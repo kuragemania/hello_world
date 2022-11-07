@@ -1,0 +1,20 @@
+/* common */
+body{
+  /* width: 1280px; */
+  background-color: #F4F9FF;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* header */
+#title{
+  width: 160px;
+  margin:60px 0 15px 0;
+}
+
+img{
+  max-width: 100%;
+}
