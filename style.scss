@@ -1,1 +1,32 @@
 
+
+
+#mainvisual{
+
+  width: 90vw;
+  // text-align: center;
+  margin: 4% auto 0 auto;
+
+  img{
+    max-width: 100%;
+  }
+}
+
+header{
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;;
+
+  img{
+    width: 110px;
+    height: 14px;
+  }
+
+  li{
+    list-style: none;
+  }
+
+  ul{
+    display: flex;
+  }
+}
