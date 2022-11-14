@@ -5,57 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>模写模写</title>
   <!-- ここでstyle.cssを読み込みます -->
-  <link rel="stylesheet" href="./css/sanitize.css">
+  <!-- <link rel="stylesheet" href="css/sanitize.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico">
 </head>
 <body>
+  <div id="mainvisual">
+    <img src="img/mainvisual.jpg" alt="">
+  </div>
+  <header>
+    <h1 class="logo">
+      <a href="#mainvisual"><img src="img/logo.svg" alt=""></a>
+    </h1>
+    <ul>
+      <li class="concept">
+        <a href="#concept">Concept</a>
+      </li>
+      <li class="work">
+        <a href="#work">Work</a>
+      </li>
+      <li class="contact">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </header>
   <div class="container">
-    <header>
-      <h1 id="title">
-        <a href="#"><img src="img/logo.svg" alt=""></a>
-      </h1>
-    </header>
-      <main>
-        <div class="main-visual">
-          <img src="img/mainvisual.jpg" alt="">
+    <main>
+      <section id="concept">
+        <div class="concept-img">
+          <img src="img/concept.jpg" alt="">
         </div>
-        <section class="index">
-          <div class="i-content">
-            <h2 class="s-title">INDEX</h2>
-            <ol>
-              <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
-              <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
-              <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
-              <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
-              <li>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</li>
-            </ol>
-          </div>
-        </section>
-        <section class="detail">
-          <div class="d-content">
-          <h2 class="s-title">DETAIL</h2>
-          <div class="text-content">
-            <img src="img/detail.jpg" alt="">
-            <div class="text">
-              <p class="p-title">タイトルタイトルタイトル</p>
-              <dl>
-                <dt>著者</dt><dd>タイトルタイトルタイトル</dd>
-                <dt>出版社</dt><dd>タイトルタイトルタイトル</dd>
-                <dt>発行年</dt><dd>タイトルタイトルタイトル</dd>
-              </dl>
-                <p class="p-text">
-                  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                </p>
-                <a href="#" target="_blank">オンラインストアで見る</a>
-            </div>
-          </div>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <small>© 2020 PHOTO BOOK</small>
-      </footer>
+        <div class="c-text">
+          <h2 class="section-title">私たちの考えるジュエリーとは</h2>
+          <span>Concept</span>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>
