@@ -70,6 +70,7 @@ header{
 }
 
 #works{
+  margin-bottom: 106px;
   ul{
     width: 100%;
     display: flex;
@@ -78,11 +79,35 @@ header{
 
     li{
       width: 31%;
-      margin-right: 24px;
+      margin-bottom: 24px;
 
       img{
         width: 100%;
       }
     }
   }
+}
+
+#news{
+  margin-bottom: 115px;
+  dl{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 1px #c8c8c8;
+    font-size: 14.4px;
+
+      dt{
+        width: 20%;
+        border-bottom: solid 1px #c8c8c8;
+        padding: 15px;
+      }
+      dd{
+        width: 80%;
+        border-bottom: solid 1px #c8c8c8;
+        padding: 15px;
+
+      }
+
+  }
+
 }
