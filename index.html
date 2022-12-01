@@ -80,8 +80,16 @@
     </section>
     <section id="contact">
       <h2 class="section-title">Contact</h2>
-      <form action="">
-        
+      <form action="#" method="post">
+        <dl>
+          <dt><label for="name">NAME</label></dt>
+          <dd><input type="text" id="name" name="your-name"></dd>
+          <dt><label for="email">E-mail</label></dt>
+          <dd><input type="email" id="email" name="your-email"></dd>
+          <dt><label for="message">MESSAGE</label></dt>
+          <dd><textarea id="message" name="your-message"></textarea></dd>
+        </dl>
+        <div class="button"><input type="submit" value="送信"></div>
       </form>
     </section>
   </main>
