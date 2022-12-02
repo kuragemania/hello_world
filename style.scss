@@ -125,7 +125,6 @@ header{
   dd{
     width: 80%;
     border: solid 1px #c8c8c8;
-    margin-bottom: 10px;
     input{
       width: 100%;
       padding: 10px;
@@ -135,6 +134,11 @@ header{
       padding: 10px;
     }
   }
+  
+  dd:not(:last-child) {
+    margin-bottom: 10px;
+}
+
   .button{
     text-align: center;
     input{
@@ -152,5 +156,4 @@ footer{
   width: 100%;
   background-color: #24292e;
   color: #fff;
-
 }
