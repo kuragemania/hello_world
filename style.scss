@@ -1,6 +1,32 @@
 body{
   background-color: #f0f0f0;
 }
+.section-title{
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+.n-h2{
+  font-size: 36px;
+  display: block;
+  letter-spacing: 0.3em;
+}
+  .n-p{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 36px;
+  }
+.section-title::after{
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+
+li{
+  list-style: none;
+}
+
 header{
   display: flex;
   justify-content: space-between;
@@ -54,8 +80,51 @@ header{
 }
 
 #mainvisual{
+  margin-bottom: 120px;
   img{
     height: calc(100vh - 80px);
     width: 100%;
+      object-fit: cover;
+  }
+}
+
+#news{
+  width: 100%;
+  max-width: 1032px;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-bottom: 120px;
+
+  .section-title{
+    margin-bottom: 50px;
+    font-weight: normal;
+  }
+  .n-h2{
+    font-size: 36px;
+    display: block;
+  }
+    .n-p{
+      font-size: 14px;
+      display: block;
+      margin-bottom: 36px;
+    }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    .date-area{
+      margin-bottom: 16px;
+      font-size: 16px;
+      span{
+        width: 50px;
+        height: 20px;
+        line-height: 20px;
+        background-color: #000;
+        color: #fff;
+        display: inline-block;
+        font-size: 0.75rem;
+        margin-left: 10px;
+        text-align: center;
+      }
+    }
   }
 }
