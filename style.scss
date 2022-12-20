@@ -201,6 +201,7 @@ header{
   height: 640px;
   display: flex;
   position: relative;
+  margin: 0 auto;
   margin-bottom: 110px;
   img{
     width: 100%;
@@ -270,4 +271,39 @@ footer{
     font-size: 0.625rem;
     vertical-align: top;
   }
+}
+
+@media (max-width: 900px){
+  header{
+    display: block;
+    .header-main{
+      display: block;
+      h1{
+        margin-left: 16px;
+      }
+      ul{
+        margin-left: 16px;
+        line-height: 1.1;
+      }
+    }
+    .contact{
+      display: none;
+    }
+  }
+#mainvisual{
+  margin-bottom: 80px;
+}
+#news{
+  ul{
+    display: block;
+    li{
+      width: 100%;
+      border: none;
+    }
+  }
+}
+
+
+
+
 }
