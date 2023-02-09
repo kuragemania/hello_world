@@ -45,6 +45,6 @@ https://network.mobile.rakuten.co.jp/campaign/rakuten-employee/entry/?code=FT282
 ※詳しいキャンペーン情報に関しては、RAPを参照ください
 RAP: https://officerakuten.sharepoint.com/sites/GlobalPortal/Lists/AnnounceCorp_001/DispForm.aspx?ID=1336&Source=/sites/GlobalPortal
 
-
+■notion
 https://royal-tiara-ed7.notion.site/f6fc92b21b8e4f2786ca09614c39cf92?p=8fe8bd3455ec48acad2e884b000688dd&pm=s
 
