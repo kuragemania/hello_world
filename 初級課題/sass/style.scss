@@ -408,6 +408,13 @@
   }
 }
 
+.faq__img img {
+  margin-top: 90px;
+  @include mq("md") {
+    margin-top: 100px;
+  }
+}
+
 .accordion {
   width: 100%;
 }
@@ -438,7 +445,7 @@
   height: 2px;
   content: "";
   background-color: $white;
-
+  transition: 0.3s transform, 0.3s opacity;
   @include mq("md") {
     right: 12px;
     width: 16px;
@@ -447,6 +454,14 @@
 
 .accordion__title::before {
   transform: rotate(90deg);
+}
+
+.accordion__title.is-open::before {
+  transform: rotate(180deg);
+}
+
+.accordion__title.is-open::after {
+  opacity: 0;
 }
 
 .accordion__title-text {
