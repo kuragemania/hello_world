@@ -399,6 +399,187 @@
   text-transform: uppercase;
 }
 
+.faq__accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto 0;
+  @include mq("md") {
+    margin-top: 40px;
+  }
+}
+
+.faq__img img {
+  margin-top: 90px;
+  @include mq("md") {
+    margin-top: 100px;
+  }
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion__item:not(:first-child) {
+  margin-top: 10px;
+  @include mq("md") {
+    margin-top: 8px;
+  }
+}
+
+.accordion__title {
+  position: relative;
+  padding: 21px 50px 21px 20px;
+  cursor: pointer;
+  background-color: $blue;
+  @include mq("md") {
+    padding: 20px 35px 20px 10px;
+  }
+}
+
+.accordion__title::before,
+.accordion__title::after {
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  width: 18px;
+  height: 2px;
+  content: "";
+  background-color: $white;
+  transition: 0.3s transform, 0.3s opacity;
+  @include mq("md") {
+    right: 12px;
+    width: 16px;
+  }
+}
+
+.accordion__title::before {
+  transform: rotate(90deg);
+}
+
+.accordion__title.is-open::before {
+  transform: rotate(180deg);
+}
+
+.accordion__title.is-open::after {
+  opacity: 0;
+}
+
+.accordion__title-text {
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: $white;
+  padding-left: 1em;
+  text-indent: -1em;
+  @include mq("md") {
+    font-size: 14px;
+    line-height: 1.857;
+  }
+}
+
+.accordion__content {
+  display: none;
+  padding: 21px 20px;
+  @include mq("md") {
+    padding: 16px 10px 24px;
+  }
+}
+
+.accordion__text {
+  font-size: 15px;
+  line-height: 1.867;
+  padding-left: 1em;
+  text-indent: -1em;
+
+  @include mq("md") {
+    font-size: 14px;
+    line-height: 1.857;
+  }
+}
+
+// Contact
+.contact {
+  padding: 105px 0 100px;
+
+  @include mq("md") {
+    padding-top: 102px;
+  }
+}
+
+.contact__inner {
+  width: 100%;
+  max-width: 650px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq("md") {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.contact__form {
+  margin-top: 52px;
+}
+
+.form__item:not(:first-child) {
+  margin-top: 20px;
+
+  @include mq("md") {
+    margin-top: 26px;
+  }
+}
+
+.form__label-text {
+  font-size: 15px;
+  font-weight: $medium;
+
+  @include mq("md") {
+    font-size: 14px;
+  }
+}
+
+.form__input {
+  margin-top: 6px;
+
+  @include mq("md") {
+    margin-top: 4px;
+  }
+}
+
+.form__input-text,
+.form__textarea {
+  font-family: "Noto sans JP", serif;
+  font-size: 15px;
+  padding: 10px;
+  background-color: $gray;
+  width: 100%;
+  @include mq("md") {
+    font-size: 14px;
+  }
+}
+
+.form__input-text::placeholder,
+.form__textarea ::placeholder {
+  opacity: 0.5;
+  color: $gray2;
+}
+
+.form__textarea {
+  height: 171px;
+  resize: none;
+}
+
+.form__button {
+  margin-top: 50px;
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: 48px;
+  }
+}
+
 //共通パーツ
 .inner {
   width: 100%;
