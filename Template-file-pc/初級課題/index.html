@@ -254,7 +254,7 @@
       </section>
 
       <!-- News -->
-      <section class="news">
+      <section id="news" class="news">
         <div class="news__inner inner">
           <h2 class="service__title section-title__main section-title--center">
             News
@@ -326,9 +326,9 @@
           </div>
           <div class="faq__accordion accordion js-accordion">
             <div class="accordion__container">
-              <div class="accordion__item js-accordin__item">
+              <div class="accordion__item js-accordion__item">
                 <div class="accordion__title js-accordion__title">
-                  <p>Q.利用は無料ですか?</p>
+                  <p class="accordion__title-text">Q.利用は無料ですか&#63;</p>
                 </div>
                 <div class="accordion__content js-accordion__content">
                   <p class="accordion__text">
@@ -337,7 +337,138 @@
                   </p>
                 </div>
               </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">
+                    Q.非公開求人とは何ですか&#63;
+                  </p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">
+                    A.転職サイトや企業ホームページなどのインターネット上に掲載されない求人のことです。企業が非公開で採用を行いたい場合は、転職エージェントを通じて募集します。
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">
+                    Q.転職時期が未定でも登録できますか&#63;
+                  </p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">
+                    A.ご登録いただけます。転職を前提にお考えの方に対しても、今の会社に残る可能性を一緒に考えることもあります。現在のお悩み、キャリアのご相談や求人を見ながらご自身の優先順位を一緒に考えてみましょう
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">
+                    Q.転職活動はどんなスケジュールで進めればいいですか？&#63;
+                  </p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">
+                    A.平均的な転職活動のスケジュールは、応募から内定まで1か月～1か月半、入社まで3か月ほどかかると考えておくといいでしょう。会社に退職を申し出てから退職するまで1か月～1か月半が目安です。
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item js-accordion__item">
+                <div class="accordion__title js-accordion__title">
+                  <p class="accordion__title-text">
+                    Q.キャリアカウンセリングはどんな内容ですか&#63;
+                  </p>
+                </div>
+                <div class="accordion__content js-accordion__content">
+                  <p class="accordion__text">
+                    A.転職を考えたきっかけやこれまでの経歴の確認をまず行います。転職で実現したいこと、キャリアビジョンを考えていきます。キャリアカウンセリングは「面接」ではありません。あなたの現状や希望の働き方など正直な気持ちをお話しください。
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <picture class="faq__img">
+          <source srcset="/images/faq-img_pc.png" media="(min-width:760px)" />
+          <img src="images/faq-img_sp.png" alt="笑顔の女性が指差している様子" />
+        </picture>
+      </section>
+
+      <!-- contact -->
+      <section id="contact" class="contact">
+        <div class="contact__inner">
+          <div class="contact__title">
+            <h2 class="section-title__main section-title--center">Contact</h2>
+            <p class="section-title__sub section-title__sub--center">
+              お問い合わせ
+            </p>
+          </div>
+          <form action="" class="contact__form form">
+            <ul class="form__list">
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">お名前</p>
+                  </dt>
+                  <dd class="from__input">
+                    <input
+                      type="text"
+                      class="form__input-text"
+                      name="お名前"
+                      placeholder="お名前をフルネームで入力してください"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">電話番号</p>
+                  </dt>
+                  <dd class="from__input">
+                    <input
+                      type="text"
+                      class="form__input-text"
+                      name="電話番号"
+                      placeholder="000-0000-0000"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">メールアドレス</p>
+                  </dt>
+                  <dd class="from__input">
+                    <input
+                      type="email"
+                      class="form__input-text"
+                      name="メールアドレス"
+                      placeholder="ExciteCode@tenshoku.co.jp"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">お問い合わせ内容</p>
+                  </dt>
+                  <dd class="form__input">
+                    <textarea
+                      name="お問い合わせ内容"
+                      class="form__textarea"
+                      placeholder="入力してください"
+                    ></textarea>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </form>
+
+          <div class="form__button">
+            <input type="submit" value="送信" class="button" />
           </div>
         </div>
       </section>
