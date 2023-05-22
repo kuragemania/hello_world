@@ -324,6 +324,13 @@
   }
 }
 
+.service__title,
+.service__title-sub {
+  @include mq("md") {
+    text-align: right;
+  }
+}
+
 .service__wrapper {
   position: relative;
 }
@@ -344,6 +351,7 @@
 
 .card {
   box-shadow: 3px 3px 8px rgba($color: #000, $alpha: 0.06);
+  background-color: $white;
   @include mq("md") {
     max-width: 250px;
     text-align: center;
@@ -351,9 +359,13 @@
 }
 
 .card__img {
-  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
 }
 
+.card__img:hover {
+  transform: scale(1.08);
+}
 .card__body {
   padding: 16px 16px;
 }
@@ -390,14 +402,12 @@
 .service__bgc {
   background-color: $beige3;
   height: 280px;
-  // width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
   width: 100vw;
+  z-index: -1;
 }
 
 // Contact
