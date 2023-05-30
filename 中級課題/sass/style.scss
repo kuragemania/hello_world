@@ -488,10 +488,16 @@
 
 // Contact
 .contact {
-  background-image: url(/images/contact-img.png);
-  background-repeat: no-repeat;
   width: 100%;
-  background-size:cover;
+  // height: 340px;
+  background-image: url(/images/contact-img-pc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq("md") {
+    background-image: url(/images/contact-img-sp.png);
+  }
 }
 
 .contact__title {
@@ -506,6 +512,23 @@
 
 .contact__text {
   margin-top: 42px;
+  text-align: center;
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // height: inherit;
+  width: 100%;
+}
+
+.contact__btn {
+  display: flex;
+  width: 340px;
+  align-items: center;
+  justify-content: center;
 }
 
 // THANKS
