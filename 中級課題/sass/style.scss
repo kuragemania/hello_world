@@ -487,7 +487,26 @@
 }
 
 // Contact
+.contact {
+  background-image: url(/images/contact-img.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size:cover;
+}
 
+.contact__title {
+  padding-top: 80px;
+  text-align-last: left;
+  color: $white;
+}
+
+.contact__title-sub {
+  text-align-last: left;
+}
+
+.contact__text {
+  margin-top: 42px;
+}
 
 // THANKS
 .thanks {
