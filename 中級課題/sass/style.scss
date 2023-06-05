@@ -529,11 +529,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 340px; /* ここでボーダーの幅を設定 */
   color: $white;
   margin-top: 21px;
   margin-bottom: 150px;
-  padding: 29px;
+  padding: 25px;
   padding-left: 87px;
   padding-right: 113px;
   border: 2px solid $white;
@@ -541,18 +540,50 @@
   box-sizing: border-box;
 }
 
-.btn-content {
-  width: 100%; /* コンテンツ領域を100%に設定 */
-  /* テキストの右側に余白を設ける */
-  box-sizing: border-box; /* paddingを含む */
-  text-align: center; /* テキストを中央に配置 */
-}
+
 
 .btn-link {
   color: $white;
   display: block;
   width: 100%;
+  font-weight: $normal;
+  position: relative;
+  letter-spacing: 0.05em;
+  transition: letter-spacing 0.3s ease-in-out;  
 }
+
+// .btn-link {
+//   color: $white;
+//   display: block;
+//   width: 160px;  /* ここで設定される幅が固定値となる */
+//   font-weight: $normal;
+//   position: relative;
+//   letter-spacing: 0.05em;
+//   transition: letter-spacing 0.3s ease-in-out;
+//   overflow: hidden;  /* 追加：テキストが幅を超えた場合に見切れるようにする */
+//   white-space: nowrap;  /* 追加：テキストが1行に収まるようにする */
+// }
+
+.btn-link:after{
+  /* 擬似要素で矢印アイコンをつくる */
+  content: '';
+  border: 0;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  /* 矢印アイコンの位置を設定 */
+  position: absolute;
+  top: 50%;
+  right: -84px;
+  transform: translateY(-50%) rotate(45deg); 
+}
+
+.btn-link:hover {
+  letter-spacing: 0.22em;
+}
+
 
 
 // THANKS
