@@ -504,6 +504,9 @@
   padding-top: 80px;
   text-align-last: left;
   color: $white;
+  @include mq("md") {
+    padding-top: 60px;
+  }
 }
 
 .contact__title-sub {
@@ -515,6 +518,10 @@
   text-align: center; 
   color: $white;
   letter-spacing: 0.05em;
+  @include mq("md") {
+    margin-top: 61px;
+    font-size: 14px;
+  }
 }
 
 .contact__wrapper {
@@ -532,12 +539,20 @@
   color: $white;
   margin-top: 21px;
   margin-bottom: 150px;
-  padding: 25px;
-  padding-left: 87px;
-  padding-right: 113px;
+  width: 100%;
+  max-width: 340px;
+  height: 78px;
   border: 2px solid $white;
   border-radius: 6px;
   box-sizing: border-box;
+  position: relative;
+  @include mq("md") {
+    font-size: 15px;
+    max-width: 260px;
+    height: 58px;
+    margin-top: 16px;
+    margin-bottom: 130px;
+  }
 }
 
 
@@ -547,9 +562,9 @@
   display: block;
   width: 100%;
   font-weight: $normal;
-  position: relative;
   letter-spacing: 0.05em;
-  transition: letter-spacing 0.3s ease-in-out;  
+  transition: letter-spacing 0.3s ease-in-out;
+  
 }
 
 // .btn-link {
@@ -564,7 +579,7 @@
 //   white-space: nowrap;  /* 追加：テキストが1行に収まるようにする */
 // }
 
-.btn-link:after{
+.contact__btn:after{
   /* 擬似要素で矢印アイコンをつくる */
   content: '';
   border: 0;
@@ -576,7 +591,7 @@
   /* 矢印アイコンの位置を設定 */
   position: absolute;
   top: 50%;
-  right: -84px;
+  right: 23px;
   transform: translateY(-50%) rotate(45deg); 
 }
 
