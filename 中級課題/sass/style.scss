@@ -515,7 +515,7 @@
 
 .contact__text {
   margin-top: 42px;
-  text-align: center; 
+  text-align: center;
   color: $white;
   letter-spacing: 0.05em;
   @include mq("md") {
@@ -555,8 +555,6 @@
   }
 }
 
-
-
 .btn-link {
   color: $white;
   display: block;
@@ -564,7 +562,6 @@
   font-weight: $normal;
   letter-spacing: 0.05em;
   transition: letter-spacing 0.3s ease-in-out;
-  
 }
 
 // .btn-link {
@@ -579,9 +576,9 @@
 //   white-space: nowrap;  /* 追加：テキストが1行に収まるようにする */
 // }
 
-.contact__btn:after{
+.contact__btn:after {
   /* 擬似要素で矢印アイコンをつくる */
-  content: '';
+  content: "";
   border: 0;
   border-top: solid 2px #fff;
   border-right: solid 2px #fff;
@@ -592,14 +589,12 @@
   position: absolute;
   top: 50%;
   right: 23px;
-  transform: translateY(-50%) rotate(45deg); 
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .btn-link:hover {
   letter-spacing: 0.22em;
 }
-
-
 
 // THANKS
 .thanks {
@@ -617,10 +612,10 @@
 
 // Footer
 .footer {
-  padding: 31px;
-  // background-color: $blue2;
+  padding: 29px;
+  background-color: $black2;
   @include mq("md") {
-    padding: 22px;
+    padding: 19.5px;
   }
 }
 
@@ -645,7 +640,6 @@
 //   transform: rotate(-45deg);
 // }
 
-
 // .top-scroll-button:before {
 //   content: "";
 //   display: block;
@@ -662,33 +656,61 @@
 .top-scroll-button {
   display: inline-block;
   position: fixed;
-  bottom: 20px;
+  bottom: 120px;
   right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   background-color: transparent;
-  border: 2px solid #000;
+  border: 1px solid $black2;
   border-radius: 50%;
   text-decoration: none;
   transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.top-scroll-button:hover {
-  background-color: #000;
+  @include mq("md") {
+    bottom: 75px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .top-scroll-button i {
-  color: #000;
+  color: $black2;
   transition: 0.3s;
 }
 
-.top-scroll-button:hover i {
-  color: #fff;
-}
+// .dli-arrow-up {
+//   display: inline-block;
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   width: 50px;
+//   height: 50px;
+//   vertical-align: middle;
+//   color: #333;
+//   line-height: 1;
+//   position: relative;
+//   width: 0.1em;
+//   height: 1em;
+//   background: currentColor;
+// }
 
+// .dli-arrow-up::before {
+//   content: "";
+//   width: 0.65em;
+//   height: 0.65em;
+//   border: 0.1em solid currentColor;
+//   border-left: 0;
+//   border-bottom: 0;
+//   transform: rotate(-45deg);
+//   transform-origin: top right;
+//   position: absolute;
+//   top: -0.05em;
+//   right: 50%;
+//   box-sizing: border-box;
+// }
 
 //共通パーツ
 .inner {
