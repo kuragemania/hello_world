@@ -632,6 +632,64 @@
   text-align: center;
 }
 
+// .top-scroll-button {
+//   display: inline-block;
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+//   width: 50px;
+//   height: 50px;
+//   box-sizing: border-box;
+//   border-top: 2px solid $black2;
+//   border-right: 2px solid $black2;
+//   transform: rotate(-45deg);
+// }
+
+
+// .top-scroll-button:before {
+//   content: "";
+//   display: block;
+//   position: relative;
+//   top: 20px;
+//   left: 12px;
+//   width: 80px;
+//   height: 20px;
+//   transform-origin: bottom right;
+//   transform: rotate(-45deg);
+//   background-color:$black2 ;
+// }
+
+.top-scroll-button {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-scroll-button:hover {
+  background-color: #000;
+}
+
+.top-scroll-button i {
+  color: #000;
+  transition: 0.3s;
+}
+
+.top-scroll-button:hover i {
+  color: #fff;
+}
+
+
 //共通パーツ
 .inner {
   width: 100%;
