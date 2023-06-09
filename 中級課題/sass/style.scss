@@ -713,10 +713,29 @@
 // }
 
 
-// Contact
+// Contact　MV
 .mv.contact-mv {
   height: 534px;
+  @include mq("md") {
+    height: 445px;
+  }
 }
+
+.contact-mv__title.contact-mv__title-main {
+  @include mq("md") {
+    font-size: 34px;
+  }
+}
+
+.mv__title.mv__title--sub.contact-mv__title-sub {
+  font-size: 14px;
+  margin-top: 5px;
+  @include mq("md") {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+}
+
 
 
 //共通パーツ
