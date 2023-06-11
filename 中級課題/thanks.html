@@ -196,42 +196,111 @@
       </div>
     </header>
     <main>
-            <!-- メインビュー -->
-            <div class="mv contact-mv">
-              <div class="mv__inner">
-                <div class="mv__slider swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <picture>
-                        <source
-                          srcset="/images/contact-mv-pc.png"
-                          media="(min-width: 1024px)"
-                        />
-                        <img
-                          src="/images/contact-mv-sp.png"
-                          alt="パグ犬がうつ伏せでこちらを見ている様子"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="mv__title-wrap">
-                    <p class="mv__title contact-mv__title contact-mv__title-main">
-                      Contact
-                    </p>
-                    <p class="mv__title mv__title--sub contact-mv__title-sub">
-                      お問い合わせ
-                    </p>
-                  </div>
-                </div>
+      <!-- メインビュー -->
+      <div class="mv contact-mv">
+        <div class="mv__inner">
+          <div class="mv__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="/images/contact-mv-pc.png"
+                    media="(min-width: 1024px)"
+                  />
+                  <img
+                    src="/images/contact-mv-sp.png"
+                    alt="パグ犬がうつ伏せでこちらを見ている様子"
+                  />
+                </picture>
               </div>
             </div>
-
-      <div class="thanks">
-        <div class="thanks__inner">
-          <p class="thanks__text">お問い合わせありがとうございました。</p>
-          <div class="thanks__button">
-            <a href="/index.html" class="button">トップページへ戻る</a>
+            <div class="mv__title-wrap">
+              <p class="mv__title contact-mv__title contact-mv__title-main">
+                Contact
+              </p>
+              <p class="mv__title mv__title--sub contact-mv__title-sub">
+                お問い合わせ
+              </p>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="contactpage">
+        <div class="contactpage__text">
+          <p class="contactpage__text-body">
+            当店へのお問い合わせは下記フォームより受け付けております。<br />
+            担当者が確認後、折り返しご連絡させていただきます。
+          </p>
+        </div>
+        <div class="coantactpage__form">
+          <form
+            action="mail.php"
+            method="POST"
+            class="contact__form form"
+          >
+            <ul class="form__list">
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">お名前</p>
+                  </dt>
+                  <dd class="from__input">
+                    <input
+                      type="text"
+                      class="form__input-text"
+                      name="お名前"
+                      placeholder="お名前をフルネームで入力してください"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">メールアドレス</p>
+                  </dt>
+                  <dd class="from__input">
+                    <input
+                      type="email"
+                      class="form__input-text"
+                      name="メールアドレス"
+                      placeholder="ExciteCode@tenshoku.co.jp"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">電話番号</p>
+                  </dt>
+                  <dd class="from__input">
+                    <input
+                      type="text"
+                      class="form__input-text"
+                      name="電話番号"
+                      placeholder="000-0000-0000"
+                    />
+                  </dd>
+                </dl>
+              </li>
+              <li class="form__item">
+                <dl>
+                  <dt .form__label>
+                    <p class="form__label-text">お問い合わせ内容</p>
+                  </dt>
+                  <dd class="form__input">
+                    <textarea
+                      name="お問い合わせ内容"
+                      class="form__textarea"
+                      placeholder="入力してください"
+                    ></textarea>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
     </main>
