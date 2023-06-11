@@ -712,7 +712,6 @@
 //   box-sizing: border-box;
 // }
 
-
 // Contact　MV
 .mv.contact-mv {
   height: 534px;
@@ -736,7 +735,31 @@
   }
 }
 
+.contactpage__text {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 510px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  @include mq("md") {
+    max-width: 375px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 
+.contactpage__text-body {
+  font-size: 15px;
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  line-height: 1.785;
+  @include mq("md") {
+    font-size: 14px;
+    line-height: 1.923;
+  }
+}
 
 //共通パーツ
 .inner {
