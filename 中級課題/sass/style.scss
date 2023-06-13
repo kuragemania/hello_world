@@ -761,6 +761,33 @@
   }
 }
 
+.coantactpage__form {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: $beige3;
+  border-radius: 20px 0 0 0;
+  @include mq("md") {
+    max-width: 345px;
+    padding-right: 15px; 
+    padding-left: 15px;
+  }
+}
+
+.coantactpage__inner {
+  padding-top: 60px;
+  text-align: center;
+  @include mq("md") {
+    padding-top: 40px;
+  }
+}
+
+
+
 //共通パーツ
 .inner {
   width: 100%;
