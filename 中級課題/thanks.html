@@ -234,6 +234,7 @@
           </p>
         </div>
         <div class="coantactpage__form">
+          <div class="coantactpage__inner">
           <form
             action="mail.php"
             method="POST"
@@ -242,65 +243,72 @@
             <ul class="form__list">
               <li class="form__item">
                 <dl>
-                  <dt .form__label>
-                    <p class="form__label-text">お名前</p>
+                  <dt class="form__label">
+                    <p class="form__label-text">お名前<span>*</span></p>
                   </dt>
                   <dd class="from__input">
                     <input
                       type="text"
                       class="form__input-text"
                       name="お名前"
-                      placeholder="お名前をフルネームで入力してください"
+                      placeholder="愛犬　はなこ"
                     />
                   </dd>
                 </dl>
               </li>
               <li class="form__item">
                 <dl>
-                  <dt .form__label>
-                    <p class="form__label-text">メールアドレス</p>
+                  <dt class="form__label">
+                    <p class="form__label-text">メールアドレス<span>*</span></p>
                   </dt>
                   <dd class="from__input">
                     <input
                       type="email"
                       class="form__input-text"
                       name="メールアドレス"
-                      placeholder="ExciteCode@tenshoku.co.jp"
+                      placeholder="excitecode@dogstore.co.jp"
                     />
                   </dd>
                 </dl>
               </li>
               <li class="form__item">
                 <dl>
-                  <dt .form__label>
-                    <p class="form__label-text">電話番号</p>
-                  </dt>
+                  <dt class="form__label">
+                    <p class="form__label-text">お問い合わせの種類<span>*</span></p>
+                  </dt> 
                   <dd class="from__input">
-                    <input
-                      type="text"
-                      class="form__input-text"
-                      name="電話番号"
-                      placeholder="000-0000-0000"
-                    />
+                    <input type="radio" id="option1" name="options" value="option1">
+                    <label for="option1">オプション1</label><br>
+                    
+                    <input type="radio" id="option2" name="options" value="option2">
+                    <label for="option2">オプション2</label><br>
+                    
+                    <input type="radio" id="option3" name="options" value="option3">
+                    <label for="option3">オプション3</label><br>
+                  
                   </dd>
                 </dl>
               </li>
               <li class="form__item">
                 <dl>
-                  <dt .form__label>
-                    <p class="form__label-text">お問い合わせ内容</p>
+                  <dt class="form__label">
+                    <p class="form__label-text">お問い合わせ内容<span>*</span></p>
                   </dt>
                   <dd class="form__input">
                     <textarea
-                      name="お問い合わせ内容"
-                      class="form__textarea"
-                      placeholder="入力してください"
+                    name="お問い合わせ内容"
+                    class="form__textarea"
+                    placeholder="入力してください"
                     ></textarea>
                   </dd>
                 </dl>
               </li>
+              <li class="form__item">
+                <input type="submit" value="Submit">
+              </li>
             </ul>
           </form>
+        </div>
         </div>
       </div>
     </main>
