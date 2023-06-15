@@ -780,13 +780,54 @@
 
 .coantactpage__inner {
   padding-top: 60px;
-  text-align: center;
+  display: flex;         /* Flexboxを使う */
+  justify-content: center; /* 子要素を横方向の中央に配置 */
   @include mq("md") {
     padding-top: 40px;
   }
 }
 
+.form__item {
+  width: 498px;
+}
 
+.form__item dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__label {
+  // width: 28.8%;
+}
+
+.form__input .form__input-text,
+.form__textarea
+ {
+  // width: 72.2%;
+  width: 360px;
+  background-color: $white;
+}
+.form__item:nth-child(2) {
+  margin-top: 22px;
+}
+
+.form__item:nth-child(3),
+.form__item:nth-child(4){
+  margin-top: 32px;
+}
+
+.form__input-text:nth-child(1),
+.form__input-text:nth-child(2) {
+  height: 40px;
+}
+
+.form__label-text {
+  font-size: 14px;
+  span {
+    color: #F93212;
+  }
+}
 
 //共通パーツ
 .inner {
