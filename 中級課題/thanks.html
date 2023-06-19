@@ -271,25 +271,26 @@
                   </dd>
                 </dl>
               </li>
-              <li class="form__item">
+              <li class="form__item radio">
                 <dl>
                   <dt class="form__label">
                     <p class="form__label-text">お問い合わせの種類<span>*</span></p>
                   </dt> 
-                  <dd class="form__input">
+                  <dd class="form__input-label radio-button">
                     <input type="radio" id="option1" name="options" value="option1">
-                    <label for="option1">オプション1</label><br>
+                    <label for="option1">ドッグフード</label><br>
                     
                     <input type="radio" id="option2" name="options" value="option2">
-                    <label for="option2">オプション2</label><br>
+                    <label for="option2">ドッグケア</label><br>
                     
                     <input type="radio" id="option3" name="options" value="option3">
-                    <label for="option3">オプション3</label><br>
-                  
+                    <label for="option3">ドッグトイ</label><br>
+                    <input type="radio" id="option4" name="options" value="option4">
+                    <label for="option4">その他</label>
                   </dd>
                 </dl>
               </li>
-              <li class="form__item">
+              <li class="form__item textarea">
                 <dl>
                   <dt class="form__label">
                     <p class="form__label-text">お問い合わせ内容<span>*</span></p>
@@ -303,8 +304,8 @@
                   </dd>
                 </dl>
               </li>
-              <li class="form__item">
-                <input type="submit" value="送信">
+              <li class="form__item ">
+                <input type="submit" value="送信" class="submit">
               </li>
             </ul>
           </form>
@@ -312,5 +313,10 @@
         </div>
       </div>
     </main>
+    <footer class="footer">
+      <small class="footer__copyright"
+        >&copy;ExciteCode&nbsp;all&nbsp;rights&nbsp;reserved</small
+      >
+    </footer>
   </body>
 </html>
