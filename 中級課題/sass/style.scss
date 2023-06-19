@@ -764,51 +764,64 @@
 .coantactpage__form {
   margin-top: 60px;
   width: 100%;
+}
+
+.coantactpage__inner {
   max-width: 850px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 25px;
   padding-left: 25px;
+  padding-top: 60px;
+  display: flex;         /* Flexboxを使う */
+  justify-content: center; /* 子要素を横方向の中央に配置 */
   background-color: $beige3;
   border-radius: 20px 0 0 0;
   @include mq("md") {
+    padding-top: 40px;
     max-width: 345px;
     padding-right: 15px; 
     padding-left: 15px;
   }
 }
 
-.coantactpage__inner {
-  padding-top: 60px;
-  display: flex;         /* Flexboxを使う */
-  justify-content: center; /* 子要素を横方向の中央に配置 */
-  @include mq("md") {
-    padding-top: 40px;
-  }
-}
-
 .form__item {
   width: 498px;
+  @include mq("md") {
+    width: 100%;
+    max-width: 305px;
+    }
 }
 
 .form__item dl {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include mq("md") {
+    flex-direction: column;
+    align-items: start;
+  }
 }
+
 
 .form__label {
   // width: 28.8%;
 }
 
-.form__input .form__input-text,
+.form__input,
+.form__input-text,
 .form__textarea
  {
-  // width: 72.2%;
   width: 360px;
   background-color: $white;
-}
-.form__item:nth-child(2) {
+  @include mq("md") {
+    width: 100%;
+    // max-width: 305px;
+    }
+  }
+
+
+  .form__item:nth-child(2) {
   margin-top: 22px;
 }
 
@@ -828,6 +841,72 @@
     color: #F93212;
   }
 }
+
+.radio dl {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.radio dd {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.radio-button label {
+  padding-left: 25px;  /* テキストとカスタムラジオボタンの間隔を設定します */
+  position: relative;  /* 疑似要素の配置の基準点になります */
+}
+
+.radio-button label:before {
+  content: "";  /* 疑似要素の内容を空にします */
+  display: inline-block;  
+  position: absolute;  
+  left: 4%;
+  top: 50%;
+  transform:translateY(-50%);
+  width: 10px;  /* カスタムラジオボタンの大きさを設定します */
+  height: 10px;
+  border-radius: 50%;  /* ボーダーを丸くします */
+  border: 1px solid #C0AC91;  /* ボーダーの色と太さを設定します */
+  background-color: #fff;
+}
+
+.radio-button input[type="radio"]:checked + label:before {
+  background: #000;  /* 選択時のラジオボタンの色を設定します */
+}
+
+.textarea dl {
+  align-items: start;
+}
+
+.textarea .form__input {
+  height: 171px;
+}
+
+.textarea .form__textarea {
+  height: inherit;
+}
+
+.submit  {
+  font-size: 20px;
+  width: 235px;
+  display: inline-block;
+  padding: 15px;
+  transition: 0.3s background, 0.3s box-shadow;
+  background-color: $red;
+  color: $white;
+  letter-spacing: 0.05em;
+  box-shadow: 2px 2px 4px rgba($color: $gray2, $alpha: 0.5);
+  &:hover {
+    opacity: 1;
+    box-shadow: none;
+    background-color: $red2;
+  }
+}
+
 
 //共通パーツ
 .inner {
