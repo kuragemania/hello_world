@@ -785,6 +785,10 @@
   }
 }
 
+.form__list {
+  margin-bottom: 60px;
+}
+
 .form__item {
   width: 498px;
   @include mq("md") {
@@ -855,6 +859,21 @@
   font-size: 14px;
 }
 
+.radio-button {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.radio-button label {
+  min-width: 110px;
+  /* ...他のスタイル... */
+}
+
+
+dd label {
+  display: inline-block;
+}
+
 .radio-button label {
   padding-left: 25px;  /* テキストとカスタムラジオボタンの間隔を設定します */
   position: relative;  /* 疑似要素の配置の基準点になります */
@@ -890,20 +909,29 @@
   height: inherit;
 }
 
-.submit  {
-  font-size: 20px;
-  width: 235px;
+.submit {
+  text-align: center;
+}
+
+.submit-btn {
+  font-size: 16px;
+  width: 180px;
+  align-items: center;
   display: inline-block;
-  padding: 15px;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  line-height: 1;
+  border-radius: 6px;
   transition: 0.3s background, 0.3s box-shadow;
-  background-color: $red;
+  background-color: $beige;
   color: $white;
   letter-spacing: 0.05em;
-  box-shadow: 2px 2px 4px rgba($color: $gray2, $alpha: 0.5);
+  box-shadow: 2px 2px 4px rgba($color: $beige, $alpha: 0.5);
   &:hover {
     opacity: 1;
     box-shadow: none;
-    background-color: $red2;
+    // background-color: $red2;
   }
 }
 
