@@ -1,0 +1,716 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+}
+
+a[href^="tel:"] {
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: auto;
+  }
+}
+
+a {
+  transition: opacity 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 75px;
+  background-color: transparent;
+}
+
+.header.scrolled {
+  background-color: #fff;
+}
+
+.header__inner {
+  padding-left: 22px;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.header__name {
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    width: 132px;
+  }
+}
+
+.header__nav {
+  height: inherit;
+}
+
+.header__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.header__item {
+  height: inherit;
+}
+
+.header__item:not(:first-child) {
+  margin-left: 60px;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #141414;
+  font-size: 16px;
+  font-weight: 500;
+  height: inherit;
+}
+
+.header__link.header__link--contact {
+  color: #fff;
+  background-color: #b19775;
+  padding: 0 24px;
+  transition: 0.3s background-color;
+  text-align: center;
+}
+.header__link.header__link--contact:hover {
+  opacity: 1;
+  background-color: #b19775;
+}
+
+.hamburger {
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  z-index: 9999;
+  width: 25px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.hamburger.is-active {
+  top: 32px;
+  right: 20px;
+}
+
+.hamburger span {
+  position: absolute;
+  display: inline-block;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  transition: 0.3s transform, 0.3s background-color;
+  background-color: #141414;
+}
+
+.hamburger.is-active span {
+  background-color: #fff;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+  transition: 0.3s opacity;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.is-active span:nth-child(1) {
+  top: 15px;
+  transform: rotate(-45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  top: 15px;
+  transform: rotate(45deg);
+}
+
+.drawer-menu {
+  position: absolute;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: #382c22;
+  opacity: 0.84;
+}
+
+.drawer-menu__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: inherit;
+}
+
+.drawer-menu__items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drawer-menu__item {
+  display: inline-block;
+}
+
+.drawer-menu__item:not(:first-child) {
+  margin-top: 25px;
+}
+
+.drawer-menu__link {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.875;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 25px;
+  width: 200px;
+}
+
+.drawer-menu__link.drawer-menu__link--contact {
+  background-color: #b19775;
+  padding: 14px;
+  transition: 0.3s background-color;
+  border-radius: 6px;
+}
+.drawer-menu__link.drawer-menu__link--contact:hover {
+  opacity: 1;
+}
+
+.mv {
+  width: 100%;
+  height: 100vh;
+}
+
+.mv__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+.mv__slider,
+.swiper-slide picture,
+.swiper-slide img {
+  height: inherit;
+}
+
+.swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mv__title-wrap {
+  width: 100%;
+  position: absolute;
+  padding: 0 120px;
+  z-index: 10;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+}
+@media screen and (max-width: 1024px) {
+  .mv__title-wrap {
+    padding-left: 34px;
+    padding-right: 0px;
+  }
+}
+
+.mv__title {
+  font-size: 38px;
+  line-height: 1.473;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: #141414;
+}
+@media screen and (max-width: 1024px) {
+  .mv__title {
+    font-size: 28px;
+    line-height: 1.428;
+    letter-spacing: 0;
+  }
+}
+
+.mv__title.mv__title--sub {
+  font-size: 15px;
+  margin-top: 22px;
+}
+@media screen and (max-width: 1024px) {
+  .mv__title.mv__title--sub {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+
+.mv__title-large,
+.mv__title-strong {
+  font-size: 60px;
+}
+@media screen and (max-width: 1024px) {
+  .mv__title-large,
+.mv__title-strong {
+    font-size: 38px;
+  }
+}
+
+.mv__title-large {
+  color: #f93212;
+}
+
+.mv.contact-mv {
+  height: 534px;
+}
+@media screen and (max-width: 768px) {
+  .mv.contact-mv {
+    height: 445px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-mv__title.contact-mv__title-main {
+    font-size: 34px;
+  }
+}
+
+.mv__title.mv__title--sub.contact-mv__title-sub {
+  font-size: 14px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  .mv__title.mv__title--sub.contact-mv__title-sub {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+}
+
+.contactpage__text {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 510px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+@media screen and (max-width: 768px) {
+  .contactpage__text {
+    max-width: 375px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.contactpage__text-body {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.785;
+}
+@media screen and (max-width: 768px) {
+  .contactpage__text-body {
+    font-size: 14px;
+    line-height: 1.923;
+  }
+}
+
+.coantactpage__form {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.coantactpage__inner {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 60px;
+  display: flex; /* Flexboxを使う */
+  justify-content: center; /* 子要素を横方向の中央に配置 */
+  background-color: #f7f3e9;
+  border-radius: 20px 0 0 0;
+}
+@media screen and (max-width: 768px) {
+  .coantactpage__inner {
+    padding-top: 40px;
+    max-width: 345px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.form__list {
+  margin-bottom: 60px;
+}
+
+.form__item {
+  width: 498px;
+}
+@media screen and (max-width: 768px) {
+  .form__item {
+    width: 100%;
+    max-width: 305px;
+  }
+}
+
+.form__item dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .form__item dl {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.form__input,
+.form__input-text,
+.form__textarea {
+  width: 360px;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .form__input,
+.form__input-text,
+.form__textarea {
+    width: 100%;
+  }
+}
+
+.form__item:nth-child(2) {
+  margin-top: 22px;
+}
+
+.form__item:nth-child(3),
+.form__item:nth-child(4) {
+  margin-top: 32px;
+}
+
+.form__input-text:nth-child(1),
+.form__input-text:nth-child(2) {
+  height: 40px;
+}
+
+.form__label-text {
+  font-size: 14px;
+}
+.form__label-text span {
+  color: #F93212;
+}
+
+.radio dl {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.radio dd {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.radio-button {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.radio-button label {
+  min-width: 110px;
+  /* ...他のスタイル... */
+}
+
+dd label {
+  display: inline-block;
+}
+
+.radio-button label {
+  padding-left: 25px; /* テキストとカスタムラジオボタンの間隔を設定します */
+  position: relative; /* 疑似要素の配置の基準点になります */
+}
+
+.radio-button label:before {
+  content: ""; /* 疑似要素の内容を空にします */
+  display: inline-block;
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px; /* カスタムラジオボタンの大きさを設定します */
+  height: 10px;
+  border-radius: 50%; /* ボーダーを丸くします */
+  border: 1px solid #C0AC91; /* ボーダーの色と太さを設定します */
+  background-color: #fff;
+}
+
+.radio-button input[type=radio]:checked + label:before {
+  background: #000; /* 選択時のラジオボタンの色を設定します */
+}
+
+.textarea dl {
+  align-items: start;
+}
+
+.textarea .form__input {
+  height: 171px;
+}
+
+.textarea .form__textarea {
+  height: inherit;
+}
+
+.submit {
+  text-align: center;
+}
+
+.submit-btn {
+  font-size: 16px;
+  width: 180px;
+  align-items: center;
+  display: inline-block;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  line-height: 1;
+  border-radius: 6px;
+  transition: 0.3s background, 0.3s box-shadow;
+  background-color: #b19775;
+  color: #fff;
+  letter-spacing: 0.05em;
+  box-shadow: 2px 2px 4px rgba(177, 151, 117, 0.5);
+}
+.submit-btn:hover {
+  opacity: 1;
+  box-shadow: none;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.section-title__main {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .section-title__main {
+    text-align: left;
+  }
+}
+
+.section-title__sub {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #b19775;
+  margin-top: 7px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .section-title__sub {
+    text-align: left;
+  }
+}
+
+.text {
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  line-height: 1.867;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 14px;
+    line-height: 1.857;
+    color: #141414;
+  }
+}
+
+.text.text--large {
+  font-size: 22px;
+  line-height: 1.727;
+  color: #141414;
+}
+@media screen and (max-width: 768px) {
+  .text.text--large {
+    font-size: 18px;
+    line-height: 1.778;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+
+.md-show {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
+}
