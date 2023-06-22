@@ -261,231 +261,6 @@
 
 
 
-
-// Contact　MV
-.mv.contact-mv {
-  height: 534px;
-  @include mq("md") {
-    height: 445px;
-  }
-}
-
-.contact-mv__title.contact-mv__title-main {
-  @include mq("md") {
-    font-size: 34px;
-  }
-}
-
-.mv__title.mv__title--sub.contact-mv__title-sub {
-  font-size: 14px;
-  margin-top: 5px;
-  @include mq("md") {
-    font-size: 12px;
-    margin-top: 3px;
-  }
-}
-
-.contactpage__text {
-  margin-top: 80px;
-  width: 100%;
-  max-width: 510px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 25px;
-  padding-left: 25px;
-  @include mq("md") {
-    max-width: 375px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-.contactpage__text-body {
-  font-size: 15px;
-  font-weight: $medium;
-  letter-spacing: 0.05em;
-  line-height: 1.785;
-  @include mq("md") {
-    font-size: 14px;
-    line-height: 1.923;
-  }
-}
-
-.coantactpage__form {
-  margin-top: 60px;
-  width: 100%;
-}
-
-.coantactpage__inner {
-  max-width: 850px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 25px;
-  padding-left: 25px;
-  padding-top: 60px;
-  display: flex;         /* Flexboxを使う */
-  justify-content: center; /* 子要素を横方向の中央に配置 */
-  background-color: $beige3;
-  border-radius: 20px 0 0 0;
-  @include mq("md") {
-    padding-top: 40px;
-    max-width: 345px;
-    padding-right: 15px; 
-    padding-left: 15px;
-  }
-}
-
-.form__list {
-  margin-bottom: 60px;
-}
-
-.form__item {
-  width: 498px;
-  @include mq("md") {
-    width: 100%;
-    max-width: 305px;
-    }
-}
-
-.form__item dl {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include mq("md") {
-    flex-direction: column;
-    align-items: start;
-  }
-}
-
-
-.form__label {
-  // width: 28.8%;
-}
-
-.form__input,
-.form__input-text,
-.form__textarea
- {
-  width: 360px;
-  background-color: $white;
-  @include mq("md") {
-    width: 100%;
-    // max-width: 305px;
-    }
-  }
-
-
-  .form__item:nth-child(2) {
-  margin-top: 22px;
-}
-
-.form__item:nth-child(3),
-.form__item:nth-child(4){
-  margin-top: 32px;
-}
-
-.form__input-text:nth-child(1),
-.form__input-text:nth-child(2) {
-  height: 40px;
-}
-
-.form__label-text {
-  font-size: 14px;
-  span {
-    color: #F93212;
-  }
-}
-
-.radio dl {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.radio dd {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-.radio-button {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-.radio-button label {
-  min-width: 110px;
-  /* ...他のスタイル... */
-}
-
-
-dd label {
-  display: inline-block;
-}
-
-.radio-button label {
-  padding-left: 25px;  /* テキストとカスタムラジオボタンの間隔を設定します */
-  position: relative;  /* 疑似要素の配置の基準点になります */
-}
-
-.radio-button label:before {
-  content: "";  /* 疑似要素の内容を空にします */
-  display: inline-block;  
-  position: absolute;  
-  left: 4%;
-  top: 50%;
-  transform:translateY(-50%);
-  width: 10px;  /* カスタムラジオボタンの大きさを設定します */
-  height: 10px;
-  border-radius: 50%;  /* ボーダーを丸くします */
-  border: 1px solid #C0AC91;  /* ボーダーの色と太さを設定します */
-  background-color: #fff;
-}
-
-.radio-button input[type="radio"]:checked + label:before {
-  background: #000;  /* 選択時のラジオボタンの色を設定します */
-}
-
-.textarea dl {
-  align-items: start;
-}
-
-.textarea .form__input {
-  height: 171px;
-}
-
-.textarea .form__textarea {
-  height: inherit;
-}
-
-.submit {
-  text-align: center;
-}
-
-.submit-btn {
-  font-size: 16px;
-  width: 180px;
-  align-items: center;
-  display: inline-block;
-  margin-top: 30px;
-  padding-top: 15px;
-  padding-bottom: 14px;
-  line-height: 1;
-  border-radius: 6px;
-  transition: 0.3s background, 0.3s box-shadow;
-  background-color: $beige;
-  color: $white;
-  letter-spacing: 0.05em;
-  box-shadow: 2px 2px 4px rgba($color: $beige, $alpha: 0.5);
-  &:hover {
-    opacity: 1;
-    box-shadow: none;
-    // background-color: $red2;
-  }
-}
-
-
 //共通パーツ
 .inner {
   width: 100%;
@@ -503,46 +278,41 @@ dd label {
 
 .section-title__main {
   font-size: 38px;
-  font-weight: $regular;
+  font-weight: $normal;
   line-height: 0.842;
   letter-spacing: 0.05em;
-  text-align: center;
+  color: $beige;
+  // text-align: center;
   @include mq("md") {
-    text-align: left;
+    // text-align: left;
   }
 }
 
-.section-title__sub {
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  color: $beige;
-  margin-top: 7px;
-  text-align: center;
+.section-title__main--black {
+  color: $black;
+  // text-align: center;
   @include mq("md") {
-    text-align: left;
+    // text-align: left;
   }
 }
 
 .text {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.05em;
-  line-height: 1.867;
+  line-height: 2.0;
   font-weight: $regular;
+  color: $beige;
   @include mq("md") {
-    font-size: 14px;
-    line-height: 1.857;
-    color: $black;
+    // font-size: 14px;
+    // line-height: 1.857;
+    // color: $black;
   }
 }
 
 .text.text--large {
   font-size: 22px;
-  line-height: 1.727;
-  color: $black;
-  @include mq("md") {
-    font-size: 18px;
-    line-height: 1.778;
-  }
+  line-height: 1.36;
+  letter-spacing: 0.04em;
 }
 
 // .button {
