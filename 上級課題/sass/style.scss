@@ -2,6 +2,9 @@
 @use "./base/reset";
 @use "./global" as *;
 
+body {
+  color: $beige;
+}
 //ヘッダー
 .header {
   width: 100%;
@@ -18,7 +21,7 @@
 }
 
 .header__inner {
-  padding-left: 22px;
+  padding-left: 20px;
   display: flex;
   align-items: center;
   height: inherit;
@@ -57,15 +60,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $black;
+  color: $beige;
   font-size: 16px;
   font-weight: $medium;
   height: inherit;
 }
 
 .header__link.header__link--contact {
-  color: $white;
-  background-color: $beige;
+  color: $beige;
+  background-color: transparent;
   padding: 0 24px;
   transition: 0.3s background-color;
   text-align: center;
