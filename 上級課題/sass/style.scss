@@ -2,9 +2,6 @@
 @use "./base/reset";
 @use "./global" as *;
 
-body {
-  color: $beige;
-}
 //ヘッダー
 .header {
   width: 100%;
@@ -21,14 +18,15 @@ body {
 }
 
 .header__inner {
-  padding-left: 20px;
+  padding-left: 22px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: inherit;
 }
 
 .header__name {
-  margin-right: auto;
+  // margin-right: auto;
 }
 
 .header__logo {
@@ -67,8 +65,8 @@ body {
 }
 
 .header__link.header__link--contact {
-  color: $beige;
-  background-color: transparent;
+  color: $white;
+  background-color: $beige;
   padding: 0 24px;
   transition: 0.3s background-color;
   text-align: center;
@@ -171,7 +169,7 @@ body {
   font-weight: $medium;
   letter-spacing: 0.05em;
   line-height: 1.875;
-  color: $white;
+  color: $beige;
   text-align: center;
   display: inline-block;
   padding-bottom: 25px;
@@ -258,6 +256,12 @@ body {
   color: $red;
 }
 
+
+
+
+
+
+
 //共通パーツ
 .inner {
   width: 100%;
@@ -267,9 +271,9 @@ body {
   padding-right: 25px;
   padding-left: 25px;
 
-  @include mq("md") {
+  @include mq("md") { 
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px; 
   }
 }
 
@@ -296,29 +300,30 @@ body {
   }
 }
 
+
 .section-title__main::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
-  width: 23px;
+  margin-right: 10px; 
+  width: 23px; 
   height: 23px;
-  background: url("/images/logo.svg") no-repeat center/contain;
+  background: url('/images/logo.svg') no-repeat center/contain;
 }
 
 .section-title__main::after {
-  content: "";
+  content: ""; 
   display: block;
   height: 1px;
-  width: 100%;
-  background-color: $beige;
+  width: 100%; 
+  background-color: $beige; 
   margin-left: 22px;
 }
 
 .text {
   font-size: 16px;
   letter-spacing: 0.05em;
-  line-height: 2;
+  line-height: 2.0;
   font-weight: $regular;
   color: $beige;
   @include mq("md") {
