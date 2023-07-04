@@ -65,11 +65,20 @@
 }
 
 .header__link.header__link--contact {
-  color: $white;
-  background-color: $beige;
-  padding: 0 24px;
+  font-size: 18px;
+  line-height: 1.333;
+  color: $beige;
+  background-color: transparent;
+  border: 1px solid $beige;
+  border-radius: 3%;
+  // padding: 10px 28px 12px 31px;
+  margin-top: 25px;
+  margin-bottom: 23px;
+  margin-right: 20px;
+  width: 121px;
   transition: 0.3s background-color;
   text-align: center;
+  height: 46px;
   &:hover {
     opacity: 1;
     background-color: $beige;
