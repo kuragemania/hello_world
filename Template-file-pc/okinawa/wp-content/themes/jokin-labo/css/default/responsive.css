@@ -51,13 +51,12 @@ header.carousel {height:78%}
 .subscribe-coming{position:relative; top:0}
 .services-dtls .col-xs-4{width:27%}
  .navbar-nav > li > a {
-    padding-left:14px;
-    padding-right:14px;
+ padding: 20px 30px;
 }
 }
 
 @media (max-width:1024px) {
-.nav > li > a {padding-left:15px; padding-right:15px; font-size:12px!important}
+/* .nav > li > a {padding-left:15px; padding-right:15px; font-size:12px!important} */
 .nav-tabs > li > a .tab-txt {font-size:14px; font-size:600}
 .number-div {margin-right:10px}
 .nav-tabs li a {line-height:42px}
@@ -80,12 +79,12 @@ header.carousel {height:78%}
 .faq-section .blog-right, .search-blog{min-height:1px}
 .padding-left-15{padding-right:15px}
 .rslides img{width:250%!important; float:right!important}
-.quote-now{margin-top:9px }
+/* .quote-now{margin-top:9px } */
 .about-what-we-do .container{padding:0 20px}
 .navbar-shrink .nav > li > a {padding:16px 8px}
 .footer-logos .owl-next, .footer-logos .owl-prev{height: 25px; width: 25px;}
 .footer-logos .owl-next::after, .footer-logos .owl-prev::after{left:10px; top:0px; font-size:18px;}
-.nav > li > a {padding-left:10px; padding-right:10px; font-size:14px!important}
+.nav > li > a {padding-left:20px; padding-right:20px; font-size:14px!important}
 .footer-container .row{margin:0}
 .top-contact .col-xs-12{margin-bottom:10px}
 .footer-container .row{padding:0 15px}
