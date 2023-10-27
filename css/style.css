@@ -664,14 +664,14 @@ select::-ms-expand {
 
 .contact {
   width: 100%;
-  background-image: url(images/contact-img-pc.png);
+  background-image: url(../images/contact-img-pc.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .contact {
-    background-image: url(images/contact-img-sp.png);
+    background-image: url(../images/contact-img-sp.png);
   }
 }
 
