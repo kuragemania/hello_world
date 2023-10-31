@@ -57,7 +57,7 @@ header.carousel {height:78%}
 
 @media (max-width:1024px) {
 /* .nav > li > a {padding-left:15px; padding-right:15px; font-size:12px!important} */
-.nav-tabs > li > a .tab-txt {font-size:14px; font-size:600}
+.nav-tabs > li > a .tab-txt {font-size:14px;
 .number-div {margin-right:10px}
 .nav-tabs li a {line-height:42px}
 .tab-pane p {font-size:13px; line-height:25px; line-height:20px }
@@ -326,7 +326,7 @@ figure.effect-jazz p{display:none}
 .projects-section .container {padding:0}
 .company-certification p {padding:0}
 .top-search {float:none; margin-top:5px}
-.top-header {padding:10px 0}
+.top-header {padding: 0px 0}
  .col-xs-8 .col-xs-5, .about-section .col-xs-8 .col-xs-7 {width:100%; text-align:center; padding:0 }
 .nav-tabs > li > a {padding-left:2px; padding-right:2px; text-align:center}
 [class^="flaticon-"]::before, [class*=" flaticon-"]::before, [class^="flaticon-"]::after, [class*=" flaticon-"]::after {font-size:35px}
@@ -389,7 +389,7 @@ figure.effect-jazz p{display:none}
 .twitter-handle ul { min-height:inherit}
 .twitter-handle ul li { font-size:12px}
 .twitter-handle a { font-size:12px;}
-
+.md-none {display: none;}
 .top-search { float:left; margin-top: 2px; width:69%}
 .footer-logos .owl-next::after, .footer-logos .owl-prev::after {top: -1px;}
 .search-div { display:block}  
@@ -432,7 +432,7 @@ body {margin: 166px 0 0 0;}
 .twitter-handle ul li { width:480px; margin:0}
 .top-social { display:none}
 body {margin:128px 0 0 0;}
-.top-header {padding: 5px 0 5px 0;}
+/* .top-header {padding: 5px 0 5px 0;} */
 .feeds { text-align:center}
 .footer-404 { text-align:center; padding:0 0 10px 0; font-size:11px;}
 }
@@ -493,3 +493,22 @@ body {margin:128px 0 0 0;}
 .gamma-description h3, .projects-section .col-xs-4 .gamma-description h3 {margin-top:18%}
 }
 @media (max-width:320px) {.twitter-handle ul li { width:300px}}
+
+
+/* レスポンシブ追加分 */
+@media (max-width:640px)  {
+    .md-none {
+        display: none !important;
+      }
+      .md-show__w100 {
+        width: 100%;
+        padding-left: 0;
+        padding: 0;
+      }
+
+      .md-show__w101 {
+        /* padding: 5px 0; */
+        height: 40px;
+      }
+      
+}

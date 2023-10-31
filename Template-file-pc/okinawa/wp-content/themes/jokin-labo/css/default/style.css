@@ -145,8 +145,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272941', end
 padding:20px; position:absolute; top:0; height:100%; width:260px; right:0; color:#FFFFFF; font-weight:600; font-size:16px  }
 .news-letter-top a {color:#ffffff}
 .quote-now {position:absolute;right:0;top:50%;transform: translateY(-50%)}
-.quote-now a {display:inline-block; text-align:center; border:2px solid #FF3938; padding:5px 15px; font-weight:600; text-transform:uppercase;color:#FF3938;}
-.quote-now a:hover, .quote-now a:focus {background:#000000; color:#FFFFFF}
+.quote-now a {display:inline-block; text-align:center; border:2px solid #ffae00; padding:5px 25px; font-weight:600; text-transform:uppercase;color:#ffae00;}
+.quote-now a:hover, .quote-now a:focus {background:#ffae00; color:#252525}
 .hotspot {position:relative; top:0px}
 .hotspot-subscribe {top:-140px}
 .content-section {padding:25px 0;}
@@ -265,7 +265,7 @@ height: 35px; width: 35px;}
 /*testimonial*/
 .testimonial-section {background:url(../imgs/testimonial.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;   color:#ffffff}
 .testimonial-section .fa {color:#FFFFFF}
-.testi-heading h3 {text-transform:uppercase; font-size:18px; font-weight:700; border:2px solid #ffffff; display:inline-block; padding:12px 20px;	font-size:20px; margin-top:0}
+.testi-heading h3 {text-transform:uppercase; font-size:18px; font-weight:700; border:2px solid #000000; display:inline-block; padding:12px 20px;	font-size:20px; margin-top:0}
 .img-and-name {position:relative; display:inline-block; margin-top:15px}
 .quote-icon {position:absolute}
 .testimonial-section .img-circle {border:6px solid rgba(255, 255, 255, 0.2)}
@@ -1417,7 +1417,7 @@ width:84px; height:85px
 .top-nav-collapse .top-header { display:none;}
 .top-nav-collapse .quote-now {display:none;}
 .top-nav-collapse .parallelogram {display:none;}
-.top-nav-collapse .fixed-menu-logo { display:block; margin: 16px 0 0 0;}
+.top-nav-collapse .fixed-menu-logo { display:block; margin: 5px 0px;}
 .top-nav-collapse .navbar-left  {float:right!important;}
 .top-nav-collapse { position:fixed}
 .fixed-menu-logo { display:none}

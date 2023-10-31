@@ -70,11 +70,12 @@ div#services {
 /*口コミ背景*/
 div#testimonial {
   background: url(../imgs/price_bg2.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 /*フッター背景*/
 .footer {
-  background: #000;
+  background: #252525;
 }
 
 .top-header .pull-left img {
@@ -189,6 +190,10 @@ span.number-div img {
   display: block;
   margin-right: 10px;
   width: 22px;
+}
+
+.img-yen {
+  height: 20px;
 }
 
 .tabs-left .nav-tabs i {
@@ -1117,7 +1122,7 @@ a.carousel-control {
   .top_ct_btn {
     float: left;
     font-size: 14px;
-    border: 1px solid #FF3938;
+    border: 1px solid #ff3938;
     width: 50%;
     height: 35px;
     line-height: 35px;
@@ -1126,7 +1131,7 @@ a.carousel-control {
   }
 
   .top_ct_btn a {
-    color: #FF3938;
+    color: #ff3938;
   }
 
   nav.navbar.navbar-custom.navbar-fixed-top.top-nav-collapse
