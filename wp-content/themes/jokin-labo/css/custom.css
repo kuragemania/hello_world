@@ -71,7 +71,23 @@ div#services {
 div#testimonial {
   background: url(../imgs/price_bg2.jpg) no-repeat center center fixed;
   background-size: cover;
+  position: relative;
+  overflow: hidden; /* この設定は、疑似要素が親要素の外にはみ出ないようにするためです */
 }
+
+div#testimonial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../imgs/price_bg2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1; /* 疑似要素を背面に配置 */
+  filter: blur(7px); /* ぼかしの度合い。必要に応じて数値を調整 */
+}
+
 
 /*フッター背景*/
 .footer {
