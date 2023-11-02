@@ -88,6 +88,11 @@ div#testimonial::before {
   filter: blur(7px); /* ぼかしの度合い。必要に応じて数値を調整 */
 }
 
+@media (max-width: 640px) {
+  div#testimonial::before {
+    filter: blur(3px);
+  }
+}
 
 /*フッター背景*/
 .footer {
