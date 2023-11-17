@@ -150,6 +150,10 @@ select::-ms-expand {
   background-color: transparent;
 }
 
+.header.scrolled {
+  background-color: #fff;
+}
+
 .header__inner {
   padding-left: 22px;
   display: flex;
