@@ -27,3 +27,16 @@ $(function () {
     $(this).next().slideToggle(300);
   });
 });
+
+window.addEventListener("scroll", function () {
+  var mvElement = document.querySelector(".mv");
+  var headerElement = document.querySelector(".header");
+  var position = mvElement.getBoundingClientRect();
+
+  // `.mv` 要素の下端がビューポートの上端を超えたらクラスを追加
+  if (position.bottom < 0) {
+    headerElement.classList.add("scrolled");
+  } else {
+    headerElement.classList.remove("scrolled");
+  }
+});
