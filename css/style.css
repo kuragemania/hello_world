@@ -936,6 +936,22 @@ select::-ms-expand {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .radio-button {
+    display: flex;
+    flex-wrap: wrap; /* 子要素が折り返し可能になる */
+    justify-content: flex-start; /* 左寄せにする */
+  }
+
+  .radio-button label {
+    flex-grow: 1; /* 子要素が均等に広がる */
+    min-width: 100px; /* ラベルの最小幅を設定 */
+    margin-right: 10px; /* ラベル間の余白 */
+    margin-bottom: 10px; /* ラベルが折り返した時の余白 */
+  }
+}
+
+
 .form__input,
 .form__input-text,
 .form__textarea {
