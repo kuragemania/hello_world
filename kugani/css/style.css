@@ -201,16 +201,48 @@ select::-ms-expand {
   height: inherit;
 }
 
+.header__item.header__contact {
+  margin-left: 16px;
+}
+
 .header__link.header__link--contact {
   color: #fff;
-  background-color: #b19775;
-  padding: 0 24px;
+  background-color: #FFB347;
+  padding: 7px 20px;
+  border-radius: 5px;
   transition: 0.3s background-color;
   text-align: center;
 }
 .header__link.header__link--contact:hover {
   opacity: 1;
   background-color: #b19775;
+}
+@media screen and (max-width: 900px) {
+  .header__link.header__link--contact {
+    position: fixed;
+    top: 30px;
+    right: 60px;
+    z-index: 9999;
+    width: 24px;
+    height: 18px;
+    padding: 0;
+    cursor: pointer;
+    overflow: visible;
+  }
+}
+
+.header__link.header__link--contact::before {
+  content: ""; /* contentを空に設定 */
+  display: inline-block; /* 疑似要素をインラインブロックに設定 */
+  width: 24px; /* アイコンの幅を設定 */
+  height: 24px; /* アイコンの高さを設定 */
+  background: url(../images/mail.svg) no-repeat center/contain; /* SVG画像を背景に設定し、サイズを調整 */
+  margin-right: 10px; /* アイコンとテキストの間のスペース */
+}
+@media screen and (max-width: 900px) {
+  .header__link.header__link--contact::before {
+    margin: 0;
+  }
 }
 
 .header__btn {
@@ -1155,3 +1187,49 @@ dd label {
     display: block;
   }
 }
+
+@media screen and (max-width: 1233px) {
+  .md2-none {
+    display: none;
+  }
+}
+
+.md2-show {
+  display: none;
+}
+@media screen and (max-width: 1233px) {
+  .md2-show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .md4-none {
+    display: none;
+  }
+}
+
+.md4-show {
+  display: none;
+}
+@media screen and (max-width: 1080px) {
+  .md4-show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .md5-none {
+    display: none;
+  }
+}
+
+.md5-show {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .md5-show {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

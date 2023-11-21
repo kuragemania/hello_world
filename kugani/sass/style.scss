@@ -68,15 +68,43 @@
   height: inherit;
 }
 
+.header__item.header__contact {
+  margin-left: 16px;
+}
+
 .header__link.header__link--contact {
   color: $white;
-  background-color: $beige;
-  padding: 0 24px;
+  background-color:#FFB347;
+  padding: 7px 20px;
+  border-radius: 5px;
   transition: 0.3s background-color;
   text-align: center;
   &:hover {
     opacity: 1;
     background-color: $beige;
+  }
+  @include mq("md5") {
+    position: fixed;
+    top: 30px;
+    right: 60px;
+    z-index: 9999;
+    width: 24px; // 幅を疑似要素と同じに設定
+    height: 18px; // 高さを疑似要素と同じに設定
+    padding: 0;
+    cursor: pointer;
+    overflow: visible; // 疑似要素がはみ出ても表示されるように設定
+  }
+}
+
+.header__link.header__link--contact::before {
+  content: ""; /* contentを空に設定 */
+  display: inline-block; /* 疑似要素をインラインブロックに設定 */
+  width: 24px; /* アイコンの幅を設定 */
+  height: 24px; /* アイコンの高さを設定 */
+  background: url(../images/mail.svg) no-repeat center/contain; /* SVG画像を背景に設定し、サイズを調整 */
+  margin-right: 10px; /* アイコンとテキストの間のスペース */
+  @include mq("md5") {
+  margin: 0;
   }
 }
 
@@ -1041,6 +1069,43 @@ dd label {
 .md-show {
   display: none;
   @include mq("md") {
+    display: block;
+  }
+}
+
+.md2-none {
+  @include mq("md2") {
+    display: none;
+  }
+}
+
+.md2-show {
+  display: none;
+  @include mq("md2") {
+    display: block;
+  }
+}
+
+.md4-none {
+  @include mq("md4") {
+    display: none;
+  }
+}
+.md4-show {
+  display: none;
+  @include mq("md4") {
+    display: block;
+  }
+}
+
+.md5-none {
+  @include mq("md5") {
+    display: none;
+  }
+}
+.md5-show {
+  display: none;
+  @include mq("md5") {
     display: block;
   }
 }

@@ -5,6 +5,8 @@ $breakpoints: (
   md: 768,
   md2: 1233,
   md3: 360,
+  md4: 1080,
+  md5: 900,
   lg: 1024,
   xl: 1440,
 );
@@ -15,6 +17,8 @@ $mediaqueries: (
   md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
   md2: "screen and (max-width: #{map-get($breakpoints,'md2')}px)",
   md3: "screen and (max-width: #{map-get($breakpoints,'md3')}px)",
+  md4: "screen and (max-width: #{map-get($breakpoints,'md4')}px)",
+  md5: "screen and (max-width: #{map-get($breakpoints,'md5')}px)",
   lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
   xl: "screen and (max-width: #{map-get($breakpoints,'xl')}px)",
 );
