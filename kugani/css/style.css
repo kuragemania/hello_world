@@ -151,7 +151,7 @@ select::-ms-expand {
 }
 
 .header.scrolled {
-  background-color: #fff;
+  background-color: #005289;
 }
 
 .header__inner {
@@ -188,7 +188,7 @@ select::-ms-expand {
 }
 
 .header__item:not(:first-child) {
-  margin-left: 60px;
+  margin-left: 24px;
 }
 
 .header__link {
@@ -207,7 +207,7 @@ select::-ms-expand {
 
 .header__link.header__link--contact {
   color: #fff;
-  background-color: #FFB347;
+  background-color: #ffb347;
   padding: 7px 20px;
   border-radius: 5px;
   transition: 0.3s background-color;
@@ -252,7 +252,7 @@ select::-ms-expand {
 }
 
 .header__btn-time {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .header__btn-item {
@@ -363,13 +363,39 @@ select::-ms-expand {
 }
 
 .drawer-menu__link.drawer-menu__link--contact {
-  background-color: #b19775;
+  background-color: #ffb347;
   padding: 14px;
   transition: 0.3s background-color;
   border-radius: 6px;
+  width: 100%;
 }
 .drawer-menu__link.drawer-menu__link--contact:hover {
   opacity: 1;
+}
+
+.drawer-menu__link.drawer-menu__link--contact::before {
+  content: ""; /* contentを空に設定 */
+  display: inline-block; /* 疑似要素をインラインブロックに設定 */
+  width: 18px; /* アイコンの幅を設定 */
+  height: 18px; /* アイコンの高さを設定 */
+  background: url(../images/mail.svg) no-repeat center/contain; /* SVG画像を背景に設定し、サイズを調整 */
+  margin-right: 10px; /* アイコンとテキストの間のスペース */
+  vertical-align: middle;
+}
+@media screen and (max-width: 900px) {
+  .drawer-menu__link.drawer-menu__link--contact::before {
+    margin: 0;
+  }
+}
+
+.tel::before {
+  content: ""; /* contentを空に設定 */
+  display: inline-block; /* 疑似要素をインラインブロックに設定 */
+  width: 18px; /* アイコンの幅を設定 */
+  height: 18px; /* アイコンの高さを設定 */
+  background: url(../images/call.svg) no-repeat center/contain; /* SVG画像を背景に設定し、サイズを調整 */
+  margin-right: 5px; /* アイコンとテキストの間のスペース */
+  vertical-align: middle; /* 疑似要素を垂直方向の中央に配置 */
 }
 
 .mv {
@@ -461,13 +487,13 @@ select::-ms-expand {
   }
 }
 
-.concept__img {
+.concept__img-item {
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 39px;
 }
 
-.concept__text-large {
+.concept__text-item-large {
   font-weight: 500;
   font-size: 22px;
   letter-spacing: 0.05em;
@@ -475,21 +501,21 @@ select::-ms-expand {
   margin-top: 30px;
 }
 @media screen and (max-width: 768px) {
-  .concept__text-large {
+  .concept__text-item-large {
     font-size: 18px;
     line-height: 1.777;
     margin-top: 19px;
   }
 }
 
-.concept__text {
+.concept__text-item {
   font-size: 15px;
   letter-spacing: 0.05em;
   line-height: 1.866;
   margin-top: 29px;
 }
 @media screen and (max-width: 768px) {
-  .concept__text {
+  .concept__text-item {
     font-size: 14px;
     line-height: 1.857;
   }
@@ -1016,7 +1042,7 @@ select::-ms-expand {
   font-size: 14px;
 }
 .form__label-text span {
-  color: #F93212;
+  color: #f93212;
 }
 
 .radio dl {
@@ -1061,7 +1087,7 @@ dd label {
   width: 10px; /* カスタムラジオボタンの大きさを設定します */
   height: 10px;
   border-radius: 50%; /* ボーダーを丸くします */
-  border: 1px solid #C0AC91; /* ボーダーの色と太さを設定します */
+  border: 1px solid #c0ac91; /* ボーダーの色と太さを設定します */
   background-color: #fff;
 }
 
@@ -1122,6 +1148,7 @@ dd label {
 }
 
 .section-title__main {
+  position: relative;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.5;
@@ -1130,7 +1157,23 @@ dd label {
 }
 @media screen and (max-width: 768px) {
   .section-title__main {
-    text-align: left;
+    font-size: 30px;
+  }
+}
+
+.section-title__main::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1px;
+  background: #ffb347;
+}
+@media screen and (max-width: 768px) {
+  .section-title__main::before {
+    height: 2px;
   }
 }
 
@@ -1203,7 +1246,7 @@ dd label {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1090px) {
   .md4-none {
     display: none;
   }
@@ -1212,7 +1255,7 @@ dd label {
 .md4-show {
   display: none;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1090px) {
   .md4-show {
     display: block;
   }
@@ -1232,4 +1275,3 @@ dd label {
     display: block;
   }
 }
-/*# sourceMappingURL=style.css.map */
