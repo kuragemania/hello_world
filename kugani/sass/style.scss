@@ -393,42 +393,52 @@
   }
 }
 
-
-// service
-.service {
-  margin-top: 180px;
+// work
+.work {
+  margin-top: 140px;
+  padding-bottom: 60px;
+  background-image: url(../images/work-bgc.png);
+  background-repeat: no-repeat;
+  @include mq("md4") {
+    background-color: #d7eefd;
+  }
   @include mq("md") {
-    margin-top: 140px;
+    margin-top: 80px;
+    padding-bottom: 50px;
   }
 }
 
-.service__title.section-title__main,
-.service__title-sub.section-title__sub {
+.work__inner {
+  padding-top: 70px;
   @include mq("md") {
-    text-align: right;
+    padding-top: 50px;
   }
 }
 
-.service__wrapper {
-  position: relative;
-}
-
-.service__cards {
-  margin-top: 39px;
+.work__cards {
+  margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // 4カラムに変更
   column-gap: 35px;
   row-gap: 50px;
   justify-items: center;
   @include mq("md") {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    ); // SP幅で2カラムに変更
     padding: 0 13px;
     margin-top: 40px;
     row-gap: 30px;
   }
 }
 
+.work__card {
+  text-align: center;
+}
+
 .card {
-  box-shadow: 3px 3px 8px rgba($color: #000, $alpha: 0.06);
+  // box-shadow: 3px 3px 8px rgba($color: #000, $alpha: 0.1);
   // background-color: $white;
   @include mq("md") {
     max-width: 250px;
@@ -438,6 +448,18 @@
 
 .card__img {
   transition: transform 0.5s ease-in-out;
+  width: 80px;
+  display: inline-block;
+  @include mq("md") {
+    width: 60px;
+  }
+}
+
+.card__img-3 {
+  width: 105px;
+  @include mq("md") {
+    width: 80px;
+  }
 }
 
 .card__img:hover {
@@ -445,7 +467,7 @@
 }
 
 .card__body {
-  background-color: $white;
+  // background-color: $white;
   padding-top: 16px;
   padding-bottom: 10px;
   @include mq("md") {
@@ -465,85 +487,96 @@
   }
 }
 
-.card__label {
-  margin-top: 16px;
-  font-size: 10px;
+.card__text .card__text-small {
+  padding-top: 8px;
+  font-size: 14px;
+  @include mq("md") {
+    font-size: 12px;
+  }
+}
+
+//service
+.service {
+  padding-top: 140px;
+  padding-bottom: 30px;
+  background-image: url(../images/serv_bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; // 追加
+  background-size: cover; // 追加
+  @include mq("md") {
+    padding-top: 50px;
+    // padding-bottom: 50px;
+  }
+}
+
+.service__container {
+  margin-top: 60px;
+}
+
+.service__cards {
+  margin-top: 39px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); // 4カラムに変更
+  column-gap: 35px;
+  row-gap: 50px;
+  justify-items: center;
+  @include mq("md") {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(130px, 1fr)
+    ); // SP幅で2カラムに変更
+    column-gap: 20px;
+    row-gap: 50px;
+  }
+}
+
+.service__card {
+  position: relative;
+  background-color: $white;
+  border: 1px solid #000000; /* 罫線の太さ、スタイル、色を指定 */
+}
+
+.service__card-text {
+  font-family: "Noto sans JP", serif;
+  font-weight: $medium;
+  font-size: 16px;
+  color: $black;
   letter-spacing: 0.05em;
-  width: 53px;
-  margin-left: auto;
-  margin-right: 10px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   text-align: center;
-  background-color: $beige2;
-  color: $white;
   @include mq("md") {
-    margin-top: 10px;
+    font-size: 13px;
   }
 }
 
-.service__bgc {
-  background-color: $beige3;
-  height: 280px;
+.service__card-title {
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 0 3px;
   position: absolute;
-  top: 50%;
+  top: -15px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.service__card-title:not(:first-child) {
+  padding: 0 5px;
+}
+
+.service__card-text.service__card-text-small {
+  padding: 10px;
+  font-size: 14px;
   @include mq("md") {
-    width: 48%;
-    height: 1342px;
-    top: 50%;
-    left: 0;
+    font-size: 12px;
   }
 }
 
-//Access
-.access {
-  margin-top: 140px;
-  width: 100%;
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-.access_list {
+.service_list {
   margin-top: 40px;
-}
-
-.access_item {
-  font-size: 15px;
-  font-weight: $regular;
-  letter-spacing: 0.05em;
-  display: flex;
-  padding-bottom: 15px;
-  border-bottom: 1px solid $gray;
-  @include mq("md") {
-    flex-direction: column;
-    padding-bottom: 20px;
-  }
 }
 
 .access_item:not(:first-child) {
   margin-top: 16px;
-}
-
-.access_term {
-  width: 30%;
-  @include mq("md") {
-    width: 100%;
-  }
-}
-
-.access_description {
-  width: 70%;
-  @include mq("md") {
-    width: 100%;
-    margin-top: 9px;
-  }
 }
 
 .googlemap {
@@ -1039,26 +1072,12 @@ dd label {
 .section-title__main::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
-  height: 1px;
+  height: 2px;
   background: $orange;
-  @include mq("md") {
-    height: 2px;
-  }
-}
-
-.section-title__sub {
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  color: $beige;
-  margin-top: 7px;
-  text-align: center;
-  @include mq("md") {
-    text-align: left;
-  }
 }
 
 .text {
