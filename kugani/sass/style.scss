@@ -399,6 +399,7 @@
   padding-bottom: 60px;
   background-image: url(../images/work-bgc.png);
   background-repeat: no-repeat;
+  background-size: cover; /* または background-size: cover; */
   @include mq("md4") {
     background-color: #d7eefd;
   }
@@ -511,7 +512,7 @@
 }
 
 .service__container {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .service__cards {
@@ -535,6 +536,7 @@
   position: relative;
   background-color: $white;
   border: 1px solid #000000; /* 罫線の太さ、スタイル、色を指定 */
+  border-radius: 3px;
 }
 
 .service__card-text {
@@ -550,13 +552,14 @@
 }
 
 .service__card-title {
-  background-color: #fff;
+  background-color: $orange;
   white-space: nowrap;
   padding: 0 3px;
   position: absolute;
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .service__card-title:not(:first-child) {
@@ -565,7 +568,8 @@
 
 .service__card-text.service__card-text-small {
   padding: 10px;
-  font-size: 14px;
+  font-size: 14.5px;
+  text-align-last: left;
   @include mq("md") {
     font-size: 12px;
   }

@@ -556,6 +556,7 @@ select::-ms-expand {
   padding-bottom: 60px;
   background-image: url(../images/work-bgc.png);
   background-repeat: no-repeat;
+  background-size: cover; /* または background-size: cover; */
 }
 @media screen and (max-width: 1090px) {
   .work {
@@ -681,7 +682,7 @@ select::-ms-expand {
 }
 
 .service__container {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .service__cards {
@@ -706,6 +707,7 @@ select::-ms-expand {
   position: relative;
   background-color: #fff;
   border: 1px solid #000000; /* 罫線の太さ、スタイル、色を指定 */
+  border-radius: 3px;
 }
 
 .service__card-text {
@@ -723,13 +725,14 @@ select::-ms-expand {
 }
 
 .service__card-title {
-  background-color: #fff;
+  background-color: #ffb347;
   white-space: nowrap;
   padding: 0 3px;
   position: absolute;
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .service__card-title:not(:first-child) {
@@ -738,7 +741,9 @@ select::-ms-expand {
 
 .service__card-text.service__card-text-small {
   padding: 10px;
-  font-size: 14px;
+  font-size: 14.5px;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 @media screen and (max-width: 768px) {
   .service__card-text.service__card-text-small {
@@ -1294,3 +1299,4 @@ dd label {
     display: block;
   }
 }
+/*# sourceMappingURL=style.css.map */
