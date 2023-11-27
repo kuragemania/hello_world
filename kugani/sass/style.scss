@@ -449,17 +449,17 @@
 
 .card__img {
   transition: transform 0.5s ease-in-out;
-  width: 80px;
+  width: 65px;
   display: inline-block;
   @include mq("md") {
-    width: 60px;
+    width: 55px;
   }
 }
 
 .card__img-3 {
-  width: 105px;
+  width: 90px;
   @include mq("md") {
-    width: 80px;
+    width: 65px;
   }
 }
 
@@ -488,7 +488,7 @@
   }
 }
 
-.card__text .card__text-small {
+.card__text.card__text-small {
   padding-top: 8px;
   font-size: 14px;
   @include mq("md") {
@@ -578,6 +578,35 @@
 .service_list {
   margin-top: 40px;
 }
+
+
+.service__items {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.service__item {
+  max-width: 360px;
+}
+
+.service__item-title {
+  font-family: "Noto sans JP", serif;
+  font-weight: $medium;
+  font-size: 16px;
+  color: $black;
+  letter-spacing: 0.05em;
+  text-align: center;
+  @include mq("md") {
+    font-size: 13px;
+  }
+}
+
 
 .access_item:not(:first-child) {
   margin-top: 16px;

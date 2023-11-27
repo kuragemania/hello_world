@@ -610,21 +610,21 @@ select::-ms-expand {
 
 .card__img {
   transition: transform 0.5s ease-in-out;
-  width: 80px;
+  width: 65px;
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
   .card__img {
-    width: 60px;
+    width: 55px;
   }
 }
 
 .card__img-3 {
-  width: 105px;
+  width: 90px;
 }
 @media screen and (max-width: 768px) {
   .card__img-3 {
-    width: 80px;
+    width: 65px;
   }
 }
 
@@ -656,12 +656,12 @@ select::-ms-expand {
   }
 }
 
-.card__text .card__text-small {
+.card__text.card__text-small {
   padding-top: 8px;
   font-size: 14px;
 }
 @media screen and (max-width: 768px) {
-  .card__text .card__text-small {
+  .card__text.card__text-small {
     font-size: 12px;
   }
 }
@@ -753,6 +753,37 @@ select::-ms-expand {
 
 .service_list {
   margin-top: 40px;
+}
+
+.service__items {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .service__items {
+    flex-direction: column;
+  }
+}
+
+.service__item {
+  max-width: 360px;
+}
+
+.service__item-title {
+  font-family: "Noto sans JP", serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #141414;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .service__item-title {
+    font-size: 13px;
+  }
 }
 
 .access_item:not(:first-child) {
