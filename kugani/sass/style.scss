@@ -25,10 +25,6 @@
   height: inherit;
 }
 
-.header__name {
-  // margin-right: auto;
-}
-
 .header__logo {
   @include mq("lg") {
     width: 132px;
@@ -535,8 +531,8 @@
 .service__card {
   position: relative;
   background-color: $white;
-  border: 1px solid #000000; /* 罫線の太さ、スタイル、色を指定 */
   border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .service__card-text {
@@ -579,7 +575,6 @@
   margin-top: 40px;
 }
 
-
 .service__items {
   margin-top: 100px;
   width: 100%;
@@ -593,9 +588,11 @@
 
 .service__item {
   max-width: 360px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .service__item-title {
+  background-color: $orange;
   font-family: "Noto sans JP", serif;
   font-weight: $medium;
   font-size: 16px;
@@ -607,7 +604,110 @@
   }
 }
 
+.service__item-text {
+  font-family: "Noto sans JP", serif;
+  background-color: #fff;
+  font-size: 14.5px;
+  color: $black;
+  letter-spacing: 0.05em;
+  text-align-last: left;
+  padding: 10px;
+  @include mq("md") {
+    font-size: 12px;
+  }
+}
 
+// history
+
+.history {
+  background-color: #fff;
+}
+
+.history__inner {
+  margin: auto;
+  padding: 0 1.25rem;
+  max-width: 37.5rem;
+  width: 100%;
+}
+
+.history__list {
+  padding-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .history__inner {
+    padding: 0 1.5625rem;
+    max-width: 75rem;
+  }
+}
+
+.history-list__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.history-list__term {
+  width: 15%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.history-list__description {
+  padding-bottom: 0.9375rem;
+  padding-left: 0.9375rem;
+  width: 85%;
+  position: relative;
+}
+
+.history-list__description::before,
+.history-list__description::after {
+  content: "";
+  position: absolute;
+  top: 0.1875rem;
+}
+
+// .history-list__description::before {
+//   left: 0;
+//   width: 1px;
+//   height: 100%;
+//   background: #333;
+// }
+
+.history-list__item:not(:last-child) .history-list__description::before {
+  content: ""; /* 擬似要素にはcontentが必要です */
+  position: absolute; /* 必要に応じて位置を調整 */
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #333;
+}
+
+.history-list__description::after {
+  left: -0.1875rem;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: #de8430;
+}
+
+.history-list__month {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.history-list__text {
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+// .access
 .access_item:not(:first-child) {
   margin-top: 16px;
 }
