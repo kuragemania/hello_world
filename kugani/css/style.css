@@ -441,7 +441,7 @@ select::-ms-expand {
   line-height: 1.473;
   letter-spacing: 0.05em;
   font-weight: 500;
-  color: #141414;
+  color: #fff;
 }
 @media screen and (max-width: 1024px) {
   .mv__title {
@@ -1452,4 +1452,3 @@ dd label {
     display: block;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -294,7 +294,7 @@
   line-height: 1.473;
   letter-spacing: 0.05em;
   font-weight: $medium;
-  color: $black;
+  color: $white;
   @include mq("lg") {
     font-size: 28px;
     line-height: 1.428;
@@ -747,7 +747,6 @@
   // height: 340px;
   background-color: $orange;
   @include mq("md") {
-
   }
 }
 
@@ -794,7 +793,7 @@
   align-items: center;
   background-color: #fff;
   margin-top: 30px;
-padding: 20px;
+  padding: 20px;
 }
 
 .contact__item-title {
