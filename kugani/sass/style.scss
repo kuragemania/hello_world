@@ -281,9 +281,10 @@
   padding: 0 120px;
   z-index: 10;
   top: 50%;
-  left: 0%;
+  left: 50%;
   transform: translate(0, -50%);
   @include mq("lg") {
+    left: 0%;
     padding-left: 34px;
     padding-right: 0px;
   }
@@ -295,6 +296,7 @@
   letter-spacing: 0.05em;
   font-weight: $medium;
   color: $white;
+  font-family: "Kiwi Maru";
   @include mq("lg") {
     font-size: 28px;
     line-height: 1.428;
@@ -302,9 +304,17 @@
   }
 }
 
+.mv__title.mv__title--main {
+  font-size: 65px;
+  margin-bottom: 40px;
+  @include mq("md") {
+    font-size: 50px;
+  }
+}
+
 .mv__title.mv__title--sub {
-  font-size: 15px;
-  margin-top: 22px;
+  font-size: 25px;
+  // margin-top: 22px;
   @include mq("lg") {
     font-size: 14px;
     margin-top: 12px;
@@ -367,7 +377,7 @@
 
 .concept__text-item-large {
   font-weight: $medium;
-  font-size: 22px;
+  font-size: 26px;
   letter-spacing: 0.05em;
   line-height: 1.727;
   margin-top: 30px;
@@ -379,6 +389,7 @@
 }
 
 .concept__text-item {
+  font-weight: $medium;
   font-size: 16px;
   letter-spacing: 0.05em;
   line-height: 1.866;
@@ -528,22 +539,26 @@
   }
 }
 
-.service__card {
-  position: relative;
-  background-color: $white;
+.service__card-item {
+  // position: relative;
+  max-width: 450px;
   border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 40px;
+  @include mq("md") {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 .service__card-text {
   font-family: "Noto sans JP", serif;
   font-weight: $medium;
-  font-size: 16px;
+  font-size: 24px;
   color: $black;
   letter-spacing: 0.05em;
   text-align: center;
   @include mq("md") {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
@@ -551,10 +566,10 @@
   background-color: $orange;
   white-space: nowrap;
   padding: 0 3px;
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // top: -40px;
+  // left: 50%;
+  // transform: translateX(-50%);
   border-radius: 2px;
 }
 
@@ -563,11 +578,17 @@
 }
 
 .service__card-text.service__card-text-small {
-  padding: 10px;
-  font-size: 14.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: $white;
+  margin-top: 20px;
+  padding: 4px;
+  font-size: 20px;
   text-align-last: left;
+
   @include mq("md") {
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 2px;
   }
 }
 
@@ -577,11 +598,14 @@
 
 .service__item {
   background-color: #fff;
+  min-width: 50%;
 }
 
 .service__item:last-child {
+  margin-left: 40px;
   @include mq("md") {
     margin-top: 30px;
+    margin-left: 0;
   }
 }
 
@@ -596,16 +620,11 @@
   }
 }
 
-.service__item {
-  max-width: 360px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
 .service__item-title {
   background-color: $orange;
   font-family: "Noto sans JP", serif;
   font-weight: $medium;
-  font-size: 16px;
+  font-size: 24px;
   color: $black;
   letter-spacing: 0.05em;
   text-align: center;
@@ -617,7 +636,7 @@
 .service__item-text {
   font-family: "Noto sans JP", serif;
   // background-color: #fff;
-  font-size: 14.5px;
+  font-size: 18px;
   font-weight: $medium;
   color: $black;
   letter-spacing: 0.05em;
@@ -627,6 +646,70 @@
     font-size: 12px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .service-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service-list__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.service-list__item + .service-list__item {
+  margin-top: 1.875rem;
+}
+
+.service-list__item-img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .service-list__item-img {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service-list__item:nth-of-type(even) .service-list__item-img {
+    margin-left: 6.25rem;
+  }
+}
+
+.service-list__item-img img {
+  width: 100%;
+  aspect-ratio: 550/420;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: auto;
+}
+
+.service-list__item-text {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 768px) {
+  .service-list__item-text {
+    margin-top: 0;
+    margin-left: 6.25rem;
+    max-width: 34.375rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service-list__item:nth-of-type(even) .service-list__item-text {
+    margin-left: 0;
+  }
+}
+
+// 利用条件
 
 // history
 
@@ -654,22 +737,25 @@
 
 .history-list__item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 }
 
 .history-list__term {
   width: 15%;
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.1em;
+  @include mq("md") {
+    font-size: 14px;
+  }
 }
 
 .history-list__description {
   padding-bottom: 0.9375rem;
   padding-left: 0.9375rem;
-  width: 70%;
+  width: 50%;
   min-width: 260px;
   position: relative;
 }
@@ -706,17 +792,23 @@
 }
 
 .history-list__month {
-  font-size: 0.75rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.1em;
+  @include mq("md") {
+    font-size: 14px;
+  }
 }
 
 .history-list__text {
   margin-top: 0.3125rem;
-  font-size: 0.75rem;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  @include mq("md") {
+    font-size: 14px;
+  }
 }
 
 // .access

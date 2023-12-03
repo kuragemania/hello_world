@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  font-family: "Roboto", "Noto Sans JP", "Kiwi Maru", sans-serif;
 }
 
 a[href^="tel:"] {
@@ -426,11 +426,12 @@ select::-ms-expand {
   padding: 0 120px;
   z-index: 10;
   top: 50%;
-  left: 0%;
+  left: 50%;
   transform: translate(0, -50%);
 }
 @media screen and (max-width: 1024px) {
   .mv__title-wrap {
+    left: 0%;
     padding-left: 34px;
     padding-right: 0px;
   }
@@ -442,6 +443,7 @@ select::-ms-expand {
   letter-spacing: 0.05em;
   font-weight: 500;
   color: #fff;
+  font-family: "Kiwi Maru";
 }
 @media screen and (max-width: 1024px) {
   .mv__title {
@@ -451,9 +453,18 @@ select::-ms-expand {
   }
 }
 
+.mv__title.mv__title--main {
+  font-size: 65px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .mv__title.mv__title--main {
+    font-size: 50px;
+  }
+}
+
 .mv__title.mv__title--sub {
-  font-size: 15px;
-  margin-top: 22px;
+  font-size: 25px;
 }
 @media screen and (max-width: 1024px) {
   .mv__title.mv__title--sub {
@@ -525,7 +536,7 @@ select::-ms-expand {
 
 .concept__text-item-large {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 26px;
   letter-spacing: 0.05em;
   line-height: 1.727;
   margin-top: 30px;
@@ -539,6 +550,7 @@ select::-ms-expand {
 }
 
 .concept__text-item {
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.05em;
   line-height: 1.866;
@@ -703,24 +715,29 @@ select::-ms-expand {
   }
 }
 
-.service__card {
-  position: relative;
-  background-color: #fff;
+.service__card-item {
+  max-width: 450px;
   border-radius: 3px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 40px;
+}
+@media screen and (max-width: 768px) {
+  .service__card-item {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 .service__card-text {
   font-family: "Noto sans JP", serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 24px;
   color: #141414;
   letter-spacing: 0.05em;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .service__card-text {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
@@ -728,10 +745,6 @@ select::-ms-expand {
   background-color: #ffb347;
   white-space: nowrap;
   padding: 0 3px;
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
   border-radius: 2px;
 }
 
@@ -740,14 +753,19 @@ select::-ms-expand {
 }
 
 .service__card-text.service__card-text-small {
-  padding: 10px;
-  font-size: 14.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 4px;
+  font-size: 20px;
   -moz-text-align-last: left;
        text-align-last: left;
 }
 @media screen and (max-width: 768px) {
   .service__card-text.service__card-text-small {
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 2px;
   }
 }
 
@@ -757,11 +775,16 @@ select::-ms-expand {
 
 .service__item {
   background-color: #fff;
+  min-width: 50%;
 }
 
+.service__item:last-child {
+  margin-left: 40px;
+}
 @media screen and (max-width: 768px) {
   .service__item:last-child {
     margin-top: 30px;
+    margin-left: 0;
   }
 }
 
@@ -778,16 +801,11 @@ select::-ms-expand {
   }
 }
 
-.service__item {
-  max-width: 360px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
 .service__item-title {
   background-color: #ffb347;
   font-family: "Noto sans JP", serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 24px;
   color: #141414;
   letter-spacing: 0.05em;
   text-align: center;
@@ -800,7 +818,7 @@ select::-ms-expand {
 
 .service__item-text {
   font-family: "Noto sans JP", serif;
-  font-size: 14.5px;
+  font-size: 18px;
   font-weight: 500;
   color: #141414;
   letter-spacing: 0.05em;
@@ -814,6 +832,64 @@ select::-ms-expand {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .service-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .service-list__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+.service-list__item + .service-list__item {
+  margin-top: 1.875rem;
+}
+
+.service-list__item-img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .service-list__item-img {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .service-list__item:nth-of-type(even) .service-list__item-img {
+    margin-left: 6.25rem;
+  }
+}
+.service-list__item-img img {
+  width: 100%;
+  aspect-ratio: 550/420;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: auto;
+}
+
+.service-list__item-text {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (min-width: 768px) {
+  .service-list__item-text {
+    margin-top: 0;
+    margin-left: 6.25rem;
+    max-width: 34.375rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .service-list__item:nth-of-type(even) .service-list__item-text {
+    margin-left: 0;
+  }
+}
 .history {
   background-color: #fff;
 }
@@ -837,22 +913,27 @@ select::-ms-expand {
 }
 .history-list__item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 }
 
 .history-list__term {
   width: 15%;
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.1em;
+}
+@media screen and (max-width: 768px) {
+  .history-list__term {
+    font-size: 14px;
+  }
 }
 
 .history-list__description {
   padding-bottom: 0.9375rem;
   padding-left: 0.9375rem;
-  width: 70%;
+  width: 50%;
   min-width: 260px;
   position: relative;
 }
@@ -882,17 +963,27 @@ select::-ms-expand {
 }
 
 .history-list__month {
-  font-size: 0.75rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.1em;
 }
+@media screen and (max-width: 768px) {
+  .history-list__month {
+    font-size: 14px;
+  }
+}
 
 .history-list__text {
   margin-top: 0.3125rem;
-  font-size: 0.75rem;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.1em;
+}
+@media screen and (max-width: 768px) {
+  .history-list__text {
+    font-size: 14px;
+  }
 }
 
 .access_item:not(:first-child) {
