@@ -290,7 +290,6 @@ body.fixed-nav-applied {
   width: 100%;
   height: 100vh;
   background-color: #f4c2c2;
-  opacity: 0.84;
 }
 
 .drawer-menu__inner {
@@ -343,7 +342,7 @@ body.fixed-nav-applied {
 }
 @media screen and (max-width: 768px) {
   .mv {
-    margin-top: 90px;
+    margin-top: 100px;
   }
 }
 
@@ -431,14 +430,16 @@ body.fixed-nav-applied {
 
 #section01 .image01 {
   position: absolute;
-  bottom: -120px;
+  bottom: -200px;
   right: -50px;
+  width: 50%;
 }
 @media screen and (max-width: 768px) {
   #section01 .image01 {
     position: static;
     padding-top: 20px;
     text-align: center;
+    width: 100%;
   }
 }
 
@@ -447,7 +448,7 @@ body.fixed-nav-applied {
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 50% auto, 100%;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 @media screen and (max-width: 768px) {
   #section02 {
@@ -462,11 +463,11 @@ body.fixed-nav-applied {
 }
 
 #section02 .l_container {
-  padding-left: 50%;
+  padding-left: 45%;
+  max-width: 1200px;
 }
 @media screen and (max-width: 768px) {
   #section02 .l_container {
-    padding-left: 0;
     padding-top: 220px;
     padding-left: 15px;
   }
@@ -474,25 +475,28 @@ body.fixed-nav-applied {
 
 #section02 .c_title01 {
   font-size: 35px;
+  margin: 50px 0 0;
 }
 @media screen and (max-width: 768px) {
   #section02 .c_title01 {
     font-size: 22px;
-    margin: 30px 0 30px;
+    margin: 30px 0;
   }
 }
 
 #section02 .text01 {
   text-align: center;
   text-align: justify;
-  line-height: 2.2;
+  line-height: 1.5;
   font-size: 18px;
   -moz-text-align-last: left;
        text-align-last: left;
+  margin-top: 30px;
 }
 @media screen and (max-width: 768px) {
   #section02 .text01 {
     font-size: 13.5px;
+    line-height: 2.2;
   }
 }
 
@@ -729,4 +733,14 @@ body.fixed-nav-applied {
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+.c_title01::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #f4c2c2;
 }
