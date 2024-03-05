@@ -1024,11 +1024,164 @@ select::-ms-expand {
   -moz-text-align-last: left;
        text-align-last: left;
   padding-bottom: 8px;
+  border-bottom: 2px solid #aab78d;
 }
 @media screen and (max-width: 768px) {
   .staff__name.section-title__main {
     font-size: 25px;
   }
+}
+
+.staff__name.section-title__main.staff__name-a {
+  position: relative;
+}
+
+.staff__name.section-title__main.staff__name-b,
+.staff__name.section-title__main.staff__name-c {
+  position: relative;
+  border-bottom: 2px solid #afce70;
+}
+
+.staff__name-a::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  max-width: 100%;
+  width: 60px;
+  height: 98px;
+  background-image: url("../images/staff-a-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+}
+@media screen and (max-width: 768px) {
+  .staff__name-a::after {
+    width: 34px;
+    height: 55px;
+  }
+}
+
+.staff__name-b::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  max-width: 100%;
+  width: 60px;
+  height: 98px;
+  background-image: url("../images/staff-b-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+}
+
+.staff__name-c::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  max-width: 100%;
+  width: 60px;
+  height: 98px;
+  background-image: url("../images/staff-c-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+}
+
+.staff__img.staff-a,
+.staff__img.staff-b,
+.staff__img.staff-c {
+  position: relative;
+}
+
+.staff-a::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 5%;
+  left: -45%;
+  max-width: 100%;
+  width: 152px;
+  height: 153px;
+  background-image: url("../images/staff-a-pattern1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .staff-a::before {
+    width: 82px;
+    height: 82px;
+    left: -8%;
+    z-index: 5;
+  }
+}
+
+.staff-a::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: -12%;
+  left: -20%;
+  max-width: 100%;
+  width: 207px;
+  height: 207px;
+  background-image: url("../images/staff-a-pattern2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .staff-a::after {
+    width: 112px;
+    height: 112px;
+    left: 7%;
+    z-index: 10;
+  }
+}
+
+.staff-b::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: -10%;
+  right: -20%;
+  max-width: 100%;
+  width: 240px;
+  height: 240px;
+  background-image: url("../images/staff-b-pattern1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+}
+
+.staff-b::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 2%;
+  right: 8%;
+  max-width: 100%;
+  width: 112px;
+  height: 107px;
+  background-image: url("../images/staff-b-pattern2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5;
+}
+
+.staff-c::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 0%;
+  left: -10%;
+  max-width: 100%;
+  width: 140px;
+  height: 140px;
+  background-image: url("../images/staff-c-pattern1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+}
+
+.staff-c::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: -20%;
+  right: 10%;
+  max-width: 100%;
+  width: 165px;
+  height: 160px;
+  background-image: url("../images/staff-c-pattern2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5;
 }
 
 .staff__text {
