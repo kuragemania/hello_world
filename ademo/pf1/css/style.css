@@ -1,0 +1,1112 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.3333333333vw;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+  font-family: "Zen Maru Gothic";
+}
+
+a[href^="tel:"] {
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: auto;
+  }
+}
+
+a {
+  transition: opacity 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.layout-header {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header {
+  height: 70px;
+  background-color: #fffef3;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 126px;
+  }
+}
+.header__inner {
+  padding-left: 0.9375rem;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .header__inner {
+    padding: 0 3.125rem;
+    align-items: center;
+  }
+}
+.header__left {
+  flex-grow: 1; /* 左側のアイテムがコンテナの残りスペースを使って伸びる */
+  justify-content: start; /* 中央に配置 */
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .header__left {
+    justify-content: center; /* 中央に配置 */
+  }
+}
+
+.header__right {
+  flex-grow: 0; /* 右側のアイテムは伸びない */
+  justify-content: flex-end; /* 右端に配置 */
+  display: flex;
+  height: inherit;
+}
+
+.header__logo {
+  max-width: 100%;
+  height: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    max-width: 23.625rem;
+  }
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .header__wrapper {
+    display: flex;
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    justify-content: center; /* 縦方向の中央揃え */
+    align-items: center; /* 横方向の中央揃え */
+    height: 100%; /* 親要素の高さに合わせる */
+    width: 100%; /* 親要素の幅に合わせる */
+  }
+}
+
+.header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .header__logo img {
+    width: 35px;
+  }
+}
+
+.header__title {
+  font-size: 2.625rem;
+  font-family: "Zen Maru Gothic";
+  font-weight: 400;
+  color: #595959;
+  margin-left: 19px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 1480px) {
+  .header__title {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 0.875rem;
+    margin-left: 0;
+  }
+}
+
+.header__nav {
+  display: none;
+  height: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: block;
+  }
+}
+.header__nav-items {
+  display: flex;
+  height: inherit;
+}
+
+.header__nav-item {
+  height: inherit;
+  position: relative;
+}
+
+.header__nav-item:not(:first-child) a:before {
+  position: absolute;
+  content: ""; /* 必須：何かを挿入するが、この場合は空の内容 */
+  display: block; /* 線を表示するためにblockレベルの表示に変更 */
+  left: 0; /* 要素の左端からの位置 */
+  top: 50%; /* 要素の上端から中央に配置 */
+  transform: translateY(-50%); /* 縦方向の中央に配置するために調整 */
+  height: 77px; /* 線の高さ */
+  width: 1px; /* 線の幅 */
+  background-color: #595959; /* 線の色 */
+}
+
+.header__nav-item:first-child {
+  padding-right: 30.5px;
+}
+
+.header__nav-item:last-child {
+  padding-left: 30.5px;
+}
+
+.header__nav-item:not(:first-child):not(:last-child) {
+  padding: 0 30.5px;
+}
+
+.header__nav-item a {
+  font-size: 1.5625rem;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 500;
+  line-height: 1;
+  color: #595959;
+}
+@media screen and (max-width: 1480px) {
+  .header__nav-item a {
+    font-size: 1.1rem;
+  }
+}
+
+.header__nav-item span {
+  margin-top: 0.625rem;
+  display: block;
+  font-size: 1.25rem;
+  color: #87c38d;
+  font-family: "M PLUS Rounded 1c";
+}
+@media screen and (max-width: 1480px) {
+  .header__nav-item span {
+    font-size: 0.9rem;
+  }
+}
+
+.header__hamburger {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+  width: 2.5rem;
+  height: inherit;
+  background-color: #fffef3;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .header__hamburger {
+    display: none;
+  }
+}
+.header__hamburger.is-open {
+  background-color: transparent;
+}
+
+.header__hamburger span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 1.625rem;
+  height: 2px;
+  background-color: #595959;
+  transition: 0.5s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: -10px;
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: 10px;
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: 2px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: -0.125rem;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.header__drawer {
+  padding: 14.25rem 0;
+  display: none;
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fffef3;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.header__drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.header__drawer-item a {
+  padding: 0.9375rem 0;
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #595959;
+  text-align: center;
+}
+
+.mv {
+  margin-top: 130px;
+  width: 100%;
+  height: 100%;
+  max-height: 1058px;
+  background-color: #fffef3;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .mv {
+    margin-top: 70px;
+    height: 100%;
+  }
+}
+
+.mv__inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 38px;
+}
+@media screen and (max-width: 768px) {
+  .mv__inner {
+    padding: 0 11px;
+  }
+}
+
+.mv__title-wrap {
+  position: absolute; /* 親要素(.mv__inner)の位置に基づいて配置 */
+  top: 45%; /* 上端から50%の位置に */
+  left: 35%; /* 左端から50%の位置に */
+  transform: translate(-50%, -50%); /* 自身のサイズの半分だけ戻して中央に配置 */
+  z-index: 10; /* 画像より前面に表示 */
+}
+@media screen and (max-width: 768px) {
+  .mv__title-wrap {
+    top: 50%;
+  }
+}
+
+.mv__title {
+  font-size: 3.75rem;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0px 4px 44px rgba(0, 0, 0, 0.55);
+}
+@media screen and (max-width: 768px) {
+  .mv__title {
+    font-size: 1.125rem;
+    line-height: 1.556;
+  }
+}
+
+.mv::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 321px; /* 画像の幅 */
+  height: 337px;
+  max-width: 321px;
+  background-image: url("../images/mv-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 1200px) {
+  .mv::before {
+    width: 180px; /* 画像の幅 */
+    height: 190px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mv::before {
+    width: 90px; /* 画像の幅 */
+    height: 95px;
+  }
+}
+
+.mv::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 8%;
+  left: 23%;
+  transform: translateX(-50%);
+  width: 71px;
+  height: 43px;
+  max-width: 71px;
+  background-image: url("../images/mv-bird.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 1200px) {
+  .mv::after {
+    width: 40px; /* 画像の幅 */
+    height: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mv::after {
+    width: 20px; /* 画像の幅 */
+    height: 13px;
+  }
+}
+
+.mv__decoration {
+  position: absolute;
+  z-index: 5; /* 必要に応じて調整 */
+}
+
+.mv__decoration--pattern {
+  top: calc(95% + (100vw - 1920px) / 10); /* 画面幅に応じて動的に位置を調整 */
+  left: 50%; /* 位置調整 */
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 180px; /* 画像のサイズに合わせて調整 */
+  height: 180px; /* 画像のサイズに合わせて調整 */
+  background-image: url("../images/mv-pattern.png");
+  background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  .mv__decoration--pattern {
+    width: 90px; /* 画像のサイズに合わせて調整 */
+    height: 90px; /* 画像のサイズに合わせて調整 */
+  }
+}
+@media screen and (max-width: 768px) {
+  .mv__decoration--pattern {
+    width: 40px; /* 画像のサイズに合わせて調整 */
+    height: 40px; /* 画像のサイズに合わせて調整 */
+    top: 65%;
+    left: 80%; /* 位置調整 */
+  }
+}
+
+.clinic-hours {
+  position: relative;
+  max-width: 838px; /* 適宜調整してください */
+  width: 838px;
+  margin: auto;
+  padding: 20px;
+  z-index: 20;
+}
+@media screen and (max-width: 1200px) {
+  .clinic-hours {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .clinic-hours {
+    width: 610px;
+  }
+}
+
+.clinic-hours {
+  position: absolute; /* 必要に応じて 'absolute' または 'relative' */
+  top: 115%; /* トップからの位置 */
+  left: 55%; /* 左からの位置 */
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  z-index: 20; /* 背景画像より高い値 */
+}
+
+.clinic-hour {
+  position: absolute; /* 必要に応じて 'absolute' または 'relative' */
+  bottom: 160%; /* トップからの位置 */
+  left: 50%; /* 左からの位置 */
+  width: 45.0625rem;
+  max-width: 721px;
+  z-index: 30; /* 背景画像より高い値 */
+}
+@media screen and (max-width: 1780px) {
+  .clinic-hour {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .clinic-hour {
+    bottom: 130%; /* トップからの位置 */
+  }
+}
+@media screen and (max-width: 1024px) {
+  .clinic-hour {
+    bottom: 60%; /* トップからの位置 */
+  }
+}
+
+.clinic-hours__background {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  right: 0;
+  background-image: url("../images/mv-bg.png"); /* 背景画像のパス */
+  background-size: cover;
+  background-position: center;
+  z-index: 25; /* テキストの背後に配置 */
+  max-width: 838px;
+  width: 100%;
+  height: 23.0625rem;
+}
+@media screen and (max-width: 1780px) {
+  .clinic-hours__background {
+    width: 78%;
+    height: 17.0325rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .clinic-hours__background {
+    height: 15.0325rem;
+  }
+}
+
+.clinic-hours-sp {
+  margin-top: 13px;
+  background-color: #cce198;
+  border-radius: 13px;
+  padding: 10px 0;
+}
+
+.clinic-hours-sp::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 25%;
+  right: -5%;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 55px; /* 画像の幅 */
+  height: 68px;
+  background-image: url("../images/mv-bg-sp.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+
+.about {
+  margin-top: 250px;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    margin-top: 50px;
+  }
+}
+
+.about__inner {
+  width: 100%;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+@media screen and (max-width: 768px) {
+  .about__inner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+}
+
+.about__text-wrapper {
+  max-width: 620px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .about__text-wrapper {
+    margin-top: 50px;
+  }
+}
+
+.about__title.section-title__main {
+  text-align: left;
+  padding-bottom: 34px;
+  border-bottom: 2px solid #aab78d;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .about__title.section-title__main {
+    padding-bottom: 0px;
+  }
+}
+
+.about__title::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 23%;
+  right: -5%;
+  width: 94px;
+  height: 143px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/about-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 1200px) {
+  .about__title::before {
+    top: 6%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about__title::before {
+    top: -5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__title::before {
+    width: 60px;
+    height: 92px;
+    top: 5%;
+  }
+}
+
+.about__text {
+  font-size: 1.9375rem;
+  line-height: 1.774;
+  padding-top: 20px;
+  color: #595959;
+}
+@media screen and (max-width: 1200px) {
+  .about__text {
+    font-size: 1.5rem;
+  }
+}
+
+.about__img {
+  max-width: 595px;
+  margin-left: 85px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .about__img {
+    max-width: 276px;
+  }
+}
+
+.about__img::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 77%;
+  right: -25%;
+  width: 220px;
+  height: 215px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/about-pattern1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 768px) {
+  .about__img::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about__img::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 65%;
+  right: -25%;
+  width: 160px;
+  height: 160px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/about-pattern2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 768px) {
+  .about__img::before {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+/* SP幅でのスタイル調整 */
+@media (max-width: 768px) {
+  .about__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__img {
+    order: 1; /* 一番最初に表示 */
+    margin-left: 0; /* SPでは余白を調整する場合 */
+    max-width: 100%; /* SPでは幅を調整する場合 */
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .about__img {
+    max-width: 277px;
+  }
+}
+@media (max-width: 768px) {
+  .about__text-wrapper {
+    order: 2; /* 二番目に表示 */
+  }
+}
+@media (max-width: 768px) {
+  .about-btn.btn {
+    order: 3; /* 三番目に表示 */
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .about-btn.btn {
+    margin-top: 50px;
+  }
+}
+.info {
+  margin-top: 50px;
+  background-color: #fffef3;
+}
+
+.info__inner {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 88px;
+  width: 100%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+@media screen and (max-width: 768px) {
+  .info__inner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.info__cards {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 35px; /* row-gapとcolumn-gapを指定 */
+}
+@media screen and (max-width: 768px) {
+  .info__cards {
+    flex-direction: row; /* 横並びにする */
+    flex-wrap: wrap; /* 必要に応じて折り返す */
+    gap: 10px 10px; /* row-gapとcolumn-gapを指定 */
+  }
+}
+
+.info__card {
+  background-color: #fff;
+  max-width: 344px;
+  width: 100%;
+  height: 344px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column; /* 縦方向に要素を並べる */
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .info__card {
+    max-width: 168px;
+    height: 168px;
+  }
+}
+
+.info__card-text {
+  padding-top: 26px;
+  font-size: 32px;
+  color: #595959;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .info__card-text {
+    font-size: 20px;
+    padding-top: 18px;
+  }
+}
+
+.info__cards img {
+  max-width: 110px;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .info__cards img {
+    max-width: 55px;
+  }
+}
+
+.info__inner::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 100%;
+  height: 35px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/info-bg.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+}
+.info__inner::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  width: 100%;
+  height: 35px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/info-bg.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+}
+.staff {
+  background-image: url(../images/staff-bg.png);
+}
+
+.staff__inner {
+  padding-top: 150px;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+@media screen and (max-width: 768px) {
+  .staff__inner {
+    padding-top: 90px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .staff__title.section-title__main {
+    font-size: 33px;
+  }
+}
+
+.staff__list {
+  margin-top: 150px;
+}
+@media screen and (max-width: 768px) {
+  .staff__list {
+    margin-top: 84px;
+  }
+}
+
+.staff__list-item {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .staff__list-item {
+    flex-direction: column;
+  }
+}
+
+.staff__list-item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .staff__list-item:nth-of-type(even) {
+    flex-direction: column;
+  }
+}
+
+.staff__img {
+  max-width: 405px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .staff__img {
+    max-width: 276px;
+  }
+}
+
+.staff__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.staff__text-wrapper {
+  max-width: 616px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .staff__text-wrapper {
+    margin-top: 50px;
+  }
+}
+
+.staff__name.section-title__main {
+  font-size: 37px;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 768px) {
+  .staff__name.section-title__main {
+    font-size: 25px;
+  }
+}
+
+.staff__text {
+  font-size: 24px;
+  line-height: 1.458;
+  padding-top: 15px;
+  color: #595959;
+}
+@media screen and (max-width: 768px) {
+  .staff__text {
+    font-size: 18px;
+  }
+}
+
+.md-show {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
+  .md-none {
+    display: none;
+  }
+}
+.section-title__main {
+  font-size: 3.25rem;
+  color: #595959;
+  font-weight: 500;
+  line-height: 1.442;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .section-title__main {
+    font-size: 2.625rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title__main {
+    font-size: 2.125rem;
+    line-height: 1.441;
+  }
+}
+
+.section-title__main-wrapper {
+  background-image: url("../images/title.svg"); /* 相対パスまたは絶対パスを使用 */
+  background-size: contain; /* 画像がコンテナに収まるように調整 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-title__sub {
+  font-size: 1.6875rem;
+  letter-spacing: 0.2em;
+  color: #87c38d;
+  line-height: 1.481;
+  font-family: "M PLUS Rounded 1c";
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .section-title__sub {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
+}
+
+.btn {
+  margin-top: 125px;
+  max-width: 715px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 57%;
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    max-width: 290px;
+  }
+}

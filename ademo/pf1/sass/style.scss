@@ -1,0 +1,918 @@
+@use "./base/base";
+@use "./base/reset";
+@use "./global" as *;
+
+// ヘッダー
+.layout-header {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header {
+  height: 70px;
+  background-color: $yellow;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 126px;
+  }
+}
+
+.header__inner {
+  padding-left: 0.9375rem;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    padding: 0 3.125rem;
+    align-items: center;
+  }
+}
+
+.header__left {
+  flex-grow: 1; /* 左側のアイテムがコンテナの残りスペースを使って伸びる */
+  justify-content: start; /* 中央に配置 */
+  display: flex;
+
+  @include mq("md") {
+    justify-content: center; /* 中央に配置 */
+  }
+}
+
+.header__right {
+  flex-grow: 0; /* 右側のアイテムは伸びない */
+  justify-content: flex-end; /* 右端に配置 */
+  display: flex;
+  height: inherit;
+}
+
+.header__logo {
+  max-width: 100%;
+  // width: auto;
+  height: inherit;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    max-width: 23.625rem;
+    // padding-top: 18px;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+
+  @include mq("md") {
+    display: flex;
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    justify-content: center; /* 縦方向の中央揃え */
+    align-items: center; /* 横方向の中央揃え */
+    height: 100%; /* 親要素の高さに合わせる */
+    width: 100%; /* 親要素の幅に合わせる */
+  }
+}
+
+.header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  @include mq("md") {
+    width: 35px;
+  }
+}
+
+.header__title {
+  font-size: 2.625rem;
+  font-family: $base-font;
+  font-weight: $normal;
+  color: $black2;
+  margin-left: 19px;
+  line-height: 1.5;
+  @include mq("xl") {
+    font-size: 1.8rem;
+  }
+  @include mq("md") {
+    font-size: 0.875rem;
+    margin-left: 0;
+  }
+}
+
+.header__nav {
+  display: none;
+  height: inherit;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: block;
+  }
+}
+
+.header__nav-items {
+  display: flex;
+  height: inherit;
+}
+
+.header__nav-item {
+  height: inherit;
+  position: relative;
+}
+
+.header__nav-item:not(:first-child) a:before {
+  position: absolute;
+  content: ""; /* 必須：何かを挿入するが、この場合は空の内容 */
+  display: block; /* 線を表示するためにblockレベルの表示に変更 */
+  left: 0; /* 要素の左端からの位置 */
+  top: 50%; /* 要素の上端から中央に配置 */
+  transform: translateY(-50%); /* 縦方向の中央に配置するために調整 */
+  height: 77px; /* 線の高さ */
+  width: 1px; /* 線の幅 */
+  background-color: $black2; /* 線の色 */
+}
+
+.header__nav-item:first-child {
+  padding-right: 30.5px;
+}
+
+.header__nav-item:last-child {
+  padding-left: 30.5px;
+}
+
+.header__nav-item:not(:first-child):not(:last-child) {
+  padding: 0 30.5px;
+}
+
+.header__nav-item a {
+  font-size: 1.5625rem;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: $medium;
+  line-height: 1;
+  color: $black2;
+
+  @include mq("xl") {
+    font-size: 1.1rem;
+  }
+}
+
+.header__nav-item span {
+  margin-top: 0.625rem;
+  display: block;
+  font-size: 1.25rem;
+  color: $green;
+  font-family: "M PLUS Rounded 1c";
+
+  @include mq("xl") {
+    font-size: 0.9rem;
+  }
+}
+
+.header__hamburger {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+  width: 2.5rem;
+  height: inherit;
+  background-color: $yellow;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .header__hamburger {
+    display: none;
+  }
+}
+
+.header__hamburger.is-open {
+  background-color: transparent;
+}
+
+.header__hamburger span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 1.625rem;
+  height: 2px;
+  background-color: $black2;
+  transition: 0.5s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: -10px;
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: 10px;
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: 2px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: -0.125rem;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.header__drawer {
+  padding: 14.25rem 0;
+  display: none;
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $yellow;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.header__drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.header__drawer-item a {
+  padding: 0.9375rem 0;
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: $black2;
+  text-align: center;
+}
+
+// mv
+.mv {
+  margin-top: 130px;
+  width: 100%;
+  height: 100%;
+  max-height: 1058px;
+  background-color: $yellow;
+  position: relative;
+  @include mq("md") {
+    margin-top: 70px;
+    height: 100%;
+  }
+}
+
+.mv__inner {
+  // position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 38px;
+  @include mq("md") {
+    padding: 0 11px;
+  }
+}
+
+.mv__title-wrap {
+  position: absolute; /* 親要素(.mv__inner)の位置に基づいて配置 */
+  top: 45%; /* 上端から50%の位置に */
+  left: 35%; /* 左端から50%の位置に */
+  transform: translate(-50%, -50%); /* 自身のサイズの半分だけ戻して中央に配置 */
+  z-index: 10; /* 画像より前面に表示 */
+
+  @include mq("lg2") {
+    // top: 25%;
+  }
+  @include mq("md") {
+    top: 50%;
+  }
+}
+
+.mv__title {
+  font-size: 3.75rem;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  color: $white;
+  font-weight: $medium;
+  text-shadow: 0px 4px 44px rgba(0, 0, 0, 0.55);
+
+  @include mq("md") {
+    font-size: 1.125rem;
+    line-height: 1.556;
+  }
+}
+
+//mv-tree
+.mv::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 321px; /* 画像の幅 */
+  height: 337px;
+  max-width: 321px;
+  background-image: url("../images/mv-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+
+  @include mq("lg2") {
+    width: 180px; /* 画像の幅 */
+    height: 190px;
+  }
+
+  @include mq("md") {
+    width: 90px; /* 画像の幅 */
+    height: 95px;
+  }
+}
+
+//mv-bird
+.mv::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 8%;
+  left: 23%;
+  transform: translateX(-50%);
+  width: 71px;
+  height: 43px;
+  max-width: 71px;
+  background-image: url("../images/mv-bird.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+
+  @include mq("lg2") {
+    width: 40px; /* 画像の幅 */
+    height: 26px;
+  }
+
+  @include mq("md") {
+    width: 20px; /* 画像の幅 */
+    height: 13px;
+  }
+}
+
+.mv__decoration {
+  position: absolute;
+  z-index: 5; /* 必要に応じて調整 */
+}
+
+.mv__decoration--pattern {
+  top: calc(95% + (100vw - 1920px) / 10); /* 画面幅に応じて動的に位置を調整 */
+  left: 50%; /* 位置調整 */
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 180px; /* 画像のサイズに合わせて調整 */
+  height: 180px; /* 画像のサイズに合わせて調整 */
+  background-image: url("../images/mv-pattern.png");
+  background-size: cover;
+  @include mq("lg2") {
+    width: 90px; /* 画像のサイズに合わせて調整 */
+    height: 90px; /* 画像のサイズに合わせて調整 */
+  }
+
+  @include mq("md") {
+    width: 40px; /* 画像のサイズに合わせて調整 */
+    height: 40px; /* 画像のサイズに合わせて調整 */
+    top: 65%;
+    left: 80%; /* 位置調整 */
+  }
+}
+
+.clinic-hours {
+  position: relative;
+  max-width: 838px; /* 適宜調整してください */
+  width: 838px;
+  margin: auto;
+  padding: 20px;
+  // background-color: rgba(255, 255, 255, 0.5);
+  z-index: 20;
+  @include mq("lg2") {
+    width: 700px;
+  }
+  @include mq("lg") {
+    width: 610px;
+  }
+}
+
+.clinic-hours {
+  position: absolute; /* 必要に応じて 'absolute' または 'relative' */
+  top: 115%; /* トップからの位置 */
+  left: 55%; /* 左からの位置 */
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  z-index: 20; /* 背景画像より高い値 */
+}
+
+.clinic-hour {
+  position: absolute; /* 必要に応じて 'absolute' または 'relative' */
+  bottom: 160%; /* トップからの位置 */
+  left: 50%; /* 左からの位置 */
+  width: 45.0625rem;
+  max-width: 721px;
+  z-index: 30; /* 背景画像より高い値 */
+  @include mq("xl2") {
+    width: 60%;
+    // height: 17.0325rem;
+  }
+  @include mq("lg2") {
+    bottom: 130%; /* トップからの位置 */
+  }
+  @include mq("lg") {
+    bottom: 60%; /* トップからの位置 */
+  }
+}
+
+.clinic-hours__background {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  right: 0;
+  background-image: url("../images/mv-bg.png"); /* 背景画像のパス */
+  background-size: cover;
+  background-position: center;
+  z-index: 25; /* テキストの背後に配置 */
+  max-width: 838px;
+  width: 100%;
+  height: 23.0625rem;
+  @include mq("xl2") {
+    width: 78%;
+    height: 17.0325rem;
+  }
+  @include mq("lg2") {
+    height: 15.0325rem;
+  }
+}
+
+.clinic-hours-sp {
+  margin-top: 13px;
+  background-color: $green2;
+  border-radius: 13px;
+  padding: 10px 0;
+}
+
+.clinic-hours-sp::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 25%;
+  right: -5%;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 55px; /* 画像の幅 */
+  height: 68px;
+  background-image: url("../images/mv-bg-sp.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+
+// about
+.about {
+  margin-top: 250px;
+
+  @include mq("md") {
+    margin-top: 50px;
+  }
+}
+
+.about__inner {
+  width: 100%;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @include mq("md") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+}
+
+.about__text-wrapper {
+  max-width: 620px;
+  width: 100%;
+  @include mq("md") {
+    margin-top: 50px;
+  }
+}
+
+.about__title.section-title__main {
+  text-align: left;
+  padding-bottom: 34px;
+  border-bottom: 2px solid #aab78d;
+  position: relative;
+  @include mq("md") {
+    padding-bottom: 0px;
+  }
+}
+
+.about__title::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 23%;
+  right: -5%;
+  width: 94px;
+  height: 143px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/about-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+  @include mq("lg2") {
+    top: 6%;
+  }
+  @include mq("lg") {
+    top: -5%;
+  }
+  @include mq("md") {
+    width: 60px;
+    height: 92px;
+    top: 5%;
+  }
+}
+
+.about__text {
+  font-size: 1.9375rem;
+  line-height: 1.774;
+  padding-top: 20px;
+  color: $black2;
+  @include mq("lg2") {
+    font-size: 1.5rem;
+  }
+}
+
+.about__img {
+  max-width: 595px;
+  margin-left: 85px;
+  position: relative;
+  @include mq("md") {
+    max-width: 276px;
+  }
+}
+
+.about__img::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 77%;
+  right: -25%;
+  width: 220px;
+  height: 215px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/about-pattern1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+  @include mq("lg2") {
+    // top: 6%;
+  }
+  @include mq("lg") {
+    // top: -5%;
+  }
+  @include mq("md") {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about__img::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 65%;
+  right: -25%;
+  width: 160px;
+  height: 160px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/about-pattern2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+  @include mq("lg2") {
+    // top: 6%;
+  }
+  @include mq("lg") {
+    // top: -5%;
+  }
+  @include mq("md") {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+/* SP幅でのスタイル調整 */
+@media (max-width: 768px) {
+  .about__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__img {
+    order: 1; /* 一番最初に表示 */
+    margin-left: 0; /* SPでは余白を調整する場合 */
+    max-width: 100%; /* SPでは幅を調整する場合 */
+    @include mq("md") {
+      max-width: 277px;
+    }
+  }
+
+  .about__text-wrapper {
+    order: 2; /* 二番目に表示 */
+  }
+
+  .about-btn.btn {
+    order: 3; /* 三番目に表示 */
+    @include mq("md") {
+      margin-top: 50px;
+    }
+  }
+}
+
+// INFO
+.info {
+  margin-top: 50px;
+  background-color: $yellow;
+}
+
+.info__inner {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 88px;
+  width: 100%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @include mq("md") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.info__cards {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 35px; /* row-gapとcolumn-gapを指定 */
+  @include mq("md") {
+    flex-direction: row; /* 横並びにする */
+    flex-wrap: wrap; /* 必要に応じて折り返す */
+    gap: 10px 10px; /* row-gapとcolumn-gapを指定 */
+  }
+}
+
+.info__card {
+  background-color: $white; // 背景色を設定
+  max-width: 344px; // 幅を設定
+  width: 100%;
+  height: 344px; // 高さを設定し、widthと同じ値にする
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column; /* 縦方向に要素を並べる */
+  justify-content: center;
+  align-items: center;
+  @include mq("md") {
+    max-width: 168px;
+    height: 168px;
+  }
+}
+
+.info__card-text {
+  padding-top: 26px;
+  font-size: 32px;
+  color: $black2;
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: 20px;
+    padding-top: 18px;
+  }
+}
+
+.info__cards img {
+  max-width: 110px;
+  width: 100%;
+  text-align: center;
+  @include mq("md") {
+    max-width: 55px;
+  }
+}
+
+.info__inner::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 100%;
+  height: 35px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/info-bg.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  @include mq("lg2") {
+    // top: 6%;
+  }
+  @include mq("lg") {
+    // top: -5%;
+  }
+  @include mq("md") {
+    // width: 75px;
+    // height: 75px;
+  }
+}
+
+.info__inner::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  width: 100%;
+  height: 35px;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  background-image: url("../images/info-bg.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  @include mq("lg2") {
+    // top: 6%;
+  }
+  @include mq("lg") {
+    // top: -5%;
+  }
+  @include mq("md") {
+    // width: 75px;
+    // height: 75px;
+  }
+}
+
+// STAFF
+.staff {
+  background-image: url(../images/staff-bg.png);
+}
+
+.staff__inner {
+  padding-top: 150px;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @include mq("md") {
+    padding-top: 90px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.staff__title.section-title__main {
+  @include mq("md") {
+    font-size: 33px;
+  }
+}
+
+.staff__list {
+  margin-top: 150px;
+  @include mq("md") {
+    margin-top: 84px;
+  }
+}
+
+.staff__list-item {
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.staff__list-item:nth-of-type(even) {
+  flex-direction: row-reverse;
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.staff__img {
+  max-width: 405px;
+  // margin-left: 85px;
+  position: relative;
+  @include mq("md") {
+    max-width: 276px;
+  }
+}
+
+.staff__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.staff__text-wrapper {
+  max-width: 616px;
+  width: 100%;
+  @include mq("md") {
+    margin-top: 50px;
+  }
+}
+
+.staff__name.section-title__main {
+  font-size: 37px;
+  text-align-last: left;
+  padding-bottom: 8px;
+  @include mq("md") {
+    font-size: 25px;
+  }
+}
+
+.staff__text {
+  font-size: 24px;
+  line-height: 1.458;
+  padding-top: 15px;
+  color: $black2;
+  @include mq("md") {
+    font-size: 18px;
+  }
+}
+
+// 共通
+.md-show {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
+  .md-none {
+    display: none;
+  }
+}
+
+.section-title__main {
+  font-size: 3.25rem;
+  color: $black2;
+  font-weight: $medium;
+  line-height: 1.442;
+  letter-spacing: 0.2em;
+  text-align: center;
+  @include mq("lg2") {
+    font-size: 2.625rem;
+  }
+  @include mq("md") {
+    font-size: 2.125rem;
+    line-height: 1.441;
+    // text-align: left;
+  }
+}
+
+.section-title__main-wrapper {
+  background-image: url("../images/title.svg"); /* 相対パスまたは絶対パスを使用 */
+  // background-size: 100px 168px;
+  background-size: contain; /* 画像がコンテナに収まるように調整 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-title__sub {
+  font-size: 1.6875rem;
+  letter-spacing: 0.2em;
+  color: $green;
+  // margin-top: 7px;
+  line-height: 1.481;
+  font-family: "M PLUS Rounded 1c";
+  text-align: center;
+  @include mq("md") {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    // text-align: left;
+  }
+}
+
+.btn {
+  margin-top: 125px;
+  max-width: 715px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 57%;
+  @include mq("md") {
+    max-width: 290px;
+  }
+}

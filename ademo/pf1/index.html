@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta
+      name="robots"
+      content="noindex,nofollow"
+    />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+    <!-- meta情報 -->
+    <title>タイトル</title>
+    <meta
+      name="description"
+      content=""
+    />
+    <meta
+      name="keywords"
+      content=""
+    />
+    <!-- ogp -->
+    <meta
+      property="og:title"
+      content=""
+    />
+    <meta
+      property="og:type"
+      content=""
+    />
+    <meta
+      property="og:url"
+      content=""
+    />
+    <meta
+      property="og:image"
+      content=""
+    />
+    <meta
+      property="og:site_name"
+      content=""
+    />
+    <meta
+      property="og:description"
+      content=""
+    />
+    <meta
+      name="twitter:card"
+      content="summary"
+    />
+    <!-- ファビコン -->
+    <link
+      rel="icon"
+      href="#"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="/css/style.css"
+    />
+
+    <!-- JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="/js/script.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <header class="header layout-header">
+      <div class="header__inner">
+        <div class="header__left">
+          <h1 class="header__logo">
+            <div class="header__wrapper">
+              <a href="#">
+                <img
+                  src="/images/logo.svg"
+                  alt="アドエモ歯科"
+                />
+              </a>
+              <p class="header__title">アドエモ歯科</p>
+            </div>
+          </h1>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <a href="#">ホーム<span>HOME</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#about">クリニックについて<span>ABOUT</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#info">診療内容<span>INFORMATION</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#staff">医師・スタッフ紹介<span>STAFF</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#access">アクセス<span>ACCESS</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right md-show">
+          <button class="header__hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-items">
+              <li class="header__drawer-item">
+                <a href="#">HOME</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#about">About</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#info">INFORMATION</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#staff">STAFF</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#access">ACCESS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="mv"
+        class="mv"
+      >
+        <div class="mv__inner">
+          <div class="mv__decoration mv__decoration--pattern"></div>
+          <div class="clinic-hours__background-sp md-show"></div>
+          <!-- 新しい装飾用のコンテナ -->
+          <div class="mv__img">
+            <picture>
+              <source
+                srcset="images/mv-pc.png"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="images/mv-sp.png"
+                alt="歯医者で女性の先生と患者さんが会話している様子"
+              />
+            </picture>
+          </div>
+          <div class="mv__title-wrap">
+            <h2 class="mv__title">歯と心に寄り添った<br />優しい治療を</h2>
+          </div>
+          <div class="clinic-hours md-none">
+            <div class="clinic-hours__background"></div>
+            <div class="clinic-hour">
+              <img
+                src="/images/診療時間.png"
+                alt="診療時間"
+              />
+            </div>
+          </div>
+          <div class="clinic-hours-sp md-show">
+            <div class="clinic-hour-sp">
+              <img
+                src="/images/診療時間-sp.png"
+                alt="診療時間"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="about"
+        class="about"
+      >
+        <div class="about__inner">
+          <div class="about__wrapper">
+            <div class="about__text-wrapper">
+              <h2 class="about__title section-title__main">
+                あなたの悩みに<br />最適な治療を
+              </h2>
+              <p class="about__text">
+                豊かな人生のスタートは、健康なお口から。
+                アドエモ歯科では、患者様の個々のニーズ
+                に合わせた丁寧な治療を提供しています。
+                お口の健康を守り、笑顔があふれる日々を お届けします。<br />
+                ご来院を心よりお待ちしております。
+              </p>
+            </div>
+            <div class="about__img">
+              <img
+                src="images/about-img.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="about-btn btn">
+            <img
+              src="images/Rectangle.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        id="info"
+        class="info"
+      >
+        <div class="info__inner">
+          <div class="section-title__main-wrapper">
+            <h2 class="section-title__main">診療内容</h2>
+            <p class="section-title__sub">INFORMATION</p>
+          </div>
+          <ul class="info__cards">
+            <li class="info__card">
+              <img
+                src="images/info1.svg"
+                alt=""
+                class="card__img"
+              />
+              <p class="info__card-text">一般診療</p>
+            </li>
+            <li class="info__card">
+              <img
+                src="images/info2.svg"
+                alt=""
+                class="card__img"
+              />
+              <p class="info__card-text">小児歯科</p>
+            </li>
+            <li class="info__card">
+              <img
+                src="images/info3.svg"
+                alt=""
+                class="card__img"
+              />
+              <p class="info__card-text">ホワイトニング</p>
+            </li>
+            <li class="info__card">
+              <img
+                src="images/info4.svg"
+                alt=""
+                class="card__img"
+              />
+              <p class="info__card-text">予防歯科</p>
+            </li>
+            <li class="info__card">
+              <img
+                src="images/info5.svg"
+                alt=""
+                class="card__img"
+              />
+              <p class="info__card-text">インプラント</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        id="staff"
+        class="staff"
+      >
+        <div class="staff__inner">
+          <div class="section-title__main-wrapper">
+            <h2 class="staff__title section-title__main">医師・スタッフ紹介</h2>
+            <p class="section-title__sub">STAFF</p>
+          </div>
+          <ul class="staff__list">
+            <li class="staff__list-item">
+              <div class="staff__img staff-a">
+                <img
+                  src="images/staff-a.png"
+                  alt=""
+                />
+              </div>
+              <div class="staff__text-wrapper">
+                <h3 class="staff__name section-title__main">院長　アドエモA</h3>
+                <p class="staff__text">
+                  当院では、患者様の健康と笑顔を最優先に考え、丁寧な
+                  治療と温かいサポートを提供しています。<br />
+                  お口の健康は全身の健康と密接に関連しています。皆様
+                  の健やかな笑顔を守るため、心を込めてお手伝いいたします。<br />
+                  どうぞお気軽にご相談ください。皆様のご来院を心より
+                  お待ちしております。
+                </p>
+              </div>
+            </li>
+            <li class="staff__list-item">
+              <div class="staff__img staff-a">
+                <img
+                  src="images/staff-b.png"
+                  alt=""
+                />
+              </div>
+              <div class="staff__text-wrapper">
+                <h3 class="staff__name section-title__main">
+                  歯科医師　スタッフB
+                </h3>
+                <p class="staff__text">
+                  患者様の健康な笑顔を守ることを使命とし、最新の
+                  技術と知識を駆使して丁寧な治療を行います。<br />
+                  皆様のお口の健康を守るため、心を込めて診療いた します。<br />
+                  お口のお悩みやご要望がございましたら、いつでも
+                  お気軽にご相談ください。
+                </p>
+              </div>
+            </li>
+            <li class="staff__list-item">
+              <div class="staff__img staff-a">
+                <img
+                  src="images/staff-c.png"
+                  alt=""
+                />
+              </div>
+              <div class="staff__text-wrapper">
+                <h3 class="staff__name section-title__main">
+                  歯科衛生士　スタッフC
+                </h3>
+                <p class="staff__text">
+                  患者様が笑顔で帰っていただけるよう一人一人に
+                  合った予防を心がけています。<br />
+                  お口のトラブルやご不安がありましたら、いつで
+                  もお気軽にお声掛けください。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
