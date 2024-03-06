@@ -155,6 +155,40 @@ select::-ms-expand {
   display: none;
 }
 
+/* オーバーレイのスタイル */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fffef3; /* オーバーレイの色、変数を直接の色値に置き換えてください */
+  z-index: 9999; /* コンテンツより上に表示 */
+  -webkit-animation: circleReveal 3s forwards;
+          animation: circleReveal 3s forwards; /* 3秒間のアニメーション */
+}
+
+/* オーバーレイを消去するアニメーション */
+@-webkit-keyframes circleReveal {
+  from {
+    -webkit-clip-path: circle(75% at 50% 50%);
+            clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
+  }
+  to {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
+  }
+}
+@keyframes circleReveal {
+  from {
+    -webkit-clip-path: circle(75% at 50% 50%);
+            clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
+  }
+  to {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
+  }
+}
 .layout-header {
   position: fixed;
   z-index: 900;
@@ -467,7 +501,8 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .mv__title-wrap {
-    top: 50%;
+    top: 35%;
+    left: 31%; /* 左端から50%の位置に */
   }
 }
 
@@ -706,6 +741,7 @@ select::-ms-expand {
   padding-bottom: 34px;
   border-bottom: 2px solid #aab78d;
   position: relative;
+  opacity: 0;
 }
 @media screen and (max-width: 768px) {
   .about__title.section-title__main {
@@ -748,6 +784,7 @@ select::-ms-expand {
   line-height: 1.774;
   padding-top: 20px;
   color: #595959;
+  opacity: 0;
 }
 @media screen and (max-width: 1200px) {
   .about__text {
@@ -804,6 +841,10 @@ select::-ms-expand {
   }
 }
 
+.staff-btn.btn {
+  margin-top: 150px;
+}
+
 /* SP幅でのスタイル調整 */
 @media (max-width: 768px) {
   .about__wrapper {
@@ -844,7 +885,7 @@ select::-ms-expand {
 .info__inner {
   position: relative;
   padding-top: 120px;
-  padding-bottom: 88px;
+  padding-bottom: 150px;
   width: 100%;
   max-width: 1400px;
   margin-right: auto;
@@ -876,7 +917,7 @@ select::-ms-expand {
 
 .info__card {
   background-color: #fff;
-  max-width: 344px;
+  max-width: 358px;
   width: 100%;
   height: 344px;
   border-radius: 50%;
@@ -884,6 +925,7 @@ select::-ms-expand {
   flex-direction: column; /* 縦方向に要素を並べる */
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 @media screen and (max-width: 768px) {
   .info__card {
@@ -919,7 +961,7 @@ select::-ms-expand {
 .info__inner::before {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 50%;
   width: 100%;
   height: 35px;
@@ -930,7 +972,7 @@ select::-ms-expand {
 .info__inner::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
   position: absolute;
-  bottom: 3%;
+  bottom: 5%;
   left: 50%;
   width: 100%;
   height: 35px;
@@ -940,22 +982,19 @@ select::-ms-expand {
 }
 .staff {
   background-image: url(../images/staff-bg.png);
+  background-size: contain; /* または contain */
 }
 
 .staff__inner {
-  padding-top: 150px;
   width: 100%;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 150px 25px 170px 25px;
 }
 @media screen and (max-width: 768px) {
   .staff__inner {
-    padding-top: 90px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 110px 15px 122px 15px;
   }
 }
 
@@ -984,6 +1023,12 @@ select::-ms-expand {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .staff__list-item:not(:first-child) {
+    margin-top: 60px;
+  }
+}
+
 .staff__list-item:nth-of-type(even) {
   flex-direction: row-reverse;
 }
@@ -996,6 +1041,7 @@ select::-ms-expand {
 .staff__img {
   max-width: 405px;
   position: relative;
+  opacity: 0;
 }
 @media screen and (max-width: 768px) {
   .staff__img {
@@ -1071,6 +1117,12 @@ select::-ms-expand {
   background-image: url("../images/staff-b-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
 }
+@media screen and (max-width: 768px) {
+  .staff__name-b::after {
+    width: 57px;
+    height: 59px;
+  }
+}
 
 .staff__name-c::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -1082,6 +1134,12 @@ select::-ms-expand {
   height: 98px;
   background-image: url("../images/staff-c-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
+}
+@media screen and (max-width: 768px) {
+  .staff__name-c::after {
+    width: 35px;
+    height: 49px;
+  }
 }
 
 .staff__img.staff-a,
@@ -1144,6 +1202,12 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  .staff-b::before {
+    width: 120px;
+    height: 120px;
+  }
+}
 
 .staff-b::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -1156,6 +1220,12 @@ select::-ms-expand {
   background-image: url("../images/staff-b-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .staff-b::after {
+    width: 59px;
+    height: 56px;
+  }
 }
 
 .staff-c::before {
@@ -1170,6 +1240,12 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  .staff-c::before {
+    width: 99px;
+    height: 99px;
+  }
+}
 
 .staff-c::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -1183,6 +1259,14 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
 }
+@media screen and (max-width: 768px) {
+  .staff-c::after {
+    width: 116px;
+    height: 113px;
+    bottom: -4%;
+    right: -14%;
+  }
+}
 
 .staff__text {
   font-size: 24px;
@@ -1193,6 +1277,180 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .staff__text {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .staff-btn.btn {
+    margin-top: 80px;
+  }
+}
+
+.access {
+  background-color: #f7fcf7;
+}
+
+.access__inner {
+  width: 100%;
+  max-width: 1190px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 130px 25px 170px 25px;
+}
+@media screen and (max-width: 768px) {
+  .access__inner {
+    padding: 70px 15px 122px 15px;
+  }
+}
+
+.access__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 86px;
+}
+@media screen and (max-width: 768px) {
+  .access__container {
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.access__map {
+  position: relative;
+  max-width: 592px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .access__map {
+    max-width: 338px;
+  }
+}
+
+.access__text-wrapper {
+  font-size: 33px;
+  line-height: 1.182;
+  font-weight: 300;
+  color: #595959;
+}
+@media screen and (max-width: 768px) {
+  .access__text-wrapper {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 125px;
+  }
+}
+
+.access__text-wrapper p:not(:first-child) {
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .access__text-wrapper p:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.access__text-card {
+  background-color: #87c38d;
+  color: #fff;
+  font-size: 25px;
+  display: inline-block;
+  padding: 5px 12.5px;
+}
+@media screen and (max-width: 768px) {
+  .access__text-card {
+    font-size: 22px;
+    line-height: 1.857;
+  }
+}
+
+.access__text-card:not(:first-child) {
+  margin-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  .access__text-card:not(:first-child) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.access__map::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: -3%;
+  left: -60%;
+  max-width: 100%;
+  width: 424px;
+  height: 422px;
+  background-image: url("../images/access-img1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .access__map::before {
+    width: 111px;
+    height: 111px;
+    bottom: -20%;
+    left: 0%;
+  }
+}
+
+.access__map::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: -25%;
+  left: -10%;
+  max-width: 100%;
+  width: 207px;
+  height: 207px;
+  background-image: url("../images/access-img2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .access__map::after {
+    width: 54px;
+    height: 54px;
+    bottom: -10%;
+    left: 25%;
+  }
+}
+
+.footer {
+  height: 40vh;
+  background-image: url(../images/footer-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    background-image: url(../images/footer-bg-sp.png);
+  }
+}
+
+.footer__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+.footer__inner::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 75%;
+  right: 5%;
+  max-width: 100%;
+  width: 367px;
+  height: 360px;
+  background-image: url("../images/footer-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .footer__inner::after {
+    width: 137px;
+    height: 133px;
   }
 }
 
@@ -1230,9 +1488,16 @@ select::-ms-expand {
 
 .section-title__main-wrapper {
   background-image: url("../images/title.svg"); /* 相対パスまたは絶対パスを使用 */
-  background-size: contain; /* 画像がコンテナに収まるように調整 */
+  background-size: 163px 168px;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 43px 0 61px;
+}
+@media screen and (max-width: 768px) {
+  .section-title__main-wrapper {
+    background-image: url("../images/title-sp.svg");
+    padding: 43px 0 48px;
+  }
 }
 
 .section-title__sub {
@@ -1260,6 +1525,6 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .btn {
-    max-width: 290px;
+    min-width: 290px;
   }
 }

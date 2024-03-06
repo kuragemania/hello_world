@@ -2,6 +2,27 @@
 @use "./base/reset";
 @use "./global" as *;
 
+/* オーバーレイのスタイル */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $yellow; /* オーバーレイの色、変数を直接の色値に置き換えてください */
+  z-index: 9999; /* コンテンツより上に表示 */
+  animation: circleReveal 3s forwards; /* 3秒間のアニメーション */
+}
+
+/* オーバーレイを消去するアニメーション */
+@keyframes circleReveal {
+  from {
+    clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
+  }
+  to {
+    clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
+  }
+}
 // ヘッダー
 .layout-header {
   position: fixed;
@@ -307,7 +328,8 @@
     // top: 25%;
   }
   @include mq("md") {
-    top: 50%;
+    top: 35%;
+    left: 31%; /* 左端から50%の位置に */
   }
 }
 
@@ -525,6 +547,7 @@
   padding-bottom: 34px;
   border-bottom: 2px solid #aab78d;
   position: relative;
+  opacity: 0;
   @include mq("md") {
     padding-bottom: 0px;
   }
@@ -559,6 +582,7 @@
   line-height: 1.774;
   padding-top: 20px;
   color: $black2;
+  opacity: 0;
   @include mq("lg2") {
     font-size: 1.5rem;
   }
@@ -619,6 +643,10 @@
   }
 }
 
+.staff-btn.btn {
+  margin-top: 150px;
+}
+
 /* SP幅でのスタイル調整 */
 @media (max-width: 768px) {
   .about__wrapper {
@@ -656,7 +684,7 @@
 .info__inner {
   position: relative;
   padding-top: 120px;
-  padding-bottom: 88px;
+  padding-bottom: 150px;
   width: 100%;
   max-width: 1400px;
   margin-right: auto;
@@ -685,7 +713,7 @@
 
 .info__card {
   background-color: $white; // 背景色を設定
-  max-width: 344px; // 幅を設定
+  max-width: 358px; // 幅を設定
   width: 100%;
   height: 344px; // 高さを設定し、widthと同じ値にする
   border-radius: 50%;
@@ -693,6 +721,7 @@
   flex-direction: column; /* 縦方向に要素を並べる */
   justify-content: center;
   align-items: center;
+  opacity: 0;
   @include mq("md") {
     max-width: 168px;
     height: 168px;
@@ -722,7 +751,7 @@
 .info__inner::before {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 50%;
   width: 100%;
   height: 35px;
@@ -744,7 +773,7 @@
 .info__inner::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
   position: absolute;
-  bottom: 3%;
+  bottom: 5%;
   left: 50%;
   width: 100%;
   height: 35px;
@@ -766,21 +795,18 @@
 // STAFF
 .staff {
   background-image: url(../images/staff-bg.png);
+  background-size: contain; /* または contain */
 }
 
 .staff__inner {
-  padding-top: 150px;
   width: 100%;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 150px 25px 170px 25px;
 
   @include mq("md") {
-    padding-top: 90px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 110px 15px 122px 15px;
   }
 }
 .staff__title.section-title__main {
@@ -804,6 +830,12 @@
   }
 }
 
+.staff__list-item:not(:first-child) {
+  @include mq("md") {
+    margin-top: 60px;
+  }
+}
+
 .staff__list-item:nth-of-type(even) {
   flex-direction: row-reverse;
   @include mq("md") {
@@ -815,6 +847,7 @@
   max-width: 405px;
   // margin-left: 85px;
   position: relative;
+  opacity: 0;
   @include mq("md") {
     max-width: 276px;
   }
@@ -879,6 +912,10 @@
   height: 98px;
   background-image: url("../images/staff-b-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
+  @include mq("md") {
+    width: 57px;
+    height: 59px;
+  }
 }
 .staff__name-c::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -890,6 +927,10 @@
   height: 98px;
   background-image: url("../images/staff-c-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
+  @include mq("md") {
+    width: 35px;
+    height: 49px;
+  }
 }
 
 .staff__img.staff-a,
@@ -947,6 +988,11 @@
   background-image: url("../images/staff-b-pattern1.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
+
+  @include mq("md") {
+    width: 120px;
+    height: 120px;
+  }
 }
 .staff-b::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -959,6 +1005,11 @@
   background-image: url("../images/staff-b-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
+
+  @include mq("md") {
+    width: 59px;
+    height: 56px;
+  }
 }
 .staff-c::before {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -971,6 +1022,11 @@
   background-image: url("../images/staff-c-pattern1.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
+
+  @include mq("md") {
+    width: 99px;
+    height: 99px;
+  }
 }
 .staff-c::after {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
@@ -983,6 +1039,13 @@
   background-image: url("../images/staff-c-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
+
+  @include mq("md") {
+    width: 116px;
+    height: 113px;
+    bottom: -4%;
+    right: -14%;
+  }
 }
 
 .staff__text {
@@ -992,6 +1055,163 @@
   color: $black2;
   @include mq("md") {
     font-size: 18px;
+  }
+}
+
+.staff-btn.btn {
+  @include mq("md") {
+    margin-top: 80px;
+  }
+}
+
+// ACCESS
+
+.access {
+  background-color: #f7fcf7;
+}
+
+.access__inner {
+  width: 100%;
+  max-width: 1190px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 130px 25px 170px 25px;
+
+  @include mq("md") {
+    padding: 70px 15px 122px 15px;
+  }
+}
+
+.access__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 86px;
+  @include mq("md") {
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.access__map {
+  position: relative;
+  max-width: 592px;
+  width: 100%;
+  @include mq("md") {
+    max-width: 338px;
+  }
+}
+
+.access__text-wrapper {
+  font-size: 33px;
+  line-height: 1.182;
+  font-weight: $regular;
+  color: $black2;
+  @include mq("md") {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 125px;
+  }
+}
+
+.access__text-wrapper p:not(:first-child) {
+  margin-top: 30px;
+  @include mq("md") {
+    margin-top: 20px;
+  }
+}
+
+.access__text-card {
+  background-color: $green;
+  color: $white;
+  font-size: 25px;
+  display: inline-block;
+  padding: 5px 12.5px;
+  @include mq("md") {
+    font-size: 22px;
+    line-height: 1.857;
+  }
+}
+
+.access__text-card:not(:first-child) {
+  margin-left: 15px;
+  @include mq("md") {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.access__map::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: -3%;
+  left: -60%;
+  max-width: 100%;
+  width: 424px;
+  height: 422px;
+  background-image: url("../images/access-img1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 5;
+
+  @include mq("md") {
+    width: 111px;
+    height: 111px;
+    bottom: -20%;
+    left: 0%;
+  }
+}
+.access__map::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: -25%;
+  left: -10%;
+  max-width: 100%;
+  width: 207px;
+  height: 207px;
+  background-image: url("../images/access-img2.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+
+  @include mq("md") {
+    width: 54px;
+    height: 54px;
+    bottom: -10%;
+    left: 25%;
+  }
+}
+
+// footer
+.footer {
+  height: 40vh;
+  background-image: url(../images/footer-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq("md") {
+    background-image: url(../images/footer-bg-sp.png);
+  }
+}
+
+.footer__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+.footer__inner::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 75%;
+  right: 5%;
+  max-width: 100%;
+  width: 367px;
+  height: 360px;
+  background-image: url("../images/footer-tree.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 10;
+  @include mq("md") {
+    width: 137px;
+    height: 133px;
   }
 }
 
@@ -1027,10 +1247,15 @@
 
 .section-title__main-wrapper {
   background-image: url("../images/title.svg"); /* 相対パスまたは絶対パスを使用 */
-  // background-size: 100px 168px;
-  background-size: contain; /* 画像がコンテナに収まるように調整 */
+  background-size: 163px 168px;
+  // background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 43px 0 61px;
+  @include mq("md") {
+    background-image: url("../images/title-sp.svg");
+    padding: 43px 0 48px;
+  }
 }
 
 .section-title__sub {
@@ -1056,6 +1281,6 @@
   margin-left: auto;
   width: 57%;
   @include mq("md") {
-    max-width: 290px;
+    min-width: 290px;
   }
 }
