@@ -518,13 +518,7 @@
 
       controller.addScene([fadeWord, scene1, scene2, scene3, scene4]);
 
-      window.addEventListener('load', () => {
-  const overlay = document.getElementById('overlay');
-  // オーバーレイを消去するために必要な最大半径を計算します。
-  // 画面の対角線の長さの半分が必要です。
-  const radius = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
-  overlay.style.clipPath = `circle(${radius}px at 50% 50%)`;
-});
+
     </script>
   </body>
 </html>

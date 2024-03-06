@@ -3,7 +3,26 @@
 @use "./global" as *;
 
 /* オーバーレイのスタイル */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $yellow; /* オーバーレイの色、変数を直接の色値に置き換えてください */
+  z-index: 9999; /* コンテンツより上に表示 */
+  animation: circleReveal 3s forwards; /* 3秒間のアニメーション */
+}
 
+/* オーバーレイを消去するアニメーション */
+@keyframes circleReveal {
+  from {
+    clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
+  }
+  to {
+    clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
+  }
+}
 // ヘッダー
 .layout-header {
   position: fixed;
