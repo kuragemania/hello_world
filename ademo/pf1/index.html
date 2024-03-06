@@ -97,10 +97,8 @@
   ></script>
   <body>
     <!-- オーバーレイ -->
-    <div
-      class="overlay"
-      id="overlay"
-    ></div>
+    <div class="overlay-top"></div>
+    <div class="overlay"></div>
     <div class="content">
       <header class="header layout-header">
         <div class="header__inner">
@@ -111,6 +109,7 @@
                   <img
                     src="images/logo.svg"
                     alt="アドエモ歯科"
+                    class="header__img"
                   />
                 </a>
                 <p class="header__title">アドエモ歯科</p>
@@ -383,10 +382,8 @@
         >
           <div class="access__inner">
             <div class="section-title__main-wrapper">
-              <h2 class="staff__title section-title__main">
-                医師・スタッフ紹介
-              </h2>
-              <p class="section-title__sub">STAFF</p>
+              <h2 class="staff__title section-title__main">アクセス</h2>
+              <p class="section-title__sub">ACCESS</p>
             </div>
             <div class="access__container">
               <div class="access__map">
@@ -521,6 +518,31 @@
       }).setTween(tween4);
 
       controller.addScene([fadeWord, scene1, scene2, scene3, scene4]);
+
+      //オーバーレイ制御
+      if (sessionStorage.getItem("adem-access")) {
+        // セッションある時
+      } else {
+        // セッションないとき
+        sessionStorage.setItem("adem-access", "true");
+
+        document.querySelector(".overlay").style.display = "block";
+        document.querySelector(".overlay-top").style.display = "block";
+
+        //オーバーレイ
+        const tl = gsap.timeline({ repeat: 0 });
+        tl.to(".overlay", {
+          scale: 1000,
+          delay: 3.5,
+          duration: 2,
+          ease: Power2.easeOut,
+        }).to(".overlay", { position: "static", duration: 0 });
+
+        //ロゴ非表示
+        setTimeout(() => {
+          document.querySelector(".overlay-top").style.display = "none";
+        }, 3500);
+      }
     </script>
   </body>
 </html>

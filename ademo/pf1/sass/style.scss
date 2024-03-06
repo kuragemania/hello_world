@@ -3,25 +3,43 @@
 @use "./global" as *;
 
 /* オーバーレイのスタイル */
+.overlay-top {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 9999;
+  background-color: #fffef3;
+}
+
+.overlay-top::before {
+  content: "";
+  width: 91px;
+  height: 103px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffef3;
+  background-image: url("../images/logo.svg");
+}
+
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: $yellow; /* オーバーレイの色、変数を直接の色値に置き換えてください */
-  z-index: 9999; /* コンテンツより上に表示 */
-  animation: circleReveal 3s forwards; /* 3秒間のアニメーション */
-}
-
-/* オーバーレイを消去するアニメーション */
-@keyframes circleReveal {
-  from {
-    clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
-  }
-  to {
-    clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
-  }
+  z-index: 9998; /* コンテンツより上に表示 */
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 0, 0) 2px,
+    #fffef3 0
+  );
 }
 // ヘッダー
 .layout-header {
@@ -98,6 +116,12 @@
   }
 }
 
+.header__img {
+  @include mq("lg2") {
+    width: 80%;
+  }
+}
+
 .header__logo a {
   height: inherit;
   display: flex;
@@ -109,6 +133,10 @@
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+
+  @include mq("lg2") {
+    width: 80%;
+  }
   @include mq("md") {
     width: 35px;
   }
@@ -124,9 +152,11 @@
   @include mq("xl") {
     font-size: 1.8rem;
   }
+  @include mq("lg2") {
+    margin-left: 0;
+  }
   @include mq("md") {
     font-size: 0.875rem;
-    margin-left: 0;
   }
 }
 
@@ -187,6 +217,9 @@
 
   @include mq("xl") {
     font-size: 1.1rem;
+  }
+  @include mq("lg2") {
+    font-size: 1rem;
   }
 }
 
@@ -300,7 +333,6 @@
   width: 100%;
   height: 100%;
   max-height: 1058px;
-  background-color: $yellow;
   position: relative;
   @include mq("md") {
     margin-top: 70px;
@@ -310,9 +342,11 @@
 
 .mv__inner {
   // position: relative;
+  background-color: $yellow;
   width: 100%;
   height: 100%;
   padding: 0 38px;
+  padding-bottom: 100px;
   @include mq("md") {
     padding: 0 11px;
   }
@@ -395,6 +429,8 @@
   @include mq("md") {
     width: 20px; /* 画像の幅 */
     height: 13px;
+    top: 6%;
+    left: 25%;
   }
 }
 
@@ -557,7 +593,7 @@
 .about__title::before {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
   position: absolute;
-  top: 23%;
+  bottom: 0%;
   right: -5%;
   width: 94px;
   height: 143px;
@@ -566,10 +602,10 @@
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
   @include mq("lg2") {
-    top: 6%;
+    // top: 6%;
   }
   @include mq("lg") {
-    top: -5%;
+    // top: -5%;
   }
   @include mq("md") {
     width: 60px;
@@ -610,7 +646,8 @@
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
   @include mq("lg2") {
-    // top: 6%;
+    width: 150px;
+    height: 150px;
   }
   @include mq("lg") {
     // top: -5%;
@@ -633,7 +670,8 @@
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
   @include mq("lg2") {
-    // top: 6%;
+    width: 125px;
+    height: 125px;
   }
   @include mq("lg") {
     // top: -5%;

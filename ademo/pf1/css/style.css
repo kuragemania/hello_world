@@ -156,39 +156,41 @@ select::-ms-expand {
 }
 
 /* オーバーレイのスタイル */
+.overlay-top {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 9999;
+  background-color: #fffef3;
+}
+
+.overlay-top::before {
+  content: "";
+  width: 91px;
+  height: 103px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffef3;
+  background-image: url("../images/logo.svg");
+}
+
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fffef3; /* オーバーレイの色、変数を直接の色値に置き換えてください */
-  z-index: 9999; /* コンテンツより上に表示 */
-  -webkit-animation: circleReveal 3s forwards;
-          animation: circleReveal 3s forwards; /* 3秒間のアニメーション */
+  z-index: 9998; /* コンテンツより上に表示 */
+  background-image: radial-gradient(circle, rgba(255, 255, 0, 0) 2px, #fffef3 0);
 }
 
-/* オーバーレイを消去するアニメーション */
-@-webkit-keyframes circleReveal {
-  from {
-    -webkit-clip-path: circle(75% at 50% 50%);
-            clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
-  }
-  to {
-    -webkit-clip-path: circle(0% at 50% 50%);
-            clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
-  }
-}
-@keyframes circleReveal {
-  from {
-    -webkit-clip-path: circle(75% at 50% 50%);
-            clip-path: circle(75% at 50% 50%); /* 初期状態では大きな円で全画面を覆う */
-  }
-  to {
-    -webkit-clip-path: circle(0% at 50% 50%);
-            clip-path: circle(0% at 50% 50%); /* 終了状態では円が中心に向かって縮小 */
-  }
-}
 .layout-header {
   position: fixed;
   z-index: 900;
@@ -263,6 +265,12 @@ select::-ms-expand {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .header__img {
+    width: 80%;
+  }
+}
+
 .header__logo a {
   height: inherit;
   display: flex;
@@ -274,6 +282,11 @@ select::-ms-expand {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+}
+@media screen and (max-width: 1200px) {
+  .header__logo img {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 768px) {
   .header__logo img {
@@ -294,10 +307,14 @@ select::-ms-expand {
     font-size: 1.8rem;
   }
 }
+@media screen and (max-width: 1200px) {
+  .header__title {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .header__title {
     font-size: 0.875rem;
-    margin-left: 0;
   }
 }
 
@@ -359,6 +376,11 @@ select::-ms-expand {
 @media screen and (max-width: 1480px) {
   .header__nav-item a {
     font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header__nav-item a {
+    font-size: 1rem;
   }
 }
 
@@ -472,7 +494,6 @@ select::-ms-expand {
   width: 100%;
   height: 100%;
   max-height: 1058px;
-  background-color: #fffef3;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -483,9 +504,11 @@ select::-ms-expand {
 }
 
 .mv__inner {
+  background-color: #fffef3;
   width: 100%;
   height: 100%;
   padding: 0 38px;
+  padding-bottom: 100px;
 }
 @media screen and (max-width: 768px) {
   .mv__inner {
@@ -571,6 +594,8 @@ select::-ms-expand {
   .mv::after {
     width: 20px; /* 画像の幅 */
     height: 13px;
+    top: 6%;
+    left: 25%;
   }
 }
 
@@ -753,7 +778,7 @@ select::-ms-expand {
 .about__title::before {
   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
   position: absolute;
-  top: 23%;
+  bottom: 0%;
   right: -5%;
   width: 94px;
   height: 143px;
@@ -761,16 +786,6 @@ select::-ms-expand {
   background-image: url("../images/about-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
-}
-@media screen and (max-width: 1200px) {
-  .about__title::before {
-    top: 6%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .about__title::before {
-    top: -5%;
-  }
 }
 @media screen and (max-width: 768px) {
   .about__title::before {
@@ -816,6 +831,12 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
 }
+@media screen and (max-width: 1200px) {
+  .about__img::after {
+    width: 150px;
+    height: 150px;
+  }
+}
 @media screen and (max-width: 768px) {
   .about__img::after {
     width: 100px;
@@ -834,6 +855,12 @@ select::-ms-expand {
   background-image: url("../images/about-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 1200px) {
+  .about__img::before {
+    width: 125px;
+    height: 125px;
+  }
 }
 @media screen and (max-width: 768px) {
   .about__img::before {
