@@ -86,17 +86,21 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
-</head>
     <script
-      src="js/script.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       defer
     ></script>
   </head>
-
+  <script
+    src="js/script.js"
+    defer
+  ></script>
   <body>
     <!-- オーバーレイ -->
-    <div class="overlay" id="overlay"></div>
+    <div
+      class="overlay"
+      id="overlay"
+    ></div>
     <div class="content">
       <header class="header layout-header">
         <div class="header__inner">
@@ -517,8 +521,6 @@
       }).setTween(tween4);
 
       controller.addScene([fadeWord, scene1, scene2, scene3, scene4]);
-
-
     </script>
   </body>
 </html>
