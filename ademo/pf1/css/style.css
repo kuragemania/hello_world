@@ -208,7 +208,7 @@ select::-ms-expand {
   }
 }
 .header__inner {
-  padding-left: 0.9375rem;
+  padding-left: 2.337rem;
   height: inherit;
   display: flex;
   justify-content: space-between;
@@ -387,6 +387,7 @@ select::-ms-expand {
   background-color: #fffef3;
   cursor: pointer;
   transition: 0.3s;
+  padding-right: 18px;
 }
 
 @media screen and (min-width: 768px) {
@@ -403,7 +404,7 @@ select::-ms-expand {
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  width: 1.625rem;
+  width: 25px;
   height: 2px;
   background-color: #595959;
   transition: 0.5s;

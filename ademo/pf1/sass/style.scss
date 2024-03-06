@@ -43,7 +43,7 @@
 }
 
 .header__inner {
-  padding-left: 0.9375rem;
+  padding-left: 2.337rem;
   height: inherit;
   display: flex;
   justify-content: space-between;
@@ -214,6 +214,7 @@
   background-color: $yellow;
   cursor: pointer;
   transition: 0.3s;
+  padding-right: 18px;
 }
 @media screen and (min-width: 768px) {
   .header__hamburger {
@@ -230,7 +231,7 @@
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  width: 1.625rem;
+  width: 25px;
   height: 2px;
   background-color: $black2;
   transition: 0.5s;
