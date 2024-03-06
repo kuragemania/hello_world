@@ -191,6 +191,10 @@ select::-ms-expand {
   background-image: radial-gradient(circle, rgba(255, 255, 0, 0) 20px, #fffef3 0);
 }
 
+.content {
+  display: none;
+}
+
 .layout-header {
   position: fixed;
   z-index: 900;

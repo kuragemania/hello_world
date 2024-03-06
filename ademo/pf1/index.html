@@ -522,12 +522,15 @@
       //オーバーレイ制御
       if (sessionStorage.getItem("adem-access")) {
         // セッションある時
+        document.querySelector(".content").style.display = "block";
+
       } else {
         // セッションないとき
         sessionStorage.setItem("adem-access", "true");
 
         document.querySelector(".overlay").style.display = "block";
         document.querySelector(".overlay-top").style.display = "block";
+        document.querySelector(".content").style.display = "block";
 
         //オーバーレイ
         const tl = gsap.timeline({ repeat: 0 });
