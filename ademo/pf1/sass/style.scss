@@ -15,6 +15,17 @@
   background-color: #fffef3;
 }
 
+@keyframes scaleUpDownAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* オーバーレイのスタイル */
 .overlay-top::before {
   content: "";
   width: 91px;
@@ -25,6 +36,7 @@
   transform: translate(-50%, -50%);
   background-color: #fffef3;
   background-image: url("../images/logo.svg");
+  animation: scaleUpDownAnimation 2s linear infinite;
 }
 
 .overlay {

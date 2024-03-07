@@ -168,6 +168,24 @@ select::-ms-expand {
   background-color: #fffef3;
 }
 
+@-webkit-keyframes scaleUpDownAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes scaleUpDownAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+/* オーバーレイのスタイル */
 .overlay-top::before {
   content: "";
   width: 91px;
@@ -178,6 +196,8 @@ select::-ms-expand {
   transform: translate(-50%, -50%);
   background-color: #fffef3;
   background-image: url("../images/logo.svg");
+  -webkit-animation: scaleUpDownAnimation 2s linear infinite;
+          animation: scaleUpDownAnimation 2s linear infinite;
 }
 
 .overlay {
