@@ -156,9 +156,9 @@ select::-ms-expand {
 }
 
 /* オーバーレイのスタイル */
-.overlay-top {
-  display: none;
-  position: relative;
+#overlay-top {
+  display: block;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -173,7 +173,7 @@ select::-ms-expand {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 }
 
@@ -182,22 +182,30 @@ select::-ms-expand {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 }
 /* オーバーレイのスタイル */
-.overlay-top::before {
+#overlay-top::before {
   content: "";
-  width: 91px;
-  height: 103px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fffef3;
-  background-image: url("../images/logo.svg");
+  position: fixed; /* 画面に固定 */
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  width: 181px;
+  height: 176px;
+  background-image: url("../images/logo-fv.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   -webkit-animation: scaleUpDownAnimation 2s linear infinite;
           animation: scaleUpDownAnimation 2s linear infinite;
+}
+@media screen and (max-width: 768px) {
+  #overlay-top::before {
+    left: 35%;
+    width: 110.5px;
+    height: 108px;
+  }
 }
 
 .overlay {
@@ -208,7 +216,7 @@ select::-ms-expand {
   width: 100%;
   height: 100%;
   z-index: 9998; /* コンテンツより上に表示 */
-  background-image: radial-gradient(circle, rgba(255, 255, 0, 0) 20px, #fffef3 0);
+  background-image: radial-gradient(circle, rgba(255, 255, 0, 0) 2px, #fffef3 0);
 }
 
 .layout-header {
@@ -226,7 +234,7 @@ select::-ms-expand {
 
 @media screen and (min-width: 768px) {
   .header {
-    height: 126px;
+    height: 120px;
   }
 }
 .header__inner {
@@ -315,7 +323,7 @@ select::-ms-expand {
 }
 
 .header__title {
-  font-size: 2.625rem;
+  font-size: 1.95rem;
   font-family: "Zen Maru Gothic";
   font-weight: 400;
   color: #595959;
@@ -365,7 +373,7 @@ select::-ms-expand {
   left: 0; /* 要素の左端からの位置 */
   top: 50%; /* 要素の上端から中央に配置 */
   transform: translateY(-50%); /* 縦方向の中央に配置するために調整 */
-  height: 77px; /* 線の高さ */
+  height: 70px; /* 線の高さ */
   width: 1px; /* 線の幅 */
   background-color: #595959; /* 線の色 */
 }
@@ -383,7 +391,7 @@ select::-ms-expand {
 }
 
 .header__nav-item a {
-  font-size: 1.5625rem;
+  font-size: 1rem;
   height: inherit;
   display: flex;
   justify-content: center;
@@ -393,21 +401,16 @@ select::-ms-expand {
   line-height: 1;
   color: #595959;
 }
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1024px) {
   .header__nav-item a {
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .header__nav-item a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 .header__nav-item span {
   margin-top: 0.625rem;
   display: block;
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   color: #87c38d;
   font-family: "M PLUS Rounded 1c";
 }
@@ -510,7 +513,7 @@ select::-ms-expand {
 }
 
 .mv {
-  margin-top: 130px;
+  margin-top: 120px;
   width: 100%;
   height: 100%;
   max-height: 1058px;
@@ -702,8 +705,7 @@ select::-ms-expand {
 .clinic-hours__background {
   position: absolute;
   bottom: 0;
-  left: 45%;
-  right: 0;
+  right: -45%;
   background-image: url("../images/mv-bg.png"); /* 背景画像のパス */
   background-size: cover;
   background-position: center;
@@ -714,6 +716,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 1780px) {
   .clinic-hours__background {
+    right: -19%;
     width: 78%;
     height: 17.0325rem;
   }
@@ -750,6 +753,15 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .about {
     margin-top: 50px;
+  }
+}
+
+#about {
+  scroll-margin-top: 140px; /* ヘッダーの高さまたはそれ以上の値 */
+}
+@media screen and (max-width: 768px) {
+  #about {
+    scroll-margin-top: 70px; /* ヘッダーの高さまたはそれ以上の値 */
   }
 }
 
@@ -1165,6 +1177,13 @@ select::-ms-expand {
   background-image: url("../images/staff-b-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
 }
+@media screen and (max-width: 1024px) {
+  .staff__name-b::after {
+    right: -6%;
+    width: 49px;
+    height: 67px;
+  }
+}
 @media screen and (max-width: 768px) {
   .staff__name-b::after {
     width: 57px;
@@ -1183,8 +1202,14 @@ select::-ms-expand {
   background-image: url("../images/staff-c-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
 }
+@media screen and (max-width: 1024px) {
+  .staff__name-c::after {
+    right: -5%;
+  }
+}
 @media screen and (max-width: 768px) {
   .staff__name-c::after {
+    right: 0%;
     width: 35px;
     height: 49px;
   }
@@ -1208,11 +1233,17 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
 }
+@media screen and (max-width: 1024px) {
+  .staff-a::before {
+    width: 75px;
+    height: 75px;
+    left: -8%;
+  }
+}
 @media screen and (max-width: 768px) {
   .staff-a::before {
     width: 82px;
     height: 82px;
-    left: -8%;
     z-index: 5;
   }
 }
@@ -1228,6 +1259,13 @@ select::-ms-expand {
   background-image: url("../images/staff-a-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
+}
+@media screen and (max-width: 1024px) {
+  .staff-a::after {
+    width: 100px;
+    height: 100px;
+    left: 0%;
+  }
 }
 @media screen and (max-width: 768px) {
   .staff-a::after {
@@ -1249,6 +1287,13 @@ select::-ms-expand {
   background-image: url("../images/staff-b-pattern1.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
+}
+@media screen and (max-width: 1024px) {
+  .staff-b::before {
+    right: -9%;
+    width: 120px;
+    height: 120px;
+  }
 }
 @media screen and (max-width: 768px) {
   .staff-b::before {
@@ -1288,7 +1333,7 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .staff-c::before {
     width: 99px;
     height: 99px;
@@ -1307,10 +1352,14 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .staff-c::after {
     width: 116px;
     height: 113px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .staff-c::after {
     bottom: -4%;
     right: -14%;
   }
@@ -1465,6 +1514,10 @@ select::-ms-expand {
   }
 }
 
+.js-fadeIn5 {
+  opacity: 0;
+}
+
 .footer {
   height: 40vh;
   background-image: url(../images/footer-bg.png);
@@ -1494,6 +1547,12 @@ select::-ms-expand {
   background-image: url("../images/footer-tree.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
+}
+@media screen and (max-width: 1480px) {
+  .footer__inner::after {
+    width: 267px;
+    height: 260px;
+  }
 }
 @media screen and (max-width: 768px) {
   .footer__inner::after {
@@ -1570,9 +1629,70 @@ select::-ms-expand {
   margin-right: auto;
   margin-left: auto;
   width: 57%;
+  position: relative; /* これを追加 */
 }
 @media screen and (max-width: 768px) {
   .btn {
     min-width: 290px;
   }
+}
+
+.btn-text {
+  font-size: 40px;
+  line-height: 0.8;
+  position: absolute;
+  top: 50%; /* 中央に配置 */
+  left: 50%; /* 中央に配置 */
+  transform: translate(-50%, -50%); /* 完全に中央にするための調整 */
+  color: #ffffff; /* テキストの色 */
+}
+@media screen and (max-width: 768px) {
+  .btn-text {
+    font-size: 16px;
+    line-height: 1.438;
+  }
+}
+
+.btn-arrow {
+  position: absolute;
+  max-width: 47px;
+  right: 20%; /* 右端から10pxの位置に配置 */
+  top: 50%; /* 上下中央に配置 */
+  transform: translateY(-50%); /* 上下中央にするための調整 */
+}
+@media screen and (max-width: 1024px) {
+  .btn-arrow {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-arrow {
+    max-width: 19px;
+    right: 25%; /* 右端から10pxの位置に配置 */
+  }
+}
+
+.btn-arrow-top {
+  position: absolute;
+  max-width: 23px; /* 必要に応じてサイズを調整 */
+  right: 21.25%; /* 右端から10pxの位置に配置 */
+  top: 50%;
+  transform: translateY(-50%); /* 上下中央にするための調整 */
+  z-index: 10;
+}
+@media screen and (max-width: 1024px) {
+  .btn-arrow-top {
+    right: 12%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-arrow-top {
+    max-width: 10px;
+    right: 26%; /* 右端から10pxの位置に配置 */
+  }
+}
+
+.btn:hover {
+  transform: scale(1.05); /* ボタンを少し大きくする */
+  transition: transform 0.3s ease;
 }
