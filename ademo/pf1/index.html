@@ -27,7 +27,7 @@
     <!-- ogp -->
     <meta
       property="og:title"
-      content=""
+      content="アドエモ歯科"
     />
     <meta
       property="og:type"
@@ -90,15 +90,35 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       defer
     ></script>
-  </head>
-  <script
+    <!--GSAP-->
+    <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+  integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  defer
+  ></script>
+  <!--scrollTrigger-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js" defer></script>
+<!-- ScrollMagic本体 -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" defer></script>
+<!-- ScrollMagicのデバッグインジケータプラグイン -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js" defer></script>
+<!-- ScrollMagicのTweenMaxプラグイン -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js" defer></script>
+</head>
+
+<script
     src="js/script.js"
     defer
   ></script>
   <body>
     <!-- オーバーレイ -->
-    <div class="overlay-top"></div>
-    <div class="overlay"></div>
+    <div
+      id="overlay-top"
+      class="overlay-top"
+    ></div>
+    <!-- <div class="overlay"></div> -->
     <div class="content">
       <header class="header layout-header">
         <div class="header__inner">
@@ -239,7 +259,17 @@
                 src="images/Rectangle.png"
                 alt=""
               />
-            </div>
+              <span class="btn-text">もっと見る</span>
+              <img
+                src="images/arrow-up.png"
+                alt=""
+                class="btn-arrow-top"
+              />
+              <img
+                src="images/arrow-right.png"
+                alt=""
+                class="btn-arrow"
+              />
           </div>
         </section>
         <section
@@ -373,6 +403,17 @@
                 src="images/Rectangle.png"
                 alt=""
               />
+              <span class="btn-text">もっと見る</span>
+              <img
+                src="images/arrow-up.png"
+                alt=""
+                class="btn-arrow-top"
+              />
+              <img
+                src="images/arrow-right.png"
+                alt=""
+                class="btn-arrow"
+              />
             </div>
           </div>
         </section>
@@ -386,13 +427,13 @@
               <p class="section-title__sub">ACCESS</p>
             </div>
             <div class="access__container">
-              <div class="access__map">
+              <div class="access__map js-fadeIn5">
                 <img
                   src="images/map.png"
                   alt="アドエモ歯科への地図"
                 />
               </div>
-              <div class="access__text-wrapper">
+              <div class="access__text-wrapper js-fadeIn5">
                 <p>アドエモ歯科<br />〒258-0019</p>
                 <p>神奈川県足柄上郡大井町金子1665-1</p>
                 <p>TEL：090-9299-2377</p>
@@ -413,6 +454,17 @@
                 src="images/Rectangle.png"
                 alt=""
               />
+              <span class="btn-text">もっと見る</span>
+              <img
+                src="images/arrow-up.png"
+                alt=""
+                class="btn-arrow-top"
+              />
+              <img
+                src="images/arrow-right.png"
+                alt=""
+                class="btn-arrow"
+              />
             </div>
           </div>
         </section>
@@ -423,156 +475,6 @@
       </footer>
     </div>
     <!--GSAP-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
-      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!--scrollTrigger-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
-    <!-- ScrollMagic本体 -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <!-- ScrollMagicのデバッグインジケータプラグイン -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-    <!-- ScrollMagicのTweenMaxプラグイン -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-    <script>
-      const speed = 1;
-      const controller = new ScrollMagic.Controller();
 
-      const tweenWord = TweenMax.staggerTo(
-        ".js-fadeWord",
-        speed,
-        {
-          y: "-20px",
-          opacity: 1,
-        },
-        0.6
-      );
-
-      const tween = TweenMax.staggerTo(
-        ".js-fadeIn",
-        speed,
-        {
-          y: "-20px",
-          opacity: 1,
-        },
-        0.2
-      );
-
-      const tween2 = TweenMax.staggerTo(
-        ".js-fadeIn2",
-        speed,
-        {
-          y: "-20px",
-          opacity: 1,
-        },
-        0.2
-      );
-
-      const tween3 = TweenMax.staggerTo(
-        ".js-fadeIn3",
-        speed,
-        {
-          y: "-20px",
-          opacity: 1,
-        },
-        0.2
-      );
-
-      const tween4 = TweenMax.staggerTo(
-        ".js-fadeIn4",
-        speed,
-        {
-          y: "-20px",
-          opacity: 1,
-        },
-        0.2
-      );
-
-      const fadeWord = new ScrollMagic.Scene({
-        triggerElement: ".about__title",
-        reverse: false,
-      }).setTween(tweenWord);
-      // .addIndicators({ name: "word" });
-
-      const scene1 = new ScrollMagic.Scene({
-        triggerElement: "#info",
-        reverse: false,
-      }).setTween(tween);
-
-      const scene2 = new ScrollMagic.Scene({
-        triggerElement: ".staff-a",
-        reverse: false,
-      }).setTween(tween2);
-
-      const scene3 = new ScrollMagic.Scene({
-        triggerElement: ".staff-b",
-        reverse: false,
-      }).setTween(tween3);
-
-      const scene4 = new ScrollMagic.Scene({
-        triggerElement: ".staff-c",
-        reverse: false,
-      }).setTween(tween4);
-
-      controller.addScene([fadeWord, scene1, scene2, scene3, scene4]);
-
-      // //オーバーレイ制御
-      // // if (sessionStorage.getItem("adem-access")) {
-      // //   // セッションある時
-      // //   // document.querySelector(".content").style.display = "block";
-      // // } else {
-      //   // セッションないとき
-      //   sessionStorage.setItem("adem-access", "true");
-
-      //   document.querySelector(".overlay").style.display = "block";
-      //   document.querySelector(".overlay-top").style.display = "block";
-      //   // document.querySelector(".content").style.display = "block";
-
-      //   //オーバーレイ
-      //   const tl = gsap.timeline({ repeat: 0 });
-      //   tl.to(".overlay", {
-      //     scale: 50,
-      //     delay: 3.5,
-      //     duration: 2,
-      //     ease: Power2.easeOut,
-      //   }).to(".overlay", { position: "static", duration: 0 });
-
-      //   //ロゴ非表示
-      //   setTimeout(() => {
-      //     document.querySelector(".overlay-top").style.display = "none";
-      //   }, 3500);
-      // }
-
-      //オーバーレイ制御
-      // セッションのチェックを一時的に無効化
-      // if (sessionStorage.getItem("adem-access")) {
-      //   // セッションがある場合の処理
-      //   // document.querySelector(".content").style.display = "block";
-      // } else {
-      // セッションがない場合の処理を常に実行
-      sessionStorage.setItem("adem-access", "true");
-
-      document.querySelector(".overlay").style.display = "block";
-      document.querySelector(".overlay-top").style.display = "block";
-      // document.querySelector(".content").style.display = "block";
-
-      //オーバーレイアニメーション
-      const tl = gsap.timeline({ repeat: 0 });
-      tl.to(".overlay", {
-        scale: 50,
-        delay: 3.5,
-        duration: 2,
-        ease: Power2.easeOut,
-      }).to(".overlay", { position: "static", duration: 0 });
-
-      //ロゴ非表示
-      setTimeout(() => {
-        document.querySelector(".overlay-top").style.display = "none";
-      }, 3500);
-      // }
-    </script>
   </body>
 </html>
