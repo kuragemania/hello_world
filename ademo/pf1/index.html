@@ -519,32 +519,60 @@
 
       controller.addScene([fadeWord, scene1, scene2, scene3, scene4]);
 
+      // //オーバーレイ制御
+      // // if (sessionStorage.getItem("adem-access")) {
+      // //   // セッションある時
+      // //   // document.querySelector(".content").style.display = "block";
+      // // } else {
+      //   // セッションないとき
+      //   sessionStorage.setItem("adem-access", "true");
+
+      //   document.querySelector(".overlay").style.display = "block";
+      //   document.querySelector(".overlay-top").style.display = "block";
+      //   // document.querySelector(".content").style.display = "block";
+
+      //   //オーバーレイ
+      //   const tl = gsap.timeline({ repeat: 0 });
+      //   tl.to(".overlay", {
+      //     scale: 50,
+      //     delay: 3.5,
+      //     duration: 2,
+      //     ease: Power2.easeOut,
+      //   }).to(".overlay", { position: "static", duration: 0 });
+
+      //   //ロゴ非表示
+      //   setTimeout(() => {
+      //     document.querySelector(".overlay-top").style.display = "none";
+      //   }, 3500);
+      // }
+
       //オーバーレイ制御
-      if (sessionStorage.getItem("adem-access")) {
-        // セッションある時
-        // document.querySelector(".content").style.display = "block";
-      } else {
-        // セッションないとき
-        sessionStorage.setItem("adem-access", "true");
+      // セッションのチェックを一時的に無効化
+      // if (sessionStorage.getItem("adem-access")) {
+      //   // セッションがある場合の処理
+      //   // document.querySelector(".content").style.display = "block";
+      // } else {
+      // セッションがない場合の処理を常に実行
+      sessionStorage.setItem("adem-access", "true");
 
-        document.querySelector(".overlay").style.display = "block";
-        document.querySelector(".overlay-top").style.display = "block";
-        // document.querySelector(".content").style.display = "block";
+      document.querySelector(".overlay").style.display = "block";
+      document.querySelector(".overlay-top").style.display = "block";
+      // document.querySelector(".content").style.display = "block";
 
-        //オーバーレイ
-        const tl = gsap.timeline({ repeat: 0 });
-        tl.to(".overlay", {
-          scale: 50,
-          delay: 3.5,
-          duration: 2,
-          ease: Power2.easeOut,
-        }).to(".overlay", { position: "static", duration: 0 });
+      //オーバーレイアニメーション
+      const tl = gsap.timeline({ repeat: 0 });
+      tl.to(".overlay", {
+        scale: 50,
+        delay: 3.5,
+        duration: 2,
+        ease: Power2.easeOut,
+      }).to(".overlay", { position: "static", duration: 0 });
 
-        //ロゴ非表示
-        setTimeout(() => {
-          document.querySelector(".overlay-top").style.display = "none";
-        }, 3500);
-      }
+      //ロゴ非表示
+      setTimeout(() => {
+        document.querySelector(".overlay-top").style.display = "none";
+      }, 3500);
+      // }
     </script>
   </body>
 </html>
