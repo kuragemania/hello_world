@@ -620,12 +620,12 @@ select::-ms-expand {
 
 .mv__decoration {
   position: absolute;
-  z-index: 5; /* 必要に応じて調整 */
+  z-index: 50; /* 必要に応じて調整 */
 }
 
 .mv__decoration--pattern {
   top: calc(95% + (100vw - 1920px) / 10); /* 画面幅に応じて動的に位置を調整 */
-  left: 50%; /* 位置調整 */
+  left: 53%; /* 位置調整 */
   transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
   width: 180px; /* 画像のサイズに合わせて調整 */
   height: 180px; /* 画像のサイズに合わせて調整 */
@@ -676,8 +676,8 @@ select::-ms-expand {
 
 .clinic-hour {
   position: absolute; /* 必要に応じて 'absolute' または 'relative' */
-  bottom: 350%; /* トップからの位置 */
-  left: 50%; /* 左からの位置 */
+  bottom: 35%; /* トップからの位置 */
+  left: 5%; /* 左からの位置 */
   font-size: 28px;
   color: #fff;
   width: 80%;
