@@ -465,11 +465,15 @@
   height: 180px; /* 画像のサイズに合わせて調整 */
   background-image: url("../images/mv-pattern.png");
   background-size: cover;
+  @include mq("xl2") {
+    left: 49%; /* 位置調整 */
+  }
   @include mq("lg2") {
     width: 90px; /* 画像のサイズに合わせて調整 */
     height: 90px; /* 画像のサイズに合わせて調整 */
+    left: 50%; /* 位置調整 */
+    top: 95%;
   }
-
   @include mq("md") {
     width: 40px; /* 画像のサイズに合わせて調整 */
     height: 40px; /* 画像のサイズに合わせて調整 */
@@ -481,16 +485,17 @@
 .clinic-hours {
   position: relative;
   max-width: 838px; /* 適宜調整してください */
-  width: 838px;
+  width: 50%;
   margin: auto;
   padding: 20px;
   // background-color: rgba(255, 255, 255, 0.5);
   z-index: 20;
-  @include mq("lg2") {
-    width: 700px;
+  @include mq("xl") {
+    width: 45%;
   }
-  @include mq("lg") {
-    width: 610px;
+
+  @include mq("lg2") {
+    width: 50%;
   }
 }
 
@@ -512,14 +517,17 @@
   // max-width: 721px;
   z-index: 30; /* 背景画像より高い値 */
   @include mq("xl2") {
-    width: 60%;
-    bottom: 200%; /* トップからの位置 */
+    width: 80%;
+    bottom: 35%; /* トップからの位置 */
+  }
+  @include mq("xl") {
+    font-size: 24px;
   }
   @include mq("lg2") {
-    bottom: 130%; /* トップからの位置 */
+    bottom: 30%; /* トップからの位置 */
   }
   @include mq("lg") {
-    bottom: 140%; /* トップからの位置 */
+    bottom: 35%; /* トップからの位置 */
     font-size: 18px;
   }
   @include mq("md") {

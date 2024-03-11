@@ -632,10 +632,17 @@ select::-ms-expand {
   background-image: url("../images/mv-pattern.png");
   background-size: cover;
 }
+@media screen and (max-width: 1780px) {
+  .mv__decoration--pattern {
+    left: 49%; /* 位置調整 */
+  }
+}
 @media screen and (max-width: 1200px) {
   .mv__decoration--pattern {
     width: 90px; /* 画像のサイズに合わせて調整 */
     height: 90px; /* 画像のサイズに合わせて調整 */
+    left: 50%; /* 位置調整 */
+    top: 95%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -650,19 +657,19 @@ select::-ms-expand {
 .clinic-hours {
   position: relative;
   max-width: 838px; /* 適宜調整してください */
-  width: 838px;
+  width: 50%;
   margin: auto;
   padding: 20px;
   z-index: 20;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1480px) {
   .clinic-hours {
-    width: 700px;
+    width: 45%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .clinic-hours {
-    width: 610px;
+    width: 50%;
   }
 }
 
@@ -685,18 +692,23 @@ select::-ms-expand {
 }
 @media screen and (max-width: 1780px) {
   .clinic-hour {
-    width: 60%;
-    bottom: 200%; /* トップからの位置 */
+    width: 80%;
+    bottom: 35%; /* トップからの位置 */
+  }
+}
+@media screen and (max-width: 1480px) {
+  .clinic-hour {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1200px) {
   .clinic-hour {
-    bottom: 130%; /* トップからの位置 */
+    bottom: 30%; /* トップからの位置 */
   }
 }
 @media screen and (max-width: 1024px) {
   .clinic-hour {
-    bottom: 140%; /* トップからの位置 */
+    bottom: 35%; /* トップからの位置 */
     font-size: 18px;
   }
 }
