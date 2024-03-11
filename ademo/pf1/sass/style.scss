@@ -10,50 +10,36 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100dvh;
   z-index: 9999;
   background-color: #fffef3;
 }
 
-@keyframes scaleUpDownAnimation {
+@keyframes fadeInOut {
   0%,
   100% {
-    transform: scale(1);
+    opacity: 0;
   }
   50% {
-    transform: scale(1.3);
+    opacity: 1;
   }
 }
 
-/* オーバーレイのスタイル */
-// .overlay-top::before {
-//   content: "";
-//   width: 91px;
-//   height: 103px;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: #fffef3;
-//   background-image: url("../images/logo.svg");
-//   animation: scaleUpDownAnimation 2s linear infinite;
-// }
-
 #overlay-top::before {
   content: "";
-  position: fixed; /* 画面に固定 */
+  position: fixed;
   top: 45%;
-  left: 45%;
-  transform: translate(-50%, -50%); /* 中央に配置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 181px;
   height: 176px;
   background-image: url("../images/logo-fv.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  animation: scaleUpDownAnimation 2s linear infinite;
+  animation: fadeInOut 2s ease-in-out forwards;
+}
 
-  @include mq("md") {
-    left: 35%;
+@include mq("md") {
+  #overlay-top::before {
     width: 110.5px;
     height: 108px;
   }
@@ -387,7 +373,7 @@
 
 .mv__title-wrap {
   position: absolute; /* 親要素(.mv__inner)の位置に基づいて配置 */
-  top: 45%; /* 上端から50%の位置に */
+  top: 50%; /* 上端から50%の位置に */
   left: 35%; /* 左端から50%の位置に */
   transform: translate(-50%, -50%); /* 自身のサイズの半分だけ戻して中央に配置 */
   z-index: 10; /* 画像より前面に表示 */
@@ -396,7 +382,6 @@
     // top: 25%;
   }
   @include mq("md") {
-    top: 35%;
     left: 31%; /* 左端から50%の位置に */
   }
 }
@@ -519,21 +504,37 @@
 
 .clinic-hour {
   position: absolute; /* 必要に応じて 'absolute' または 'relative' */
-  bottom: 160%; /* トップからの位置 */
+  bottom: 350%; /* トップからの位置 */
   left: 50%; /* 左からの位置 */
-  width: 45.0625rem;
-  max-width: 721px;
+  font-size: 28px;
+  color: $white;
+  width: 80%;
+  // max-width: 721px;
   z-index: 30; /* 背景画像より高い値 */
   @include mq("xl2") {
     width: 60%;
-    // height: 17.0325rem;
+    bottom: 200%; /* トップからの位置 */
   }
   @include mq("lg2") {
     bottom: 130%; /* トップからの位置 */
   }
   @include mq("lg") {
-    bottom: 60%; /* トップからの位置 */
+    bottom: 140%; /* トップからの位置 */
+    font-size: 18px;
   }
+  @include mq("md") {
+    position: static;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.clinic-hour-day th {
+  border-bottom: 1px dashed $white; /* 各<th>要素の下に点線を適用 */
+}
+
+.clinic-hour td {
+  text-align: center;
 }
 
 .clinic-hours__background {
@@ -564,18 +565,18 @@
   padding: 10px 0;
 }
 
-.clinic-hours-sp::before {
-  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
-  position: absolute;
-  bottom: 25%;
-  right: -5%;
-  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
-  width: 55px; /* 画像の幅 */
-  height: 68px;
-  background-image: url("../images/mv-bg-sp.png"); /* 飾り画像のパス */
-  background-size: cover; /* 画像をコンテナにフィットさせる */
-  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
-}
+// .clinic-hours-sp::before {
+//   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+//   position: absolute;
+//   bottom: 25%;
+//   right: -5%;
+//   transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+//   width: 55px; /* 画像の幅 */
+//   height: 68px;
+//   background-image: url("../images/mv-bg-sp.png"); /* 飾り画像のパス */
+//   background-size: cover; /* 画像をコンテナにフィットさせる */
+//   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+// }
 
 // about
 .about {

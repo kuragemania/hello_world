@@ -75,6 +75,11 @@
     />
     <!-- css -->
     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+    <link
       rel="stylesheet"
       href="css/style.css"
     />
@@ -90,6 +95,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       defer
     ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    defer
+  ></script>
     <!--GSAP-->
     <script
   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
@@ -185,50 +194,154 @@
           </div>
         </div>
       </header>
-
       <main>
-        <section
-          id="mv"
-          class="mv"
-        >
+        <div class="mv">
           <div class="mv__inner">
             <div class="mv__decoration mv__decoration--pattern"></div>
             <div class="clinic-hours__background-sp md-show"></div>
             <!-- 新しい装飾用のコンテナ -->
-            <div class="mv__img">
-              <picture>
-                <source
-                  srcset="images/mv-pc.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="images/mv-sp.png"
-                  alt="歯医者で女性の先生と患者さんが会話している様子"
-                />
-              </picture>
+
+            <!-- pc mv -->
+            <div class="mv__img md-none">
+              <!-- svg1 -->
+              <svg width="100%" height="100%" viewBox="0 0 854 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="sliderImg">
+                <g>
+                  <clipPath id="mofing">
+                    <path id="overlayPath" d="" />
+                  </clipPath>
+                  <image clip-path="url(#mofing)" href="images/mv.png" width="1000" height="667"></image>
+                </g>
+              </svg>
+
+              <!-- svg2 -->
+              <svg width="100%" height="100%" viewBox="0 0 854 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="sliderImg2" style="display: none; opacity: 0">
+                <g>
+                  <clipPath id="slider">
+                    <path d="M798.8 30.0346C740.086 -13.8847 306.412 -0.253407 92.7453 21.4491C-41.5162 33.7239 -4.08353 345.847 68.6985 376.025C131.07 401.886 762.638 393.395 806.816 357.161C856.092 316.745 872.193 84.9338 798.8 30.0346Z" />
+                  </clipPath>
+                  <image clip-path="url(#slider)" href="images/mv2.png" width="1000" height="667"></image>
+                </g>
+              </svg>
+              <!-- svg3 -->
+              <svg width="100%" height="100%" viewBox="0 0 854 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="sliderImg3" style="display: none; opacity: 0">
+                <g>
+                  <clipPath id="slider2">
+                    <path d="M798.8 30.0346C740.086 -13.8847 306.412 -0.253407 92.7453 21.4491C-41.5162 33.7239 -4.08353 345.847 68.6985 376.025C131.07 401.886 762.638 393.395 806.816 357.161C856.092 316.745 872.193 84.9338 798.8 30.0346Z" />
+                  </clipPath>
+                  <image clip-path="url(#slider2)" href="images/mv3.png" width="1000" height="667"></image>
+                </g>
+              </svg>
+            </div>
+
+            <!-- sp -->
+            <div class="mv__img md-show">
+              <!-- svg1 -->
+              <svg width="100%" height="100%" viewBox="0 0 368 331" fill="none" xmlns="http://www.w3.org/2000/svg" class="sliderImg">
+                <g>
+                  <clipPath id="mofingSP">
+                    <path id="overlayPath_SP" d="" />
+                  </clipPath>
+                  <image clip-path="url(#mofingSP)" href="images/mv.png" width="368" height="331"></image>
+                </g>
+              </svg>
+
+              <!-- svg2 -->
+              <svg width="100%" height="100%" viewBox="0 0 368 331" fill="none" xmlns="http://www.w3.org/2000/svg" class="sliderImg2" style="display: none; opacity: 0">
+                <g>
+                  <clipPath id="sliderSP">
+                    <path d="M345.704 24.5655C320.198 -12.719 131.805 -1.14695 38.9863 17.277C-19.3383 27.6974 -3.07715 292.668 28.5401 318.287C55.6349 340.242 329.994 333.034 349.186 302.273C370.591 267.963 377.586 71.171 345.704 24.5655Z" />
+                  </clipPath>
+                  <image clip-path="url(#sliderSP)" href="images/mv2.png" width="368" height="331"></image>
+                </g>
+              </svg>
+              <!-- svg3 -->
+              <svg width="100%" height="100%" viewBox="0 0 368 331" fill="none" xmlns="http://www.w3.org/2000/svg" class="sliderImg3" style="display: none; opacity: 0">
+                <g>
+                  <clipPath id="slider2SP">
+                    <path d="M345.704 24.5655C320.198 -12.719 131.805 -1.14695 38.9863 17.277C-19.3383 27.6974 -3.07715 292.668 28.5401 318.287C55.6349 340.242 329.994 333.034 349.186 302.273C370.591 267.963 377.586 71.171 345.704 24.5655Z" />
+                  </clipPath>
+                  <image clip-path="url(#slider2SP)" href="images/mv3.png" width="368" height="331"></image>
+                </g>
+              </svg>
             </div>
             <div class="mv__title-wrap">
               <h2 class="mv__title">歯と心に寄り添った<br />優しい治療を</h2>
             </div>
+            </div>
             <div class="clinic-hours md-none">
-              <div class="clinic-hours__background"></div>
-              <div class="clinic-hour">
-                <img
-                  src="images/診療時間.png"
-                  alt="診療時間"
-                />
+              <div class="clinic-hours__background">
               </div>
+              <table class="clinic-hour">
+                <tr class="clinic-hour-day">
+                  <th>診療時間</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日</th>
+                </tr>
+                <tr>
+                  <td>10:00〜13:00</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>×</td>
+                </tr>
+                <tr>
+                  <td>14:00〜18:00</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>×</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>×</td>
+                  <td>×</td>
+                </tr>
+              </table>
             </div>
             <div class="clinic-hours-sp md-show">
-              <div class="clinic-hour-sp">
-                <img
-                  src="images/診療時間-sp.png"
-                  alt="診療時間"
-                />
+              <table class="clinic-hour">
+                <tr class="clinic-hour-day">
+                  <th>診療時間</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日</th>
+                </tr>
+                <tr>
+                  <td>10:00〜13:00</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>×</td>
+                </tr>
+                <tr>
+                  <td>14:00〜18:00</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>×</td>
+                  <td>⚫︎</td>
+                  <td>⚫︎</td>
+                  <td>×</td>
+                  <td>×</td>
+                </tr>
+              </table>
               </div>
             </div>
           </div>
-        </section>
+
+
         <section
           id="about"
           class="about"
