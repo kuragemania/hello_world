@@ -1102,7 +1102,7 @@ select::-ms-expand {
 }
 
 .staff__list {
-  margin-top: 150px;
+  margin-top: 86px;
 }
 @media screen and (max-width: 768px) {
   .staff__list {
