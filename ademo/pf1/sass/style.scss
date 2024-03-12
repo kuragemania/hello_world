@@ -383,6 +383,7 @@
   }
   @include mq("md") {
     left: 31%; /* 左端から50%の位置に */
+    top: 32%;
   }
 }
 
@@ -477,8 +478,8 @@
   @include mq("md") {
     width: 40px; /* 画像のサイズに合わせて調整 */
     height: 40px; /* 画像のサイズに合わせて調整 */
-    top: 65%;
-    left: 80%; /* 位置調整 */
+    top: 58%;
+    left: 83%; /* 位置調整 */
   }
 }
 
@@ -573,18 +574,18 @@
   padding: 10px 0;
 }
 
-// .clinic-hours-sp::before {
-//   content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
-//   position: absolute;
-//   bottom: 25%;
-//   right: -5%;
-//   transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
-//   width: 55px; /* 画像の幅 */
-//   height: 68px;
-//   background-image: url("../images/mv-bg-sp.png"); /* 飾り画像のパス */
-//   background-size: cover; /* 画像をコンテナにフィットさせる */
-//   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
-// }
+.clinic-hours__background-sp::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 35%;
+  right: -5%;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 55px; /* 画像の幅 */
+  height: 68px;
+  background-image: url("../images/mv-bg-sp1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
 
 // about
 .about {
@@ -664,13 +665,13 @@
 }
 
 .about__text {
-  font-size: 1.9375rem;
+  font-size: 1.5rem;
   line-height: 1.774;
   padding-top: 20px;
   color: $black2;
   opacity: 0;
-  @include mq("lg2") {
-    font-size: 1.5rem;
+  @include mq("md") {
+    font-size: 18px;
   }
 }
 
@@ -694,6 +695,10 @@
   background-image: url("../images/about-pattern1.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+  @include mq("xl") {
+    right: -18%;
+  }
+
   @include mq("lg2") {
     width: 150px;
     height: 150px;
@@ -718,6 +723,9 @@
   background-image: url("../images/about-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+  @include mq("xl") {
+    right: -18%;
+  }
   @include mq("lg2") {
     width: 125px;
     height: 125px;
@@ -800,29 +808,30 @@
 }
 
 .info__card {
-  background-color: $white; // 背景色を設定
-  max-width: 358px; // 幅を設定
+  background-color: $white; /* 背景色を設定 */
+  max-width: 328px; /* 幅を設定 */
   width: 100%;
-  height: 344px; // 高さを設定し、widthと同じ値にする
+  aspect-ratio: 1 / 1; /* 幅と高さの比率を1:1に設定 */
   border-radius: 50%;
   display: flex;
   flex-direction: column; /* 縦方向に要素を並べる */
   justify-content: center;
   align-items: center;
   opacity: 0;
-  @include mq("md") {
-    max-width: 168px;
-    height: 168px;
+
+  @media (max-width: 768px) {
+    /* 768px以上の画面で適用 */
+    max-width: 164px; /* 中断点での幅を調整 */
   }
 }
 
 .info__card-text {
   padding-top: 26px;
-  font-size: 32px;
+  font-size: 1.5rem;
   color: $black2;
   font-weight: $bold;
   @include mq("md") {
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 18px;
   }
 }
@@ -1002,9 +1011,9 @@
   background-size: cover; /* 画像をコンテナにフィットさせる */
 
   @include mq("lg") {
-    right: -6%;
-    width: 49px;
-    height: 67px;
+    right: 5%;
+    width: 69px;
+    height: 98px;
   }
 
   @include mq("md") {
@@ -1024,7 +1033,7 @@
   background-size: cover; /* 画像をコンテナにフィットさせる */
 
   @include mq("lg") {
-    right: -5%;
+    right: 5%;
   }
 
   @include mq("md") {
@@ -1101,8 +1110,13 @@
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
 
+  @include mq("lg2") {
+    right: 0%;
+    width: 120px;
+    height: 120px;
+  }
   @include mq("lg") {
-    right: -9%;
+    right: -3%;
     width: 120px;
     height: 120px;
   }
@@ -1170,7 +1184,7 @@
 }
 
 .staff__text {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.458;
   padding-top: 15px;
   color: $black2;
@@ -1225,12 +1239,12 @@
 }
 
 .access__text-wrapper {
-  font-size: 33px;
+  font-size: 1.5rem;
   line-height: 1.182;
   font-weight: $regular;
   color: $black2;
   @include mq("md") {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     margin-top: 125px;
   }
@@ -1409,7 +1423,7 @@
   max-width: 715px;
   margin-right: auto;
   margin-left: auto;
-  width: 57%;
+  width: 50%;
   position: relative; /* これを追加 */
   @include mq("md") {
     min-width: 290px;
@@ -1417,7 +1431,7 @@
 }
 
 .btn-text {
-  font-size: 40px;
+  font-size: 2.2rem;
   line-height: 0.8;
   position: absolute;
   top: 50%; /* 中央に配置 */
@@ -1466,3 +1480,8 @@
   transform: scale(1.05); /* ボタンを少し大きくする */
   transition: transform 0.3s ease;
 }
+
+// .sliderImg {
+//   width: 367px; /* スマートフォンの表示領域に合わせた幅 */
+//   height: auto; /* 高さはアスペクト比を保持して自動調整 */
+// }

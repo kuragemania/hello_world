@@ -546,6 +546,7 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .mv__title-wrap {
     left: 31%; /* 左端から50%の位置に */
+    top: 32%;
   }
 }
 
@@ -649,8 +650,8 @@ select::-ms-expand {
   .mv__decoration--pattern {
     width: 40px; /* 画像のサイズに合わせて調整 */
     height: 40px; /* 画像のサイズに合わせて調整 */
-    top: 65%;
-    left: 80%; /* 位置調整 */
+    top: 58%;
+    left: 83%; /* 位置調整 */
   }
 }
 
@@ -760,6 +761,19 @@ select::-ms-expand {
   padding: 10px 0;
 }
 
+.clinic-hours__background-sp::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須ですが、画像を表示するだけなら空で構いません */
+  position: absolute;
+  bottom: 35%;
+  right: -5%;
+  transform: translateX(-50%); /* 画像を水平方向の中央に配置 */
+  width: 55px; /* 画像の幅 */
+  height: 68px;
+  background-image: url("../images/mv-bg-sp1.png"); /* 飾り画像のパス */
+  background-size: cover; /* 画像をコンテナにフィットさせる */
+  z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+
 .about {
   margin-top: 250px;
 }
@@ -841,15 +855,15 @@ select::-ms-expand {
 }
 
 .about__text {
-  font-size: 1.9375rem;
+  font-size: 1.5rem;
   line-height: 1.774;
   padding-top: 20px;
   color: #595959;
   opacity: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .about__text {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 }
 
@@ -876,6 +890,11 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
 }
+@media screen and (max-width: 1480px) {
+  .about__img::after {
+    right: -18%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .about__img::after {
     width: 150px;
@@ -900,6 +919,11 @@ select::-ms-expand {
   background-image: url("../images/about-pattern2.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 4; /* 必要に応じてz-indexを調整して、他の要素との重なりを制御します */
+}
+@media screen and (max-width: 1480px) {
+  .about__img::before {
+    right: -18%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .about__img::before {
@@ -989,10 +1013,10 @@ select::-ms-expand {
 }
 
 .info__card {
-  background-color: #fff;
-  max-width: 358px;
+  background-color: #fff; /* 背景色を設定 */
+  max-width: 328px; /* 幅を設定 */
   width: 100%;
-  height: 344px;
+  aspect-ratio: 1/1; /* 幅と高さの比率を1:1に設定 */
   border-radius: 50%;
   display: flex;
   flex-direction: column; /* 縦方向に要素を並べる */
@@ -1000,22 +1024,22 @@ select::-ms-expand {
   align-items: center;
   opacity: 0;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .info__card {
-    max-width: 168px;
-    height: 168px;
+    /* 768px以上の画面で適用 */
+    max-width: 164px; /* 中断点での幅を調整 */
   }
 }
 
 .info__card-text {
   padding-top: 26px;
-  font-size: 32px;
+  font-size: 1.5rem;
   color: #595959;
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   .info__card-text {
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 18px;
   }
 }
@@ -1192,9 +1216,9 @@ select::-ms-expand {
 }
 @media screen and (max-width: 1024px) {
   .staff__name-b::after {
-    right: -6%;
-    width: 49px;
-    height: 67px;
+    right: 5%;
+    width: 69px;
+    height: 98px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1217,7 +1241,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 1024px) {
   .staff__name-c::after {
-    right: -5%;
+    right: 5%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1301,9 +1325,16 @@ select::-ms-expand {
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 10;
 }
+@media screen and (max-width: 1200px) {
+  .staff-b::before {
+    right: 0%;
+    width: 120px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .staff-b::before {
-    right: -9%;
+    right: -3%;
     width: 120px;
     height: 120px;
   }
@@ -1379,7 +1410,7 @@ select::-ms-expand {
 }
 
 .staff__text {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.458;
   padding-top: 15px;
   color: #595959;
@@ -1439,14 +1470,14 @@ select::-ms-expand {
 }
 
 .access__text-wrapper {
-  font-size: 33px;
+  font-size: 1.5rem;
   line-height: 1.182;
   font-weight: 300;
   color: #595959;
 }
 @media screen and (max-width: 768px) {
   .access__text-wrapper {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     margin-top: 125px;
   }
@@ -1641,7 +1672,7 @@ select::-ms-expand {
   max-width: 715px;
   margin-right: auto;
   margin-left: auto;
-  width: 57%;
+  width: 50%;
   position: relative; /* これを追加 */
 }
 @media screen and (max-width: 768px) {
@@ -1651,7 +1682,7 @@ select::-ms-expand {
 }
 
 .btn-text {
-  font-size: 40px;
+  font-size: 2.2rem;
   line-height: 0.8;
   position: absolute;
   top: 50%; /* 中央に配置 */
