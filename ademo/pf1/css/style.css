@@ -1672,7 +1672,7 @@ select::-ms-expand {
   max-width: 715px;
   margin-right: auto;
   margin-left: auto;
-  width: 50%;
+  width: 30%;
   position: relative; /* これを追加 */
 }
 @media screen and (max-width: 768px) {
@@ -1682,7 +1682,7 @@ select::-ms-expand {
 }
 
 .btn-text {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   line-height: 0.8;
   position: absolute;
   top: 50%; /* 中央に配置 */
@@ -1699,7 +1699,7 @@ select::-ms-expand {
 
 .btn-arrow {
   position: absolute;
-  max-width: 47px;
+  max-width: 35px;
   right: 20%; /* 右端から10pxの位置に配置 */
   top: 50%; /* 上下中央に配置 */
   transform: translateY(-50%); /* 上下中央にするための調整 */
@@ -1718,8 +1718,8 @@ select::-ms-expand {
 
 .btn-arrow-top {
   position: absolute;
-  max-width: 23px; /* 必要に応じてサイズを調整 */
-  right: 21.25%; /* 右端から10pxの位置に配置 */
+  max-width: 17px; /* 必要に応じてサイズを調整 */
+  right: 22%; /* 右端から10pxの位置に配置 */
   top: 50%;
   transform: translateY(-50%); /* 上下中央にするための調整 */
   z-index: 10;
