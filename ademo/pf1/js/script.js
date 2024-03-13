@@ -324,67 +324,80 @@ TL2_SP.to(
 
 //スライドショー
 const sliderImg = document.querySelectorAll(".sliderImg");
-const sliderImg2 = document.querySelectorAll(".sliderImg2");
-const sliderImg3 = document.querySelectorAll(".sliderImg3");
+      const sliderImgZoom = document.querySelectorAll(".sliderImg image");
+      const sliderImg2 = document.querySelectorAll(".sliderImg2");
+      const sliderImg2Zoom = document.querySelectorAll(".sliderImg2 image");
+      const sliderImg3 = document.querySelectorAll(".sliderImg3");
+      const sliderImg3Zoom = document.querySelectorAll(".sliderImg3 image");
 
-console.log(sliderImg);
+      console.log(sliderImg);
 
-const SLIDER = gsap.timeline({
-  repeat: -1,
-});
+      const SLIDER = gsap.timeline({
+        repeat: -1,
+      });
 
-SLIDER.to(
-  sliderImg,
-  {
-    display: "none",
-    delay: 6,
-    opacity: 0,
-    duration: 1,
-  },
-  ">"
-)
-  .to(
-    sliderImg2,
-    {
-      display: "block",
-      opacity: 1,
-      duration: 5,
-    },
-    ">"
-  )
-  .to(
-    sliderImg2,
-    {
-      display: "none",
-      opacity: 0,
-      duration: 1,
-    },
-    ">"
-  )
-  .to(
-    sliderImg3,
-    {
-      display: "block",
-      opacity: 1,
-      duration: 5,
-    },
-    ">"
-  )
-  .to(
-    sliderImg3,
-    {
-      display: "none",
-      opacity: 0,
-      duration: 1,
-    },
-    ">"
-  )
-  .to(
-    sliderImg,
-    {
-      display: "block",
-      opacity: 1,
-      duration: 1,
-    },
-    ">"
-  );
+      SLIDER.to(sliderImg, {
+        delay: 2,
+      })
+      .to(
+        sliderImgZoom, // sliderImgにズーム効果を追加
+        {
+          width: "103%",
+          duration: 8,
+        }
+      )
+      .to(
+        sliderImg2,
+        {
+          opacity: 0,
+          duration: 1,
+        },
+        ">"
+      )
+      .to(
+        sliderImg2,
+        {
+          opacity: 1,
+          duration: 4,
+        },
+        ">"
+      )
+      .to(
+        sliderImg2Zoom,
+        {
+          width: "103%",
+          duration: 8,
+        },
+        "-=4"
+      )
+      .to(
+        sliderImg3,
+        {
+          opacity: 1,
+          duration: 4,
+        },
+        "-=4"
+      )
+      .to(
+        sliderImg3Zoom,
+        {
+          width: "103%",
+          duration: 4,
+        },
+        "-=4"
+      )
+      .to(
+        sliderImg2,
+        {
+          opacity: 0,
+          duration: 0,
+        },
+        ">"
+      )
+      .to(sliderImg3, {
+        opacity: 0,
+        duration: 1,
+      });
+
+
+// スライドショーにクロスディゾルブとズーム効果を追加
