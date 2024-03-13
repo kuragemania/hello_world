@@ -530,10 +530,54 @@ select::-ms-expand {
   padding: 0 38px;
   padding-bottom: 100px;
 }
+@media screen and (max-width: 1480px) {
+  .mv__inner {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mv__inner {
+    padding-bottom: 0px;
+  }
+}
 @media screen and (max-width: 768px) {
   .mv__inner {
     padding: 0 11px;
   }
+}
+
+.mv__img {
+  position: relative;
+  height: 70vh;
+}
+@media screen and (max-width: 1480px) {
+  .mv__img {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mv__img {
+    height: 55vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mv__img {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mv__img {
+    height: 41vh;
+  }
+}
+
+.sliderImg,
+.sliderImg2,
+.sliderImg3 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .mv__title-wrap {
@@ -643,7 +687,7 @@ select::-ms-expand {
     width: 90px; /* 画像のサイズに合わせて調整 */
     height: 90px; /* 画像のサイズに合わせて調整 */
     left: 50%; /* 位置調整 */
-    top: 95%;
+    top: 115%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -676,10 +720,15 @@ select::-ms-expand {
 
 .clinic-hours {
   position: absolute; /* 必要に応じて 'absolute' または 'relative' */
-  top: 115%; /* トップからの位置 */
-  left: 55%; /* 左からの位置 */
+  top: 90%; /* トップからの位置 */
+  left: 75%; /* 左からの位置 */
   transform: translate(-50%, -50%); /* 中央に配置 */
   z-index: 20; /* 背景画像より高い値 */
+}
+@media screen and (max-width: 1200px) {
+  .clinic-hours {
+    top: 110%; /* トップからの位置 */
+  }
 }
 
 .clinic-hour {
@@ -775,7 +824,7 @@ select::-ms-expand {
 }
 
 .about {
-  margin-top: 250px;
+  margin-top: 200px;
 }
 @media screen and (max-width: 768px) {
   .about {
@@ -1461,11 +1510,12 @@ select::-ms-expand {
 .access__map {
   position: relative;
   max-width: 592px;
-  width: 100%;
+  width: 50%;
 }
 @media screen and (max-width: 768px) {
   .access__map {
     max-width: 338px;
+    width: 100%;
   }
 }
 
@@ -1521,12 +1571,19 @@ select::-ms-expand {
   position: absolute;
   bottom: -3%;
   left: -60%;
-  max-width: 100%;
-  width: 424px;
+  max-width: 424px;
+  width: 100%;
   height: 422px;
   background-image: url("../images/access-img1.png"); /* 飾り画像のパス */
   background-size: cover; /* 画像をコンテナにフィットさせる */
   z-index: 5;
+}
+@media screen and (max-width: 1200px) {
+  .access__map::before {
+    width: 50%;
+    left: -25%;
+    height: 211px;
+  }
 }
 @media screen and (max-width: 768px) {
   .access__map::before {
