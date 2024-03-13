@@ -1686,7 +1686,7 @@ select::-ms-expand {
   line-height: 0.8;
   position: absolute;
   top: 50%; /* 中央に配置 */
-  left: 50%; /* 中央に配置 */
+  left: 45%; /* 中央に配置 */
   transform: translate(-50%, -50%); /* 完全に中央にするための調整 */
   color: #ffffff; /* テキストの色 */
 }
@@ -1700,7 +1700,7 @@ select::-ms-expand {
 .btn-arrow {
   position: absolute;
   max-width: 35px;
-  right: 20%; /* 右端から10pxの位置に配置 */
+  right: 22%; /* 右端から10pxの位置に配置 */
   top: 50%; /* 上下中央に配置 */
   transform: translateY(-50%); /* 上下中央にするための調整 */
 }
@@ -1712,14 +1712,14 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .btn-arrow {
     max-width: 19px;
-    right: 25%; /* 右端から10pxの位置に配置 */
+    right: 30%; /* 右端から10pxの位置に配置 */
   }
 }
 
 .btn-arrow-top {
   position: absolute;
   max-width: 17px; /* 必要に応じてサイズを調整 */
-  right: 22%; /* 右端から10pxの位置に配置 */
+  right: 24%; /* 右端から10pxの位置に配置 */
   top: 50%;
   transform: translateY(-50%); /* 上下中央にするための調整 */
   z-index: 10;
@@ -1732,7 +1732,7 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .btn-arrow-top {
     max-width: 10px;
-    right: 26%; /* 右端から10pxの位置に配置 */
+    right: 31%; /* 右端から10pxの位置に配置 */
   }
 }
 
