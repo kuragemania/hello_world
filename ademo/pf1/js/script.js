@@ -330,79 +330,55 @@ const sliderImg2Zoom = document.querySelectorAll(".sliderImg2 image");
 const sliderImg3 = document.querySelectorAll(".sliderImg3");
 const sliderImg3Zoom = document.querySelectorAll(".sliderImg3 image");
 
-console.log(sliderImg);
+// アニメーションの関数を定義
+function startAnimation() {
+  const SLIDER = gsap.timeline({
+    repeat: -1, // 無限に繰り返し
+  });
 
-const SLIDER = gsap.timeline({
-  repeat: -1, // 無限に繰り返し
-});
-
-SLIDER.to(sliderImg, {
-  delay: 2,
-})
-.to(
-  sliderImgZoom, // sliderImgにズーム効果を追加
-  {
+  SLIDER
+  .to(sliderImgZoom, { // 最初のディレイはここでは適用されない
     width: "103%",
     duration: 8,
-  }
-)
-.to(
-  sliderImg2,
-  {
+  })
+  .to(sliderImg2, {
     opacity: 0,
     duration: 1,
-  },
-  "-=4"
-)
-.to(
-  sliderImg2,
-  {
+  }, "-=5")
+  .to(sliderImg2, {
     opacity: 1,
     duration: 4,
-  },
-  ">"
-)
-.to(
-  sliderImg2Zoom,
-  {
+  }, ">")
+  .to(sliderImg2Zoom, {
     width: "103%",
     duration: 8,
-  },
-  "-=4"
-)
-.to(
-  sliderImg3,
-  {
+  }, "-=4")
+  .to(sliderImg3, {
     opacity: 1,
     duration: 4,
-  },
-  "-=4"
-)
-.to(
-  sliderImg3Zoom,
-  {
+  }, "-=4")
+  .to(sliderImg3Zoom, {
     width: "103%",
     duration: 5,
-  },
-  "-=4"
-)
-.to(
-  sliderImg2,
-  {
+  }, "-=4")
+  .to(sliderImg2, {
     opacity: 0,
     duration: 0,
-  },
-  ">"
-)
-.to(sliderImg3, {
-  opacity: 0,
-  duration: 1,
-})
-.to(sliderImgZoom, {
-  width: "100%", // ここで幅を100%に戻す
-  duration: 0.1, // この変化にかかる時間
-  ease: "none", // アニメーションのイージングを無効にして滑らかに
-}, "-=4"); // 前のアニメーションと同時に開始
+  }, ">")
+  .to(sliderImg3, {
+    opacity: 0,
+    duration: 1,
+  })
+  .to(sliderImgZoom, {
+    width: "100%",
+    duration: 0.1,
+    ease: "none",
+  }, "-=4");
+}
+
+// 最初のアニメーションセットを遅延させて開始
+gsap.delayedCall(2, startAnimation);
 
 
-// スライドショーにクロスディゾルブとズーム効果を追加
+
+
