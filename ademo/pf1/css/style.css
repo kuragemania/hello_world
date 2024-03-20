@@ -479,7 +479,7 @@ select::-ms-expand {
 }
 
 .header__drawer {
-  padding: 14.25rem 0;
+  padding: 15px 20px;
   display: none;
   position: absolute;
   z-index: 900;
@@ -494,19 +494,36 @@ select::-ms-expand {
   scrollbar-width: none;
 }
 
+.header__drawer-title {
+  display: flex;
+  align-items: center;
+}
+
+.header__drawer-title img {
+  width: 35px;
+}
+
+.header__drawer-title .header__title {
+  margin-left: 10px;
+}
+
 .header__drawer::-webkit-scrollbar {
   display: none;
 }
 
+.header__drawer-nav {
+  margin-top: 20px;
+}
+
 .header__drawer-item a {
-  padding: 0.9375rem 0;
+  padding: 0.9375rem 10px;
   display: block;
-  font-size: 2.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.05em;
   color: #595959;
-  text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 .mv {
@@ -1738,6 +1755,10 @@ select::-ms-expand {
   }
 }
 
+.contact-btn.btn {
+  margin-top: 30px;
+}
+
 .btn-text {
   font-size: 1.6rem;
   line-height: 0.8;
@@ -1752,6 +1773,10 @@ select::-ms-expand {
     font-size: 16px;
     line-height: 1.438;
   }
+}
+
+.btn-text.c-text {
+  left: 50%;
 }
 
 .btn-arrow {
@@ -1791,6 +1816,25 @@ select::-ms-expand {
     max-width: 10px;
     right: 31%; /* 右端から10pxの位置に配置 */
   }
+}
+
+.btn-arrow-top.btn-arrow-top-c {
+  right: 21%; /* 右端から10pxの位置に配置 */
+}
+
+.btn-arrow.btn-arrow-c {
+  right: 20%; /* 右端から10pxの位置に配置 */
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 23%;
+  width: 20px; /* アイコンの幅 */
+  height: 16px; /* アイコンの高さ */
+  background-image: url("../images/icon_mail.svg");
+  background-size: cover;
 }
 
 .btn:hover {
