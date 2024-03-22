@@ -1,43 +1,279 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+    <title>京都 浦野</title>
+    <meta
+      name="description"
+      content="トップページの説明"
+    />
+    <meta
+      name="keywords"
+      content="キーワード"
+    />
+    <!-- ogp -->
+    <meta
+      property="og:title"
+      content="サイト名"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:image"
+      content="OGP IMAGE"
+    />
+    <meta
+      property="og:site_name"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:description"
+      content="トップページの説明"
+    />
+    <!-- ファビコン -->
+    <link
+      rel="”icon”"
+      href=""
+    />
+    <link
+      rel="apple-touch-icon"
+      href=""
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&family=Zen+Old+Mincho:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+    <!-- JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="/js/script.js"
+      defer
+    ></script>
+  </head>
+  <body class="b-bgi">
+    <header class="header layout-header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#">
+            <img
+              src="./images/common/h-logo.png"
+              alt="LOGO"
+            />
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <a href="#">浦野とは</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">お食事</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">お知らせ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">アクセス</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">予約</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-items">
+              <li class="header__drawer-item">
+                <a href="#">浦野とは</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">お食事</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">お知らせ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">アクセス</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">予約</a>
+              </li>
+              <li class="header__drawer-item header__drawer-item--contact">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mv js-mv">
+        <div class="mv__inner">
+          <div class="mv__title-wrap">
+            <h2 class="mv__main-title">メインタイトル</h2>
+            <p class="mv__sub-title">
+              ここにサブタイトルが入ります。<br />ここにサブタイトルが入ります。
+            </p>
+          </div>
+          <div class="mv__img">
+            <picture class="mv__img-wrap">
+              <source
+                srcset="./images/common/mv.png"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./images/common/mv-sp.png"
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__inner">
+          <div class="about__img"></div>
+          <p class="about__text">
+            当店では伝統的な京都の味わいを<br />大切にし
+            、季節の恵みを活かした<br />料理を提供しています。<br />雅な空間と厳選された食材と共に<br />ご家族やご友人と、くつろぎのひ<br />と時をお過ごしください。
+          </p>
+          <h2 class="about__title">
+            京料理の伝統<br />こだわりの庭<br />おもてなしを。
+          </h2>
+        </div>
+      </section>
+      <section class="menu">
+        <div class="menu__title title__wrapper">
+          <h2 class="menu__title section-title__main">お食事</h2>
+          <p class="menu__title-sub section-title__sub">menu</p>
+        </div>
+        <div class="menu-img">
+          <img
+            src="./images/common/menu1.png"
+            class="md-none"
+            alt=""
+          />
+          <img
+            src="./images/common/menu-sp.png"
+            class="md-show"
+            alt=""
+          />
+        </div>
+        <div class="menu__wrapper">
+          <div class="menu__img2">
+            <img
+              src="./images/common/menu2.png"
+              alt=""
+            />
+          </div>
+          <div class="menu__text-items">
+            <p class="menu__text-large">京都の風情を味わう<br />特選コース</p>
+            <p class="menu__text-small">
+              京都の風情を味わう特選コース<br />
+              四季折々の風情を詰め込んだ、贅沢な京都コース。<br />
+              伝統の味わいと現代の創作が融合した一皿一皿で、<br />
+              京都の美食文化をご堪能ください。
+            </p>
+            <div class="menu__btn-container">
+              <!-- ボタンのための新しいコンテナを追加 -->
+              <a
+                href="#"
+                class="menu__btn btn"
+                >もっと見る</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="commit">
+        <div class="commit__title title__wrapper">
+          <h2 class="commit__title section-title__main">こだわり</h2>
+          <p class="commit__title-sub section-title__sub">commitment</p>
+        </div>
+        <div class="commit-img">
+          <img
+            src="./images/common/commit1.png"
+            class="md-none"
+            alt=""
+          />
+          <img
+            src="./images/common/commit-sp.png"
+            class="md-show"
+            alt=""
+          />
+        </div>
+        <ol class="commit__lists">
+          <li class="commit__list">
+            <div class="commit__text-wrap">
+              <h3 class="commit__text-no">01</h3>
+              <p class="commit__text-large">
+                季節の恵みを活かした<br />
+                厳選食材
+              </p>
+              <p class="commit__text-small">
+                京都の四季折々の豊かな自然から得られる季<br />節の恵みを厳選し、お料理に活かしておりま<br />す。<br />
+                新鮮な食材を用いて、伝統の味わいと季節の<br />風情をお楽しみいただけます。<br />
+                美味と健康を兼ね備えた料理を心を込めてご<br />提供いたします。
+              </p>
+            </div>
+            <img
+              src="./images/common/commit-1.png"
+              alt=""
+              class="commit__list-img"
+            />
+          </li>
+        </ol>
+      </section>
+      <div style="height: 1000px"></div>
+    </main>
 
-<head>
-  <meta name="robots" content="noindex,nofollow" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- meta情報 -->
-  <title>タイトル</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <meta name="twitter:card" content="summary" />
-  <!-- ファビコン -->
-  <link rel="icon" href="#" />
-
-  <!-- Google Fonts -->
-
-  <!-- css -->
-  <link rel="stylesheet" href="/css/style.css" />
-
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
-  <script src="/js/script.js" defer></script>
-</head>
-
-<body>
-  <header class="header"></header>
-
-  <main></main>
-
-  <footer class="footer"></footer>
-
-</body>
-
+    <footer class="footer"></footer>
+  </body>
 </html>

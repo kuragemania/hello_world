@@ -1,0 +1,56 @@
+@use "../foundation" as *;
+
+.title__wrapper {
+  display: flex;
+}
+.section-title__main {
+  position: relative;
+  color: $white;
+  font-weight: $regular;
+  font-size: prem(60);
+  letter-spacing: 0.45em;
+  line-height: 2.3;
+  padding: 20px 0 100px;
+  border-right: 2px solid white;
+  writing-mode: vertical-rl; /* 右から左へ縦書き */
+  text-orientation: upright; /* 文字を直立させる */
+  @include mq("md"){
+    font-size: prem(30);
+  }
+}
+.section-title__sub {
+  color: $white;
+  font-family: WindSong;
+  font-size: prem(50);
+  padding-top: 20px;
+  line-height: 1.0;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  z-index: 1;
+  @include mq("md"){
+    font-size: prem(30);
+  }
+}
+
+.section-title__main::after {
+  content: ""; /* 疑似要素にはcontentプロパティが必要 */
+  position: absolute; /* 親要素(section-title__main)に対して絶対位置指定 */
+  right: -6px;
+  bottom: 0px;
+  width: 10px; /* 丸の直径 */
+  height: 10px; /* 丸の直径 */
+  background-color: white; /* 丸の色 */
+  border-radius: 50%; /* 丸くする */
+}
+
+.md-show {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
+  .md-none {
+    display: none;
+  }
+}

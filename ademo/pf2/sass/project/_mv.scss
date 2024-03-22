@@ -1,0 +1,54 @@
+@use '../foundation' as *;
+
+.mv {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    min-height: prem(400);
+    @include mq("md"){
+        height: 72vh;
+    }
+}
+
+.mv__inner {
+    height: inherit;
+    min-height: inherit;
+}
+
+.mv__title-wrap {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.mv__main-title {
+    font-size: prem(60);
+    @include mq(md){
+        font-size: prem(40);
+    }
+}
+
+.mv__sub-title {
+    margin-top: prem(20);
+    font-size: prem(35);
+    @include mq(md){
+        font-size: prem(20);
+    }
+}
+
+.mv__img,
+.mv__img-wrap,
+.mv__img img {
+    height: inherit;
+    min-height: inherit;
+}
+
+.mv__img img {
+    width: 100%;
+    object-fit: cover;
+}
