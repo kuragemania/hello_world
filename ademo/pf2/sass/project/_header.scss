@@ -2,7 +2,7 @@
 
 .header {
   height: prem(120);
-  background-image: url(../../images/common/h-bgi.png);
+  background-image: url("../../images/common/h-bgi.png");
   @include mq("md") {
     height: prem(40);
   }

@@ -245,7 +245,7 @@ a:hover {
 
 .header {
   height: 7.5rem;
-  background-image: url(../../images/common/h-bgi.png);
+  background-image: url("../../images/common/h-bgi.png");
 }
 @media screen and (max-width: 767px) {
   .header {
