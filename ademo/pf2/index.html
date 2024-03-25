@@ -88,6 +88,7 @@
       defer
     ></script>
   </head>
+
   <body class="b-bgi">
     <header class="header layout-header js-header">
       <div class="header__inner">
@@ -155,13 +156,41 @@
       </div>
     </header>
     <main>
-      <section class="mv js-mv">
+      <section class="mv js-mv mv-black">
         <div class="mv__inner">
           <div class="mv__title-wrap">
-            <h2 class="mv__main-title">メインタイトル</h2>
-            <p class="mv__sub-title">
-              ここにサブタイトルが入ります。<br />ここにサブタイトルが入ります。
-            </p>
+            <div class="mv__title-items">
+              <span class="mv__title-item"
+                ><img
+                  src="./images/common/mv/logo.png"
+                  alt=""
+                  class="mv__title-img"
+              /></span>
+              <span class="mv__title-item"
+                ><img
+                  src="./images/common/mv/kyo.png"
+                  alt=""
+                  class="mv__title-img"
+              /></span>
+              <span class="mv__title-item"
+                ><img
+                  src="./images/common/mv/to.png"
+                  alt=""
+                  class="mv__title-img"
+              /></span>
+              <span class="mv__title-item"
+                ><img
+                  src="./images/common/mv/ura.png"
+                  alt=""
+                  class="mv__title-img"
+              /></span>
+              <span class="mv__title-item"
+                ><img
+                  src="./images/common/mv/no.png"
+                  alt=""
+                  class="mv__title-img"
+              /></span>
+            </div>
           </div>
           <div class="mv__img">
             <picture class="mv__img-wrap">
@@ -250,17 +279,25 @@
           />
         </div>
         <ol class="commit__lists">
-          <li class="commit__list">
+          <li class="commit__list commit__list-fade01">
             <div class="commit__text-wrap">
-              <h3 class="commit__text-no">01</h3>
+              <h3 class="commit__text-no commit__text-no1">01</h3>
               <p class="commit__text-large">
                 季節の恵みを活かした<br />
                 厳選食材
               </p>
               <p class="commit__text-small">
-                京都の四季折々の豊かな自然から得られる季<br />節の恵みを厳選し、お料理に活かしておりま<br />す。<br />
-                新鮮な食材を用いて、伝統の味わいと季節の<br />風情をお楽しみいただけます。<br />
-                美味と健康を兼ね備えた料理を心を込めてご<br />提供いたします。
+                京都の四季折々の豊かな自然から得られる季<br
+                  class="md-none"
+                />節の恵みを厳選し、お料理に活かしておりま<br
+                  class="md-none"
+                />す。<br />
+                新鮮な食材を用いて、伝統の味わいと季節の<br
+                  class="md-none"
+                />風情をお楽しみいただけます。<br />
+                美味と健康を兼ね備えた料理を心を込めてご<br
+                  class="md-none"
+                />提供いたします。
               </p>
             </div>
             <img
@@ -269,11 +306,119 @@
               class="commit__list-img"
             />
           </li>
+          <li class="commit__list commit__list-fade02">
+            <div class="commit__text-wrap commit__text-wrap-r">
+              <h3 class="commit__text-no commit__text-no2">02</h3>
+              <p class="commit__text-large">
+                繊細な盛り付けと<br />
+                美しい器での提供
+              </p>
+              <p class="commit__text-small">
+                繊細な盛り付けと美しい器でお客様に提供し<br
+                  class="md-none"
+                />ております。<br />
+                京都の美意識を感じさせる雅な器や、彩り豊<br
+                  class="md-none"
+                />かな食材を活かした華やかな盛り付けで、目<br
+                  class="md-none"
+                />でも楽しむ料理体験をお届けします。<br />
+                料理だけでなく、見た目にも美しいひととき<br
+                  class="md-none"
+                />をお楽しみください。
+              </p>
+            </div>
+            <img
+              src="./images/common/commit-2.png"
+              alt=""
+              class="commit__list-img"
+            />
+          </li>
+          <li class="commit__list commit__list-fade03">
+            <div class="commit__text-wrap">
+              <h3 class="commit__text-no commit__text-no3">03</h3>
+              <p class="commit__text-large">
+                伝統の技法と<br />
+                現代の創意との融合
+              </p>
+              <p class="commit__text-small">
+                伝統的な京都の技法を踏襲しつつ、現代の創<br
+                  class="md-none"
+                />意を取り入れた独創的な料理です。<br />
+                伝統の味わいを大切にしながらも、新しいア<br
+                  class="md-none"
+                />プローチでお客様に驚きと喜びを提供します。<br />
+                雅な雰囲気の中で、伝統と革新が融合した味<br
+                  class="md-none"
+                />わいをお楽しみください。
+              </p>
+            </div>
+            <img
+              src="./images/common/commit-3.png"
+              alt=""
+              class="commit__list-img"
+            />
+          </li>
         </ol>
+        <div class="commit__img-large">
+          <picture>
+            <source
+              srcset="./images/common/commit-4.png"
+              media="(min-width: 530px)"
+            />
+            <img
+              src="./images/common/commit-4-sp.png"
+              alt=""
+            />
+          </picture>
+        </div>
       </section>
-      <div style="height: 1000px"></div>
+      <section class="rv">
+        <div class="works__list works-list">
+          <div class="works-list__item">
+            <div class="works-list__item-img">
+              <img
+                src="./images/common/rv-img.png"
+                alt="省略"
+                class="md-none"
+              />
+              <img
+                src="./images/common/rv-img-sp.png"
+                alt="省略"
+                class="md-show"
+              />
+              <div class="rv__title title__wrapper">
+                <h2 class="rv__title section-title__main">ご予約</h2>
+                <p class="rv__title-sub section-title__sub">reservation</p>
+              </div>
+            </div>
+            <div class="rv__text-wrap">
+              <p class="works-list__item-text">
+                京都の風情を味わう特別なひとときをお約束します。
+                お好みの日時と人数をご指定の上、お気軽にご予約ください。ご来店を心よりお待ちしております。
+              </p>
+              <div class="rv__btn-container">
+                <a
+                  href="#"
+                  class="rv__btn btn btn--black"
+                  >ご来店予約</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="height: 200px"></div>
     </main>
-
     <footer class="footer"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <!--scrollTrigger-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollMagic本体 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <!-- ScrollMagicのデバッグインジケータプラグイン -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <!-- ScrollMagicのTweenMaxプラグイン -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="./js/gsap.js"></script>
   </body>
 </html>
