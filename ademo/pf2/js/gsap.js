@@ -20,8 +20,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const e1_fixed = document.querySelector(".b-bgi");
 
   tl.to(e1_1, { filter: "blur(0)", opacity: 1, duration: 0.6 }, "-=0.4")
-    .to(e1_2, { filter: "blur(0)", opacity: 1, duration: 1.0 }, "-=0.4")
-    .to(e1_3, { filter: "blur(0)", opacity: 1, duration: 1.0 }, "-=0.4")
+    .to(e1_2, { filter: "blur(0)", opacity: 1, duration: 0.8 }, "-=0.4")
+    .to(e1_3, { filter: "blur(0)", opacity: 1, duration: 0.8 }, "-=0.4")
     .to(e1_4, { filter: "blur(0)", opacity: 1, duration: 0.6 }, "-=0.4")
     .to(e1_5, { filter: "blur(0)", opacity: 1, duration: 0.6 }, "-=0.2")
     .add(() => {
