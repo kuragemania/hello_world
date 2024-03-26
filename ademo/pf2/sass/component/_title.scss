@@ -11,10 +11,10 @@
   letter-spacing: 0.45em;
   line-height: 2.3;
   padding: 20px 0 100px;
-  border-right: 2px solid white;
+  // border-right: 2px solid white;
   writing-mode: vertical-rl; /* 右から左へ縦書き */
   text-orientation: upright; /* 文字を直立させる */
-  @include mq("md"){
+  @include mq("md") {
     font-size: prem(30);
   }
 }
@@ -23,13 +23,34 @@
   font-family: WindSong;
   font-size: prem(50);
   padding-top: 20px;
-  line-height: 1.0;
+  line-height: 1;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   z-index: 1;
-  @include mq("md"){
+  @include mq("md") {
     font-size: prem(30);
   }
+}
+
+.section-title__main.active::before {
+  transform: scaleY(1);
+  transition: 2s;
+}
+.section-title__main.is-active::after {
+opacity: 1;
+transition: 0.3s 1.7s;
+}
+
+.section-title__main::before {
+  content: ""; /* 疑似要素にはcontentプロパティが必要 */
+  position: absolute; /* 親要素(section-title__main)に対して絶対位置指定 */
+  right: -2px;
+  bottom: 0px;
+  width: 2px;
+  height: 100%;
+  background-color: white; /* 丸の色 */
+  transform: scaleY(0); /* 最初は線を縮小して見えなくする */
+  transform-origin: top; /* 縮小・拡大の原点を下側に設定 */
 }
 
 .section-title__main::after {
@@ -41,6 +62,7 @@
   height: 10px; /* 丸の直径 */
   background-color: white; /* 丸の色 */
   border-radius: 50%; /* 丸くする */
+  opacity: 0;
 }
 
 .md-show {
@@ -56,7 +78,7 @@
 }
 
 @media screen and (max-width: 1579px) {
-.xl2-none {
-  display: none;
-}
+  .xl2-none {
+    display: none;
+  }
 }

@@ -162,7 +162,6 @@ a:hover {
   letter-spacing: 0.45em;
   line-height: 2.3;
   padding: 20px 0 100px;
-  border-right: 2px solid white;
   writing-mode: vertical-rl; /* 右から左へ縦書き */
   text-orientation: upright; /* 文字を直立させる */
 }
@@ -187,6 +186,28 @@ a:hover {
   }
 }
 
+.section-title__main.active::before {
+  transform: scaleY(1);
+  transition: 2s;
+}
+
+.section-title__main.is-active::after {
+  opacity: 1;
+  transition: 0.3s 1.7s;
+}
+
+.section-title__main::before {
+  content: ""; /* 疑似要素にはcontentプロパティが必要 */
+  position: absolute; /* 親要素(section-title__main)に対して絶対位置指定 */
+  right: -2px;
+  bottom: 0px;
+  width: 2px;
+  height: 100%;
+  background-color: white; /* 丸の色 */
+  transform: scaleY(0); /* 最初は線を縮小して見えなくする */
+  transform-origin: top; /* 縮小・拡大の原点を下側に設定 */
+}
+
 .section-title__main::after {
   content: ""; /* 疑似要素にはcontentプロパティが必要 */
   position: absolute; /* 親要素(section-title__main)に対して絶対位置指定 */
@@ -196,6 +217,7 @@ a:hover {
   height: 10px; /* 丸の直径 */
   background-color: white; /* 丸の色 */
   border-radius: 50%; /* 丸くする */
+  opacity: 0;
 }
 
 .md-show {
@@ -299,7 +321,7 @@ a:hover {
   max-height: 2.875rem; /* 擬似要素のコンテナの最大高さを調整 */
   width: 100%;
   height: 100%;
-  background-image: url("../images/common/logo.png");
+  background-image: url("../../images/common/logo.png");
   background-size: cover; /* または contain によって要件に合わせて調整 */
   position: absolute;
   top: 50%;
@@ -489,7 +511,6 @@ a:hover {
   height: 100vh;
   min-height: 25rem;
   overflow: hidden;
-  transition: all 1s ease;
 }
 @media screen and (max-width: 767px) {
   .mv {
@@ -506,7 +527,6 @@ a:hover {
   width: 100vw;
   height: 100vh;
   z-index: 200;
-  opacity: 1;
   content: "";
   background-color: #000;
 }
@@ -753,18 +773,12 @@ a:hover {
 
 .menu__title.title__wrapper {
   position: absolute;
-  top: -10%;
+  top: -5%;
   left: 17%;
 }
 @media screen and (max-width: 1579px) {
   .menu__title.title__wrapper {
-    top: -12%;
     left: 13%;
-  }
-}
-@media screen and (max-width: 1329px) {
-  .menu__title.title__wrapper {
-    top: -15%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -773,15 +787,63 @@ a:hover {
   }
 }
 
+.section-title__main span,
+.section-title__sub span {
+  opacity: 0;
+}
+
 .menu-img {
   display: flex;
   justify-content: flex-end; /* 要素を右寄せにして左に自動のマージンを作る */
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 780px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1579px) {
+  .menu-img {
+    height: 640px;
+  }
+}
+@media screen and (max-width: 1329px) {
+  .menu-img {
+    height: 540px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .menu-img {
+    height: 480px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .menu-img {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu-img {
+    height: 230px;
+  }
 }
 
-.menu-img img {
-  width: 90%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.menu-img div img {
+  max-width: 90vw; /* 画像の最大幅を90vwに設定 */
+  height: inherit; /* 画像の高さを780pxに固定 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.menu-imgBg {
+  position: absolute;
+  width: 90vw;
+  height: inherit;
+  background-color: #010101;
+  z-index: 99;
+  overflow: hidden;
 }
 
 .menu__wrapper {
@@ -874,7 +936,7 @@ a:hover {
 }
 @media screen and (max-width: 767px) {
   .commit {
-    margin-top: 180px;
+    margin-top: 110px;
   }
 }
 
@@ -882,10 +944,11 @@ a:hover {
   position: absolute;
   top: -3%;
   right: 20%;
+  z-index: 1;
 }
 @media screen and (max-width: 767px) {
   .commit__title.title__wrapper {
-    top: -5%;
+    top: -2%;
     right: 6%;
   }
 }
@@ -901,16 +964,50 @@ a:hover {
 .commit-img {
   display: flex;
   justify-content: flex-start; /* 要素を右寄せにして左に自動のマージンを作る */
+  position: relative;
+  width: 100%;
+  height: 780px;
+}
+@media screen and (max-width: 1579px) {
+  .commit-img {
+    height: 640px;
+  }
+}
+@media screen and (max-width: 1329px) {
+  .commit-img {
+    height: 540px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .commit-img {
+    height: 480px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .commit-img {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .commit-img {
+    height: 230px;
+  }
 }
 
 .commit-img img {
-  width: 90%;
+  max-width: 90vw;
   -o-object-fit: cover;
      object-fit: cover;
+  height: inherit; /* 画像の高さを780pxに固定 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transform-origin: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .commit-img img {
-    width: 95%;
+    width: 95vw;
   }
 }
 

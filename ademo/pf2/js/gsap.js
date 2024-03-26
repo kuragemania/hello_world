@@ -1,62 +1,62 @@
 window.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
   // 要素の選択はそのまま
-  const e1_1 = document.querySelector(
+  const el_1 = document.querySelector(
     ".mv__title-item:nth-of-type(1) .mv__title-img"
   );
-  const e1_2 = document.querySelector(
+  const el_2 = document.querySelector(
     ".mv__title-item:nth-of-type(2) .mv__title-img"
   );
-  const e1_3 = document.querySelector(
+  const el_3 = document.querySelector(
     ".mv__title-item:nth-of-type(3) .mv__title-img"
   );
-  const e1_4 = document.querySelector(
+  const el_4 = document.querySelector(
     ".mv__title-item:nth-of-type(4) .mv__title-img"
   );
-  const e1_5 = document.querySelector(
+  const el_5 = document.querySelector(
     ".mv__title-item:nth-of-type(5) .mv__title-img"
   );
-  const e1_bg = document.querySelector(".mv");
-  const e1_header = document.querySelector(".layout-header");
-  const e1_fixed = document.querySelector(".b-bgi");
+  const el_bg = document.querySelector(".mv");
+  const el_header = document.querySelector(".layout-header");
+  const el_fixed = document.querySelector(".b-bgi");
 
   // アニメーションの開始状態にblurを適用し、fromToメソッドで滑らかに変化させる
   tl.fromTo(
-    e1_1,
-    { filter: "blur(10px)", opacity: 0 },
-    { filter: "blur(0)", opacity: 1, duration: 0.6, ease: "power1.out" }
+    el_1,
+    { filter: "blur(40px)", opacity: 0 },
+    { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" }
   )
     .fromTo(
-      e1_2,
-      { filter: "blur(10px)", opacity: 0 },
-      { filter: "blur(0)", opacity: 1, duration: 1.0, ease: "power1.out" },
+      el_2,
+      { filter: "blur(40px)", opacity: 0 },
+      { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" },
       "-=0.5"
     )
     .fromTo(
-      e1_3,
-      { filter: "blur(10px)", opacity: 0 },
-      { filter: "blur(0)", opacity: 1, duration: 1.0, ease: "power1.out" },
+      el_3,
+      { filter: "blur(40px)", opacity: 0 },
+      { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" },
       "-=0.5"
     )
     .fromTo(
-      e1_4,
-      { filter: "blur(10px)", opacity: 0 },
-      { filter: "blur(0)", opacity: 1, duration: 0.6, ease: "power1.out" },
+      el_4,
+      { filter: "blur(40px)", opacity: 0 },
+      { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" },
       "-=0.5"
     )
     .fromTo(
-      e1_5,
-      { filter: "blur(10px)", opacity: 0 },
-      { filter: "blur(0)", opacity: 1, duration: 0.6, ease: "power1.out" },
+      el_5,
+      { filter: "blur(40px)", opacity: 0 },
+      { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" },
       "-=0.5"
     )
     .add(() => {
-      e1_bg.classList.remove("mv-black");
-    }, "-=0.5") // 背景クラスの変更タイミングも調整
-    .to(e1_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2") // ヘッダーの透明度変化を滑らかに
+      el_bg.classList.remove("mv-black");
+    }, "+=2") // 背景クラスの変更タイミングも調整
+    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2") // ヘッダーの透明度変化を滑らかに
     .to(
-      e1_fixed,
-      { overflow: "visible", duration: 1, ease: "power1.inOut" },
+      el_fixed,
+      { overflow: "hidden visible", duration: 1, ease: "power1.inOut" },
       "-=1"
     ); // 固定要素のオーバーフロー変更を滑らかに
 
@@ -94,6 +94,78 @@ const textTween = TweenMax.fromTo(
   }
 );
 
+const imgSlideTween = gsap.timeline();
+imgSlideTween
+  .fromTo(
+    ".menu-imgBg",
+    1.2,
+    {
+      x: "120%",
+      opacity: 0.4,
+    },
+    {
+      x: "0%",
+      opacity: 0.4,
+      ease: Power2.easeOut,
+    }
+  )
+  .fromTo(
+    ".menu-img div img",
+    2,
+    {
+      scale: 1.1,
+      opacity: 0,
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      ease: Power2.easeOut,
+    }
+  )
+  .to(
+    ".menu-imgBg",
+    {
+      opacity: 0,
+    },
+    "-=2"
+  );
+
+const imgSlideTween2 = gsap.timeline();
+imgSlideTween2
+  .fromTo(
+    ".menu-imgBg",
+    1.2,
+    {
+      x: "-120%",
+      opacity: 0.4,
+    },
+    {
+      x: "0%",
+      opacity: 0.4,
+      ease: Power2.easeOut,
+    }
+  )
+  .fromTo(
+    ".commit-img div img",
+    2,
+    {
+      scale: 1.1,
+      opacity: 0,
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      ease: Power2.easeOut,
+    }
+  )
+  .to(
+    ".menu-imgBg",
+    {
+      opacity: 0,
+    },
+    "-=2"
+  );
+
 // 画像に対するブラー効果は提案されていないため、imgTweenはそのままです
 const imgTween = TweenMax.to(".about__img", 1, {
   y: "-20px",
@@ -122,6 +194,20 @@ new ScrollMagic.Scene({
   reverse: false,
 })
   .setTween(imgTween.delay(1))
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: ".menu",
+  reverse: false,
+})
+  .setTween(imgSlideTween)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: ".commit",
+  reverse: false,
+})
+  .setTween(imgSlideTween2)
   .addTo(controller);
 
 // menu
@@ -210,5 +296,69 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .setTween(textTween)
       .addTo(controller);
+  });
+});
+
+// title
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = ['.menu', '.commit', '.rv'];
+
+    sections.forEach(section => {
+        const targets = document.querySelectorAll(`${section} .section-title__main, ${section} .section-title__sub`);
+
+        targets.forEach((target) => {
+            // テキストを1文字ずつ<span>で囲む処理
+            const chars = target.textContent.split("");
+            target.textContent = "";
+            chars.forEach((char) => {
+                const span = document.createElement("span");
+                span.textContent = char;
+                target.appendChild(span);
+            });
+
+            // GSAPタイムラインを定義（ここでディレイを設定）
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top center",
+                },
+                delay: 0.8, // タイムラインの開始前にディレイを適用
+            });
+
+            // タイムラインにアニメーションを追加
+            tl.set(target.children, { autoAlpha: 0, y: 20 })
+              .to(target.children, {
+                  autoAlpha: 1,
+                  y: 0,
+                  stagger: 0.05,
+              });
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // セクションにクラスを追加する関数
+  function addClasses(section) {
+      // 0.5秒後にクラスを追加する
+      setTimeout(() => {
+          document.querySelectorAll(`${section} .section-title__main`).forEach(element => {
+              element.classList.add('active', 'is-active');
+          });
+      }, 800); // 500ミリ秒のディレイ
+  }
+
+  // 各セクションに対してaddClasses関数を呼び出す例
+  const sections = ['.menu', '.commit', '.rv'];
+  sections.forEach(section => {
+      // ScrollTriggerを設定
+      ScrollTrigger.create({
+          trigger: section,
+          start: 'top center',
+          onEnter: () => addClasses(section),
+          // onEnterBack: () => addClasses(section)  // ユーザーが逆方向にスクロールしたときにも適用する場合
+      });
   });
 });
