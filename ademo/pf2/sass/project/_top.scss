@@ -458,8 +458,6 @@
   transition: 2s;
 }
 
-
-
 .commit__text-large {
   font-size: prem(36);
   margin-top: prem(80);
@@ -566,9 +564,10 @@
   overflow: hidden;
 }
 
-.rv-imgBg{
+.rv-imgBg {
   position: absolute;
-  top: 0;left: 0;
+  top: 0;
+  left: 0;
   width: prem(600);
   height: inherit;
   background-color: #010101;

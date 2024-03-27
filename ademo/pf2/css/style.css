@@ -49,8 +49,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -76,10 +75,8 @@ select {
   *,
 *::before,
 *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -177,6 +174,7 @@ a:hover {
   font-size: 3.125rem;
   padding-top: 20px;
   line-height: 1;
+  -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   z-index: 1;
 }
@@ -351,8 +349,7 @@ a:hover {
 .header__logo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .header__nav {
@@ -553,15 +550,13 @@ a:hover {
   align-items: center;
   grid-template-columns: 1fr 120px 60px 1fr;
   grid-template-rows: repeat(3, 1fr);
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+  column-gap: 24px;
   row-gap: 32px;
 }
 @media screen and (max-width: 767px) {
   .mv__title-items {
     grid-template-columns: 1fr 80px 36px 1fr;
-    -moz-column-gap: 0px;
-         column-gap: 0px;
+    column-gap: 0px;
     row-gap: 18px;
   }
 }
@@ -647,8 +642,7 @@ a:hover {
 
 .mv__img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .b-bgi {
@@ -830,8 +824,7 @@ a:hover {
 .menu-img div img {
   max-width: 90vw; /* 画像の最大幅を90vwに設定 */
   height: inherit; /* 画像の高さを780pxに固定 */
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   opacity: 0;
   transform-origin: center;
   overflow: hidden;
@@ -996,11 +989,9 @@ a:hover {
 
 .commit-img img {
   max-width: 90vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: inherit; /* 画像の高さを780pxに固定 */
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   opacity: 0;
   transform-origin: center;
   overflow: hidden;
@@ -1085,8 +1076,7 @@ a:hover {
   max-width: 55%; /* 例: 画像の最大幅を100pxに設定 */
   width: 100%;
   height: auto; /* 高さを自動調整して、アスペクト比を保持します。 */
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (max-width: 767px) {
   .commit__list-img {
@@ -1299,8 +1289,7 @@ a:hover {
 .works-list__item-img div img {
   max-width: 37.5rem; /* 画像の最大幅を90vwに設定 */
   height: inherit; /* 画像の高さを780pxに固定 */
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   transform-origin: center;
   overflow: hidden;
 }
