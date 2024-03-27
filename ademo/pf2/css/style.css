@@ -388,14 +388,6 @@ a:hover {
   color: #fff;
 }
 
-.header__nav-item.header__nav-item--contact a {
-  padding: 0.625rem 1.25rem;
-  position: relative;
-  height: initial;
-  color: #fff;
-  background-color: #de8430;
-}
-
 .header__hamburger {
   display: none;
 }
@@ -418,6 +410,10 @@ a:hover {
 
 .header__hamburger.is-open {
   background-color: transparent;
+}
+
+.header__hamburger.is-open span {
+  background-color: #000;
 }
 
 .header__hamburger span {
@@ -458,7 +454,7 @@ a:hover {
 }
 
 .header__drawer {
-  padding: 14.25rem 0;
+  padding: 2.5rem 1.25rem;
   display: none;
   position: absolute;
   z-index: 900;
@@ -468,25 +464,52 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(98, 58, 20, 0.95);
+  background-color: #f7f7f7;
   overflow-y: scroll;
   scrollbar-width: none;
+}
+
+.header__drawer__img {
+  background-image: url(../images/common/bgi.png);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 垂直中央配置も必要な場合に追加 */
+  padding: 10px 0;
 }
 
 .header__drawer::-webkit-scrollbar {
   display: none;
 }
 
+.header__drawer-nav {
+  margin-top: 5rem;
+}
+
+.header__drawer-item {
+  line-height: 1.2;
+}
+
 .header__drawer-item a {
   padding: 0.9375rem 0;
   display: block;
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
+}
+
+.header__drawer-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: #a5a5a5;
+}
+
+.header__rv {
+  margin-top: 3.125rem;
+  border: 1px solid #7f7f7f;
 }
 
 .header__drawer-item.header__drawer-item--contact a::after {

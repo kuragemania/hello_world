@@ -99,13 +99,6 @@
   color: #fff;
 }
 
-.header__nav-item.header__nav-item--contact a {
-  padding: prem(10) prem(20);
-  position: relative;
-  height: initial;
-  color: #fff;
-  background-color: #de8430;
-}
 
 .header__hamburger {
   display: none;
@@ -127,6 +120,10 @@
 
 .header__hamburger.is-open {
   background-color: transparent;
+}
+
+.header__hamburger.is-open span{
+  background-color: #000;
 }
 
 .header__hamburger span {
@@ -167,7 +164,7 @@
 }
 
 .header__drawer {
-  padding: prem(228) 0;
+  padding: prem(40) prem(20);
   display: none;
   position: absolute;
   z-index: 900;
@@ -177,25 +174,52 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba($color: #623a14, $alpha: 0.95);
+  background-color: rgba($color: #f7f7f7, $alpha: 1.0);
   overflow-y: scroll;
   scrollbar-width: none;
+}
+
+.header__drawer__img {
+  background-image: url(../images/common/bgi.png);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 垂直中央配置も必要な場合に追加 */
+  padding: 10px 0;
 }
 
 .header__drawer::-webkit-scrollbar {
   display: none;
 }
 
+.header__drawer-nav {
+  margin-top: prem(80);
+}
+
+.header__drawer-item {
+  line-height: 1.2;
+}
+
 .header__drawer-item a {
   padding: prem(15) 0;
   display: block;
-  font-size: prem(36);
-  font-weight: 700;
-  line-height: 1;
+  font-size: prem(20);
+  font-weight: 400;
+  line-height: 1.2;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
+}
+
+.header__drawer-item span {
+display: block;
+font-size: prem(12);
+color: #a5a5a5;
+}
+
+.header__rv {
+  margin-top: prem(50);
+  border: 1px solid #7f7f7f;
 }
 
 .header__drawer-item.header__drawer-item--contact a::after {
