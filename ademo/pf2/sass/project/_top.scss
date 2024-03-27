@@ -526,8 +526,11 @@
 
 .works-list__item-img {
   max-width: prem(600);
+  height: auto;
   margin-left: 50px;
+  // overflow: hidden;
   position: relative;
+  z-index: -1;
   @include mq(md) {
     margin-left: prem(40);
     margin-right: prem(40);
@@ -535,9 +538,27 @@
   }
 }
 
-.works-list__item-img img {
-  width: 100%;
-  object-fit: cover;
+.rv__img-wrap {
+  opacity: 0;
+}
+
+.works-list__item-img div img {
+  max-width: prem(600); /* 画像の最大幅を90vwに設定 */
+  height: inherit; /* 画像の高さを780pxに固定 */
+  object-fit: contain;
+  // opacity: 0;
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.rv-imgBg{
+  position: absolute;
+  top: 0;left: 0;
+  width: prem(600);
+  height: inherit;
+  background-color: #010101;
+  z-index: 99;
+  overflow: hidden;
 }
 
 .works-list__item-text {
@@ -592,6 +613,7 @@
 }
 
 .rv__text-wrap {
+  opacity: 0;
   @include mq("md") {
     margin-top: 25px;
   }

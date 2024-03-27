@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
   return tl;
 });
 
-// GSAPアニメーションの定義
+// aboutアニメーションの定義
 const titleTween = TweenMax.fromTo(
   ".about__title",
   1,
@@ -93,6 +93,14 @@ const textTween = TweenMax.fromTo(
     ease: Power1.easeOut,
   }
 );
+// 画像に対するブラー効果は提案されていないため、imgTweenはそのままです
+const imgTween = TweenMax.to(".about__img", 1, {
+  y: "-20px",
+  opacity: 1,
+  ease: Power1.easeOut,
+});
+
+
 
 const imgSlideTween = gsap.timeline();
 imgSlideTween
@@ -166,12 +174,42 @@ imgSlideTween2
     "-=2"
   );
 
-// 画像に対するブラー効果は提案されていないため、imgTweenはそのままです
-const imgTween = TweenMax.to(".about__img", 1, {
-  y: "-20px",
-  opacity: 1,
-  ease: Power1.easeOut,
-});
+// .rv
+// const imgSlideTween3 = gsap.timeline();
+// imgSlideTween3
+//   .fromTo(
+//     ".rv-imgBg",
+//     1.2,
+//     {
+//       x: "-120%",
+//       opacity: 0.4,
+//     },
+//     {
+//       x: "0%",
+//       opacity: 0.4,
+//       ease: Power2.easeOut,
+//     }
+//   )
+//   .fromTo(
+//     ".works-list__item-img div img",
+//     2,
+//     {
+//       scale: 1.1,
+//       opacity: 0,
+//     },
+//     {
+//       scale: 1,
+//       opacity: 1,
+//       ease: Power2.easeOut,
+//     }
+//   )
+//   .to(
+//     ".rv-imgBg",
+//     {
+//       opacity: 0,
+//     },
+//     "-=2"
+//   );
 
 const controller = new ScrollMagic.Controller();
 
@@ -209,6 +247,27 @@ new ScrollMagic.Scene({
 })
   .setTween(imgSlideTween2)
   .addTo(controller);
+
+// new ScrollMagic.Scene({
+//   triggerElement: ".works-list__item",
+//   reverse: false,
+// })
+//   .setTween(textTween2.delay(0.5))
+//   .addTo(controller);
+
+// new ScrollMagic.Scene({
+//   triggerElement: ".rv",
+//   reverse: false,
+// })
+//   .setTween(imgTween2.delay(0.5))
+//   .addTo(controller);
+
+// new ScrollMagic.Scene({
+//   triggerElement: ".rv",
+//   reverse: false,
+// })
+//   .setTween(imgSlideTween3)
+//   .addTo(controller);
 
 // menu
 document.addEventListener("DOMContentLoaded", function () {
@@ -302,63 +361,123 @@ document.addEventListener("DOMContentLoaded", function () {
 // title
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = ['.menu', '.commit', '.rv'];
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = [".menu", ".commit", ".rv"];
 
-    sections.forEach(section => {
-        const targets = document.querySelectorAll(`${section} .section-title__main, ${section} .section-title__sub`);
+  sections.forEach((section) => {
+    const targets = document.querySelectorAll(
+      `${section} .section-title__main, ${section} .section-title__sub`
+    );
 
-        targets.forEach((target) => {
-            // テキストを1文字ずつ<span>で囲む処理
-            const chars = target.textContent.split("");
-            target.textContent = "";
-            chars.forEach((char) => {
-                const span = document.createElement("span");
-                span.textContent = char;
-                target.appendChild(span);
-            });
+    targets.forEach((target) => {
+      // テキストを1文字ずつ<span>で囲む処理
+      const chars = target.textContent.split("");
+      target.textContent = "";
+      chars.forEach((char) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        target.appendChild(span);
+      });
 
-            // GSAPタイムラインを定義（ここでディレイを設定）
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top center",
-                },
-                delay: 0.8, // タイムラインの開始前にディレイを適用
-            });
+      // GSAPタイムラインを定義（ここでディレイを設定）
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+        },
+        delay: 0.8, // タイムラインの開始前にディレイを適用
+      });
 
-            // タイムラインにアニメーションを追加
-            tl.set(target.children, { autoAlpha: 0, y: 20 })
-              .to(target.children, {
-                  autoAlpha: 1,
-                  y: 0,
-                  stagger: 0.05,
-              });
-        });
+      // タイムラインにアニメーションを追加
+      tl.set(target.children, { autoAlpha: 0, y: 20 }).to(target.children, {
+        autoAlpha: 1,
+        y: 0,
+        stagger: 0.05,
+      });
     });
+  });
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // セクションにクラスを追加する関数
   function addClasses(section) {
-      // 0.5秒後にクラスを追加する
-      setTimeout(() => {
-          document.querySelectorAll(`${section} .section-title__main`).forEach(element => {
-              element.classList.add('active', 'is-active');
-          });
-      }, 800); // 500ミリ秒のディレイ
+    // 0.5秒後にクラスを追加する
+    setTimeout(() => {
+      document
+        .querySelectorAll(`${section} .section-title__main`)
+        .forEach((element) => {
+          element.classList.add("active", "is-active");
+        });
+    }, 800); // 500ミリ秒のディレイ
   }
 
   // 各セクションに対してaddClasses関数を呼び出す例
-  const sections = ['.menu', '.commit', '.rv'];
-  sections.forEach(section => {
-      // ScrollTriggerを設定
-      ScrollTrigger.create({
-          trigger: section,
-          start: 'top center',
-          onEnter: () => addClasses(section),
-          // onEnterBack: () => addClasses(section)  // ユーザーが逆方向にスクロールしたときにも適用する場合
-      });
+  const sections = [".menu", ".commit", ".rv"];
+  sections.forEach((section) => {
+    // ScrollTriggerを設定
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",
+      onEnter: () => addClasses(section),
+      // onEnterBack: () => addClasses(section)  // ユーザーが逆方向にスクロールしたときにも適用する場合
+    });
   });
+});
+
+//mvアニメーション
+gsap.registerPlugin(ScrollTrigger);
+
+// menu__img2のアニメーション定義
+const imgTween3 = gsap.to(".menu__img2", {
+  opacity: 1,
+  duration: 1, // アニメーションの期間
+  ease: "power1.out", // イージング関数
+  scrollTrigger: {
+    trigger: ".menu__wrapper", // この要素がビューポートに入ったときにアニメーションを開始
+    start: "top center", // トリガー要素のトップがビューポートの中央に来たときにアニメーションを開始
+  },
+  onComplete: () => {
+    // imgTweenのアニメーション完了後に実行
+    gsap.to(".menu__text-items", {
+      opacity: 1,
+      y: "-20px",
+      duration: 1, // アニメーションの期間
+      ease: "power1.out", // イージング関数
+    });
+  }
+});
+
+
+
+// rvアニメーションの定義
+gsap.registerPlugin(ScrollTrigger);
+
+// テキストアニメーション
+const textTween2 = gsap.fromTo(".rv__text-wrap", {
+  filter: "blur(8px)",
+  opacity: 0,
+}, {
+  filter: "blur(0px)",
+  opacity: 1,
+  y: "-20px",
+  ease: "power1.out",
+  duration: 1.5,
+  scrollTrigger: {
+    trigger: ".rv__img-wrap",
+    start: "top center",
+    // ここでの delay は ScrollTrigger のプロパティではないため、代わりに timeline を使用
+  },
+  delay: 1.5, // ScrollTrigger が発火してからのディレイ
+});
+
+// 画像アニメーション
+const imgTween2 = gsap.to(".rv__img-wrap", {
+  y: "-20px",
+  opacity: 1,
+  ease: "power1.out",
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".rv__img-wrap",
+    start: "top center",
+  },
 });

@@ -1266,8 +1266,10 @@ a:hover {
 
 .works-list__item-img {
   max-width: 37.5rem;
+  height: auto;
   margin-left: 50px;
   position: relative;
+  z-index: -1;
 }
 @media screen and (max-width: 767px) {
   .works-list__item-img {
@@ -1276,10 +1278,28 @@ a:hover {
   }
 }
 
-.works-list__item-img img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.rv__img-wrap {
+  opacity: 0;
+}
+
+.works-list__item-img div img {
+  max-width: 37.5rem; /* 画像の最大幅を90vwに設定 */
+  height: inherit; /* 画像の高さを780pxに固定 */
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.rv-imgBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37.5rem;
+  height: inherit;
+  background-color: #010101;
+  z-index: 99;
+  overflow: hidden;
 }
 
 .works-list__item-text {
@@ -1342,6 +1362,9 @@ a:hover {
   }
 }
 
+.rv__text-wrap {
+  opacity: 0;
+}
 @media screen and (max-width: 767px) {
   .rv__text-wrap {
     margin-top: 25px;
