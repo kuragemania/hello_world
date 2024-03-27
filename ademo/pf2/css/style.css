@@ -1139,6 +1139,8 @@ a:hover {
   top: 57%;
   left: 15%;
   z-index: 1;
+  transform: scaleX(0); /* 最初は線を縮小して見えなくする */
+  transform-origin: left; /* 縮小・拡大の原点を下側に設定 */
 }
 @media screen and (max-width: 767px) {
   .commit__text-no::before {
@@ -1157,12 +1159,24 @@ a:hover {
   top: 57%;
   left: -40%;
   z-index: 1;
+  transform: scaleX(0); /* 最初は線を縮小して見えなくする */
+  transform-origin: right; /* 縮小・拡大の原点を下側に設定 */
 }
 @media screen and (max-width: 767px) {
   .commit__text-no.commit__text-no2::before {
     width: 100px; /* 画像の幅 */
     left: 63%;
   }
+}
+
+.commit__text-no.active::before {
+  transform: scaleX(1);
+  transition: 2s;
+}
+
+.commit__text-no.commit__text-no2.active::before {
+  transform: scaleX(1);
+  transition: 2s;
 }
 
 .commit__text-large {
