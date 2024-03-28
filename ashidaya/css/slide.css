@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+/*CSSスライドショー設定
+---------------------------------------------------------------------------*/
+/*１枚目*/
+@keyframes slide1 {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	30% {opacity: 1;}
+	40% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*２枚目*/
+@keyframes slide2 {
+	0% {opacity: 0;}
+	20% {opacity: 0;}
+	30% {opacity: 1;}
+	60% {opacity: 1;}
+	70% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*３枚目*/
+@keyframes slide3 {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	60% {opacity: 1;}
+	85% {opacity: 1;}
+	95% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+/*mainimg
+---------------------------------------------------------------------------*/
+#mainimg {
+	float: right;	/*右に回り込み*/
+	width: 65%;		/*ブロック幅*/
+	position: relative;
+	top: 80px;		/*上からの配置場所の指定*/
+	right: 0px;		/*右からの配置場所の指定*/
+	box-shadow: -80px 80px rgba(222,176,37,0.6), 80px -80px rgba(0,0,0,0.2);	/*ボックスの影。左下へ向けてと、右上に向けての２つ指定しています。*/
+}
+.slide1,.slide2,.slide3 {
+	animation-duration: 12s;	/*アニメーションを実行する時間。「s」は秒の事。*/
+	animation-iteration-count:infinite;
+	position: absolute;left:0px;top:0px;width: 100%;height: auto;
+	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
+	animation-delay: 1s;		/*スライドショーが動き出すタイミング（秒後）*/
+}
+.slide0 {
+	position: relative;width: 100%;height: auto;
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.7);	/*写真（または動画）のドロップシャドウ*/
+}
+.slide1 {
+	animation-name: slide1;
+}
+.slide2 {
+	animation-name: slide2;
+}
+.slide3 {
+	animation-name: slide3;
+}
+
