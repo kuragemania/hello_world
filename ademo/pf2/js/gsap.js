@@ -104,7 +104,7 @@ const imgSlideTween = gsap.timeline();
 imgSlideTween
   .fromTo(
     ".menu-imgBg",
-    0.3,
+    0.8,
     {
       x: "120%",
       opacity: 0.4,
@@ -460,7 +460,7 @@ const textTween2 = gsap.fromTo(
     opacity: 1,
     y: "-20px",
     ease: "power1.out",
-    duration: 0.8,
+    duration: 0.5,
     scrollTrigger: {
       trigger: ".rv__img-wrap",
       start: "top center",
@@ -475,7 +475,7 @@ const imgTween2 = gsap.to(".rv__img-wrap", {
   y: "-20px",
   opacity: 1,
   ease: "power1.out",
-  duration: 1,
+  duration: 0.8,
   scrollTrigger: {
     trigger: ".rv__img-wrap",
     start: "top center",
