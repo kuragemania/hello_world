@@ -48,22 +48,23 @@
           <h1 id="logo">
             <a href="index.html"
               ><img
-                src="images/logo_top.png"
+                src="images/logo-t.png"
                 alt="和食"
             /></a>
           </h1>
           <nav id="header-menu">
             <ul>
-              <li class="current"><a href="index.html">ホーム</a></li>
-              <li><a href="menu.html">おしながき</a></li>
-              <li><a href="takeout.html">あしだ屋について</a></li>
+              <li class="current"><a href="#">ホーム</a></li>
+              <li><a href="#menu">おしながき</a></li>
+              <li><a href="#contents">あしだ屋について</a></li>
+              <li><a href="#pagefooter">アクセス</a></li>
             </ul>
           </nav>
         </div>
-        <ul class="nav">
+        <!-- <ul class="nav">
           <li><a href="index_en.html">English</a></li>
           <li><a href="index_en.html">Chinese</a></li>
-        </ul>
+        </ul> -->
         <!--スライドショー-->
         <aside id="mainimg">
           <img
@@ -92,10 +93,11 @@
       <!--開閉メニュー-->
       <nav id="menubar">
         <ul>
-          <li class="current"><a href="index.html">ホーム</a></li>
-          <li><a href="menu.html">おしながき</a></li>
-          <li><a href="takeout.html">あしだ屋について</a></li>
-          <li><a href="company.html">会社概要</a></li>
+          <li class="current"><a href="#">ホーム</a></li>
+          <li><a href="#contents">あしだ屋について</a></li>
+          <li><a href="#menu">おしながき</a></li>
+          <li><a href="#pagefooter">アクセス</a></li>
+          <!-- <li><a href="company.html">会社概要</a></li> -->
         </ul>
       </nav>
 
@@ -106,9 +108,9 @@
 
             <div class="list up about__list">
               <div class="text">
-                <h4>動画を配置したサンプル</h4>
+                <h4>あしだ屋とは</h4>
                 <p>
-                  videoタグ内にあるimg画像は、videoタグを再生できない環境向けの代替画像です。動画のキャプチャをjpgなどにして読み込んでください。
+                  アットホームな店内でどなたでも気軽に焼肉を楽しく満喫していただけます、友人や家族とのワイワイとした食事会に最適です。
                 </p>
               </div>
               <div
@@ -135,13 +137,10 @@
 
             <div class="list up">
               <div class="text about__text-b">
-                <h4>固定画像も配置できます</h4>
+                <h4>お得な宴会プラン</h4>
                 <p>
-                  固定画像を配置する場合、必ず「figure」タグで囲って下さい。
-                </p>
-                <h4>listブロックは</h4>
-                <p>
-                  自動で交互に画像(動画)と文字ブロックが左右入れ替わります。
+                  あしだ屋名物の宴会プランは30種類以上のドリンク飲み放題と焼肉盛り合わせとお料理がセットとなっております！<br />
+                  ※前日までにご予約が必要
                 </p>
               </div>
               <figure class="about__img-b">
@@ -153,7 +152,7 @@
             </div>
           </section>
 
-          <section>
+          <section id="menu">
             <h2>メニュー<br /><span></span></h2>
 
             <div class="list-column-container up">
@@ -276,7 +275,7 @@
       </div>
       <!--/#contents-->
 
-      <footer>
+      <footer id="pagefooter">
         <h2>Access<span>アクセス</span></h2>
 
         <div
@@ -294,9 +293,9 @@
               </tr>
               <tr>
                 <th>TEL</th>
-                <td>098-960-6250</td>
+                <td><a href="tel:098-960-6250">098-960-6250</a></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <th>アクセス</th>
                 <td>
                   <ul class="disc">
@@ -304,24 +303,22 @@
                     <li>地下鉄XX駅東口改札より徒歩１分。</li>
                   </ul>
                 </td>
-              </tr>
+              </tr> -->
             </table>
           </div>
 
           <div class="fr w48p">
-            <img
-              src="images/dummy_map_main.jpg"
-              alt=""
-            /><br />
-            <a href="https://template-party.com/file/pickup_googlemap.html"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.253633578676!2d127.70576277590797!3d26.253430477046454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56b9be51eb093%3A0x5c799b89944744d!2z44CSOTAxLTIxMjcg5rKW57iE55yM5rWm5re75biC5bGL5a-M56WW77yT5LiB55uu77yS4oiS77yR!5e0!3m2!1sja!2sjp!4v1711680392749!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <!-- <a href="https://template-party.com/file/pickup_googlemap.html"
               >GoogleMapで地図を貼り付けたい人は解説がありますのでご覧下さい。</a
-            >
+            > -->
           </div>
         </div>
         <!--/#footer-contents-->
 
         <div id="copyright">
-          <ul class="icon">
+          <!-- <ul class="icon">
             <li>
               <a href="#"
                 ><img
@@ -350,9 +347,9 @@
                   alt="TouTube"
               /></a>
             </li>
-          </ul>
+          </ul> -->
           <small
-            >Copyright&copy; <a href="index.html">和食</a> All Rights
+            >Copyright&copy; <a href="index.html">屋富祖酒場あしだ屋</a> All Rights
             Reserved.</small
           >
           <span class="pr"

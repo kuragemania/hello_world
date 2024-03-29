@@ -123,8 +123,8 @@ header #logo {
 /*ロゴ画像（トップページのロゴ画像への追加指定）*/
 .home header #logo {
   float: none; /*回り込み解除*/
-  width: 100px; /*画像幅*/
-  margin: 0 auto 50px; /*上、左右、下へ、画像の外側にとるスペース*/
+  width: 175px; /*画像幅*/
+  margin: 80px auto 50px; /*上、左右、下へ、画像の外側にとるスペース*/
   background: linear-gradient(
     #48390d,
     #302609 20%,
@@ -751,7 +751,7 @@ p.look {
   /*ロゴ画像（トップページのロゴ画像への追加指定）*/
   .home header #logo {
     margin-bottom: 0;
-    width: 70px; /*画像幅*/
+    width: 80px; /*画像幅*/
   }
 
   /*ヘッダーメニュー
@@ -858,6 +858,7 @@ p.look {
   /*トップページのコンテンツへの追加指定*/
   .home #contents {
     padding-top: 100px; /*上に空ける余白*/
+    padding-top: 165px;
   }
 }
 

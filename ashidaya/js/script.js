@@ -12,3 +12,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
     images[currentImageIndex].classList.add('active');
   }, 3000); // 2000ミリ秒ごとに切り替え
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault(); // デフォルトの動作をキャンセル
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    // スムーズスクロールを実行
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // メニューリンクを取得
+  var menuLinks = document.querySelectorAll('#menubar a');
+
+  // 各リンクにクリックイベントを設定
+  menuLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+          // メニューを閉じる処理
+          var menubar = document.getElementById('menubar');
+          menubar.style.display = 'none'; // 例として、displayをnoneに設定
+      });
+  });
+});
