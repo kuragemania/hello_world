@@ -482,7 +482,7 @@ a:hover {
 }
 
 .header__drawer-nav {
-  margin-top: 5rem;
+  margin-top: 3.125rem;
 }
 
 .header__drawer-item {
@@ -673,7 +673,6 @@ a:hover {
   background-size: auto; /* 元の画像サイズを保持 */
   background-position: center;
   background-repeat: repeat; /* 画像を繰り返して表示 */
-  overflow: hidden;
 }
 
 .about {

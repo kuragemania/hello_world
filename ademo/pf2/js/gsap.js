@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // aboutアニメーションの定義
 const titleTween = TweenMax.fromTo(
   ".about__title",
-  1,
+  0.5,
   {
     filter: "blur(8px)",
     opacity: 0,
@@ -81,7 +81,7 @@ const titleTween = TweenMax.fromTo(
 
 const textTween = TweenMax.fromTo(
   ".about__text",
-  1,
+  0.5,
   {
     filter: "blur(8px)",
     opacity: 0,
@@ -94,7 +94,7 @@ const textTween = TweenMax.fromTo(
   }
 );
 // 画像に対するブラー効果は提案されていないため、imgTweenはそのままです
-const imgTween = TweenMax.to(".about__img", 1, {
+const imgTween = TweenMax.to(".about__img", 0.5, {
   y: "-20px",
   opacity: 1,
   ease: Power1.easeOut,
@@ -104,7 +104,7 @@ const imgSlideTween = gsap.timeline();
 imgSlideTween
   .fromTo(
     ".menu-imgBg",
-    1.2,
+    0.3,
     {
       x: "120%",
       opacity: 0.4,
@@ -117,7 +117,7 @@ imgSlideTween
   )
   .fromTo(
     ".menu-img div img",
-    2,
+    1.0,
     {
       scale: 1.1,
       opacity: 0,
@@ -133,14 +133,14 @@ imgSlideTween
     {
       opacity: 0,
     },
-    "-=2"
+    "-=1.0"
   );
 
 const imgSlideTween2 = gsap.timeline();
 imgSlideTween2
   .fromTo(
     ".menu-imgBg",
-    1.2,
+    0.5,
     {
       x: "-120%",
       opacity: 0.4,
@@ -153,7 +153,7 @@ imgSlideTween2
   )
   .fromTo(
     ".commit-img div img",
-    2,
+    1.0,
     {
       scale: 1.1,
       opacity: 0,
@@ -169,7 +169,7 @@ imgSlideTween2
     {
       opacity: 0,
     },
-    "-=2"
+    "-=1.0"
   );
 
 // .rv
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
   commitElements.forEach(function (element, index) {
     // 画像のズームアウトアニメーション
     var imgTween = gsap.from(element + " .commit__list-img", {
-      duration: 1.0, // アニメーションの持続時間
+      duration: 0.5, // アニメーションの持続時間
       scale: 1.03, // 少しズームしている状態から開始
       ease: "Power2.easeOut", // イージング関数
     });
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
       autoAlpha: 0, // 透明度を0から1へ
       filter: "blur(10px)", // ぼやけた状態からピントが合う
       ease: "Power2.easeOut", // イージング関数
-      delay: 1.5, // 画像のアニメーション後に遅延実行
+      delay: 0.8, // 画像のアニメーション後に遅延実行
     });
 
     // 画像アニメーションのシーン
@@ -460,13 +460,13 @@ const textTween2 = gsap.fromTo(
     opacity: 1,
     y: "-20px",
     ease: "power1.out",
-    duration: 1.5,
+    duration: 0.8,
     scrollTrigger: {
       trigger: ".rv__img-wrap",
       start: "top center",
       // ここでの delay は ScrollTrigger のプロパティではないため、代わりに timeline を使用
     },
-    delay: 1.5, // ScrollTrigger が発火してからのディレイ
+    delay: 0.5, // ScrollTrigger が発火してからのディレイ
   }
 );
 
