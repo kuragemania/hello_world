@@ -1,67 +1,34 @@
 window.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
   // 要素の選択はそのまま
-  const el_1 = document.querySelector(
-    ".mv__title-item:nth-of-type(1) .mv__title-img"
-  );
-  const el_2 = document.querySelector(
-    ".mv__title-item:nth-of-type(2) .mv__title-img"
-  );
-  const el_3 = document.querySelector(
-    ".mv__title-item:nth-of-type(3) .mv__title-img"
-  );
-  const el_4 = document.querySelector(
-    ".mv__title-item:nth-of-type(4) .mv__title-img"
-  );
-  const el_5 = document.querySelector(
-    ".mv__title-item:nth-of-type(5) .mv__title-img"
-  );
+  const el_1 = document.querySelector(".mv__title-img");
   const el_bg = document.querySelector(".mv");
   const el_header = document.querySelector(".layout-header");
-  const el_fixed = document.querySelector(".b-bgi");
+  // const el_fixed = document.querySelector(".b-bgi");
 
   // アニメーションの開始状態にblurを適用し、fromToメソッドで滑らかに変化させる
   tl.fromTo(
     el_1,
     { filter: "blur(40px)", opacity: 0 },
-    { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" }
+    { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
   )
-    .fromTo(
-      el_2,
-      { filter: "blur(40px)", opacity: 0 },
-      { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" },
-      "-=0.5"
-    )
-    .fromTo(
-      el_3,
-      { filter: "blur(40px)", opacity: 0 },
-      { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" },
-      "-=0.5"
-    )
-    .fromTo(
-      el_4,
-      { filter: "blur(40px)", opacity: 0 },
-      { filter: "blur(0px)", opacity: 1, duration: 1, ease: "power1.out" },
-      "-=0.5"
-    )
-    .fromTo(
-      el_5,
-      { filter: "blur(40px)", opacity: 0 },
-      { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" },
-      "-=0.5"
-    )
-    .add(() => {
-      el_bg.classList.remove("mv-black");
-    }, "+=2") // 背景クラスの変更タイミングも調整
-    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2") // ヘッダーの透明度変化を滑らかに
-    .to(
-      el_fixed,
-      { overflow: "hidden visible", duration: 1, ease: "power1.inOut" },
-      "-=1"
-    ); // 固定要素のオーバーフロー変更を滑らかに
-
+    // 背景クラスの変更タイミングも調整
+    .to(el_bg, {
+      onStart: () => el_bg.classList.add("fade-out"), // アニメーション開始時にクラスを追加
+    }, "+=0.5")
+    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2"); // ヘッダーの透明度変化を滑らかに
+    // 固定要素のオーバーフロー変更を滑らかに（コメントアウトされた部分）
   return tl;
 });
+
+
+    // ヘッダーの透明度変化を滑らかに
+    // .to(
+    //   el_fixed,
+    //   { overflow: "hidden visible", duration: 1, ease: "power1.inOut" },
+    //   "-=1"
+    // );
+
 
 // aboutアニメーションの定義
 const titleTween = TweenMax.fromTo(
@@ -140,7 +107,7 @@ const imgSlideTween2 = gsap.timeline();
 imgSlideTween2
   .fromTo(
     ".menu-imgBg",
-    0.5,
+    0.8,
     {
       x: "-120%",
       opacity: 0.4,
@@ -498,6 +465,25 @@ document.addEventListener("DOMContentLoaded", function () {
       start: "top center",
       onEnter: () => addClasses(section),
       // onEnterBack: () => addClasses(section)  // ユーザーが逆方向にスクロールしたときにも適用する場合
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // ページ内リンクに対してイベントリスナーを設定
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // スクロール先の要素を取得
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      // スムーススクロールを実行
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   });
 });

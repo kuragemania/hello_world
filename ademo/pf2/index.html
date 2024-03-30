@@ -94,10 +94,10 @@
         <nav class="header__nav">
           <ul class="header__nav-items">
             <li class="header__nav-item">
-              <a href="#">浦野とは</a>
+              <a href="#about">浦野とは</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">お食事</a>
+              <a href="#menu">お食事</a>
             </li>
             <li class="header__nav-item">
               <a href="#">お知らせ</a>
@@ -106,7 +106,7 @@
               <a href="#">アクセス</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">予約</a>
+              <a href="#rv">予約</a>
             </li>
           </ul>
         </nav>
@@ -125,10 +125,10 @@
           <nav class="header__drawer-nav">
             <ul class="header__drawer-items">
               <li class="header__drawer-item">
-                <a href="#">浦野とは<span>About</span></a>
+                <a href="#about">浦野とは<span>About</span></a>
               </li>
               <li class="header__drawer-item">
-                <a href="#">お食事<span>Menu</span></a>
+                <a href="#menu">お食事<span>Menu</span></a>
               </li>
               <li class="header__drawer-item">
                 <a href="#">お知らせ<span>News</span></a>
@@ -137,7 +137,7 @@
                 <a href="#">アクセス<span>Access</span></a>
               </li>
               <li class="header__drawer-item header__rv">
-                <a href="#">ご予約<span>Reservation</span></a>
+                <a href="#rv">ご予約<span>Reservation</span></a>
               </li>
             </ul>
           </nav>
@@ -149,53 +149,40 @@
         <div class="mv__inner">
           <div class="mv__title-wrap">
             <div class="mv__title-items">
-              <span class="mv__title-item"
-                ><img
-                  src="./images/common/mv/logo.png"
-                  alt=""
-                  class="mv__title-img"
-              /></span>
-              <span class="mv__title-item"
-                ><img
-                  src="./images/common/mv/kyo.png"
-                  alt=""
-                  class="mv__title-img"
-              /></span>
-              <span class="mv__title-item"
-                ><img
-                  src="./images/common/mv/to.png"
-                  alt=""
-                  class="mv__title-img"
-              /></span>
-              <span class="mv__title-item"
-                ><img
-                  src="./images/common/mv/ura.png"
-                  alt=""
-                  class="mv__title-img"
-              /></span>
-              <span class="mv__title-item"
-                ><img
-                  src="./images/common/mv/no.png"
-                  alt=""
-                  class="mv__title-img"
-              /></span>
-            </div>
+              <img
+              src="./images/common/mv-logo.png"
+              alt=""
+              class="mv__title-img"/>
+              </div>
           </div>
           <div class="mv__img">
-            <picture class="mv__img-wrap">
-              <source
-                srcset="./images/common/mv.png"
-                media="(min-width: 768px)"
-              />
-              <img
-                src="./images/common/mv-sp.png"
-                alt=""
-              />
-            </picture>
+            <div class="mv__img-wrap slideshow">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <picture>
+                  <source srcset="./images/common/mv.png" media="(min-width: 768px)" />
+                  <img src="./images/common/mv-sp.png" alt="" />
+                </picture>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <picture>
+                  <source srcset="./images/common/mv2.png" media="(min-width: 768px)" />
+                  <img src="./images/common/mv-sp2.png" alt="" />
+                </picture>
+              </div>
+              <!-- 以下、追加のスライド -->
+              <div class="slide">
+                <picture>
+                  <source srcset="./images/common/mv3.png" media="(min-width: 768px)" />
+                  <img src="./images/common/mv-sp3.png" alt="" />
+                </picture>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__inner">
           <div class="about__img"></div>
           <p class="about__text">
@@ -206,7 +193,7 @@
           </h2>
         </div>
       </section>
-      <section class="menu">
+      <section class="menu" id="menu">
         <div class="menu__title title__wrapper">
           <h2 class="menu__title section-title__main">
             <span>お</span><span>食</span><span>事</span>
@@ -376,7 +363,7 @@
           </picture>
         </div>
       </section>
-      <section class="rv">
+      <section class="rv" id="rv">
         <div class="works__list works-list">
           <div class="works-list__item">
             <div class="works-list__item-img">

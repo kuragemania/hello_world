@@ -632,3 +632,25 @@
     margin-top: 25px;
   }
 }
+
+
+.about {
+  scroll-margin-top: 500px; /* スクロール位置を上に100pxずらす */
+  @include mq("md"){
+    scroll-margin-top: 300px; /* スクロール位置を上に100pxずらす */
+  }
+}
+
+.menu {
+  scroll-margin-top: 250px; /* スクロール位置を上に100pxずらす */
+  @include mq("md"){
+    scroll-margin-top: 100px; /* スクロール位置を上に100pxずらす */
+  }
+}
+
+.rv {
+  scroll-margin-top: 230px; /* スクロール位置を上に100pxずらす */
+  @include mq("md"){
+    scroll-margin-top: 120px; /* スクロール位置を上に100pxずらす */
+  }
+}
