@@ -13,22 +13,24 @@ window.addEventListener("DOMContentLoaded", () => {
     { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
   )
     // 背景クラスの変更タイミングも調整
-    .to(el_bg, {
-      onStart: () => el_bg.classList.add("fade-out"), // アニメーション開始時にクラスを追加
-    }, "+=0.5")
+    .to(
+      el_bg,
+      {
+        onStart: () => el_bg.classList.add("fade-out"), // アニメーション開始時にクラスを追加
+      },
+      "+=0.5"
+    )
     .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2"); // ヘッダーの透明度変化を滑らかに
-    // 固定要素のオーバーフロー変更を滑らかに（コメントアウトされた部分）
+  // 固定要素のオーバーフロー変更を滑らかに（コメントアウトされた部分）
   return tl;
 });
 
-
-    // ヘッダーの透明度変化を滑らかに
-    // .to(
-    //   el_fixed,
-    //   { overflow: "hidden visible", duration: 1, ease: "power1.inOut" },
-    //   "-=1"
-    // );
-
+// ヘッダーの透明度変化を滑らかに
+// .to(
+//   el_fixed,
+//   { overflow: "hidden visible", duration: 1, ease: "power1.inOut" },
+//   "-=1"
+// );
 
 // aboutアニメーションの定義
 const titleTween = TweenMax.fromTo(
@@ -84,7 +86,7 @@ imgSlideTween
   )
   .fromTo(
     ".menu-img div img",
-    1.0,
+    0.8,
     {
       scale: 1.1,
       opacity: 0,
@@ -100,7 +102,7 @@ imgSlideTween
     {
       opacity: 0,
     },
-    "-=1.0"
+    "-=0.8"
   );
 
 const imgSlideTween2 = gsap.timeline();
@@ -120,7 +122,7 @@ imgSlideTween2
   )
   .fromTo(
     ".commit-img div img",
-    1.0,
+    0.8,
     {
       scale: 1.1,
       opacity: 0,
@@ -136,7 +138,7 @@ imgSlideTween2
     {
       opacity: 0,
     },
-    "-=1.0"
+    "-=0.8"
   );
 
 // .rv
@@ -469,20 +471,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
   // ページ内リンクに対してイベントリスナーを設定
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
 
       // スクロール先の要素を取得
-      const targetId = this.getAttribute('href');
+      const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
 
       // スムーススクロールを実行
       targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start",
       });
     });
   });
