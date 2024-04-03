@@ -644,6 +644,10 @@ a:hover {
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .b-bgi {
   background-image: url("../images/common/bgi.png"); /* 背景画像を指定 */
   background-size: auto; /* 元の画像サイズを保持 */
