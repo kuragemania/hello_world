@@ -167,7 +167,7 @@ html {
 
 .menu-imgBg {
   position: absolute;
-  width: 90vw;
+  width: 90%;
   height: inherit;
   background-color: #010101;
   z-index: 99;
@@ -565,17 +565,6 @@ html {
   object-fit: contain;
   // opacity: 0;
   transform-origin: center;
-  overflow: hidden;
-}
-
-.rv-imgBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: prem(600);
-  height: inherit;
-  background-color: #010101;
-  z-index: 99;
   overflow: hidden;
 }
 

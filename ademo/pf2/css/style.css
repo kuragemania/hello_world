@@ -846,7 +846,7 @@ html {
 
 .menu-imgBg {
   position: absolute;
-  width: 90vw;
+  width: 90%;
   height: inherit;
   background-color: #010101;
   z-index: 99;
