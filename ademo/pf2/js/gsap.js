@@ -471,20 +471,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
   // ページ内リンクに対してイベントリスナーを設定
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
       // スクロール先の要素を取得
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
+      const targetId = this.getAttribute('href');
+      const targetElement = targetId === "#" ? document.body : document.querySelector(targetId);
 
       // スムーススクロールを実行
       targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+        behavior: 'smooth',
+        block: 'start'
       });
     });
   });

@@ -138,6 +138,18 @@ a:hover {
   }
 }
 
+.md-show {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
+  .md-none {
+    display: none;
+  }
+}
 .layout-header {
   position: fixed;
   z-index: 110;
