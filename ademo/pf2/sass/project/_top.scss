@@ -1,7 +1,7 @@
 @use "../foundation" as *;
 
 html {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .b-bgi {
