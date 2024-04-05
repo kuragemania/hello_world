@@ -12,21 +12,21 @@ html {
   width: 100%;
   height: 100vh;
   z-index: 9999;
-  background-color: #010101;
+  background-color: #000;
 }
 
 .sp-overlay-img {
   position: absolute;
   max-width: prem(218); /* 画像がコンテナより大きくならないように */
   height: auto; /* 画像の高さを自動調整してアスペクト比を保持 */
-     top: 50%; /* 位置調整 */
-     left: 50%; /* 位置調整 */
-transform: translate(-50%,-50%);
- filter: blur(20px);
- @include mq("md"){
-  width: 5.625rem; /* 画像がコンテナより大きくならないように */
-  height: 196px; /* 画像の高さを自動調整してアスペクト比を保持 */
- }
+  top: 50%; /* 位置調整 */
+  left: 50%; /* 位置調整 */
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  @include mq("md") {
+    width: 5.625rem; /* 画像がコンテナより大きくならないように */
+    height: 196px; /* 画像の高さを自動調整してアスペクト比を保持 */
+  }
 }
 
 .b-bgi {
@@ -651,24 +651,23 @@ transform: translate(-50%,-50%);
   }
 }
 
-
 .about {
   scroll-margin-top: 500px; /* スクロール位置を上に100pxずらす */
-  @include mq("md"){
+  @include mq("md") {
     scroll-margin-top: 300px; /* スクロール位置を上に100pxずらす */
   }
 }
 
 .menu {
   scroll-margin-top: 250px; /* スクロール位置を上に100pxずらす */
-  @include mq("md"){
+  @include mq("md") {
     scroll-margin-top: 100px; /* スクロール位置を上に100pxずらす */
   }
 }
 
 .rv {
   scroll-margin-top: 230px; /* スクロール位置を上に100pxずらす */
-  @include mq("md"){
+  @include mq("md") {
     scroll-margin-top: 120px; /* スクロール位置を上に100pxずらす */
   }
 }
