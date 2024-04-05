@@ -666,7 +666,6 @@ html {
   top: 50%; /* 位置調整 */
   left: 50%; /* 位置調整 */
   transform: translate(-50%, -50%);
-  filter: blur(20px);
 }
 @media screen and (max-width: 767px) {
   .sp-overlay-img {

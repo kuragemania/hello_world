@@ -22,7 +22,7 @@ html {
   top: 50%; /* 位置調整 */
   left: 50%; /* 位置調整 */
   transform: translate(-50%, -50%);
-  filter: blur(20px);
+  // filter: blur(50px);
   @include mq("md") {
     width: 5.625rem; /* 画像がコンテナより大きくならないように */
     height: 196px; /* 画像の高さを自動調整してアスペクト比を保持 */
