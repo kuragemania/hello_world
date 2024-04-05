@@ -1,27 +1,34 @@
 window.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
-  // 要素の選択はそのまま
-  const el_1 = document.querySelector(".mv__title-img");
+  const elements = document.querySelectorAll(".mv__title-img, .sp-overlay-img");
   const el_bg = document.querySelector(".mv");
   const el_header = document.querySelector(".layout-header");
-  // const el_fixed = document.querySelector(".b-bgi");
 
-  // アニメーションの開始状態にblurを適用し、fromToメソッドで滑らかに変化させる
-  tl.fromTo(
-    el_1,
-    { filter: "blur(40px)", opacity: 0 },
-    { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
+  // .mv__title-img と .sp-overlay-img に対するアニメーション
+  elements.forEach((el) => {
+    tl.fromTo(
+      el,
+      { filter: "blur(40px)", opacity: 0 },
+      { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
+    );
+  });
+
+  // 背景とヘッダーに対する追加のアニメーション
+  tl.to(
+    el_bg,
+    {
+      onStart: () => el_bg.classList.add("fade-out"),
+    },
+    "+=0.5"
   )
-    // 背景クラスの変更タイミングも調整
+    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2")
+
+    // ここで .sp-overlay の透明度を0に徐々に変化させる
     .to(
-      el_bg,
-      {
-        onStart: () => el_bg.classList.add("fade-out"), // アニメーション開始時にクラスを追加
-      },
-      "+=0.5"
-    )
-    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2"); // ヘッダーの透明度変化を滑らかに
-  // 固定要素のオーバーフロー変更を滑らかに（コメントアウトされた部分）
+      ".sp-overlay",
+      { opacity: 0, duration: 0.5, ease: "power1.inOut" },
+      "-=2.4"
+    );
   return tl;
 });
 
@@ -68,6 +75,43 @@ const imgTween = TweenMax.to(".about__img", 0.5, {
   opacity: 1,
   ease: Power1.easeOut,
 });
+
+// menu
+// const imgSlideTween = gsap.timeline();
+// imgSlideTween
+//   .fromTo(
+//     ".menu-imgBg",
+//     {
+//       width: "0%", // 初期状態の幅
+//       opacity: 0 // 初期状態の透明度
+//     },
+//     {
+//       width: "90%", // 最終状態の幅
+//       opacity: 1, // 途中状態の透明度
+//       ease: Power1.easeOut, // アニメーションのイージング
+//       duration: 1.8 // 幅が伸びるアニメーションの時間
+//     }
+//   )
+//   .to(".menu-imgBg", {
+//     opacity: 0, // 最終状態の透明度
+//     duration: 0.01, // このアニメーションステップの持続時間を非常に短く設定
+//     ease: Power1.easeOut, // イージング関数
+//     delay: -0.01 // 前のアニメーションが終わる直前に開始
+//   })
+//   // menu-imgBgが消えた後に実行するアニメーション
+//   .fromTo(
+//     ".menu-img div img",
+//     {
+//       scale: 1.1,
+//       opacity: 0,
+//     },
+//     {
+//       scale: 1,
+//       opacity: 1,
+//       ease: Power2.easeOut,
+//       duration: 0.8
+//     }
+//   );
 
 const imgSlideTween = gsap.timeline();
 imgSlideTween
@@ -471,20 +515,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
   // ページ内リンクに対してイベントリスナーを設定
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
 
       // スクロール先の要素を取得
-      const targetId = this.getAttribute('href');
-      const targetElement = targetId === "#" ? document.body : document.querySelector(targetId);
+      const targetId = this.getAttribute("href");
+      const targetElement =
+        targetId === "#" ? document.body : document.querySelector(targetId);
 
       // スムーススクロールを実行
       targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start",
       });
     });
   });

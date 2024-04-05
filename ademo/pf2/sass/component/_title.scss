@@ -65,17 +65,6 @@ transition: 0.3s 1.7s;
   opacity: 0;
 }
 
-.md-show {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .md-show {
-    display: block;
-  }
-  .md-none {
-    display: none;
-  }
-}
 
 @media screen and (max-width: 1579px) {
   .xl2-none {
