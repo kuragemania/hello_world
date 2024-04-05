@@ -1,34 +1,27 @@
 window.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
-  const elements = document.querySelectorAll(".mv__title-img, .sp-overlay-img");
+  // 要素の選択はそのまま
+  const el_1 = document.querySelector(".mv__title-img");
   const el_bg = document.querySelector(".mv");
   const el_header = document.querySelector(".layout-header");
+  // const el_fixed = document.querySelector(".b-bgi");
 
-  // .mv__title-img と .sp-overlay-img に対するアニメーション
-  elements.forEach((el) => {
-    tl.fromTo(
-      el,
-      { filter: "blur(40px)", opacity: 0 },
-      { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
-    );
-  });
-
-  // 背景とヘッダーに対する追加のアニメーション
-  tl.to(
-    el_bg,
-    {
-      onStart: () => el_bg.classList.add("fade-out"),
-    },
-    "+=0.5"
+  // アニメーションの開始状態にblurを適用し、fromToメソッドで滑らかに変化させる
+  tl.fromTo(
+    el_1,
+    { filter: "blur(40px)", opacity: 0 },
+    { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
   )
-    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2")
-
-    // ここで .sp-overlay の透明度を0に徐々に変化させる
+    // 背景クラスの変更タイミングも調整
     .to(
-      ".sp-overlay",
-      { opacity: 0, duration: 0.5, ease: "power1.inOut" },
-      "-=2.4"
-    );
+      el_bg,
+      {
+        onStart: () => el_bg.classList.add("fade-out"), // アニメーション開始時にクラスを追加
+      },
+      "+=0.5"
+    )
+    .to(el_header, { opacity: 1, duration: 1, ease: "power1.inOut" }, "-=0.2"); // ヘッダーの透明度変化を滑らかに
+  // 固定要素のオーバーフロー変更を滑らかに（コメントアウトされた部分）
   return tl;
 });
 
