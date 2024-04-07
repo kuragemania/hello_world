@@ -26,9 +26,18 @@ window.addEventListener("DOMContentLoaded", () => {
     // ここで .sp-overlay の透明度を0に徐々に変化させる
     .to(
       ".sp-overlay",
-      { opacity: 0, duration: 0.5, ease: "power1.inOut" },
+      {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+        onComplete: () => {
+          // アニメーション完了後に実行
+          document.querySelector(".sp-overlay").style.display = "none";
+        },
+      },
       "-=2.0"
     );
+
   return tl;
 });
 
