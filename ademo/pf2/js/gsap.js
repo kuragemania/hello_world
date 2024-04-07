@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
   elements.forEach((el) => {
     tl.fromTo(
       el,
-      { filter: "blur(40px)", opacity: 0 },
+      { filter: "blur(30px)", opacity: 0 },
       { filter: "blur(0px)", opacity: 1, duration: 1.0, ease: "power1.out" }
     );
   });
@@ -89,7 +89,7 @@ imgSlideTween
       width: "90%", // 最終状態の幅
       opacity: 1, // 途中状態の透明度
       ease: Power1.easeOut, // アニメーションのイージング
-      duration: 1.8, // 幅が伸びるアニメーションの時間
+      duration: 0.6, // 幅が伸びるアニメーションの時間
     }
   )
   .to(".menu-imgBg", {
@@ -161,7 +161,7 @@ imgSlideTween2
       width: "90%", // 最終状態の幅
       opacity: 1, // 途中状態の透明度
       ease: Power1.easeOut, // アニメーションのイージング
-      duration: 1.8, // 幅が伸びるアニメーションの時間
+      duration: 0.6, // 幅が伸びるアニメーションの時間
     }
   )
   .to(".menu-imgBg", {
