@@ -1098,10 +1098,14 @@ html {
   padding-left: 30px;
 }
 
-.commit__list-img {
-  flex-shrink: 0; /* 画像が縮小されないようにします。 */
-  /* 必要に応じて画像の最大幅や高さを指定することもできます。 */
+.commit__list-img-wrap {
   max-width: 55%; /* 例: 画像の最大幅を100pxに設定 */
+  flex-shrink: 0; /* 画像が縮小されないようにします。 */
+  overflow: hidden;
+}
+
+.commit__list-img {
+  /* 必要に応じて画像の最大幅や高さを指定することもできます。 */
   width: 100%;
   height: auto; /* 高さを自動調整して、アスペクト比を保持します。 */
   object-fit: cover;
