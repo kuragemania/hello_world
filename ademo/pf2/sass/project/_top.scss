@@ -404,6 +404,9 @@ html {
   max-width: 55%; /* 例: 画像の最大幅を100pxに設定 */
   flex-shrink: 0; /* 画像が縮小されないようにします。 */
   overflow: hidden;
+  @include mq("md") {
+    max-width: 82%; /* モバイルビューでは画像の最大幅を調整することができます */
+  }
 }
 
 .commit__list-img {
@@ -411,9 +414,6 @@ html {
   width: 100%;
   height: auto; /* 高さを自動調整して、アスペクト比を保持します。 */
   object-fit: cover;
-  @include mq("md") {
-    max-width: 82%; /* モバイルビューでは画像の最大幅を調整することができます */
-  }
 }
 
 .commit__text-no {
