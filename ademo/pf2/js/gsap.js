@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
     tl.fromTo(
       el,
       { filter: "blur(40px)", opacity: 0 },
-      { filter: "blur(0px)", opacity: 1, duration: 1.5, ease: "power1.out" }
+      { filter: "blur(0px)", opacity: 1, duration: 1.0, ease: "power1.out" }
     );
   });
 
@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .to(
       ".sp-overlay",
       { opacity: 0, duration: 0.5, ease: "power1.inOut" },
-      "-=2.4"
+      "-=2.0"
     );
   return tl;
 });
@@ -77,30 +77,60 @@ const imgTween = TweenMax.to(".about__img", 0.5, {
 });
 
 // menu
+const imgSlideTween = gsap.timeline();
+imgSlideTween
+  .fromTo(
+    ".menu-imgBg",
+    {
+      width: "0%", // 初期状態の幅
+      opacity: 0, // 初期状態の透明度
+    },
+    {
+      width: "90%", // 最終状態の幅
+      opacity: 1, // 途中状態の透明度
+      ease: Power1.easeOut, // アニメーションのイージング
+      duration: 1.8, // 幅が伸びるアニメーションの時間
+    }
+  )
+  .to(".menu-imgBg", {
+    opacity: 0, // 最終状態の透明度
+    duration: 0.01, // このアニメーションステップの持続時間を非常に短く設定
+    ease: Power1.easeOut, // イージング関数
+    delay: -0.01, // 前のアニメーションが終わる直前に開始
+  })
+  // menu-imgBgが消えた後に実行するアニメーション
+  .fromTo(
+    ".menu-img div img",
+    {
+      scale: 1.1,
+      opacity: 0,
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      ease: Power2.easeOut,
+      duration: 0.8,
+    }
+  );
+
 // const imgSlideTween = gsap.timeline();
 // imgSlideTween
 //   .fromTo(
 //     ".menu-imgBg",
+//     0.8,
 //     {
-//       width: "0%", // 初期状態の幅
-//       opacity: 0 // 初期状態の透明度
+//       x: "120%",
+//       opacity: 0.4,
 //     },
 //     {
-//       width: "90%", // 最終状態の幅
-//       opacity: 1, // 途中状態の透明度
-//       ease: Power1.easeOut, // アニメーションのイージング
-//       duration: 1.8 // 幅が伸びるアニメーションの時間
+//       x: "0%",
+//       opacity: 0.4,
+//       ease: Power2.easeOut,
 //     }
 //   )
-//   .to(".menu-imgBg", {
-//     opacity: 0, // 最終状態の透明度
-//     duration: 0.01, // このアニメーションステップの持続時間を非常に短く設定
-//     ease: Power1.easeOut, // イージング関数
-//     delay: -0.01 // 前のアニメーションが終わる直前に開始
-//   })
-//   // menu-imgBgが消えた後に実行するアニメーション
 //   .fromTo(
 //     ".menu-img div img",
+//     0.8,
 //     {
 //       scale: 1.1,
 //       opacity: 0,
@@ -109,64 +139,40 @@ const imgTween = TweenMax.to(".about__img", 0.5, {
 //       scale: 1,
 //       opacity: 1,
 //       ease: Power2.easeOut,
-//       duration: 0.8
 //     }
+//   )
+//   .to(
+//     ".menu-imgBg",
+//     {
+//       opacity: 0,
+//     },
+//     "-=0.8"
 //   );
-
-const imgSlideTween = gsap.timeline();
-imgSlideTween
-  .fromTo(
-    ".menu-imgBg",
-    0.8,
-    {
-      x: "120%",
-      opacity: 0.4,
-    },
-    {
-      x: "0%",
-      opacity: 0.4,
-      ease: Power2.easeOut,
-    }
-  )
-  .fromTo(
-    ".menu-img div img",
-    0.8,
-    {
-      scale: 1.1,
-      opacity: 0,
-    },
-    {
-      scale: 1,
-      opacity: 1,
-      ease: Power2.easeOut,
-    }
-  )
-  .to(
-    ".menu-imgBg",
-    {
-      opacity: 0,
-    },
-    "-=0.8"
-  );
 
 const imgSlideTween2 = gsap.timeline();
 imgSlideTween2
   .fromTo(
     ".menu-imgBg",
-    0.8,
     {
-      x: "-120%",
-      opacity: 0.4,
+      width: "0%", // 初期状態の幅
+      opacity: 0, // 初期状態の透明度
     },
     {
-      x: "0%",
-      opacity: 0.4,
-      ease: Power2.easeOut,
+      width: "90%", // 最終状態の幅
+      opacity: 1, // 途中状態の透明度
+      ease: Power1.easeOut, // アニメーションのイージング
+      duration: 1.8, // 幅が伸びるアニメーションの時間
     }
   )
+  .to(".menu-imgBg", {
+    opacity: 0, // 最終状態の透明度
+    duration: 0.01, // このアニメーションステップの持続時間を非常に短く設定
+    ease: Power1.easeOut, // イージング関数
+    delay: -0.01, // 前のアニメーションが終わる直前に開始
+  })
+  // menu-imgBgが消えた後に実行するアニメーション
   .fromTo(
     ".commit-img div img",
-    0.8,
     {
       scale: 1.1,
       opacity: 0,
@@ -175,14 +181,8 @@ imgSlideTween2
       scale: 1,
       opacity: 1,
       ease: Power2.easeOut,
+      duration: 0.8,
     }
-  )
-  .to(
-    ".menu-imgBg",
-    {
-      opacity: 0,
-    },
-    "-=0.8"
   );
 
 // .rv
@@ -258,27 +258,6 @@ new ScrollMagic.Scene({
 })
   .setTween(imgSlideTween2)
   .addTo(controller);
-
-// new ScrollMagic.Scene({
-//   triggerElement: ".works-list__item",
-//   reverse: false,
-// })
-//   .setTween(textTween2.delay(0.5))
-//   .addTo(controller);
-
-// new ScrollMagic.Scene({
-//   triggerElement: ".rv",
-//   reverse: false,
-// })
-//   .setTween(imgTween2.delay(0.5))
-//   .addTo(controller);
-
-// new ScrollMagic.Scene({
-//   triggerElement: ".rv",
-//   reverse: false,
-// })
-//   .setTween(imgSlideTween3)
-//   .addTo(controller);
 
 // menu
 document.addEventListener("DOMContentLoaded", function () {
