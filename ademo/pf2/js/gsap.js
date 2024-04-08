@@ -1,5 +1,27 @@
+function disableScroll() {
+  // スクロール位置を保存
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  window.onscroll = function () {
+    window.scrollTo(0, scrollTop);
+  };
+}
+
+function enableScroll() {
+  window.onscroll = null;
+}
+
+// fvアニメーションの定義
 window.addEventListener("DOMContentLoaded", () => {
+  // スクロールを無効にする
+  disableScroll();
+
   const tl = gsap.timeline();
+
+  tl.eventCallback("onComplete", () => {
+    // アニメーションが完了したらスクロールを有効にする
+    enableScroll();
+  });
+
   const elements = document.querySelectorAll(".mv__title-img, .sp-overlay-img");
   const el_bg = document.querySelector(".mv");
   const el_header = document.querySelector(".layout-header");
@@ -40,13 +62,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   return tl;
 });
-
-// ヘッダーの透明度変化を滑らかに
-// .to(
-//   el_fixed,
-//   { overflow: "hidden visible", duration: 1, ease: "power1.inOut" },
-//   "-=1"
-// );
 
 // aboutアニメーションの定義
 const titleTween = TweenMax.fromTo(
