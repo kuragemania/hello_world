@@ -331,50 +331,78 @@ function startAnimation() {
     repeat: -1, // 無限に繰り返し
   });
 
-  SLIDER
-  .to(sliderImgZoom, { // 最初のディレイはここでは適用されない
+  SLIDER.to(sliderImgZoom, {
+    // 最初のディレイはここでは適用されない
     width: "103%",
     duration: 8,
   })
-  .to(sliderImg2, {
-    opacity: 0,
-    duration: 1,
-  }, "-=5")
-  .to(sliderImg2, {
-    opacity: 1,
-    duration: 4,
-  }, ">")
-  .to(sliderImg2Zoom, {
-    width: "103%",
-    duration: 8,
-  }, "-=4")
-  .to(sliderImg3, {
-    opacity: 1,
-    duration: 4,
-  }, "-=4")
-  .to(sliderImg3Zoom, {
-    width: "103%",
-    duration: 5,
-  }, "-=4")
-  .to(sliderImg2, {
-    opacity: 0,
-    duration: 0,
-  }, ">")
-  .to(sliderImg3, {
-    opacity: 0,
-    duration: 1,
-  })
-  .to(sliderImgZoom, {
-    width: "100%",
-    duration: 0.1,
-    ease: "none",
-  }, "-=4");
+    .to(
+      sliderImg2,
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      "-=5"
+    )
+    .to(
+      sliderImg2,
+      {
+        opacity: 1,
+        duration: 4,
+      },
+      ">"
+    )
+    .to(
+      sliderImg2Zoom,
+      {
+        width: "103%",
+        duration: 8,
+      },
+      "-=4"
+    )
+    .to(
+      sliderImg3,
+      {
+        opacity: 1,
+        duration: 4,
+      },
+      "-=4"
+    )
+    .to(
+      sliderImg3Zoom,
+      {
+        width: "103%",
+        duration: 5,
+      },
+      "-=4"
+    )
+    .to(
+      sliderImg2,
+      {
+        opacity: 0,
+        duration: 0,
+      },
+      ">"
+    )
+    .to(sliderImg3, {
+      opacity: 0,
+      duration: 1,
+    })
+    .to(
+      sliderImgZoom,
+      {
+        width: "100%",
+        duration: 0.1,
+        ease: "none",
+      },
+      "-=4"
+    );
 }
 
 // 最初のアニメーションセットを遅延させて開始
 gsap.delayedCall(2, startAnimation);
 
-
+// FVアニメーション
 function disableScroll() {
   // スクロール位置を保存
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -387,19 +415,16 @@ function enableScroll() {
   window.onscroll = null;
 }
 
+// オーバーレイがフェードアウトする
+$(document).ready(function () {
+  // オーバーレイ表示時にスクロールを禁止
+  disableScroll();
 
   // オーバーレイがフェードアウトする
-  $(document).ready(function() {
-    // オーバーレイ表示時にスクロールを禁止
-    disableScroll();
-  
-    // オーバーレイがフェードアウトする
-    setTimeout(function () {
-      $("#overlay-top").fadeOut(2000, function() {
-        // フェードアウト完了後、スクロールを有効にする
-        enableScroll();
-      });
-    }, 2000); // この2000はオーバーレイ表示後、フェードアウトを開始するまでのディレイです。
-  });
-  
-
+  setTimeout(function () {
+    $("#overlay-top").fadeOut(2000, function () {
+      // フェードアウト完了後、さらに3秒間スクロールを禁止する
+      setTimeout(enableScroll, 1000); // この3000msがアニメーション終了後スクロールを禁止する時間
+    });
+  }, 2000); // この2000はオーバーレイ表示後、フェードアウトを開始するまでのディレイです。
+});
