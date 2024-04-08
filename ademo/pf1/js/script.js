@@ -33,11 +33,6 @@ jQuery(function ($) {
     $(".js-hamburger").removeClass("is-open");
   }
 
-  // オーバーレイがフェードアウトする
-  setTimeout(function () {
-    $("#overlay-top").fadeOut(2000);
-  }, 2000);
-
   // Swiperの初期化
   const swiper = new Swiper(".swiper", {
     loop: true,
@@ -380,5 +375,31 @@ function startAnimation() {
 gsap.delayedCall(2, startAnimation);
 
 
+function disableScroll() {
+  // スクロール位置を保存
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  window.onscroll = function () {
+    window.scrollTo(0, scrollTop);
+  };
+}
 
+function enableScroll() {
+  window.onscroll = null;
+}
+
+
+  // オーバーレイがフェードアウトする
+  $(document).ready(function() {
+    // オーバーレイ表示時にスクロールを禁止
+    disableScroll();
+  
+    // オーバーレイがフェードアウトする
+    setTimeout(function () {
+      $("#overlay-top").fadeOut(2000, function() {
+        // フェードアウト完了後、スクロールを有効にする
+        enableScroll();
+      });
+    }, 2000); // この2000はオーバーレイ表示後、フェードアウトを開始するまでのディレイです。
+  });
+  
 
