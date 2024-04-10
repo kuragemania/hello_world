@@ -314,10 +314,9 @@ header .nav li {
 /*h3タグ*/
 #contents h3 {
   clear: both;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 1.5rem; /*文字サイズ。冒頭で指定しているフォントサイズの1.5倍です。*/
-  border-bottom: 1px dashed #999; /*下線の幅、線種、色*/
-  padding-left: 3%; /*左側に空ける余白*/
+  padding-left: 0; /*左側に空ける余白*/
   letter-spacing: 0.1em; /*文字間隔を少し広めにとる指定。通常がいいならこの１行削除。*/
 }
 /*h3タグ内のspanタグ（装飾文字）*/
@@ -395,7 +394,7 @@ header .nav li {
   display: flex;
   justify-content: space-between; /*中のブロックの横並びの揃え方*/
   flex-wrap: wrap; /*中のブロックを自動で折り返す*/
-  margin: 0 3%; /*上下、左右へのボックスの外に空けるスペース*/
+  margin: 0 1%; /*上下、左右へのボックスの外に空けるスペース*/
 }
 /*１カラムあたりの設定*/
 #contents .list-column {
@@ -807,13 +806,6 @@ p.look {
     margin-top: 50px;
   }
 
-  /*list-column（トップページ、おしながきページで使っている３列ブロック）
----------------------------------------------------------------------------*/
-  /*１カラムあたりの設定*/
-  #contents .list-column {
-    width: 100%;
-  }
-
   /*テーブル（ta1）
 ---------------------------------------------------------------------------*/
   /*ta1設定*/
@@ -850,59 +842,124 @@ p.look {
   }
 }
 
-/*画面幅380px以下の設定
-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 380px) {
-  /*コンテンツ
----------------------------------------------------------------------------*/
-  /*トップページのコンテンツへの追加指定*/
-  .home #contents {
-    padding-top: 100px; /*上に空ける余白*/
-    padding-top: 165px;
+/* menu */
+
+.mn-title {
+  text-align: center;
+}
+
+.mn-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col_l,
+.col_r {
+  flex-basis: 50%; /* 基本の幅を50%に設定 */
+  flex-grow: 1; /* コンテナが余分なスペースを持っている場合に、それを吸収するように拡大 */
+  flex-shrink: 1; /* コンテナの幅が縮小する場合、内容に応じて縮小 */
+}
+
+.mn {
+  padding: 0 5%;
+}
+
+.mn h4 {
+  border-bottom: 2px solid #999; /*下線の幅、線種、色*/
+  padding-bottom: 8px;
+}
+
+.mn dl {
+  border-bottom: 1px solid #999; /*下線の幅、線種、色*/
+  padding: 11px 0 11px;
+}
+
+.mn-1,
+.mn-2 {
+  margin-bottom: 40px;
+}
+
+.mn-1 span {
+  font-size: 1rem;
+}
+
+.mn dl {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 各カラム設定 */
+.list-column {
+  flex-basis: calc(50% - 10px); /* 2つのカラムの間に少し間隔を作る */
+  margin-bottom: 20px; /* カラム間の余白 */
+}
+
+/* 3つ目のカラム専用のスタイル */
+.list-column.single-column {
+  flex-basis: 100%;
+}
+
+.single-column figure {
+  /* width: 40%; */
+  /* figureの幅を50%に設定 */
+  /* margin: auto; */
+  /* 左右のマージンを自動で調整し、中央寄せに */
+  display: none; /* ブロックレベル要素として扱う */
+}
+
+.single-column img {
+  display: block; /* 画像をブロックレベル要素として扱う */
+  margin: auto; /* 画像を中央寄せに */
+}
+
+.accordion-toggle {
+  display: none;
+}
+
+
+/* レスポンシブデザイン対応 */
+@media screen and (max-width: 800px) {
+  .list-column,
+  .list-column.single-column {
+    flex-basis: 100%; /* 画面が狭い場合は全カラムを縦並びにする */
+  }
+
+  .single-column figure {
+    /* width: 40%; */
+    /* figureの幅を50%に設定 */
+    /* margin: auto; */
+    /* 左右のマージンを自動で調整し、中央寄せに */
+    display: block; /* ブロックレベル要素として扱う */
+  }
+
+  .lst_mn {
+    display: none; /* デフォルトで非表示 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .accordion-toggle {
+    display: inline-block;
+    background: none; /* 背景色を透明に */
+    color: inherit; /* 親要素から色を継承 */
+    border: none; /* ボーダーを削除 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    font: inherit; /* 親要素からフォントスタイルを継承 */
+    cursor: pointer; /* カーソルをポインタに変更 */
+    outline: inherit; /* クリック時のアウトラインを親要素から継承、または削除したい場合は 'none' */
+    font-size: 24px; /* 24pxに設定。必要に応じて値を調整 */
   }
 }
 
-/* 追加スタイル */
-.about__list {
-  height: 440px;
-}
-
-.image-slider img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 2s ease-in-out; /* 1秒かけて透明度を変更 */
-}
-
-.image-slider img.active {
-  opacity: 1; /* アクティブな画像を表示 */
-}
-
-.image-slider {
-  position: relative;
-  /* 必要に応じて高さや幅を設定 */
-  width: 50%;
-  height: 440px; /* 例として */
-  overflow: hidden;
-}
-
-.about__text-b {
-  width: 60%;
-}
-
-@media (max-width: 768px) {
-  #contents .list {
-    flex-direction: column; /* スマホ幅で縦並びにする */
+@media (min-width: 800px) {
+  .lst_mn {
+    display: flex !important; /* フレックスコンテナとして表示 */
+    max-height: none !important; /* `max-height`を上書き */
+    /* 必要に応じて以下のプロパティを追加 */
+    flex-direction: row; /* 子要素を行方向に配置 */
+    justify-content: space-around; /* 子要素間に均等なスペースを配置 */
   }
-  .image-slider {
-    width: 90%;
-    height: 277px; /* 例として */
-  }
-
-  #contents .list .about__img-b {
-    width: 90%;
-    padding-top: 30px;
   }
 }
