@@ -1,0 +1,42 @@
+@use "../foundation" as *;
+
+.service-slick {
+  position: relative;
+}
+
+.service-slick.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+// .service-slick__img {
+//     transform: scale(.7);
+//     transition: 1s;
+// }
+
+.service-slick__img.slick-center {
+  transform: scale(1);
+}
+
+// .service-slick__img {
+//     overflow: hidden;
+// }
+
+.service-slick__img img {
+    border-top-right-radius:20px;
+    border-bottom-left-radius:20px;
+  width: 95%;
+  aspect-ratio: 180/300;
+  object-fit: cover;
+  @include mq("md"){
+    aspect-ratio: 180/270;
+  }
+}
+
+.service-slick .slick-dots li button:before {
+  opacity: 1;
+  color: #d4e7ed;
+}
+
+.service-slick .slick-dots li.slick-active button:before {
+  color: $red;
+}

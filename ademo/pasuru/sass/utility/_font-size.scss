@@ -1,0 +1,12 @@
+@use "../foundation" as *;
+
+.u-size-large {
+  font-size: prem(35);
+  @include mq("md"){
+    font-weight: $medium;
+  }
+}
+
+.u-size-superLarge {
+  font-size: prem(60);
+}

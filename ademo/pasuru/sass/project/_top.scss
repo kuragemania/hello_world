@@ -1,0 +1,516 @@
+@use "../foundation" as *;
+
+// worries
+
+.worries {
+  background-color: $gray;
+  padding: 90px 0 100px;
+  @include mq("md") {
+    padding: 50px 0 100px;
+  }
+}
+
+.worries__container {
+  margin: auto;
+  padding: 60px prem(100) 0;
+  max-width: prem(1300);
+  width: 100%;
+  @include mq(md) {
+    padding: 0 prem(50);
+    max-width: prem(1200);
+    margin-top: 40px;
+  }
+}
+
+.worries-list {
+  display: grid;
+  gap: prem(20);
+  grid-template-columns: repeat(3, 1fr);
+  @include mq(md) {
+    gap: prem(30);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.worries-list__item-img {
+  width: 100%;
+}
+
+.worries-list__item-img img {
+  width: 100%;
+  aspect-ratio: 420/370;
+  border-top-right-radius: 35px;
+  object-fit: cover;
+}
+
+.worries-list__item-content {
+  padding: prem(45) prem(25) prem(35);
+  background-color: $gray2;
+
+  @include mq(md) {
+    padding: prem(20) prem(25) prem(25);
+  }
+}
+
+// concept
+.concept {
+  background-image: url(../images/common/concept-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+  position: relative;
+  @include mq("md") {
+    background-image: url(../images/common/concept-bg-sp.png);
+  }
+}
+
+.concept::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 258px; /* 画像の幅 */
+  height: 70px; /* 画像の高さ */
+  background-image: url("../images/common/arrow.png"); /* 追加したい画像のパス */
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  background-position: center;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: -6%; /* 位置調整 */
+  left: 50%; /* 位置調整 */
+  transform: translateX(-50%);
+  @include mq("md") {
+    top: -3%; /* 位置調整 */
+    width: 147px;
+    height: 40px;
+  }
+}
+
+.concept__inner {
+  padding: 150px 0 100px;
+  @include mq("md") {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+}
+
+.concept__container {
+  max-width: prem(560);
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  justify-content: center; /* 垂直方向の中央揃え */
+  align-items: center; /* 水平方向の中央揃え */
+  @include mq("md") {
+    max-width: prem(320);
+    margin-top: 70px;
+  }
+}
+
+.concept__btn {
+  margin-top: 80px;
+}
+
+// reason
+.reason {
+  background-image: url(../images/common/reason-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+  // @include mq("md"){
+  //   background-image: url(../images/common/concept-bg-sp.png);
+  // }
+}
+
+.reason__inner {
+  padding: 100px 0 100px;
+  @include mq("md") {
+    padding-top: 90px;
+    padding-bottom: 380px;
+  }
+}
+
+.reason__item {
+  margin-top: 100px;
+  display: flex;
+  position: relative; /* 子要素を絶対位置で配置するために必要 */
+  @include mq("md") {
+    flex-direction: column; /* 子要素を縦並びに変更 */
+    align-items: center; /* 中央揃えにする */
+  }
+}
+
+.reason__item-text {
+  width: 60%; /* 元の幅に戻す */
+  padding-top: 50px;
+  padding-left: 15%;
+  padding-right: 3%;
+  padding-bottom: 25px;
+  background-color: $gray4;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  position: relative; /* z-indexを適用するために必要 */
+  z-index: 2; /* この要素を上に重ねる */
+  @include mq("md") {
+    width: 100%; /* 親要素の全幅を使用 */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 60px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  }
+}
+
+.reason__item::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必要です */
+  position: absolute;
+  top: -15%; /* .reason__item-textの下端からの位置 */
+  left: 5%;
+  max-width: 110px;
+  width: 100%; /* .reason__item-textの幅に合わせる */
+  height: 95px; /* 画像の高さに合わせる */
+  background-image: url("../images/common/01.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+  @include mq("md") {
+    top: -9%;
+    max-width: 90px;
+    height: 75px;
+  }
+}
+
+.reason__item.reason__item02::before {
+  background-image: url("../images/common/02.png");
+}
+.reason__item.reason__item03::before {
+  background-image: url("../images/common/03.png");
+}
+
+.reason__item-text h3 {
+  font-size: prem(40);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  border-bottom: 1px solid #000000; /* ここで色は任意に変更できます */
+}
+
+.reason__item-text p {
+  margin-top: 25px;
+}
+
+.reason__item-img {
+  width: 45%;
+  position: absolute; /* 絶対位置で指定 */
+  top: 0; /* 親要素の上端からの位置 */
+  right: 0; /* 親要素の右端からの位置 */
+  bottom: 0; /* 親要素の下端からの位置 */
+  background: url("../images/common/reason-img.png") center / cover no-repeat;
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+  @include mq("md") {
+    width: 100%;
+    top: 85%;
+    left: 0px;
+    height: 322px;
+    clip-path: none;
+  }
+}
+
+.reason__item-img.reason__item-img02 {
+  background: url("../images/common/reason-img2.png") center / cover no-repeat;
+}
+
+.reason__item-img.reason__item-img03 {
+  background: url("../images/common/reason-img3.png") center / cover no-repeat;
+}
+
+.reason__item02,
+.reason__item03 {
+  @include mq("md") {
+    margin-top: 350px;
+  }
+}
+
+// case service
+.case {
+  background-color: $gray5;
+}
+
+.case__inner {
+  padding-top: 100px;
+}
+
+.case__title-sub {
+  // margin-left: 17%;
+  @include mq("md") {
+    margin-left: auto;
+  }
+}
+
+.service {
+  margin-top: 90px;
+  @include mq("md") {
+    margin-top: 40px;
+  }
+}
+
+.service__inner {
+  margin: auto;
+  padding: 0 prem(25) 130px;
+  max-width: prem(1000);
+  width: 100%;
+  @include mq(md) {
+    padding: 0 prem(20) 130px;
+    max-width: prem(600);
+  }
+}
+
+// flow works
+
+.flow {
+  background-image: url(../images/common/flow-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+  padding-top: 100px;
+  @include mq("md") {
+    background-image: url(../images/common/flow-bg-sp.png);
+  }
+}
+
+.flow__title-sub {
+  // margin-left: 15%;
+  @include mq("md") {
+    margin-left: auto;
+  }
+}
+
+.flow__inner.inner {
+  margin-top: 100px;
+  height: prem(600);
+  padding-left: prem(120);
+  @include mq("md") {
+    padding-left: prem(20);
+    margin-top: 40px;
+    height: prem(1700);
+  }
+
+  @include mq("sm1"){
+    height: prem(1380);
+  }
+}
+
+.works-list {
+  position: relative;
+  // height: prem(480);
+  display: grid;
+  gap: prem(0);
+  grid-template-columns: repeat(3, 1fr);
+  @include mq(md) {
+    width: 100%;
+    gap: prem(30);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.works-list__item {
+  position: relative;
+  width: prem(316);
+  display: block;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.1);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.works-list__item-01,
+.works-list__item-02 {
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+  @include mq("md") {
+    clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  }
+}
+
+.works-list__item-01 {
+  z-index: 2;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.1);
+}
+
+.works-list__item-02 {
+  position: absolute;
+  top: 0%;
+  left: 29%;
+  z-index: 1;
+  @include mq("md") {
+    top: 90%;
+    left: 0%;
+  }
+}
+
+.works-list__item-03 {
+  position: absolute;
+  top: 0%;
+  left: 58%;
+  z-index: 0;
+  @include mq("md") {
+    top: 180%;
+    left: 0%;
+  }
+}
+
+.works-list__item-img {
+  width: 100%;
+}
+
+.works-list__item-img img {
+  width: 100%;
+  aspect-ratio: 9/10;
+  object-fit: cover;
+}
+
+.works-list__item-category {
+  padding: prem(15) prem(75);
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: prem(16);
+  line-height: 1;
+  color: #fff;
+  background-color: $red;
+  @include mq(md) {
+    font-size: prem(14);
+    top: 40px;
+  }
+}
+
+.works-list__item-02 .works-list__item-category,
+.works-list__item-03 .works-list__item-category {
+  @include mq("md") {
+    top: 50px;
+  }
+}
+
+.works-list__item-content {
+  padding: prem(25) prem(60) prem(30) prem(10);
+  @include mq(md) {
+    padding: prem(10) prem(25) prem(60);
+  }
+}
+.works-list__item-content.works-list__item-content-02 {
+  padding: prem(25) prem(55) prem(30) prem(38);
+  @include mq(md) {
+    padding: prem(20) prem(25) prem(25);
+  }
+}
+.works-list__item-content.works-list__item-content-03 {
+  padding: prem(25) prem(20) prem(30) prem(38);
+  @include mq(md) {
+    padding: prem(20) prem(25) prem(25);
+  }
+}
+
+.works-list__item-text {
+  margin-top: prem(15);
+  font-size: prem(14);
+  line-height: 1.5;
+  @include mq(md) {
+    margin-top: prem(0);
+    font-size: prem(12);
+  }
+}
+
+
+// present
+
+.present {
+  background-image: url(../images/common/present-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+  padding-top: 100px;
+  // @include mq("md") {
+  //   background-image: url(../images/common/flow-bg-sp.png);
+  // }
+}
+
+.present__inner.inner {
+  background-image: url(../images/common/present-inner-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+  padding-left: prem(120);
+  padding-right: prem(130);
+  padding-top: prem(100);
+  padding-bottom: prem(220);
+
+}
+
+.present-list__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+}
+
+.present-list__item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.present-list__item + .present-list__item {
+  @include mq(md){
+    margin-top: prem(30);
+}
+}
+
+.present-list__item-img {
+  max-width: prem(600);
+position: relative;
+  @include mq(md){
+  width: 100%;
+
+  }
+}
+
+.present-list__item:nth-of-type(even) .present-list__item-img {
+  margin-left: prem(100);
+}
+
+.present-list__item-img img {
+  width: 100%;
+  aspect-ratio: 550/320;
+  // object-fit: cover;
+}
+
+.present-list__item-text {
+  margin-top: 0;
+  font-size: prem(16);
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-left: prem(90);
+  max-width: prem(550);
+  width: 80%;
+  @include mq(md){
+  margin-top: prem(20);
+  width: 100%;
+  }
+}
+
+.present-list__item:nth-of-type(even) .present-list__item-text {
+  margin-left: 0;
+}
+
+.present-list__item-label {
+  text-align: center;
+  width: prem(100);
+  height: prem(100);
+  background-color: $red;
+  border-radius: 50px;
+  position: absolute;
+  top: -45px;
+  left: -45px;
+}
+
+.present__item-label {
+margin: 0 auto;
+line-height: 1.0;
+padding: prem(25) 0 prem(25);
+}
+
+.present__item-label span {
+  font-size: prem(40);
+}
+
+.present__title-sub {
+  text-align: center;
+  font-size: prem(40);
+  font-weight: $medium;
+}

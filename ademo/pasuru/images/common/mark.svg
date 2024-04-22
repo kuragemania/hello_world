@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="167" height="167" viewBox="0 0 167 167">
+  <g id="グループ_1" data-name="グループ 1" transform="translate(1804 -4227)">
+    <circle id="楕円形_1" data-name="楕円形 1" cx="83.5" cy="83.5" r="83.5" transform="translate(-1804 4227)" fill="#f0ecec"/>
+    <g id="楕円形_1-2" data-name="楕円形 1" transform="translate(-1797.15 4233.85)" fill="none" stroke="#cd3032" stroke-width="2">
+      <circle cx="77.15" cy="77.15" r="77.15" stroke="none"/>
+      <circle cx="77.15" cy="77.15" r="78.15" fill="none"/>
+    </g>
+    <text id="簡単_30秒" data-name="簡単
+30秒" transform="matrix(0.96, -0.28, 0.28, 0.96, -1722.844, 4296.799)" fill="#c40002" font-size="38.744" font-family="KozGoPr6N-Regular, Kozuka Gothic Pr6N"><tspan x="-38.744" y="0">簡単</tspan><tspan font-size="54" font-family="KozGoPr6N-Bold, Kozuka Gothic Pr6N" font-weight="700"><tspan x="-57.888" y="53.646">30秒</tspan></tspan></text>
+    <g id="強調線" transform="translate(-2319 -8)">
+      <line id="シェイプ_2" data-name="シェイプ 2" x2="26.47" y2="19.85" transform="translate(528.43 4301.44)" fill="none" stroke="#c40002" stroke-width="2"/>
+      <line id="シェイプ_2-2" data-name="シェイプ 2" x1="6.75" y2="32.38" transform="translate(638.36 4261.1)" fill="none" stroke="#c40002" stroke-width="2"/>
+      <line id="シェイプ_2-3" data-name="シェイプ 2" x1="8.44" y2="15.36" transform="translate(644.3 4275.38)" fill="none" stroke="#c40002" stroke-width="2"/>
+      <line id="シェイプ_2-4" data-name="シェイプ 2" x2="16.19" y2="6.73" transform="translate(533.3 4316.47)" fill="none" stroke="#c40002" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

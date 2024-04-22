@@ -1,0 +1,100 @@
+@use "../foundation" as *;
+
+.section-title__wrap {
+  display: flex;
+  // justify-content: flex-start; /* h2を左に、pを中央に配置 */
+  align-items: center;
+  position: relative; /* 相対位置設定 */
+
+  // flex-direction: row; /* 横並び */
+  @include mq("md") {
+    flex-direction: column; /* 縦並びに変更 */
+    align-items: flex-start; /* 子要素を上揃えにする（左揃え） */
+  }
+}
+
+.section-title__main {
+  // justify-self: flex-start; /* h2タグを左に揃える */
+  width: prem(420);
+  font-size: prem(60);
+  line-height: 1.208;
+  letter-spacing: 0.08em;
+  font-weight: $medium;
+  padding: 5px prem(100) 5px prem(70);
+  color: $white;
+  background-color: $red;
+  text-align: center;
+  border-top-right-radius: 35px;
+  @include mq("md") {
+    width: prem(280);
+    font-size: prem(42);
+    padding: 5px prem(100) 5px prem(45);
+  }
+}
+
+.section-title__main.section-title__main-reverce {
+  color: $red;
+  background-color: $white;
+}
+
+.section-title__sub {
+  // margin-left: 5%;
+  // margin-right: auto;
+  display: inline-block; /* テキストに合わせてサイズが決まる */
+  font-size: prem(35); /* 'prem'は恐らく誤りで'rem'の意図だったかもしれません */
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  font-weight: $medium; /* $mediumは定義済み変数であることを確認してください */
+  z-index: 1;
+  // text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq("md") {
+    position: static;
+    font-size: prem(32);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+  text-align: center;
+  transform: translate(0%, 0%);
+  }
+}
+
+.section-title__sub.section-title__sub-reverce {
+  color: $white;
+}
+
+.section-title__sub span {
+  position: relative; /* 絶対位置指定された擬似要素の基準点となる */
+  padding-bottom: 2px; /* 下線とテキストの重なりを調整する */
+}
+
+.section-title__sub span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0; /* leftとrightを0に設定して要素の幅全体に広げる */
+  bottom: -1px; /* テキストとの重なりを調整するための値を負の数に */
+  height: 10px; /* 下線の高さ */
+  background-color: $orange;
+  z-index: -1; /* 下線がテキストの背景になるようにz-indexを設定 */
+}
+
+// title装飾横棒
+.ttl-mark {
+  position: relative;
+  margin-top: 0.5em;
+}
+
+.ttl-mark::after {
+  content: "";
+  display: inline-block;
+  width: 2.5em;
+  height: 4px;
+  background-color: $red;
+  position: absolute;
+  top: -0.8em;
+  left: 0;
+}

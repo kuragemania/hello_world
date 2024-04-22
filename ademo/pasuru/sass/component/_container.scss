@@ -1,0 +1,13 @@
+@use "../foundation" as *;
+
+.c-container {
+  width: 100%;
+  margin: auto;
+}
+
+.c-container--w70 {
+  width: 70%;
+  @include mq(md) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../foundation" as *;
+
+.text {
+  font-size: prem(20);
+  line-height: 1.5;
+  color: $white;
+  letter-spacing: 0.08em;
+  @include mq(md) {
+    // margin-top: prem(15);
+    font-size: prem(14);
+  }
+}
+
+.text.text-bk {
+  color: $black;
+}

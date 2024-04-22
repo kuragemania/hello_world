@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+    <title>パスル</title>
+    <meta
+      name="description"
+      content="トップページの説明"
+    />
+    <meta
+      name="keywords"
+      content="キーワード"
+    />
+    <!-- ogp -->
+    <meta
+      property="og:title"
+      content="サイト名"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:image"
+      content="OGP IMAGE"
+    />
+    <meta
+      property="og:site_name"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:description"
+      content="トップページの説明"
+    />
+    <!-- ファビコン -->
+    <link
+      rel="”icon”"
+      href=""
+    />
+    <link
+      rel="apple-touch-icon"
+      href=""
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+    <!-- adobe font-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ukq6jxz",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header class="header layout-header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#">
+            <img
+              src="./images/common/logo.svg"
+              alt="LOGO"
+            />
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#">パスルについて</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">代表あいさつ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">お知らせ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">会社概要</a>
+            </li>
+            <li class="header__nav-item header__nav-item--contact">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >LINE転職相談する</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-btn md-show">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+            >LINE転職相談する ▶︎</a
+          >
+        </div>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-list">
+              <li class="header__drawer-item">
+                <a href="#">パスルについて</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">代表あいさつ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">お知らせ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">会社概要</a>
+              </li>
+              <li class="header__drawer-item header__drawer-item--contact">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  >LINE転職相談する</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mv js-mv">
+        <div class="mv__inner">
+          <div class="mv__title-wrap">
+            <h2 class="mv__main-title md-none"><span>キャ</span>ッチコピー</h2>
+            <h2 class="mv__main-title md-show">
+              <span>キ</span>ャッチ<br /><span>コ</span>ピー
+            </h2>
+            <div class="mv-btn">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >無料でLINE転職相談する ▶︎</a
+              >
+            </div>
+          </div>
+
+          <div class="mv__img">
+            <img
+              src="./images/common/mv-img.png"
+              alt="省略"
+              class="md-none"
+            />
+            <img
+              src="./images/common/mv-img-sp.png"
+              alt="省略"
+              class="md-show"
+            />
+            <!-- <div class="mv-btn mv-btn-sp md-show">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >無料でLINE転職相談する ▶︎</a
+              >
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="worries">
+        <div class="worries__inner">
+          <div class="worries__title-wrap section-title__wrap">
+            <h2 class="worries__title section-title__main">worries</h2>
+            <p class="worries__title-sub section-title__sub">
+              <span>こんなお悩み</span><br class="md-show" /><span
+                >ありませんか？</span
+              >
+            </p>
+          </div>
+          <div class="worries__container">
+            <ul class="worries__list worries-list">
+              <li class="worries-list__item">
+                <div class="worries-list__item-img">
+                  <img
+                    src="https://placehold.jp/3d4070/ffffff/420x370.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </div>
+                <div class="worries-list__item-content">
+                  <p class="worries-list__item-text text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  </p>
+                </div>
+              </li>
+              <li class="worries-list__item">
+                <div class="worries-list__item-img">
+                  <img
+                    src="https://placehold.jp/3d4070/ffffff/420x370.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </div>
+                <div class="worries-list__item-content">
+                  <p class="worries-list__item-text text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  </p>
+                </div>
+              </li>
+              <li class="worries-list__item">
+                <div class="worries-list__item-img">
+                  <img
+                    src="https://placehold.jp/3d4070/ffffff/420x370.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </div>
+                <div class="worries-list__item-content">
+                  <p class="worries-list__item-text text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="concept">
+        <div class="concept__inner">
+          <div class="concept__title-wrap section-title__wrap">
+            <h2
+              class="concept__title section-title__main section-title__main-reverce"
+            >
+              concept
+            </h2>
+            <p
+              class="concept__title-sub section-title__sub section-title__sub-reverce"
+            >
+              <span>解決できる</span><br class="md-show" /><span
+                >サービスやコンセプト</span
+              >
+            </p>
+          </div>
+          <div class="concept__container">
+            <p class="concept__text text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <a
+              href="#"
+              class="concept__btn btn"
+              >もっと見る ▶︎</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="reason">
+        <div class="reason__inner">
+          <div class="worries__title-wrap section-title__wrap">
+            <h2 class="worries__title section-title__main">reason</h2>
+            <p class="worries__title-sub section-title__sub">
+              <span>パルスが選ばれる</span><br class="md-show" /><span
+                ><strong class="u-color-red u-size-superLarge">3</strong
+                >つの理由</span
+              >
+            </p>
+          </div>
+          <div class="reason__wrap">
+            <ul class="reason__items">
+              <li class="reason__item">
+                <div class="reason__item-text">
+                  <!-- <p>01</p> -->
+                  <h3 class="u-color-red">ああああああああああああ</h3>
+                  <p class="text text-bk">
+                    ああああああああああああああああああああああああ
+                    ああああああああああああああああああああああああ
+                    ああああああああああああああああああああああああ
+                  </p>
+                </div>
+                <div class="reason__item-img"></div>
+              </li>
+              <li class="reason__item reason__item02">
+                <div class="reason__item-text">
+                  <!-- <p>01</p> -->
+                  <h3 class="u-color-red">ああああああああああああ</h3>
+                  <p class="text text-bk">
+                    ああああああああああああああああああああああああ
+                    ああああああああああああああああああああああああ
+                    ああああああああああああああああああああああああ
+                  </p>
+                </div>
+                <div class="reason__item-img reason__item-img02"></div>
+              </li>
+              <li class="reason__item reason__item03">
+                <div class="reason__item-text">
+                  <!-- <p>01</p> -->
+                  <h3 class="u-color-red">ああああああああああああ</h3>
+                  <p class="text text-bk">
+                    ああああああああああああああああああああああああ
+                    ああああああああああああああああああああああああ
+                    ああああああああああああああああああああああああ
+                  </p>
+                </div>
+                <div class="reason__item-img reason__item-img03"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="c-incentive">
+          <div class="c-incentive__inner">
+            <div class="c-incentive__container">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="l-btn mv-btn--mark"
+                >無料でLINE転職相談する ▶︎</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="case">
+        <div class="case__inner">
+          <div class="case__title-wrap section-title__wrap">
+            <h2 class="case__title section-title__main">examples</h2>
+            <p class="case__title-sub section-title__sub">
+              <span>事例</span>
+            </p>
+          </div>
+          <div class="service">
+            <div class="service__inner">
+              <ul class="service__slick service-slick js-service-slick">
+                <li class="service-slick__img">
+                  <img
+                    src="https://placehold.jp/DADADA/ffffff/420x645.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </li>
+                <li class="service-slick__img">
+                  <img
+                    src="https://placehold.jp/DADADA/ffffff/420x645.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </li>
+                <li class="service-slick__img">
+                  <img
+                    src="https://placehold.jp/DADADA/ffffff/420x645.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </li>
+                <li class="service-slick__img">
+                  <img
+                    src="https://placehold.jp/DADADA/ffffff/420x645.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </li>
+                <li class="service-slick__img">
+                  <img
+                    src="https://placehold.jp/DADADA/ffffff/420x645.png?text=%E3%83%80%E3%83%9F%E3%83%BC"
+                    alt="省略"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="c-incentive">
+          <div class="c-incentive__inner">
+            <div class="c-incentive__container">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="l-btn mv-btn--mark"
+                >無料でLINE転職相談する ▶︎</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flow">
+        <div class="flow__title-wrap section-title__wrap">
+          <h2
+            class="flow__title section-title__main section-title__main-reverce"
+          >
+            flow
+          </h2>
+          <p
+            class="flow__title-sub section-title__sub section-title__sub-reverce"
+          >
+            <span>転職の流れ</span>
+          </p>
+        </div>
+        <div class="flow__inner inner">
+          <ul class="works__list works-list">
+            <li class="works-list__item works-list__item-01">
+              <div class="works-list__item-img">
+                <img
+                  src="https://placehold.jp/DADADA/ffffff/380x420.png?text=%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"
+                  alt="省略"
+                />
+              </div>
+              <p class="works-list__item-category">STEP1</p>
+              <div class="works-list__item-content">
+                <p class="works-list__item-text">
+                  テキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+              </div>
+            </li>
+            <li class="works-list__item works-list__item-02">
+              <div class="works-list__item-img">
+                <img
+                  src="https://placehold.jp/DADADA/ffffff/380x420.png?text=%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"
+                  alt="省略"
+                />
+              </div>
+              <p class="works-list__item-category">STEP2</p>
+              <div class="works-list__item-content works-list__item-content-02">
+                <p class="works-list__item-text">
+                  テキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+              </div>
+            </li>
+            <li class="works-list__item works-list__item-03">
+              <div class="works-list__item-img">
+                <img
+                  src="https://placehold.jp/DADADA/ffffff/380x420.png?text=%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"
+                  alt="省略"
+                />
+              </div>
+              <p class="works-list__item-category">STEP3</p>
+              <div class="works-list__item-content works-list__item-content-03">
+                <p class="works-list__item-text">
+                  テキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="present">
+        <div class="present__title-wrap section-title__wrap">
+          <h2 class="present__title section-title__main">present</h2>
+          <!-- <p class="present__title-sub section-title__sub">
+        <span>事例</span>
+      </p> -->
+        </div>
+        <div class="present__inner inner">
+          <p class="present__title-sub">
+            <span>LINE友だち</span>限定プレゼント！
+          </p>
+          <ul class="present__list present-list">
+            <li class="present-list__item">
+              <div class="present-list__item-img">
+                <div class="present-list__item-label">
+                  <p class="present__item-label text">
+                    present <br /><span>01</span>
+                  </p>
+                </div>
+                <img
+                  src="./images/common/present-img.png"
+                  alt="省略"
+                />
+              </div>
+              <p class="present-list__item-text text text-bk">
+                ああああああああああああああああああああああああああ
+                ああああああああああああああああああああああああああ
+                あああああああああああああ
+              </p>
+            </li>
+            <li class="present-list__item">
+              <div class="present-list__item-img">
+                <div class="present-list__item-label">
+                  <p class="present__item-label text">
+                    present <br /><span>02</span>
+                  </p>
+                </div>
+                <img
+                  src="./images/common/present-img.png"
+                  alt="省略"
+                />
+              </div>
+              <p class="present-list__item-text text text-bk">
+                ああああああああああああああああああああああああああ
+                ああああああああああああああああああああああああああ
+                あああああああああああああ
+              </p>
+            </li>
+            <li class="present-list__item">
+              <div class="present-list__item-img">
+                <div class="present-list__item-label">
+                  <p class="present__item-label text">
+                    present <br /><span>03</span>
+                  </p>
+                </div>
+                <img
+                  src="./images/common/present-img.png"
+                  alt="省略"
+                />
+              </div>
+              <p class="present-list__item-text text text-bk">
+                ああああああああああああああああああああああああああ
+                ああああああああああああああああああああああああああ
+                あああああああああああああ
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div style="height: 500px"></div>
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

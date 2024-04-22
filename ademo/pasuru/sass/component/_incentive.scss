@@ -1,0 +1,24 @@
+@use "../foundation" as *;
+
+.c-incentive {
+  width: 100%;
+  background-color: $red;
+  &__inner {
+    max-width: prem(1220);
+    padding: prem(60) prem(80) prem(60);
+    margin: auto;
+
+    @include mq(md) {
+      padding: prem(60) prem(30) prem(60);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+}

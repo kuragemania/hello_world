@@ -1,0 +1,30 @@
+@use "../foundation" as *;
+
+footer {
+  color: $white;
+  background-color: $gray3;
+}
+
+.c-footer {
+  &__inner {
+    max-width: prem(1220);
+    padding: prem(200) prem(40) prem(200);
+    margin: auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__listItem + &__listItem {
+    margin-left: prem(120);
+    @include mq(md) {
+      margin-left: 0;
+      margin-top: prem(16);
+    }
+  }
+}

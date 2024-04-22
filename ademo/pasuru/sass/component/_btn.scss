@@ -1,0 +1,12 @@
+@use "../foundation" as *;
+
+.btn {
+  padding: prem(14) prem(60);
+  position: relative;
+  display: inline-block;
+  font-size: prem(15);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  background-color: $white;
+  opacity: 0.8;
+}
