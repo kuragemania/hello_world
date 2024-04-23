@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+    <title>パスル-代表あいさつ</title>
+    <meta
+      name="description"
+      content="トップページの説明"
+    />
+    <meta
+      name="keywords"
+      content="キーワード"
+    />
+    <!-- ogp -->
+    <meta
+      property="og:title"
+      content="パスル"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:image"
+      content="OGP IMAGE"
+    />
+    <meta
+      property="og:site_name"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:description"
+      content="トップページの説明"
+    />
+    <!-- ファビコン -->
+    <link
+      rel="”icon”"
+      href=""
+    />
+    <link
+      rel="apple-touch-icon"
+      href=""
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/style.css"
+    />
+    <!-- adobe font-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ukq6jxz",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header class="header layout-header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#">
+            <img
+              src="../images/common/logo.svg"
+              alt="LOGO"
+            />
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#">パスルについて</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">代表あいさつ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">お知らせ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">会社概要</a>
+            </li>
+            <li class="header__nav-item header__nav-item--contact">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >LINE転職相談する</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-btn md-show">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+            >LINE転職相談する ▶︎</a
+          >
+        </div>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-list">
+              <li class="header__drawer-item">
+                <a href="#">パスルについて</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">代表あいさつ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">お知らせ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">会社概要</a>
+              </li>
+              <li class="header__drawer-item header__drawer-item--contact">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  >LINE転職相談する</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mv js-mv">
+        <div class="mv__inner">
+          <div class="mv__title-wrap">
+            <h2 class="mv__main-title md-none"><span>キャ</span>ッチコピー</h2>
+            <h2 class="mv__main-title md-show">
+              <span>キ</span>ャッチ<br /><span>コ</span>ピー
+            </h2>
+            <div class="mv-btn">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >無料でLINE転職相談する ▶︎</a
+              >
+            </div>
+          </div>
+
+          <div class="mv__img">
+            <img
+              src="../images/common/mv-img.png"
+              alt="省略"
+              class="md-none"
+            />
+            <img
+              src="../images/common/mv-img-sp.png"
+              alt="省略"
+              class="md-show"
+            />
+            <!-- <div class="mv-btn mv-btn-sp md-show">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >無料でLINE転職相談する ▶︎</a
+              >
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="message"></section>
+      <section>
+        <div class="c-incentive">
+          <div class="c-incentive__inner">
+            <div class="c-incentive__container">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="l-btn mv-btn--mark"
+                >無料でLINE転職相談する ▶︎</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="l-btn mv-btn--white"
+                >お問い合わせ ▶︎</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="c-footer__inner">
+          <ul class="c-footer__list">
+            <li class="c-footer__listItem">
+              <a href="/about/">パスルについて</a>
+            </li>
+            <li class="c-footer__listItem"><a href="">代表あいさつ</a></li>
+            <li class="c-footer__listItem"><a href="">お知らせ</a></li>
+            <li class="c-footer__listItem"><a href="">会社概要</a></li>
+            <li class="c-footer__listItem">
+              <a href="">プライバシーポリシー</a>
+            </li>
+            <li class="c-footer__listItem">
+              <a href="">特定商取引法に基づく表記</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
