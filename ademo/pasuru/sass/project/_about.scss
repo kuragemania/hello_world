@@ -35,27 +35,27 @@
     background-repeat: no-repeat;
 
     &:nth-child(2) {
-      background-image: url("/images/common/about-bg.png");
+      background-image: url("../images/common/about-bg.png");
     }
 
     &:nth-child(3) {
-      background-image: url("/images/common/about-bg2.png");
+      background-image: url("../images/common/about-bg2.png");
     }
 
     &:nth-child(4) {
-      background-image: url("/images/common/about-bg3.png");
+      background-image: url("../images/common/about-bg3.png");
     }
-    @include mq("md"){
+    @include mq("md") {
       &:nth-child(2) {
-        background-image: url("/images/common/about-bg-sp.png");
+        background-image: url("../images/common/about-bg-sp.png");
       }
-  
+
       &:nth-child(3) {
-        background-image: url("/images/common/about-bg-sp2.png");
+        background-image: url("../images/common/about-bg-sp2.png");
       }
-  
+
       &:nth-child(4) {
-        background-image: url("/images/common/about-bg-sp3.png");
+        background-image: url("../images/common/about-bg-sp3.png");
       }
     }
   }
@@ -105,8 +105,8 @@
 
 .p-about-text {
   margin-top: 50px;
-  @include mq("md"){
-margin-top: 25px;
+  @include mq("md") {
+    margin-top: 25px;
   }
 }
 

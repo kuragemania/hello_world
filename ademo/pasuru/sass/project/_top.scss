@@ -22,6 +22,13 @@
   }
 }
 
+.worries__title.section-title__main {
+  width: prem(350);
+  @include mq("md") {
+    width: prem(280);
+  }
+}
+
 .worries-list {
   display: grid;
   gap: prem(20);
@@ -89,6 +96,20 @@
   }
 }
 
+.concept__title.section-title__main {
+  width: prem(350);
+  @include mq("md") {
+    width: prem(280);
+  }
+}
+
+.concept__title-sub.section-title__sub {
+  font-size: prem(27);
+  @include mq("md") {
+    font-size: prem(32);
+  }
+}
+
 .concept__container {
   max-width: prem(560);
   margin-top: 90px;
@@ -122,6 +143,20 @@
   @include mq("md") {
     padding-top: 90px;
     padding-bottom: 380px;
+  }
+}
+
+.reason__title.section-title__main {
+  width: prem(400);
+  @include mq("md") {
+    width: prem(280);
+  }
+}
+
+.reason__title-sub.section-title__sub {
+  font-size: prem(27);
+  @include mq("md") {
+    font-size: prem(32);
   }
 }
 
@@ -286,8 +321,8 @@
     height: prem(1700);
   }
 
-  @include mq("sm1"){
-    height: prem(1380);
+  @include mq("sm1") {
+    height: prem(1480);
   }
 }
 
@@ -386,7 +421,7 @@
 .works-list__item-content {
   padding: prem(25) prem(60) prem(30) prem(10);
   @include mq(md) {
-    padding: prem(10) prem(25) prem(60);
+    padding: prem(10) prem(25) prem(70);
   }
 }
 .works-list__item-content.works-list__item-content-02 {
@@ -412,16 +447,27 @@
   }
 }
 
-
 // present
 
 .present {
   background-image: url(../images/common/present-bg.png);
   background-size: cover; /* 画像が常にコンテナを覆うように */
+  position: relative;
   padding-top: 100px;
+  padding-bottom: 100px;
   // @include mq("md") {
   //   background-image: url(../images/common/flow-bg-sp.png);
   // }
+}
+
+.present__title-wrap {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+
+  @include mq("md") {
+    top: 8%;
+  }
 }
 
 .present__inner.inner {
@@ -429,45 +475,76 @@
   background-size: cover; /* 画像が常にコンテナを覆うように */
   padding-left: prem(120);
   padding-right: prem(130);
-  padding-top: prem(100);
+  padding-top: prem(170);
   padding-bottom: prem(220);
+  max-width: prem(1150);
 
+  @include mq("xl") {
+    padding-left: prem(190);
+    padding-right: prem(250);
+    padding-top: prem(240);
+    padding-bottom: prem(200);
+  }
+  @include mq("lg") {
+    padding-left: prem(280);
+    padding-right: prem(280);
+  }
+
+  @include mq("md") {
+    background-image: url(../images/common/present-inner-bg-sp.png);
+    padding-left: prem(20);
+    padding-right: prem(20);
+    padding-top: prem(120);
+    padding-bottom: prem(150);
+    max-width: prem(380);
+  }
 }
 
 .present-list__item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  @include mq("md") {
+    flex-direction: column; /* flexの方向を縦に変更 */
+  }
 }
 
 .present-list__item:nth-of-type(even) {
   flex-direction: row-reverse;
+  @include mq("md") {
+    flex-direction: column; /* flexの方向を縦に変更 */
+  }
 }
 
 .present-list__item + .present-list__item {
-  @include mq(md){
-    margin-top: prem(30);
-}
+  @include mq(md) {
+    margin-top: prem(50);
+  }
 }
 
 .present-list__item-img {
   max-width: prem(600);
-position: relative;
-  @include mq(md){
-  width: 100%;
-
+  position: relative;
+  @include mq(md) {
+    width: 100%;
   }
 }
 
 .present-list__item:nth-of-type(even) .present-list__item-img {
   margin-left: prem(100);
+  @include mq("md") {
+    margin-left: 0;
+    margin-top: prem(30);
+  }
 }
 
 .present-list__item-img img {
   width: 100%;
   aspect-ratio: 550/320;
-  // object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 3/2.5;
+  }
 }
 
 .present-list__item-text {
@@ -478,9 +555,10 @@ position: relative;
   margin-left: prem(90);
   max-width: prem(550);
   width: 80%;
-  @include mq(md){
-  margin-top: prem(20);
-  width: 100%;
+  @include mq(md) {
+    margin-top: prem(20);
+    margin-left: 0px;
+    width: 100%;
   }
 }
 
@@ -497,20 +575,123 @@ position: relative;
   position: absolute;
   top: -45px;
   left: -45px;
+  @include mq("md") {
+    width: prem(75);
+    height: prem(75);
+    top: -30px;
+    left: -10px;
+  }
 }
 
 .present__item-label {
-margin: 0 auto;
-line-height: 1.0;
-padding: prem(25) 0 prem(25);
+  margin: 0 auto;
+  line-height: 1;
+  padding: prem(25) 0 prem(25);
+  @include mq("md") {
+    padding-top: prem(20);
+  }
 }
 
 .present__item-label span {
   font-size: prem(40);
+  @include mq("md") {
+    font-size: prem(24);
+  }
 }
 
 .present__title-sub {
   text-align: center;
   font-size: prem(40);
   font-weight: $medium;
+  position: relative;
+  @include mq("md") {
+    font-size: prem(32);
+    margin-top: prem(50);
+    position: static;
+  }
+}
+
+.present__title-sub span {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.present__title-sub strong {
+  color: $green;
+  font-weight: $medium;
+}
+
+.present__title-sub span::after {
+  content: "";
+  position: absolute;
+  width: prem(530);
+  left: 19%;
+  bottom: 1.5px;
+  height: 10px;
+  background-color: #f5a522;
+  z-index: 1;
+  @include mq("xl") {
+    left: 13%;
+  }
+  @include mq("lg") {
+    left: 4%;
+    bottom: -1.5px;
+  }
+
+  @include mq("md") {
+    width: 100%;
+    left: 0%;
+    bottom: -7.5px;
+  }
+}
+
+// faq
+
+.faq {
+  background-image: url(../images/common/faq-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+  // position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  // @include mq("md") {
+  //   background-image: url(../images/common/flow-bg-sp.png);
+  // }
+}
+
+.faq__inner.inner {
+  margin-top: 100px;
+}
+
+.faq-list__item-question {
+  background-color: $red;
+  color: $white;
+  // text-align: center;
+  font-size: prem(26);
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  padding: prem(30) prem(80) prem(30) prem(50);
+  @include mq("md"){
+    padding: prem(20) prem(15);
+      }
+}
+
+.faq-list__item-question span {
+  margin-right: prem(10);
+  @include mq("md"){
+display: block;
+  }
+}
+
+.faq-list__item:not(:first-child){
+  margin-top: 50px;
+}
+
+.faq-list__item-answer {
+  background-color: $white;
+  padding: prem(40) prem(80);
+  // text-align: center;
+  @include mq("md"){
+    padding: prem(25) prem(15);
+  }
 }
