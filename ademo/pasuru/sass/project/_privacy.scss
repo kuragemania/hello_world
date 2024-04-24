@@ -1,1 +1,78 @@
 @use "../foundation" as *;
+
+.policy {
+  padding: prem(100) 0 prem(150) 0;
+  position: relative;
+}
+
+.policy-title-sub {
+  padding: prem(6) prem(30);
+  position: absolute;
+  background-color: #c40002;
+  color: #fff;
+  font-size: prem(30);
+  font-weight: bold;
+  border-radius: 0 prem(30) 0 0;
+}
+
+.policy-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: prem(120) 0 0 0;
+}
+
+.policy-title {
+  font-size: prem(30);
+  padding-bottom: prem(40);
+}
+
+.policy-lead {
+  font-size: prem(16);
+  padding-bottom: prem(40);
+}
+
+.policy-inner > p {
+  padding: prem(24) 0;
+}
+
+.policy-box {
+  padding: prem(1) 0;
+  border-left: prem(20) solid #f5a522;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: prem(20);
+}
+
+.policy-box_title {
+  display: flex;
+  align-items: center;
+}
+
+.policy-box_number {
+  color: #f5a522;
+  font-size: prem(32);
+  padding: 0em 0.6em;
+}
+
+.policy-inner_list {
+  background-color: #dadada;
+  padding: prem(40);
+}
+
+.policy-inner_list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-inner_list li {
+  margin-bottom: 0.5em;
+  text-indent: -1.2em;
+  padding-left: 1.2em;
+}
+
+/* 1000px以下の画面幅に適用するスタイル */
+@media (max-width: 1000px) {
+  .policy-container {
+    max-width: 90%;
+  }
+}

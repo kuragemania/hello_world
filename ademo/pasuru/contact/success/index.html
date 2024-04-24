@@ -10,7 +10,7 @@
       name="format-detection"
       content="telephone=no"
     />
-    <title>プライバシーポリシー</title>
+    <title>お問い合わせ</title>
     <meta
       name="description"
       content="トップページの説明"
@@ -194,12 +194,12 @@
 
           <div class="mv__img message-mv">
             <img
-              src="../images/common/privacy-mv.png"
+              src="../images/common/contact-mv.png"
               alt="省略"
               class="md-none"
             />
             <img
-              src="../images/common/privacy-mv-sp.png"
+              src="../images/common/contact-mv-sp.png"
               alt="省略"
               class="md-show"
             />
@@ -214,79 +214,61 @@
           </div>
         </div>
       </section>
-      <section class="policy">
-        <p class="policy-title-sub">Privacypolicy</p>
-        <div class="policy-container">
-            <p class="policy-title">プライバシーポリシー</p>
-            <p class="policy-lead">
-                あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-            </p>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">1.</span>
-                        個人情報の取り扱いについて</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">2.</span>
-                        個人情報の地域目的について</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">3.</span>
-                        個人情報の取り扱いについて</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">4.</span>
-                        個人情報の第三者提供について</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">5.</span>
-                        当サイトに掲載されている広告について</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">6.</span>
-                        当サイトが使用しているアクセス解析ツールについて</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner">
-                <div class="policy-box">
-                    <p class="policy-box_title"><span class="policy-box_number">7.</span>
-                        当サイトへのコメントについて</p>
-                </div>
-                <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-            </div>
-            <div class="policy-inner_list">
-                <ul>
-                    <li>● あああああああああああああああああああああああああああああああああああああ</li>
-                    <li>● あああああああああああああああああああああああああああああああああああああ</li>
-                    <li>● あああああああああああああああああああああああああああああああああああああ</li>
-                    <li>● あああああああああああああああああああああああああああああああああああああ</li>
-                </ul>
-            </div>
+      <section class="contact">
+        <div class="contact__title-wrap section-title__wrap">
+          <h2 class="contact__title section-title__main">Contact</h2>
         </div>
-    </section>
+        <div class="contact__inner inner">
+          <form
+            class="contact__form form"
+            action=""
+          >
+            <dl class="form__wrap">
+              <dt class="form__label">名前</dt>
+              <dd class="form__input form-input">
+                <input type="text" />
+              </dd>
+            </dl>
+            <dl class="form__wrap">
+              <dt class="form__label">電話番号</dt>
+              <dd class="form__input form-input">
+                <input type="tel" />
+              </dd>
+            </dl>
+            <dl class="form__wrap">
+              <dt class="form__label">メールアドレス</dt>
+              <dd class="form__input form-input">
+                <input type="email" />
+              </dd>
+            </dl>
+            <dl class="form__wrap form__wrap--textarea">
+              <dt class="form__label">内容</dt>
+              <dd class="form__textarea form-textarea">
+                <textarea name="message"></textarea>
+              </dd>
+            </dl>
+            <div class="contact__form-privacy">
+              <label>
+                <input
+                  type="checkbox"
+                  name="privacy-policy"
+                  value="agree"
+                />
+                <span
+                  ><a href="#">個人情報</a
+                  >の取り扱いに同意する<strong class="u-color-red">*必須</strong></span
+                >
+              </label>
+            </div>
+            <div class="form__submit form-submit">
+              <input
+                type="submit"
+                value="上記の内容で送信する"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
       <section>
         <div class="c-incentive">
           <div class="c-incentive__inner">

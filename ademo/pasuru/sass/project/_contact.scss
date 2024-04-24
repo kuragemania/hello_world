@@ -1,0 +1,212 @@
+@use "../foundation" as *;
+
+.contact {
+background-color: $gray;
+ padding-top: 100px;
+ padding-bottom: 100px;
+}
+
+
+.contact__inner.inner {
+  margin-top: 150px;
+  @include mq("md"){
+margin-top: 50px;
+  }
+}
+
+.form__wrap {
+  display: flex;
+  align-items: center;
+  @include mq(md){
+      display: block;
+  }
+}
+
+.form__wrap.form__wrap--textarea {
+  
+  @include mq(md){
+      align-items: flex-start;
+  }
+}
+
+.form__wrap + .form__wrap {
+  margin-top: prem(30);
+}
+
+.form__label {
+  width: 100%;
+  max-width: prem(200);
+  font-size: prem(15);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  @include mq(md){
+      max-width: prem(200);
+      width: 100%;
+  }
+}
+
+.form__wrap.form__wrap--textarea .form__label {
+  margin-top: prem(10);
+
+  @include mq(md){
+      margin-top: 0;
+  }
+}
+
+.form__label span {
+  margin-left: prem(10);
+  padding: prem(5);
+  display: inline-block;
+  font-size: prem(12);
+  color: #fff;
+  background-color: #D00000;
+}
+
+.form__input,
+.form__select,
+.form__radio,
+.form__checkbox,
+.form__textarea {
+  margin-top: 0;
+  @include mq(md){
+    margin-top: prem(10);
+  }
+}
+
+.form__input,
+.form__textarea {
+  flex-grow: 1;
+}
+
+.form__submit {
+  margin-top: prem(60);
+  text-align: center;
+}
+
+.form-input input {
+	padding: prem(8) prem(15);
+	width: 100%;
+	font-size: prem(15);
+	line-height: 1;
+	border-radius: 0;
+	border: 1px solid #ccc;
+	appearance: none;
+	// background-color: transparent;
+	background-image: none;
+}
+
+.form-input input:focus {
+	border: 1px solid #ccc;
+	box-shadow: none;
+	outline: none;
+}
+
+.form-textarea textarea {
+  padding: prem(8) prem(15);
+  width: 100%;
+  height: prem(150);
+  font-size: prem(15);
+  border-radius: 0;
+  border: 1px solid #ccc;
+  appearance: none;
+  // background-color: transparent;
+  background-image: none;
+}
+
+.form-textarea textarea:focus {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-submit input {
+  padding: prem(25) prem(125);
+  color: #fff;
+  display: inline-block;
+  font-size: prem(16);
+  line-height: 1;
+  background-color: $orange;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s;
+  @include mq("md"){
+  padding: prem(25) prem(90);
+  }
+}
+
+.form-submit input:hover,
+.form-submit input:focus {
+  outline: none;
+}
+
+.form-submit input:hover {
+  @include mq(md){
+      opacity: .8;
+  }
+}
+
+.form-submit input::-moz-foucus-inner {
+  padding: 0;
+  border: none;
+}
+
+
+
+.contact__form-privacy {
+  margin-top: prem(30);
+  text-align: center;
+}
+
+.contact__form-privacy input {
+  display: none;
+}
+
+.contact__form-privacy input + span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0 0 prem(40);
+  position: relative;
+  font-size: prem(16);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+.contact__form-privacy input + span::before {
+  content: "";
+  position: absolute;
+  top: prem(5);
+  left: 0;
+  background: #fff;
+  border: 1px solid #808080;
+  display: block;
+  width: prem(20);
+  height: prem(20);
+}
+
+.contact__form-privacy input + span::after {
+  content: "";
+  margin-top: prem(-2);
+  position: absolute;
+  top: prem(12);
+  left: prem(2);
+  transform: rotate(-45deg);
+  display: block;
+  width: prem(15);
+  height: prem(8);
+  border-bottom: prem(3) solid #333;
+  border-left: prem(3) solid #333;
+  transition:  .3s;
+  opacity: 0;
+}
+
+.contact__form-privacy input + span a {
+  text-decoration: underline;
+}
+
+.contact__form-privacy input:checked + span::after {
+  opacity: 1;
+}
