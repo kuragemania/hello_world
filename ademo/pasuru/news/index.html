@@ -105,7 +105,10 @@
     <header class="header layout-header js-header">
       <div class="header__inner">
         <h1 class="header__logo">
-          <a href="#">
+          <a
+            class="header__logo-link"
+            href="#"
+          >
             <img
               src="../images/common/logo.svg"
               alt="LOGO"
@@ -115,16 +118,16 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#">パスルについて</a>
+              <a href="/about/">パスルについて</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">代表あいさつ</a>
+              <a href="/message/">代表あいさつ</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">お知らせ</a>
+              <a href="/news/">お知らせ</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">会社概要</a>
+              <a href="/company/">会社概要</a>
             </li>
             <li class="header__nav-item header__nav-item--contact">
               <a
@@ -153,16 +156,16 @@
           <nav class="header__drawer-nav">
             <ul class="header__drawer-list">
               <li class="header__drawer-item">
-                <a href="#">パスルについて</a>
+                <a href="/about/">パスルについて</a>
               </li>
               <li class="header__drawer-item">
-                <a href="#">代表あいさつ</a>
+                <a href="/message/">代表あいさつ</a>
               </li>
               <li class="header__drawer-item">
-                <a href="#">お知らせ</a>
+                <a href="/news/">お知らせ</a>
               </li>
               <li class="header__drawer-item">
-                <a href="#">会社概要</a>
+                <a href="/company/">会社概要</a>
               </li>
               <li class="header__drawer-item header__drawer-item--contact">
                 <a
@@ -189,7 +192,7 @@
 
           </div> -->
 
-          <div class="mv__img">
+          <div class="mv__img news-mv">
             <img
               src="../images/common/news-mv.png"
               alt="省略"
@@ -211,36 +214,100 @@
           </div>
         </div>
       </section>
-      <section class="message"></section>
-
+      <div class="news__title-wrap section-title__wrap">
+        <h2 class="news__title section-title__main">News</h2>
+      </div>
       <div class="news">
-        <div class="news__inner">
+        <div class="news__inner inner">
           <ul class="news__list news-list">
             <li class="news-list__item">
               <a href="#">
                 <div class="news-list__item-meta">
-                  <time class="news-list__item-date" datetime="2023-05-10">2023.05.10</time>
-                  <p class="news-list__item-category">お知らせ</p>
+                  <p class="news-list__item-category category-news">NEWS</p>
+                  <time
+                    class="news-list__item-date"
+                    datetime="2024-03-20"
+                    >2024年3月20日</time
+                  >
                 </div>
-                <p class="news-list__item-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
               </a>
             </li>
             <li class="news-list__item">
               <a href="#">
                 <div class="news-list__item-meta">
-                  <time class="news-list__item-date" datetime="2023-05-10">2023.05.10</time>
-                  <p class="news-list__item-category">イベント</p>
+                  <p class="news-list__item-category category-event">EVENT</p>
+                  <time
+                    class="news-list__item-date"
+                    datetime="2024-03-20"
+                    >2024年3月20日</time
+                  >
                 </div>
-                <p class="news-list__item-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
               </a>
             </li>
             <li class="news-list__item">
               <a href="#">
                 <div class="news-list__item-meta">
-                  <time class="news-list__item-date" datetime="2023-05-10">2023.05.10</time>
-                  <p class="news-list__item-category">その他</p>
+                  <p class="news-list__item-category category-news">NEWS</p>
+                  <time
+                    class="news-list__item-date"
+                    datetime="2024-03-20"
+                    >2024年3月20日</time
+                  >
                 </div>
-                <p class="news-list__item-title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
+              </a>
+            </li>
+            <li class="news-list__item">
+              <a href="#">
+                <div class="news-list__item-meta">
+                  <p class="news-list__item-category category-event">EVENT</p>
+                  <time
+                    class="news-list__item-date"
+                    datetime="2024-03-20"
+                    >2024年3月20日</time
+                  >
+                </div>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
+              </a>
+            </li>
+            <li class="news-list__item">
+              <a href="#">
+                <div class="news-list__item-meta">
+                  <p class="news-list__item-category category-news">NEWS</p>
+                  <time
+                    class="news-list__item-date"
+                    datetime="2024-03-20"
+                    >2024年3月20日</time
+                  >
+                </div>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
+              </a>
+            </li>
+            <li class="news-list__item">
+              <a href="#">
+                <div class="news-list__item-meta">
+                  <p class="news-list__item-category category-event">EVENT</p>
+                  <time
+                    class="news-list__item-date"
+                    datetime="2024-03-20"
+                    >2024年3月20日</time
+                  >
+                </div>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
               </a>
             </li>
           </ul>

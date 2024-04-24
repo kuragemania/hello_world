@@ -67,6 +67,12 @@
   }
 }
 
+.mv__img.news-mv {
+  @include mq("md") {
+    padding-left: 0px;
+  }
+}
+
 .mv__img::before {
   content: "";
   position: absolute;
