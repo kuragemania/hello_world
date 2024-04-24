@@ -3,6 +3,7 @@
 @use "top";
 @use "about";
 @use "service-slick";
-@use "_message";
-@use "_news";
+@use "message";
+@use "news";
+@use "company";
 // 新規scssファイルは都度追記する

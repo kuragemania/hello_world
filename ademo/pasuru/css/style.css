@@ -675,7 +675,8 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-  .mv__img.news-mv {
+  .mv__img.news-mv,
+.mv__img.company-mv {
     padding-left: 0px;
   }
 }
@@ -1825,6 +1826,141 @@ footer {
     margin-top: 0.75rem;
     margin-left: 0;
   }
+}
+
+.company__title-wrap {
+  margin-top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .company__title-wrap {
+    margin-top: 50px;
+  }
+}
+
+.company-inner.inner {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .company-inner.inner {
+    margin-top: 50px;
+  }
+}
+
+table {
+  width: 100%; /* 表の幅を親要素に合わせて100%に設定 */
+  border-collapse: collapse; /* ボーダーの重なりをなくす */
+}
+
+th,
+td {
+  border: 2px solid #716b6b; /* 黒の細いボーダー */
+  padding: 8px 15px; /* セル内の余白 */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align-last: left;
+}
+@media screen and (max-width: 767px) {
+  th,
+td {
+    font-size: 0.875rem;
+    text-align-last: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  td {
+    padding: 15px 15px; /* セル内の余白 */
+  }
+}
+
+th {
+  background-color: #ffffff; /* タイトルセルの背景色 */
+  width: 20%; /* タイトルセルの幅 */
+}
+@media screen and (max-width: 767px) {
+  th {
+    width: 100%;
+  }
+}
+
+td {
+  background-color: #fff; /* データセルの背景色 */
+}
+
+@media (max-width: 767px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    border-spacing: 0px;
+  }
+  th, td {
+    border: 2px solid #716b6b; /* 一貫したボーダースタイルを維持 */
+    border-top: none; /* 上のボーダーを削除する */
+  }
+  tr:first-child th {
+    border-top: 2px solid #716b6b; /* 最初の行にのみ上のボーダーを適用 */
+  }
+  th:last-of-type,
+td:last-of-type {
+    border-bottom: 2px solid #716b6b; /* 最後の行にのみ下のボーダーを適用 */
+  }
+}
+.access {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .access {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
+.access__info {
+  text-align: left;
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  .access__info {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+.access__address {
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.access__map-wrap {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .access__map-wrap {
+    margin-top: 1.875rem;
+    width: 100%;
+  }
+}
+
+.access__map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 60%;
+}
+
+.access__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .u-center {

@@ -67,7 +67,9 @@
   }
 }
 
-.mv__img.news-mv {
+.mv__img.news-mv,
+.mv__img.company-mv
+{
   @include mq("md") {
     padding-left: 0px;
   }

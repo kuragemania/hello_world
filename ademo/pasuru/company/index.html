@@ -6,7 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>パスル - パスルについて</title>
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+    <title>会社概要</title>
     <meta
       name="description"
       content="トップページの説明"
@@ -18,7 +22,7 @@
     <!-- ogp -->
     <meta
       property="og:title"
-      content="パスル - パスルについて"
+      content="パスル"
     />
     <meta
       property="og:type"
@@ -50,6 +54,16 @@
       href=""
     />
     <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <link
       rel="stylesheet"
       href="../css/style.css"
@@ -87,7 +101,6 @@
       })(document);
     </script>
   </head>
-
   <body>
     <header class="header layout-header js-header">
       <div class="header__inner">
@@ -171,21 +184,22 @@
     <main>
       <section class="mv js-mv">
         <div class="mv__inner">
-          <div class="mv__title-wrap">
-            <h2 class="mv__main-title md-none"><span>パス</span>ルについて</h2>
+          <!-- <div class="mv__title-wrap">
+            <h2 class="mv__main-title md-none"><span>キャ</span>ッチコピー</h2>
             <h2 class="mv__main-title md-show">
-              <span>パ</span>スルに<br /><span>つ</span>いて
+              <span>キ</span>ャッチ<br /><span>コ</span>ピー
             </h2>
-          </div>
 
-          <div class="mv__img">
+          </div> -->
+
+          <div class="mv__img company-mv">
             <img
-              src="../images/common/about-mv.png"
+              src="../images/common/company-mv.png"
               alt="省略"
               class="md-none"
             />
             <img
-              src="../images/common/about-mv-sp.png"
+              src="../images/common/message-mv-sp.png"
               alt="省略"
               class="md-show"
             />
@@ -200,84 +214,54 @@
           </div>
         </div>
       </section>
-      <section class="worries">
-        <div class="worries__inner">
-          <div class="worries__container">
-            <div class="c-container c-container--w70 p-about-container">
-              <div class="p-about-flex">
-                <img
-                  src="https://placehold.jp/400x400.png"
-                  alt=""
-                  class="p-about__img--w50"
-                />
-                <div class="p-about-flex__inner">
-                  <h2 class="u-color-red u-size-large ttl-mark">
-                    ああああああああああああああ
-                  </h2>
-                  <p class="p-about-text">
-                    ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                  </p>
-                </div>
-              </div>
+      <section class="company">
+        <div class="company__title-wrap section-title__wrap">
+          <h2 class="company__title section-title__main">Company</h2>
+        </div>
+        <div class="company-inner inner">
+          <table>
+            <tr>
+              <th>会社名</th>
+              <td>テキストテキスト</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>テキストテキスト</td>
+            </tr>
+            <tr>
+              <th>連絡先</th>
+              <td>テキストテキスト</td>
+            </tr>
+            <tr>
+              <th>設立年</th>
+              <td>テキストテキスト</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>テキストテキスト</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>テキストテキスト</td>
+          </tr>
+        </table>
+        <div class="access">
+          <div class="access__map-wrap">
+            <div class="access__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207763.07103716696!2d139.41831505122724!3d35.5463421778204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1688630714995!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+          </div>
+          <div class="access__info">
+            <address class="access__address">
+              〒123-4567<br>
+              東京都渋谷区1-2-3　渋谷ビル10F<br>
+              TEL:03-1234-5678<br>
+              FAX:03-1234-5679
+            </address>
           </div>
         </div>
-      </section>
-      <section>
-        <div class="c-incentive">
-          <div class="c-incentive__inner">
-            <div class="c-incentive__container">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener"
-                class="l-btn mv-btn--mark"
-                >無料でLINE転職相談する ▶︎</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="worries value">
-        <div class="worries__inner">
-          <div class="worries__title-wrap section-title__wrap">
-            <h2 class="worries__title section-title__main">value</h2>
-            <p class="worries__title-sub section-title__sub">
-              <span
-                >パスルの
-                <strong class="u-color-red u-size-superLarge">3</strong
-                >つの約束</span
-              >
-            </p>
-          </div>
-
-          <div class="p-about-value__container">
-            <div class="p-about-value__content">
-              <h3 class="p-about-value__title">ああああああああああああ</h3>
-              <p class="p-about-value__text">
-                ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-              </p>
-            </div>
-          </div>
-
-          <div class="p-about-value__container">
-            <div class="p-about-value__content">
-              <h3 class="p-about-value__title">ああああああああああああ</h3>
-              <p class="p-about-value__text">
-                ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-              </p>
-            </div>
-          </div>
-
-          <div class="p-about-value__container">
-            <div class="p-about-value__content">
-              <h3 class="p-about-value__title">ああああああああああああ</h3>
-              <p class="p-about-value__text">
-                ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-              </p>
-            </div>
-          </div>
-        </div>
+      </div>
+        
       </section>
       <section>
         <div class="c-incentive">
@@ -322,6 +306,10 @@
     </main>
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
