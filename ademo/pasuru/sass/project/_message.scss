@@ -1,2 +1,148 @@
 @use "../foundation" as *;
 
+.message {
+  background-color: #f0ecec;
+  padding: prem(100) 0 prem(150) 0;
+}
+
+.message_container01 {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 0 0 80px 0;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+  z-index: 0;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  border-radius: 0 58px 0 58px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: -5px;
+  /* Image overlay offset */
+  right: -5px;
+  /* Image overlay offset */
+  width: 100%;
+  height: 100%;
+  background-color: #c40002;
+  z-index: -1;
+  border-radius: 0 58px 0 58px;
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  @include mq("md"){
+    margin-top: 50px;
+  }
+}
+
+.text-container_title {
+  font-size: prem(30);
+  padding-bottom: prem(40);
+}
+
+.text-container_sentence {
+  font-size: prem(16);
+  padding-bottom: prem(40);
+}
+
+.text-container_name {
+  font-size: prem(24);
+  text-align: end;
+}
+
+.message_container02 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  margin-bottom: prem(15);
+  /* Adjust spacing as necessary */
+}
+
+.tab-label {
+  background-color: #c40002;
+  color: white;
+  padding: 3px 80px;
+  font-size: prem(20);
+  font-weight: bold;
+  border-radius: 0px 80px 0px 80px;
+  /* Rounded corners on the left side */
+}
+
+.tab-line {
+  flex-grow: 1;
+  height: 2px;
+  width: 740px;
+  background-color: #c40002;
+  margin-left: prem(10);
+}
+
+.tab-sentence {
+  margin-bottom: prem(24);
+}
+
+.tab-sentence :last-child {
+  margin-bottom: 0;
+}
+
+/* 1000px以下の画面幅に適用するスタイル */
+@media (max-width: 1000px) {
+  .message_container01 {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .image-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .text-container {
+    padding: 0px;
+  }
+
+  .text-container_title {
+    padding: prem(40) auto;
+  }
+
+  .message_container02 {
+    max-width: 90%;
+    padding: 24px 16px;
+  }
+
+  .tab {
+    flex-direction: column;
+  }
+
+  .tab-label {
+    padding: 3px 40px;
+    margin-bottom: -17px;
+    z-index: 0;
+  }
+
+  .tab-line {
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: prem(15);
+  }
+}

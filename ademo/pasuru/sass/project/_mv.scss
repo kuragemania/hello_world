@@ -68,7 +68,8 @@
 }
 
 .mv__img.news-mv,
-.mv__img.company-mv
+.mv__img.company-mv,
+.mv__img.message-mv
 {
   @include mq("md") {
     padding-left: 0px;
