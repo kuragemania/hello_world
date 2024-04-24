@@ -2300,6 +2300,124 @@ td:last-of-type {
     max-width: 90%;
   }
 }
+.terms__title.section-title__main {
+  width: 43.75rem;
+}
+@media screen and (max-width: 767px) {
+  .terms__title.section-title__main {
+    width: 21.875rem;
+    font-size: 1.625rem;
+    padding-left: 1.875rem;
+    padding-right: 5rem;
+  }
+}
+
+.policy {
+  padding: 6.25rem 0 9.375rem 0;
+  position: relative;
+}
+
+.policy-title-sub {
+  padding: 0.375rem 1.875rem;
+  position: absolute;
+  background-color: #c40002;
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  border-radius: 0 1.875rem 0 0;
+}
+
+.policy-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 7.5rem 0 0 0;
+}
+
+.policy-title {
+  font-size: 1.875rem;
+  padding-bottom: 2.5rem;
+}
+
+.policy-lead {
+  font-size: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.policy-inner > p {
+  padding: 1.5rem 0;
+}
+
+.policy-box {
+  padding: 0.9375rem;
+  border-left: 1.25rem solid #f5a522;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.25rem;
+}
+
+.policy-box_title {
+  display: flex;
+  align-items: center;
+}
+
+.policy-box_number {
+  color: #f5a522;
+  font-size: 2rem;
+  padding: 0em 0.6em 0em 0em;
+}
+
+.policy-inner_list {
+  background-color: #dadada;
+  padding: 40px;
+}
+
+.policy-inner_list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-inner_list li {
+  margin-bottom: 0.5em;
+  text-indent: -1.2em;
+  padding-left: 1em;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+/* 1000px以下の画面幅に適用するスタイル */
+@media (max-width: 1000px) {
+  .policy-container {
+    max-width: 90%;
+  }
+  .info-table {
+    border: 0;
+  }
+  .info-table td {
+    border: 0;
+    display: block;
+  }
+  .info-table td:first-child {
+    background-color: transparent;
+    text-align: left;
+  }
+  .info-table tr {
+    margin-bottom: -1px;
+    border: 1px solid #000;
+    display: block;
+  }
+  .info-table td:first-child {
+    text-align: center;
+    border-bottom: 1px solid #000;
+  }
+}
 .contact {
   background-color: #f0ecec;
   padding-top: 100px;

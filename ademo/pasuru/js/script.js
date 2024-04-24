@@ -68,7 +68,7 @@ document.querySelectorAll('section:not(.mv)').forEach(section => {
     duration: 1.0, // アニメーションの持続時間は1秒
     scrollTrigger: {
       trigger: section, // このセクションがトリガー
-      start: "top 80%", // ビューポートの上部から80%の位置でトリガー
+      start: "top 70%", // ビューポートの上部から80%の位置でトリガー
       end: "bottom 20%", // ビューポートの下部から20%の位置でトリガーが終了
       toggleActions: 'play none none none', // スクロールダウン時に一度だけ再生
     //   markers: true // 開発時はマーカーを表示して位置を確認
