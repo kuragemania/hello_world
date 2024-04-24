@@ -1011,9 +1011,14 @@ footer {
   background-position: center;
   z-index: 3;
 }
+@media screen and (max-width: 1199px) {
+  .reason__item::before {
+    top: -12%; /* .reason__item-textの下端からの位置 */
+  }
+}
 @media screen and (max-width: 767px) {
   .reason__item::before {
-    top: -9%;
+    top: -10%;
     max-width: 90px;
     height: 75px;
   }

@@ -201,8 +201,13 @@
   background-size: cover;
   background-position: center;
   z-index: 3;
+
+  @include mq("xl"){
+  top: -12%; /* .reason__item-textの下端からの位置 */
+  }
+
   @include mq("md") {
-    top: -9%;
+    top: -10%;
     max-width: 90px;
     height: 75px;
   }
