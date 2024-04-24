@@ -1,0 +1,42 @@
+@use "../foundation" as *;
+
+.news-list__item a {
+  display: flex;
+  align-items: flex-start;
+  @include mq(md){
+      padding: prem(20) 0;
+      display: block;
+  }
+}
+
+.news-list__item-meta {
+  display: flex;
+  align-items: center;
+}
+
+.news-list__item-date {
+  font-size: prem(16);
+  line-height: 1;
+}
+
+.news-list__item-category {
+  margin-left: prem(30);
+  padding: prem(5);
+  min-width: prem(80);
+  width: fit-content;
+  font-size: prem(14);
+  line-height: 1;
+  color: #fff;
+  background-color: #73B2C8;
+  text-align: center;
+}
+
+.news-list__item-title {
+  margin-top: 0;
+  font-size: prem(16);
+  line-height: 1.5;
+  @include mq(md){
+    margin-top: prem(12);
+      margin-left: prem(60);
+  }
+}

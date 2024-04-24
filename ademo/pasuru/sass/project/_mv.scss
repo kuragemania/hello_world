@@ -23,6 +23,9 @@
   width: 100%;
   color: #fff;
   text-align: center;
+  @include mq("xl2") {
+    left: 35%;
+  }
   @include mq("md") {
     top: 46%;
     left: 37%;

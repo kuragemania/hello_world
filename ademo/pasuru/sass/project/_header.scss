@@ -8,6 +8,13 @@
   }
 }
 
+.header.is-scroll {
+  height: prem(70);
+  @include mq("md") {
+    height: prem(50);
+  }
+}
+
 .header__inner {
   padding: 0px prem(16) 0 prem(21);
   height: inherit;
@@ -26,7 +33,7 @@
   height: inherit;
   @include mq("md") {
     max-width: prem(74);
-  height: prem(45);
+    height: prem(45);
   }
 }
 
@@ -34,6 +41,11 @@
   height: inherit;
   display: flex;
   align-items: center;
+}
+
+// スクロール時にロゴ非表示
+.header.is-scroll .header__logo-link {
+  display: none;
 }
 
 .header__logo img {
@@ -170,7 +182,8 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba($color: #623a14, $alpha: 0.95);
+  backdrop-filter: blur(5px);
+  background-color: rgba(158, 159, 161, 0.8);
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -180,41 +193,53 @@
 }
 
 .header__drawer-item a {
-  padding: prem(15) 0;
+  padding: prem(15) prem(24);
   display: block;
-  font-size: prem(36);
+  font-size: prem(16);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #fff;
-  text-align: center;
+  color: $white;
+  // text-align: center;
   text-transform: uppercase;
 }
 
-.header__drawer-item.header__drawer-item--contact a::after {
-  content: "";
-  margin-bottom: prem(5);
-  margin-left: prem(20);
-  width: prem(15);
-  height: prem(15);
-  display: inline-block;
-  background-image: url(./../images/common/contact-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.header__drawer-item:not(:last-child) {
+  border-bottom: 1px solid $white;
+  margin-bottom: 20px;
 }
+
+.header__drawer-item.header__drawer-item--contact {
+display: inline-block;
+text-align: center;
+}
+.header__drawer-item.header__drawer-item--contact a{
+color: $green;
+}
+
+// .header__drawer-item.header__drawer-item--contact a::after {
+//   content: "";
+//   // margin-bottom: prem(5);
+//   margin-left: prem(20);
+//   width: prem(15);
+//   height: prem(15);
+//   display: inline-block;
+//   background-image: url(./../images/common/contact-icon.svg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: contain;
+// }
 
 .js-header.is-scroll {
   background-color: $red; /* ここに希望の色を指定 */
 }
-
 
 .header-btn {
   margin-left: 50px;
   margin-top: 3px;
 }
 
-.header-btn a{
+.header-btn a {
   display: inline-block;
   background-color: $green;
   color: $white;

@@ -362,6 +362,15 @@ footer {
   }
 }
 
+.header.is-scroll {
+  height: 4.375rem;
+}
+@media screen and (max-width: 767px) {
+  .header.is-scroll {
+    height: 3.125rem;
+  }
+}
+
 .header__inner {
   padding: 0px 1rem 0 1.3125rem;
   height: inherit;
@@ -392,6 +401,10 @@ footer {
   height: inherit;
   display: flex;
   align-items: center;
+}
+
+.header.is-scroll .header__logo-link {
+  display: none;
 }
 
 .header__logo img {
@@ -532,7 +545,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(98, 58, 20, 0.95);
+  backdrop-filter: blur(5px);
+  background-color: rgba(158, 159, 161, 0.8);
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -542,28 +556,28 @@ footer {
 }
 
 .header__drawer-item a {
-  padding: 0.9375rem 0;
+  padding: 0.9375rem 1.5rem;
   display: block;
-  font-size: 2.25rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.05em;
   color: #fff;
-  text-align: center;
   text-transform: uppercase;
 }
 
-.header__drawer-item.header__drawer-item--contact a::after {
-  content: "";
-  margin-bottom: 0.3125rem;
-  margin-left: 1.25rem;
-  width: 0.9375rem;
-  height: 0.9375rem;
+.header__drawer-item:not(:last-child) {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 20px;
+}
+
+.header__drawer-item.header__drawer-item--contact {
   display: inline-block;
-  background-image: url(./../images/common/contact-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  text-align: center;
+}
+
+.header__drawer-item.header__drawer-item--contact a {
+  color: #45ab13;
 }
 
 .js-header.is-scroll {
@@ -609,6 +623,11 @@ footer {
   width: 100%;
   color: #fff;
   text-align: center;
+}
+@media screen and (max-width: 1399px) {
+  .mv__title-wrap {
+    left: 35%;
+  }
 }
 @media screen and (max-width: 767px) {
   .mv__title-wrap {
@@ -967,7 +986,7 @@ footer {
 .reason__item::before {
   content: ""; /* 擬似要素にはcontentプロパティが必要です */
   position: absolute;
-  top: -15%; /* .reason__item-textの下端からの位置 */
+  top: -16%; /* .reason__item-textの下端からの位置 */
   left: 5%;
   max-width: 110px;
   width: 100%; /* .reason__item-textの幅に合わせる */
@@ -1703,6 +1722,51 @@ footer {
 
 .service-slick .slick-dots li.slick-active button:before {
   color: #c40002;
+}
+
+.news-list__item a {
+  display: flex;
+  align-items: flex-start;
+}
+@media screen and (max-width: 767px) {
+  .news-list__item a {
+    padding: 1.25rem 0;
+    display: block;
+  }
+}
+
+.news-list__item-meta {
+  display: flex;
+  align-items: center;
+}
+
+.news-list__item-date {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.news-list__item-category {
+  margin-left: 1.875rem;
+  padding: 0.3125rem;
+  min-width: 5rem;
+  width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: #fff;
+  background-color: #73B2C8;
+  text-align: center;
+}
+
+.news-list__item-title {
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 767px) {
+  .news-list__item-title {
+    margin-top: 0.75rem;
+    margin-left: 3.75rem;
+  }
 }
 
 .u-center {

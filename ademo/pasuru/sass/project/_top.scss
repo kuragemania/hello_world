@@ -192,7 +192,7 @@
 .reason__item::before {
   content: ""; /* 擬似要素にはcontentプロパティが必要です */
   position: absolute;
-  top: -15%; /* .reason__item-textの下端からの位置 */
+  top: -16%; /* .reason__item-textの下端からの位置 */
   left: 5%;
   max-width: 110px;
   width: 100%; /* .reason__item-textの幅に合わせる */
