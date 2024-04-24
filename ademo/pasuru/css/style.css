@@ -493,6 +493,10 @@ footer {
   }
 }
 
+.header__hamburger.news__contents-text {
+  background-color: #c40002;
+}
+
 .header__hamburger.is-open {
   background-color: transparent;
 }
@@ -1961,6 +1965,118 @@ td:last-of-type {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.news.news__contents {
+  margin-top: 150px;
+}
+@media screen and (max-width: 767px) {
+  .news.news__contents {
+    margin-top: 50px;
+  }
+}
+
+.news__contents-header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 55%;
+  background-color: #c40002;
+}
+
+.news__contents-title {
+  color: #897f7f;
+  font-weight: 400;
+}
+
+.news__list.news__contents-list {
+  margin-top: 30px;
+}
+
+.news__contents-mv {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .news__contents-mv {
+    padding-top: 70px;
+  }
+}
+
+.news__contents-text-wrap {
+  background-color: #f0ecec;
+}
+
+.news-list__item.news__contents-text {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.news-list__item-date.news__contents-text {
+  font-weight: 700;
+}
+
+.news-list__item-title.news__contents-text {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .news-list__item-title.news__contents-text {
+    font-size: 2rem;
+  }
+}
+
+.news-list__item-meta.news__contents-text {
+  padding-top: 20px;
+}
+
+.news-list__item-category.news__contents-text {
+  background-color: #000;
+}
+
+.news-contents__inner.inner {
+  margin-top: 50px;
+}
+
+.news-contents__list {
+  background-color: #fff;
+  padding: 30px;
+}
+@media screen and (max-width: 767px) {
+  .news-contents__list {
+    padding: 0;
+  }
+}
+
+.news-contents-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .news-contents-list__item {
+    display: block;
+  }
+}
+
+.news-contents-list__item-text-wrap {
+  width: 50%;
+  margin-left: 50px;
+}
+@media screen and (max-width: 767px) {
+  .news-contents-list__item-text-wrap {
+    width: 100%;
+    margin-left: 0px;
+    padding: 10px;
+  }
+}
+
+.news-contents-list__item-text:last-child {
+  margin-top: 20px;
 }
 
 .u-center {

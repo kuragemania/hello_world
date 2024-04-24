@@ -130,6 +130,10 @@
   }
 }
 
+.header__hamburger.news__contents-text {
+  background-color: $red;
+}
+
 .header__hamburger.is-open {
   background-color: transparent;
 }
