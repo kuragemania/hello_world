@@ -210,3 +210,53 @@ margin-top: 50px;
 .contact__form-privacy input:checked + span::after {
   opacity: 1;
 }
+
+// success
+
+.mv__img.success-inner {
+  margin: 0 auto;
+  padding: 130px prem(25) 70px;
+  max-width: prem(1000);
+  width: 100%;
+  @include mq(md) {
+    padding: 70px prem(20) 0px;
+    max-width: prem(600);
+  }
+}
+
+.success::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0%;
+  width: 60%;
+  height: 100%;
+  background-color: #c40002;
+}
+
+.success__container {
+  background-color: $white;
+  padding: 150px;
+  border-radius: 0 100px 0 100px;
+  @include mq("md"){
+padding: 40px;
+  }
+}
+
+.success__text-lg {
+  font-size: prem(36);
+  font-weight: $bold;
+  text-align: center;
+  @include mq("md"){
+    text-align: justify;
+  }
+}
+
+.success__text {
+  text-align: center;
+  margin-top: 50px;
+  @include mq("md"){
+    text-align: justify;
+      }
+}

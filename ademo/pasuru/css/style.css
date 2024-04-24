@@ -2638,6 +2638,62 @@ td:last-of-type {
   opacity: 1;
 }
 
+.mv__img.success-inner {
+  margin: 0 auto;
+  padding: 130px 1.5625rem 70px;
+  max-width: 62.5rem;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .mv__img.success-inner {
+    padding: 70px 1.25rem 0px;
+    max-width: 37.5rem;
+  }
+}
+
+.success::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0%;
+  width: 60%;
+  height: 100%;
+  background-color: #c40002;
+}
+
+.success__container {
+  background-color: #fff;
+  padding: 150px;
+  border-radius: 0 100px 0 100px;
+}
+@media screen and (max-width: 767px) {
+  .success__container {
+    padding: 40px;
+  }
+}
+
+.success__text-lg {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .success__text-lg {
+    text-align: justify;
+  }
+}
+
+.success__text {
+  text-align: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .success__text {
+    text-align: justify;
+  }
+}
+
 .u-center {
   text-align: center;
 }
