@@ -1,5 +1,14 @@
 @use "../foundation" as *;
 
+.worries.value {
+  background-image: url(../images/common/value-bg.png);
+  background-size: cover; /* 画像が常にコンテナを覆うように */
+
+  @include mq("md"){
+    background-image: url(../images/common/value-bg-sp.png);
+  }
+}
+
 .p-about-container {
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;
