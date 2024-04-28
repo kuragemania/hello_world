@@ -916,6 +916,22 @@ p.look {
   display: none;
 }
 
+.contact-btn a {
+  display: block;
+position: fixed;
+  top: 2%;
+  right: 3%;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: #deb025;
+  box-shadow: 6.14px 6.58px 21px rgba(20, 29, 33, 0.29);
+}
+
+.insta-icon {
+  width: 50px;
+margin: 0 auto;
+}
 
 /* レスポンシブデザイン対応 */
 @media screen and (max-width: 800px) {
@@ -951,6 +967,11 @@ p.look {
     outline: inherit; /* クリック時のアウトラインを親要素から継承、または削除したい場合は 'none' */
     font-size: 24px; /* 24pxに設定。必要に応じて値を調整 */
   }
+
+  .insta-icon {
+    width: 30px;
+  margin: 20px auto;
+  }
 }
 
 @media (min-width: 800px) {
@@ -962,4 +983,3 @@ p.look {
     justify-content: space-around; /* 子要素間に均等なスペースを配置 */
   }
   }
-}
