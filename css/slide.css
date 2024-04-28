@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/*CSSスライドショー設定
+---------------------------------------------------------------------------*/
+/*１枚目*/
+@keyframes slide1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*２枚目*/
+@keyframes slide2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*３枚目*/
+@keyframes slide3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*mainimg
+---------------------------------------------------------------------------*/
+#mainimg {
+  float: right; /*右に回り込み*/
+  width: 65%; /*ブロック幅*/
+  position: relative;
+  top: 80px; /*上からの配置場所の指定*/
+  right: 0px; /*右からの配置場所の指定*/
+  box-shadow: -80px 80px rgba(222, 176, 37, 0.6), 80px -80px rgba(0, 0, 0, 0.2); /*ボックスの影。左下へ向けてと、右上に向けての２つ指定しています。*/
+}
+.slide1,
+.slide2,
+.slide3 {
+  animation-duration: 12s; /*アニメーションを実行する時間。「s」は秒の事。*/
+  animation-iteration-count: infinite;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  animation-fill-mode: both; /*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
+  animation-delay: 1s; /*スライドショーが動き出すタイミング（秒後）*/
+}
+.slide0 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7); /*写真（または動画）のドロップシャドウ*/
+}
+.slide1 {
+  animation-name: slide1;
+}
+.slide2 {
+  animation-name: slide2;
+}
+.slide3 {
+  animation-name: slide3;
+}
+
+/*画面幅380px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 380px) {
+  /*コンテンツ
+---------------------------------------------------------------------------*/
+  /*トップページのコンテンツへの追加指定*/
+  .home #contents {
+    padding-top: 100px; /*上に空ける余白*/
+    padding-top: 165px;
+  }
+}
+
+/* 追加スタイル */
+.about__list {
+  height: 440px;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* 1秒かけて透明度を変更 */
+}
+
+.image-slider img.active {
+  opacity: 1; /* アクティブな画像を表示 */
+}
+
+.image-slider {
+  position: relative;
+  /* 必要に応じて高さや幅を設定 */
+  width: 50%;
+  height: 440px; /* 例として */
+  overflow: hidden;
+}
+
+.about__text-b {
+  width: 60%;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  #contents .list {
+    flex-direction: column; /* スマホ幅で縦並びにする */
+  }
+  .image-slider {
+    width: 90%;
+    height: 277px; /* 例として */
+  }
+
+  #contents .list .about__img-b {
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  /*list-column（トップページ、おしながきページで使っている３列ブロック）
+---------------------------------------------------------------------------*/
+  /*１カラムあたりの設定*/
+  #contents .list-column {
+    width: 100%;
+  }
+}
