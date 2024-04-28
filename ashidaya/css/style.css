@@ -918,7 +918,7 @@ p.look {
 
 .contact-btn a {
   display: block;
-position: fixed;
+  position: fixed;
   top: 2%;
   right: 3%;
   padding: 10px;
@@ -928,9 +928,18 @@ position: fixed;
   box-shadow: 6.14px 6.58px 21px rgba(20, 29, 33, 0.29);
 }
 
-.insta-icon {
-  width: 50px;
-margin: 0 auto;
+.icon-wrap{
+  display: flex;
+  margin-left: 40%;
+}
+
+.insta-icon,
+.x-icon {
+  width: 40px;
+}
+
+.x-icon {
+  margin-left: 10px;
 }
 
 /* レスポンシブデザイン対応 */
@@ -968,9 +977,14 @@ margin: 0 auto;
     font-size: 24px; /* 24pxに設定。必要に応じて値を調整 */
   }
 
-  .insta-icon {
+  .icon-wrap{
+margin-left: 19%;
+  }
+
+  .insta-icon,
+  .x-icon {
     width: 30px;
-  margin: 20px auto;
+margin-top: 20px;
   }
 }
 
@@ -982,4 +996,4 @@ margin: 0 auto;
     flex-direction: row; /* 子要素を行方向に配置 */
     justify-content: space-around; /* 子要素間に均等なスペースを配置 */
   }
-  }
+}
