@@ -25,10 +25,10 @@
     border-top-right-radius:20px;
     border-bottom-left-radius:20px;
   width: 95%;
-  aspect-ratio: 180/300;
+  // aspect-ratio: 180/300;
   object-fit: cover;
   @include mq("md"){
-    aspect-ratio: 180/270;
+    // aspect-ratio: 180/270;
   }
 }
 

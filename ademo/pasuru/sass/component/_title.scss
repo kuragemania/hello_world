@@ -97,4 +97,7 @@
   position: absolute;
   top: -0.8em;
   left: 0;
+  @include mq("md"){
+    top: -1.3em;
+  }
 }

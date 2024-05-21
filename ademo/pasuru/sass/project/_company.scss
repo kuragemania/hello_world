@@ -38,6 +38,16 @@ td {
   }
 }
 
+th,
+td :last-child {
+  font-size: prem(14);
+  @include mq(md) {
+    // margin-top: prem(15);
+    font-size: prem(14);
+  text-align-last: center;
+  }
+}
+
 td {
   @include mq(md) {
     padding: 15px 15px; /* セル内の余白 */

@@ -1,0 +1,24 @@
+@use '../foundation' as *;
+
+.mt-24 {
+  margin-top: prem(24);
+}
+
+.mt-32 {
+  margin-top: prem(32);
+}
+
+.mt-12 {
+  margin-top: prem(12);
+}
+
+.ml-12 {
+  margin-left: prem(12);
+}
+
+.mt-30 {
+  margin-top: 30px;
+  @include mq("md") {
+    margin-top: 25px;
+  }
+}

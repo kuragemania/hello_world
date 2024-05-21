@@ -1,9 +1,14 @@
 @use "../foundation" as *;
 
 .u-size-large {
-  font-size: prem(35);
+  font-size: prem(30);
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  font-weight: $medium;
   @include mq("md"){
     font-weight: $medium;
+  font-size: prem(24);
+  line-height: 1.5;
   }
 }
 

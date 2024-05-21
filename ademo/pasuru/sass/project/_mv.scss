@@ -17,17 +17,17 @@
 .mv__title-wrap {
   position: absolute;
   z-index: 2;
-  top: 50%;
-  left: 33%;
+  top: 70%;
+  left: 42%;
   transform: translate(-50%, -50%);
   width: 100%;
   color: #fff;
   text-align: center;
   @include mq("xl2") {
-    left: 35%;
+    // left: 35%;
   }
   @include mq("md") {
-    top: 46%;
+    top: 65%;
     left: 37%;
     width: 70%;
     text-align: left;
@@ -66,13 +66,46 @@
     padding-bottom: 25px;
   }
 }
+.mv__img.top__mv {
+  @include mq("lg") {
+    padding-left: 20%;
+  }
+  @include mq("md") {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+.mv__img.term__mv,
+.mv__img.privacy__mv,
+.mv__img.about__mv
+ {
+  @include mq("xl1"){
+  padding: 75px 60px 50px 18%;
+  }
+  @include mq("lg"){
+  padding: 75px 60px 50px 15%;
+  }
+}
 
 .mv__img.news-mv,
 .mv__img.company-mv,
-.mv__img.message-mv
+.mv__img.message-mv,
+.mv__img.term__mv,
+.mv__img.privacy__mv,
+.mv__img.about__mv
 {
   @include mq("md") {
     padding-left: 0px;
+  }
+}
+
+.mv__img.term__mv,
+.mv__img.privacy__mv,
+.mv__img.about__mv
+{
+  @include mq("md") {
+    padding-right: 16px;
   }
 }
 

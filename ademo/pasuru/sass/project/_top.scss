@@ -51,9 +51,20 @@
 }
 
 .worries-list__item-content {
-  padding: prem(45) prem(25) prem(35);
+  padding: prem(45) prem(20) prem(45);
   background-color: $gray2;
+  border-bottom-left-radius: 35px;
+  @include mq(md) {
+    padding: prem(20) prem(25) prem(25);
+  }
+}
 
+.worries-list__item-content.worries-list__item-content--02 {
+  padding: prem(45) prem(20) prem(45);
+  background-color: $gray2;
+  @include mq("xl1") {
+    padding: prem(30) prem(20);
+  }
   @include mq(md) {
     padding: prem(20) prem(25) prem(25);
   }
@@ -104,14 +115,14 @@
 }
 
 .concept__title-sub.section-title__sub {
-  font-size: prem(27);
+  font-size: prem(35);
   @include mq("md") {
     font-size: prem(32);
   }
 }
 
 .concept__container {
-  max-width: prem(560);
+  max-width: prem(720);
   margin-top: 90px;
   margin-left: auto;
   margin-right: auto;
@@ -126,7 +137,7 @@
 }
 
 .concept__btn {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 // reason
@@ -172,7 +183,7 @@
 
 .reason__item-text {
   width: 60%; /* 元の幅に戻す */
-  padding-top: 50px;
+  padding-top: 25px;
   padding-left: 15%;
   padding-right: 3%;
   padding-bottom: 25px;
@@ -182,9 +193,10 @@
   z-index: 2; /* この要素を上に重ねる */
   @include mq("md") {
     width: 100%; /* 親要素の全幅を使用 */
+    padding-top: 50px;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
   }
 }
@@ -192,7 +204,7 @@
 .reason__item::before {
   content: ""; /* 擬似要素にはcontentプロパティが必要です */
   position: absolute;
-  top: -16%; /* .reason__item-textの下端からの位置 */
+  top: -13%; /* .reason__item-textの下端からの位置 */
   left: 5%;
   max-width: 110px;
   width: 100%; /* .reason__item-textの幅に合わせる */
@@ -202,12 +214,12 @@
   background-position: center;
   z-index: 3;
 
-  @include mq("xl"){
-  top: -12%; /* .reason__item-textの下端からの位置 */
+  @include mq("xl3") {
+    top: -12%; /* .reason__item-textの下端からの位置 */
   }
 
   @include mq("md") {
-    top: -10%;
+    top: -7%;
     max-width: 90px;
     height: 75px;
   }
@@ -215,13 +227,27 @@
 
 .reason__item.reason__item02::before {
   background-image: url("../images/common/02.png");
+  @include mq("xl3") {
+    top: -13%; /* .reason__item-textの下端からの位置 */
+  }
+  @include mq("md") {
+    top: -8%;
+  }
 }
 .reason__item.reason__item03::before {
   background-image: url("../images/common/03.png");
+  top: -18%;
+  @include mq("xl3") {
+    top: -16%; /* .reason__item-textの下端からの位置 */
+  }
+  @include mq("md") {
+    top: -9%;
+  }
 }
 
 .reason__item-text h3 {
-  font-size: prem(40);
+  font-size: prem(24);
+  padding-bottom: 10px;
   font-weight: $regular;
   letter-spacing: 0.08em;
   line-height: 1.2;
@@ -233,16 +259,16 @@
 }
 
 .reason__item-img {
-  width: 45%;
+  width: 47%;
   position: absolute; /* 絶対位置で指定 */
   top: 0; /* 親要素の上端からの位置 */
   right: 0; /* 親要素の右端からの位置 */
   bottom: 0; /* 親要素の下端からの位置 */
   background: url("../images/common/reason-img.png") center / cover no-repeat;
-  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+  // clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
   @include mq("md") {
     width: 100%;
-    top: 85%;
+    top: 84%;
     left: 0px;
     height: 322px;
     clip-path: none;
@@ -304,8 +330,14 @@
   background-image: url(../images/common/flow-bg.png);
   background-size: cover; /* 画像が常にコンテナを覆うように */
   padding-top: 100px;
+  padding-bottom: 0px;
   @include mq("md") {
     background-image: url(../images/common/flow-bg-sp.png);
+    padding-top: 50px;
+    padding-bottom: 750px;
+  }
+  @include mq(sm1) {
+    padding-bottom: 400px;
   }
 }
 
@@ -319,15 +351,14 @@
 .flow__inner.inner {
   margin-top: 100px;
   height: prem(600);
-  padding-left: prem(120);
   @include mq("md") {
     padding-left: prem(20);
     margin-top: 40px;
-    height: prem(1700);
+    // height: prem(1700);
   }
 
   @include mq("sm1") {
-    height: prem(1480);
+    // height: prem(1480);
   }
 }
 
@@ -467,17 +498,18 @@
 
 .present__title-wrap {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 0%;
 
   @include mq("md") {
-    top: 8%;
+    top: 4%;
   }
 }
 
 .present__inner.inner {
   background-image: url(../images/common/present-inner-bg.png);
-  background-size: cover; /* 画像が常にコンテナを覆うように */
+  background-size: contain; /* 画像が常にコンテナを覆うように */
+  background-repeat: no-repeat;
   padding-left: prem(120);
   padding-right: prem(130);
   padding-top: prem(170);
@@ -486,24 +518,39 @@
 
   @include mq("xl") {
     padding-left: prem(190);
-    padding-right: prem(250);
-    padding-top: prem(240);
+    padding-right: prem(150);
+    padding-top: prem(140);
     padding-bottom: prem(200);
   }
   @include mq("lg") {
-    padding-left: prem(280);
-    padding-right: prem(280);
+    // padding-left: prem(280);
+    // padding-right: prem(280);
   }
 
   @include mq("md") {
     background-image: url(../images/common/present-inner-bg-sp.png);
     padding-left: prem(20);
     padding-right: prem(20);
-    padding-top: prem(120);
+    padding-top: prem(70);
     padding-bottom: prem(150);
     max-width: prem(380);
   }
 }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .present__inner.inner {
+      padding-left: prem(0)!important;
+      padding-right: prem(0)!important;
+
+      @include mq("xl") {
+        padding-left: prem(0)!important;
+        padding-right: prem(0)!important;
+      }
+    }
+  }
+}
+
 
 .present-list__item {
   display: flex;
@@ -529,7 +576,7 @@
 }
 
 .present-list__item-img {
-  max-width: prem(600);
+  max-width: prem(500);
   position: relative;
   @include mq(md) {
     width: 100%;
@@ -546,29 +593,43 @@
 
 .present-list__item-img img {
   width: 100%;
-  aspect-ratio: 550/320;
+  aspect-ratio: 580/290;
   @include mq("md") {
-    aspect-ratio: 3/2.5;
+    aspect-ratio: 467/435;
   }
 }
 
 .present-list__item-text {
   margin-top: 0;
-  font-size: prem(16);
+  font-size: prem(20);
   line-height: 1.6;
   letter-spacing: 0.05em;
-  margin-left: prem(90);
+  margin-left: prem(50);
   max-width: prem(550);
   width: 80%;
+  font-weight: $medium;
   @include mq(md) {
     margin-top: prem(20);
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     width: 100%;
+    text-align: left;
+    padding-left: 20px;
   }
 }
 
+.present-list__item-text span {
+  font-size: prem(30);
+  color: $red;
+}
+
 .present-list__item:nth-of-type(even) .present-list__item-text {
-  margin-left: 0;
+  margin-top: prem(20);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
 }
 
 .present-list__item-label {
@@ -576,6 +637,7 @@
   width: prem(100);
   height: prem(100);
   background-color: $red;
+  opacity: 0.8;
   border-radius: 50px;
   position: absolute;
   top: -45px;
@@ -611,7 +673,7 @@
   position: relative;
   @include mq("md") {
     font-size: prem(32);
-    margin-top: prem(50);
+    margin-top: prem(70);
     position: static;
   }
 }
@@ -676,19 +738,19 @@
   line-height: 1.2;
   letter-spacing: 0.08em;
   padding: prem(30) prem(80) prem(30) prem(50);
-  @include mq("md"){
+  @include mq("md") {
     padding: prem(20) prem(15);
-      }
+  }
 }
 
 .faq-list__item-question span {
   margin-right: prem(10);
-  @include mq("md"){
-display: block;
+  @include mq("md") {
+    display: block;
   }
 }
 
-.faq-list__item:not(:first-child){
+.faq-list__item:not(:first-child) {
   margin-top: 50px;
 }
 
@@ -696,7 +758,7 @@ display: block;
   background-color: $white;
   padding: prem(40) prem(80);
   // text-align: center;
-  @include mq("md"){
+  @include mq("md") {
     padding: prem(25) prem(15);
   }
 }

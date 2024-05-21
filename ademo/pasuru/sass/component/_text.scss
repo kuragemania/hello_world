@@ -14,3 +14,17 @@
 .text.text-bk {
   color: $black;
 }
+
+.text-small {
+  line-height: 1.786;
+  letter-spacing: 0.08em;
+  font-size: prem(16);
+  @include mq(md) {
+    // margin-top: prem(15);
+    font-size: prem(14);
+  }
+}
+
+.text-small.text-small--sub {
+padding: 0 0 32px;
+}

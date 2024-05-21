@@ -5,15 +5,18 @@
   width: prem(700);
   @include mq("md"){
     width: prem(350);
-    font-size: prem(26);
+    font-size: prem(32);
     padding-left: prem(30);
     padding-right: prem(80);
   }
 }
 
 .policy {
-  padding: prem(100) 0 prem(150) 0;
+  padding: prem(100) 0 prem(100) 0;
   position: relative;
+  @include mq("md"){
+    padding: prem(50) 0 prem(100) 0;
+  }
 }
 
 .policy-title-sub {
@@ -30,28 +33,41 @@
   max-width: 1000px;
   margin: auto;
   padding: prem(120) 0 0 0;
+  @include mq("md"){
+    padding: prem(50) 0 0 0;
+  }
 }
 
 .policy-title {
-  font-size: prem(30);
+  font-size: prem(40);
   padding-bottom: prem(40);
+  @include mq("md"){
+    font-size: prem(28);
+    text-align: center;
+  }
 }
 
 .policy-lead {
   font-size: prem(16);
   padding-bottom: prem(40);
+  @include mq("md"){
+    font-size: prem(14);
+  }
 }
 
-.policy-inner > p {
-  padding: prem(24) 0;
-}
+// .policy-inner > p {
+//   padding: prem(32) 0;
+// }
 
 .policy-box {
   padding: prem(15);
   border-left: prem(20) solid #f5a522;
   background-color: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  font-size: prem(20);
+  font-size: prem(32);
+  @include mq("md"){
+    font-size: prem(20);
+  }
 }
 
 .policy-box_title {
@@ -63,6 +79,10 @@
   color: #f5a522;
   font-size: prem(32);
   padding: 0em 0.6em 0em 0em;
+  white-space: nowrap;
+  @include mq("md"){
+    font-size: prem(24);
+  }
 }
 
 .policy-inner_list {
@@ -88,7 +108,7 @@
 
 .info-table td {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 16px;
 }
 
 /* 1000px以下の画面幅に適用するスタイル */
@@ -121,4 +141,11 @@
     text-align: center;
     border-bottom: 1px solid #000;
   }
+}
+
+.privacy-link {
+  display: inline-block;
+  margin-bottom: prem(32);
+  text-decoration: underline;
+  color: #0829A3;
 }

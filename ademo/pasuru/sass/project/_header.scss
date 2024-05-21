@@ -61,6 +61,17 @@
     display: none;
   }
 }
+.header__nav::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 60%; /* 画像の幅 */
+  height: 70px; /* 画像の高さ */
+  background-color: $red;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 0; /* 位置調整 */
+  right: 0; /* 位置調整 */
+  z-index: -1;
+}
 
 .header__nav-list {
   display: flex;
@@ -122,7 +133,7 @@
   z-index: 999;
   width: prem(40);
   height: 40px;
-  background-color: transparent;
+  background-color: $red;
   cursor: pointer;
   transition: 0.3s;
   @include mq("md") {

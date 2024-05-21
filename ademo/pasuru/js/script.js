@@ -76,3 +76,11 @@ document.querySelectorAll('section:not(.mv)').forEach(section => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.getElementById("privacyPolicy");
+  const submitBtn = document.getElementById("submitBtn");
+
+  checkbox.addEventListener("change", function () {
+    submitBtn.disabled = !checkbox.checked;
+  });
+});

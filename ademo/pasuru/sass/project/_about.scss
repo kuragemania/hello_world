@@ -4,8 +4,15 @@
   background-image: url(../images/common/value-bg.png);
   background-size: cover; /* 画像が常にコンテナを覆うように */
 
-  @include mq("md"){
+  @include mq("md") {
     background-image: url(../images/common/value-bg-sp.png);
+  }
+}
+
+.worries__container.about-container {
+  @include mq(md) {
+    padding: 0 prem(40);
+    margin-top: 30px;
   }
 }
 
@@ -14,12 +21,18 @@
   border-bottom-right-radius: 35px;
   background-color: #fff;
   overflow: hidden;
+  @include mq("md") {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
 }
 
 .p-about-flex {
   display: flex;
   &__inner {
-    padding: prem(45) prem(25) prem(35);
+    padding: prem(45) prem(15) prem(35);
   }
 
   @include mq(md) {
@@ -27,8 +40,8 @@
   }
 }
 
-.p-about__img--w50 {
-  width: 50%;
+.p-about__img--w40 {
+  width: 40%;
   @include mq(md) {
     width: 100%;
   }
@@ -81,7 +94,7 @@
     @include mq(md) {
       max-width: 90%;
       margin-left: unset;
-      padding: prem(160) prem(8);
+      padding: prem(160) prem(8) prem(40) prem(8);
       margin: prem(80) auto 0 auto;
       clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
     }
@@ -102,20 +115,22 @@
 //反転用
 .p-about-value__container:nth-child(3) .p-about-value__content {
   margin-left: 0;
-  padding: prem(40) prem(200) prem(40) prem(160);
+  padding: prem(25) prem(200) prem(25) prem(160);
   clip-path: polygon(0 0, 84% 0, 100% 100%, 0% 100%);
   @include mq(md) {
     margin-left: unset;
-    padding: prem(160) prem(8);
+    padding: prem(160) prem(8) prem(40) prem(8);
     margin: prem(80) auto 0 auto;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
   }
 }
 
 .p-about-text {
-  margin-top: 50px;
-  @include mq("md") {
-    margin-top: 25px;
+  letter-spacing: 0.08em;
+  font-size: prem(16);
+  @include mq(md) {
+    // margin-top: prem(15);
+    font-size: prem(14);
   }
 }
 
@@ -130,7 +145,7 @@
   font-size: prem(120);
   z-index: 2;
   color: $red;
-  font-weight: bold;
+  font-weight: $medium;
   @include mq(md) {
     top: 26%;
     left: 6%;
@@ -143,13 +158,19 @@
 
 .p-about-value__container:nth-child(3)::before {
   content: "02.";
+  top: 50%;
   left: 62%;
 
   @include mq(md) {
+    top: 25%;
     left: 48%;
   }
 }
 
 .p-about-value__container:nth-child(4)::before {
   content: "03.";
+  top: 50%;
+  @include mq(md) {
+    top: 25%;
+  }
 }

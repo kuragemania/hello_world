@@ -13,11 +13,11 @@
     <title>代表あいさつ</title>
     <meta
       name="description"
-      content="トップページの説明"
+      content="パスルは自分の人生にワクワクと刺激を求めるあなたのキャリアを支援します。キャリアを築く上で最も重要な20代が充実していないなんて最高にもったいない。従来のエージェントの都合ではなく、利用者の未来に徹底的に寄り添い、一人ひとりに合わせたキャリアアドバイスを行います。私たちがあなたの将来の可能性を最大限に引き出し最高の成長環境を提供していきます。"
     />
     <meta
       name="keywords"
-      content="キーワード"
+      content="転職"
     />
     <!-- ogp -->
     <meta
@@ -34,24 +34,26 @@
     />
     <meta
       property="og:image"
-      content="OGP IMAGE"
+      content="/images/common/og-image.png"
     />
     <meta
       property="og:site_name"
-      content="サイトのドメイン"
+      content="パスル"
     />
     <meta
       property="og:description"
-      content="トップページの説明"
+      content="営業経験者・営業志望者のための“20代の普通じゃない転職”"
     />
+
     <!-- ファビコン -->
     <link
-      rel="”icon”"
-      href=""
+      rel="icon"
+      href="/images/common/favicon.ico"
     />
     <link
       rel="apple-touch-icon"
-      href=""
+      sizes="180x180"
+      href="/images/common/apple-touch-icon.png"
     />
     <!-- CSS -->
     <link
@@ -100,6 +102,37 @@
         s.parentNode.insertBefore(tk, s);
       })(document);
     </script>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ukq6jxz",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
   </head>
   <body>
     <header class="header layout-header js-header">
@@ -107,11 +140,11 @@
         <h1 class="header__logo">
           <a
             class="header__logo-link"
-            href="#"
+            href="/"
           >
             <img
               src="../images/common/logo.svg"
-              alt="LOGO"
+              alt="株式会社パスル"
             />
           </a>
         </h1>
@@ -131,7 +164,7 @@
             </li>
             <li class="header__nav-item header__nav-item--contact">
               <a
-                href="#"
+                href="https://liff.line.me/2004588804-lRZkv9m9/landing?follow=%40692yhpgw&lp=vyJ021&liff_id=2004588804-lRZkv9m9"
                 target="_blank"
                 rel="noopener"
                 >LINE転職相談する</a
@@ -141,7 +174,7 @@
         </nav>
         <div class="header-btn md-show">
           <a
-            href="#"
+            href="https://liff.line.me/2004588804-lRZkv9m9/landing?follow=%40692yhpgw&lp=vyJ021&liff_id=2004588804-lRZkv9m9"
             target="_blank"
             rel="noopener"
             >LINE転職相談する ▶︎</a
@@ -169,7 +202,7 @@
               </li>
               <li class="header__drawer-item header__drawer-item--contact">
                 <a
-                  href="#"
+                  href="https://liff.line.me/2004588804-lRZkv9m9/landing?follow=%40692yhpgw&lp=vyJ021&liff_id=2004588804-lRZkv9m9"
                   target="_blank"
                   rel="noopener"
                   >LINE転職相談する</a
@@ -195,22 +228,14 @@
           <div class="mv__img message-mv">
             <img
               src="../images/common/message-mv.png"
-              alt="省略"
+              alt="代表あいさつ"
               class="md-none"
             />
             <img
               src="../images/common/message-mv-sp.png"
-              alt="省略"
+              alt="代表あいさつ"
               class="md-show"
             />
-            <!-- <div class="mv-btn mv-btn-sp md-show">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener"
-                >無料でLINE転職相談する ▶︎</a
-              >
-            </div> -->
           </div>
         </div>
       </section>
@@ -218,41 +243,59 @@
         <div class="message_container01">
           <div class="image-container">
             <img
-              src="https://placehold.jp/585x595.png"
-              alt="Image description"
+              src="../images/common/message-img.png"
+              alt="代表である山田晃嗣の写真"
             />
             <div class="overlay"></div>
           </div>
           <div class="text-container">
-            <p class="text-container_title">ああああああああああああ</p>
+            <!-- <p class="text-container_title">ああああああああああああ</p> -->
             <p class="text-container_sentence">
-              あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+              初めまして。<br />株式会社パスル代表の山田と申します。<br />今回の「20代の普通じゃない転職」は20代の時、私自身があったらよかった！と強く思っていたことを凝縮したサービスです。<br
+                class="md-show"
+              />私自身ずっと何者かになりたくて、どういったキャリアが今の自分にとって最高のキャリアになるかを常に模索しながら20代を送ってきました。<br />当時の私を含め、今のキャリアが未来につながっていないと感じながらもモヤモヤして毎日を過ごしている20代の方々はきっと多いはずです。<br />20代の大切な時間が自分の理想の未来のための時間になっていないなんて、本当にもったいない。<br />自分自身では思い描けない、そして他のエージェントは提示ができない最高のキャリアプランを提案させていただきます。<br />本サービスが1人でも多くの人の人生を変えるターニングポイントとなることを強く願っております。
             </p>
             <p class="text-container_name">山田晃嗣</p>
           </div>
         </div>
         <div class="message_container02">
           <div class="tab">
-            <span class="tab-label">profile</span>
-            <div class="tab-line"></div>
+            <span class="tab-label">経歴</span>
+            <!-- <div class="tab-line"></div> -->
           </div>
-          <p class="tab-sentence">
-            あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+          <ul class="message__list">
+            <li>・佐賀出身</li>
+            <li>・関西大学卒業</li>
+            <li>・SMBC日興証券株式会社</li>
+            <li>・ITベンチャー</li>
+            <li>・株式会社パスル　創業</li>
+          </ul>
+          <div>
+            <p class="tab-sentence">
+              SMBC日興証券株式会社にて約3年営業をし表彰セールスに。
           </p>
-          <div class="tab">
+            <p class="message__text">
+              働きがいのある会社ランキング全国1位のITベンチャー企業で5年半勤務。<br>新たな業界の開拓や新規事業の立ち上げに関わる。
+          </p>
+            <p class="message__text">
+              独立をし、 企業の中途採用を支援する株式会社パスルを創業。
+          </p>
+            <p class="message__text">
+              現在は20代の営業職のキャリア支援を行う「20代の普通じゃない転職」を運営。
+          </p>
+            <p class="message__text ">
+              特技は馬術とキックボクシング。<br>
+              馬術は19歳で日本一に。<br>
+              キックボクシングは試合に出て2戦2敗(笑)
+          </p>
+          </div>
+          <!-- <div class="tab">
             <span class="tab-label">career</span>
             <div class="tab-line"></div>
           </div>
           <p class="tab-sentence">
             あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-          <div class="tab">
-            <span class="tab-label">media</span>
-            <div class="tab-line"></div>
-          </div>
-          <p class="tab-sentence">
-            あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
+          </p> -->
         </div>
       </section>
       <section>
@@ -260,14 +303,14 @@
           <div class="c-incentive__inner">
             <div class="c-incentive__container">
               <a
-                href="#"
+                href="https://liff.line.me/2004588804-lRZkv9m9/landing?follow=%40692yhpgw&lp=vyJ021&liff_id=2004588804-lRZkv9m9"
                 target="_blank"
                 rel="noopener"
                 class="l-btn mv-btn--mark"
                 >無料でLINE転職相談する ▶︎</a
               >
               <a
-                href="#"
+                href="/contact/"
                 target="_blank"
                 rel="noopener"
                 class="l-btn mv-btn--white"
@@ -291,9 +334,7 @@
             <li class="c-footer__listItem">
               <a href="/privacy/">プライバシーポリシー</a>
             </li>
-            <li class="c-footer__listItem">
-              <a href="/terms/">特定商取引法に基づく表記</a>
-            </li>
+
           </ul>
         </div>
       </footer>

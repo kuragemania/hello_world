@@ -2,7 +2,11 @@
 
 .message {
   background-color: #f0ecec;
-  padding: prem(100) 0 prem(150) 0;
+  padding: prem(100) prem(10) prem(150) prem(10);
+  @include mq("md") {
+    padding-top: prem(80);
+    padding-bottom: prem(100);
+  }
 }
 
 .message_container01 {
@@ -10,8 +14,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 64px;
-  padding: 0 0 80px 0;
+  gap: 24px;
 }
 
 .image-container {
@@ -28,9 +31,9 @@
 
 .overlay {
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   /* Image overlay offset */
-  right: -5px;
+  right: -10px;
   /* Image overlay offset */
   width: 100%;
   height: 100%;
@@ -43,7 +46,7 @@
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 50px;
   }
 }
@@ -55,53 +58,95 @@
 
 .text-container_sentence {
   font-size: prem(16);
+  padding-top: prem(20);
   padding-bottom: prem(40);
+  font-weight: $medium;
+  letter-spacing: 0.08em;
+  @include mq("md") {
+    // font-size: prem(14);
+    line-height: 1.667;
+  }
 }
 
 .text-container_name {
   font-size: prem(24);
   text-align: end;
+  font-family: ab-ootori, sans-serif;
 }
 
 .message_container02 {
   max-width: 1000px;
   margin: 0 auto;
+  margin-top: 50px;
   padding: 48px;
   background-color: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #383636;
+  position: relative;
 }
 
 .tab {
   display: flex;
   align-items: center;
   margin-bottom: prem(15);
+  position: absolute;
+  top: -4%;
+  left: 5%;
   /* Adjust spacing as necessary */
 }
 
 .tab-label {
-  background-color: #c40002;
+  background-color: #383636;
   color: white;
-  padding: 3px 80px;
+  padding: 5px 70px;
   font-size: prem(20);
-  font-weight: bold;
-  border-radius: 0px 80px 0px 80px;
+  font-weight: $regular;
+  border-radius: 0px 15px 0px 15px;
+  box-shadow: 5px 5px 0px 0px #C40002;
   /* Rounded corners on the left side */
 }
 
-.tab-line {
-  flex-grow: 1;
-  height: 2px;
-  width: 740px;
-  background-color: #c40002;
-  margin-left: prem(10);
+.message__list {
+  position: relative; /* 親要素に相対位置指定 */
 }
 
+.message__list::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 100%; /* 画像の幅 */
+  height: 1px; /* 画像の高さ */
+  background: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 67%);
+  background-size: 5px 1px; /* 点の間隔と高さを設定 */
+  background-repeat: repeat-x;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  bottom: -20%; /* 位置調整 */
+  left: 0%; /* 位置調整 */
+}
+
+
+// .tab-line {
+//   flex-grow: 1;
+//   height: 2px;
+//   width: 740px;
+//   background-color: #c40002;
+//   margin-left: prem(10);
+// }
+
 .tab-sentence {
+  margin-top: 50px;
   margin-bottom: prem(24);
 }
 
 .tab-sentence :last-child {
   margin-bottom: 0;
+}
+
+.message__text:not(:first-child) {
+  margin-top: prem(24);
+}
+
+.message__text:last-child {
+  margin-top: prem(48);
 }
 
 /* 1000px以下の画面幅に適用するスタイル */

@@ -1,8 +1,11 @@
 @use "../foundation" as *;
 
 .policy {
-  padding: prem(100) 0 prem(150) 0;
+  padding: prem(100) 0 prem(100) 0;
   position: relative;
+  @include mq("md"){
+    padding: prem(50) 0 prem(100) 0;
+  }
 }
 
 .policy-title-sub {
@@ -18,11 +21,11 @@
 .policy-container {
   max-width: 1000px;
   margin: auto;
-  padding: prem(120) 0 0 0;
+  padding: prem(80) 0 0 0;
 }
 
 .policy-title {
-  font-size: prem(30);
+  font-size: prem(40);
   padding-bottom: prem(40);
 }
 
@@ -32,7 +35,7 @@
 }
 
 .policy-inner > p {
-  padding: prem(24) 0;
+  padding: prem(32) 0;
 }
 
 .policy-box {
@@ -40,7 +43,7 @@
   border-left: prem(20) solid #f5a522;
   background-color: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  font-size: prem(20);
+  font-size: prem(32);
 }
 
 .policy-box_title {
@@ -70,9 +73,51 @@
   padding-left: 1.2em;
 }
 
+.policy-list-title {
+  padding-bottom: 10px!important;
+}
+
+
+.policy-list-number {
+  counter-reset: number;  /* カウンター 'number' を 0 から開始 */
+  margin-bottom: prem(32);
+}
+
+.policy-list-number li {
+  padding-left: prem(25);
+  line-height: 1.786;
+  letter-spacing: 0.08em;
+  position: relative;
+  // counter-increment: number;
+}
+
+.policy-list-number.policy-list-number--no-cn li {
+  padding-left: 0;
+}
+
+.policy-list-number li:not(:first-child){
+  margin-top: prem(10);
+}
+
+.policy-list-number.policy-list-number--no-cn li:not(:first-child) {
+  margin-top: prem(5);
+}
+
+.policy-list-number li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "・";
+}
+
+.policy-list-number.policy-list-number--no-cn li:before {
+  content:"";
+}
+
 /* 1000px以下の画面幅に適用するスタイル */
 @media (max-width: 1000px) {
   .policy-container {
     max-width: 90%;
   }
 }
+
