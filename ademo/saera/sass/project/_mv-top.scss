@@ -1,0 +1,111 @@
+@use "../foundation" as *;
+
+.mv {
+  margin-top: prem(70);
+  @include mq("md") {
+    margin-top: prem(100);
+  }
+}
+
+.mv__inner {
+  // height: inherit;
+  // min-height: inherit;
+  padding: prem(50) 0;
+  background-image: url(../images/common/mv-bg.png);
+  background-size: cover;
+  position: relative;
+  @include mq("md"){
+    padding: prem(30) 0;
+  }
+}
+
+.mv-container {
+  position: relative;
+}
+
+.mv__title-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  // width: 100%;
+  color: $pink;
+  text-align: center;
+  @include mq(md) {
+    width: initial;
+    text-align: left;
+    top: 29%;
+    left: 34%;
+  }
+}
+
+.mv__main-title {
+  font-size: prem(60);
+  font-family: "GenJyuuGothicP";
+  font-weight: normal;
+  @include mq(md) {
+    font-size: prem(40);
+  }
+}
+
+.mv__sub-title {
+  margin-top: prem(20);
+  font-size: prem(20);
+  @include mq(md) {
+    font-size: prem(35);
+  }
+}
+
+.mv__img {
+  width: 90%;
+  margin-left: auto;
+}
+
+.mv__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mv__btn-rap {
+  width: 45%;
+  padding: prem(20) prem(90) prem(20) 0;
+  text-align: right;
+  background-color: #fff;
+  border-top-right-radius: 73px; /* 右上の角丸 */
+  border-bottom-right-radius: 73px; /* 右下の角丸 */
+  position: absolute;
+  bottom: 22%;
+  left: 0%;
+  @include mq("md") {
+  padding: prem(10) prem(60) prem(10) 0;
+    bottom: 15%;
+    width: 80%;
+  }
+}
+
+.mv__btn {
+  display: inline-block;
+  font-size: prem(30);
+  letter-spacing: 0.08em;
+  color: $pink;
+  font-family: "GenJyuuGothicP";
+  @include mq("md") {
+    font-size: prem(20);
+  }
+}
+
+.mv__btn-rap::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: prem(25); /* 画像の幅 */
+  height: prem(25); /* 画像の高さ */
+  background-image: url("../images/common/mv-arrow.png"); /* 追加したい画像のパス */
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 35%; /* 位置調整 */
+  right: 5%; /* 位置調整 */
+  @include mq("md"){
+    top: 24%; /* 位置調整 */
+  }
+}

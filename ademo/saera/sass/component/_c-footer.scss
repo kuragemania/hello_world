@@ -1,0 +1,18 @@
+@use "../foundation" as *;
+
+footer {
+  color: #fff;
+  background-color: $pink2;
+}
+
+.c-footer__inner {
+  max-width: 76.25rem;
+  padding: 6.25rem 2.5rem 6.25rem;
+  margin: auto;
+}
+
+.c-footer__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

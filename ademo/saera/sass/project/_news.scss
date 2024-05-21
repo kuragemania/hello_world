@@ -1,0 +1,78 @@
+@use "../foundation" as *;
+
+.news {
+  background-color: $beige;
+}
+
+.news__inner.inner {
+  max-width: prem(1050);
+}
+
+.news__list {
+  margin-top: prem(100);
+  padding-bottom: prem(150);
+}
+
+.news-list__item {
+  padding: 30px 0;
+  border-top: 1px solid #000;
+}
+
+.news-list__item:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.news-list__item a {
+  display: flex;
+  align-items: flex-start;
+  @include mq("md"){
+    flex-direction: column;
+  }
+}
+
+.news-list__item-meta {
+  display: flex;
+  align-items: center;
+}
+
+.news-list__item-category {
+  margin-left: 1.875rem;
+  padding: 0.3125rem prem(30);
+  min-width: 5rem;
+  width: fit-content;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  border-radius: 19px;
+  @include mq("md"){
+    margin-left: 0;
+  }
+}
+
+.category-news {
+  background-color: $pink3;
+}
+
+.news-list__item-date {
+  margin-left: prem(50);
+  font-size: 1rem;
+  line-height: 1;
+  @include mq("md"){
+    margin-left: prem(30);
+  }
+}
+
+.news-list__item-title {
+  margin-top: 0;
+  margin-left: 1.875rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  @include mq("md"){
+    margin-left: auto; /* 左のマージンを自動にして右寄せ */
+    display: inline-block;
+    margin-top: prem(16);
+    align-self: flex-end; /* 親要素内で右端に配置 */
+  }
+}
+

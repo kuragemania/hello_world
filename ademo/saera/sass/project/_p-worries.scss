@@ -1,0 +1,59 @@
+@use '../foundation' as *;
+
+.worries {
+  background-color: $beige;
+  position: relative;
+}
+
+.worries::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 90px;
+  height: 32px;
+  background-image: url('../images/common/worries-arrow.png'); /* 追加したい画像のパス */
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  bottom: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq("md"){
+  bottom: -0.5%;
+    width: 45px;
+    height: 16px;
+  }
+}
+
+.worries__inner {
+  padding-top: prem(100);
+  padding-bottom: prem(130);
+  @include mq("md"){
+  padding-top: prem(50);
+    padding-left: prem(30);
+    padding-right: prem(30);
+  }
+}
+
+.worries__list {
+  margin-top: prem(100);
+  display: flex;
+  justify-content: space-between;
+  @include mq("md"){
+    flex-direction: column;
+  margin-top: prem(50);
+  }
+}
+
+.worries-list__item {
+  max-width: calc(33.333% - #{prem(30)} * 2/3);
+  @include mq("md"){
+    max-width: 100%;
+  }
+}
+
+.worries-list__item:not(:first-child) {
+margin-top: prem(40);
+}
+
+.worries-list__item-text {
+  margin-top: prem(20);
+}

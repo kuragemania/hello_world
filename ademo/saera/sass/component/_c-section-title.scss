@@ -1,0 +1,28 @@
+@use '../foundation' as *;
+
+.section-title {
+  font-size: prem(42);
+  line-height: 1.2;
+  max-width: prem(320);
+  background-color: $pink2;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: prem(50) prem(90) prem(100) prem(90);
+  border-radius: 0 0 200px 200px;
+  font-family: "GenJyuuGothicP";
+  font-weight: 300;
+  @include mq("md"){
+  max-width: prem(240);
+  padding: prem(30) prem(40) prem(80) prem(40);
+    font-size: prem(32);
+    line-height: 1.25;
+  }
+}
+
+.section-title-main {
+  font-size: prem(32);
+  color: $pink;
+  font-weight: 300;
+  text-align: center;
+}

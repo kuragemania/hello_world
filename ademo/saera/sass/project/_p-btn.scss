@@ -1,0 +1,101 @@
+@use "../foundation" as *;
+
+.p-btn-container.inner {
+  max-width: prem(1050);
+}
+
+.p-btn-body {
+  display: flex;
+  justify-content: space-evenly;
+  margin: prem(80) 0px;
+  text-align: center;
+  font-size: prem(20);
+  @include mq("md"){
+    flex-direction: column;
+  font-size: prem(16);
+  }
+}
+
+.btn-rv-text {
+  position: relative;
+  display: inline-block;
+  color: $pink;
+}
+
+.btn-rv-link {
+  color: #fff;
+  letter-spacing: 0.08em;
+  padding: prem(30) 0;
+  display: inline-block;
+  border-radius: 76px;
+  position: relative;
+  margin-top: prem(24);
+  @include mq("md"){
+  display: block;
+  }
+}
+
+.p-btn-rv .btn-rv-link {
+  background-color: $pink3;
+  padding-left: prem(10);
+  padding-right: prem(50);
+}
+
+.p-btn-line {
+  @include mq("md"){
+margin-top: prem(30);
+  }
+}
+
+.p-btn-line .btn-rv-link {
+  background-color: $green;
+  padding-left: prem(72);
+  padding-right: prem(82);
+}
+
+.btn-rv-link::after {
+  content: "";
+  display: block;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background-image: url(../images/common/arrow-p.png);
+  background-size: cover;
+  position: absolute;
+  top: 36%;
+  right: 5%;
+}
+
+.p-btn-line .btn-rv-link::after {
+  content: "";
+  background-image: url(../images/common/arrow-g.png);
+
+}
+
+.btn-rv-text::before,
+.btn-rv-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: prem(40); /* 線の長さ */
+  border-top: 2px solid #F59090; /* 線の色と太さ */
+}
+
+.btn-rv-text::before {
+  left: prem(-60); /* テキストの左側の位置 */
+  transform: translateY(-50%) rotate(55deg); /* 線の角度 */
+}
+
+.btn-rv-text::after {
+  right: prem(-60); /* テキストの右側の位置 */
+  transform: translateY(-50%) rotate(-55deg); /* 線の角度 */
+}
+
+.p-btn-line .btn-rv-text::before {
+  left: prem(-40); /* テキストの左側の位置 */
+  transform: translateY(-50%) rotate(55deg); /* 線の角度 */
+}
+
+.p-btn-line .btn-rv-text::after {
+  right: prem(-40); /* テキストの右側の位置 */
+  transform: translateY(-50%) rotate(-55deg); /* 線の角度 */
+}

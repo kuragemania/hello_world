@@ -1,0 +1,62 @@
+@use "../foundation" as *;
+
+.news__contents-text-wrap {
+  background-image: url(../images/common/news-c-mv-bg.png);
+  background-size: cover;
+  @include mq("md"){
+    background-image: url(../images/common/news-c-mv-bg-sp.png);
+  }
+}
+
+.news-list__item.news__contents-text {
+  border: none;
+  max-width: prem(1050);
+  padding: prem(90) 0;
+  @include mq(md) {
+    padding: prem(50) prem(20);
+    max-width: prem(600);
+  }
+}
+
+.news-list__item-title.news__contents-text {
+  margin-top: prem(30);
+}
+
+.news-contents-list {
+  margin: prem(80) 0;
+}
+
+.news-contents-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.news-contents-list__item-img {
+  max-width: 50%;
+  margin-right: prem(20);
+  border-radius: 277px;
+  overflow: hidden;
+  @include mq("md") {
+    max-width: 90%;
+    margin-right: prem(0);
+  }
+}
+
+.news-contents-list__item-text-wrap {
+  @include mq("md") {
+    margin-top: prem(30);
+  }
+}
+
+.news__contents-title {
+  margin-top: prem(40);
+  font-size: prem(16);
+}
+
+.news__contents .news__list {
+  margin-top: prem(30);
+}
