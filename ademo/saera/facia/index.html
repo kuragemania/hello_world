@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no"
+    />
+    <title>SAERA</title>
+    <meta
+      name="description"
+      content="トップページの説明"
+    />
+    <meta
+      name="keywords"
+      content="キーワード"
+    />
+    <!-- ogp -->
+    <meta
+      property="og:title"
+      content="サイト名"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:image"
+      content="OGP IMAGE"
+    />
+    <meta
+      property="og:site_name"
+      content="サイトのドメイン"
+    />
+    <meta
+      property="og:description"
+      content="トップページの説明"
+    />
+    <!-- ファビコン -->
+    <link
+      rel="”icon”"
+      href=""
+    />
+    <link
+      rel="apple-touch-icon"
+      href=""
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="../css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/GenJyuuGothic-P-ExtraLight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/GenJyuuGothic-P-Light.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/GenJyuuGothic-P-Normal.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body>
+    <header class="header layout-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#">
+            <img
+              src="../images/common/logo.svg"
+              alt="LOGO"
+              class="md-none"
+            />
+            <img
+              src="../images/common/logo-sp.png"
+              alt="LOGO"
+              class="md-show"
+            />
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#">CONCEPT<span>SAERAについて</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">SERVICE<span>サービス</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">FAQ<span>よくある質問</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/news/">NEWS<span>お知らせ</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">ACCESS<span>アクセス</span></a>
+            </li>
+            <li class="header__nav-item header__nav-item--contact">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >ご予約</a
+              >
+            </li>
+            <li
+              class="header__nav-item header__nav-item--contact header__drawer-item--line"
+            >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >SAERAを<br />友だち追加</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header__sp-link md-show">
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item--contact">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >ご予約</a
+              >
+            </li>
+            <li
+              class="header__nav-item header__nav-item--contact header__drawer-item--line"
+            >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >SAERAを<br />友だち追加</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-list">
+              <li class="header__drawer-item">
+                <a href="#">CONCEPT</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">SERVICE</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">FAQ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">NEWS</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">ACCESS</a>
+              </li>
+              <!-- <li class="header__drawer-item header__drawer-item--contact">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  >ご予約</a
+                >
+              </li>
+              <li
+                class="header__drawer-item header__drawer-item--contact header__drawer-item--line"
+              >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  >SAERAを<br />友だち追加</a
+                >
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mv sub-mv">
+        <div class="mv__inner sub-mv__inner">
+          <div class="sub-mv-container">
+            <div class="sub-mv__title-wrap p-facia">
+              <h2 class="sub-mv__main-title"><span>FACIA TREATMENT</span></h2>
+              <p class="sub-mv__title-sub">フェイシャルエステ</p>
+            </div>
+            <div class="sub-mv__img">
+              <img
+                src="../images/common/mv-facia.png"
+                alt="省略"
+                class="md-none"
+              />
+              <img
+                src="../images/common/mv-facia-sp.png"
+                alt="省略"
+                class="md-show"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="worries">
+        <div class="worries__inner inner">
+          <h3 class="worries__title section-title-main">
+            こんなお悩み<br class="md-show" />ありませんか？
+          </h3>
+          <ul class="worries__list works-list">
+            <li class="worries-list__item">
+              <a href="#">
+                <div class="worries-list__item-img">
+                  <img
+                    src="../images/common/works-img1.png"
+                    alt="省略"
+                  />
+                </div>
+                <div class="worries-list__item-content">
+                  <p class="worries-list__item-text text-bk">
+                    顔も毛もバストも全部キレイにしたい！
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="worries-list__item">
+              <a href="#">
+                <div class="worries-list__item-img">
+                  <img
+                    src="../images/common/works-img2.png"
+                    alt="省略"
+                  />
+                </div>
+                <div class="worries-list__item-content">
+                  <p class="worries-list__item-text text-bk">
+                    サロンに通いたいけど、ローンを組んだり強引な勧誘がいやだ
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="worries-list__item">
+              <a href="#">
+                <div class="worries-list__item-img">
+                  <img
+                    src="../images/common/works-img3.png"
+                    alt="省略"
+                  />
+                </div>
+                <div class="worries-list__item-content">
+                  <p class="worries-list__item-text text-bk">
+                    本当に効果があるエステに通いたい
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="c-concept">
+        <div class="c-concept-inner inner">
+          <div class="c-concept-rap">
+            <img
+              src="../images/common/c-concept-img.png"
+              alt=""
+            />
+            <div class="c-concept-text-rap">
+              <h3 class="section-title-main">キレイを全て叶える</h3>
+              <p class="text-bk">
+                SAERAは、お客様のキレイを全て叶えるため、<br />フェイスアップ（フォト）、脱毛、バストアップなど幅広いサービスをご用意しております。<br />しかも施術時間内であれば追加料金なしで、どのサービスも受け放題！余った時間も有効活用できるので、時間とお金を無駄にすることなく、効率的にキレイになれます。<br />美容知識と技術を修得したスタッフのみが施術を担当し、お客様が内側からも外側からも輝けるようにトータルサポートします。ムダ毛や肌トラブルでお悩みの方、スタイルに自信がない方は、ぜひSAERAにお任せください。
+              </p>
+              <a
+                href="#"
+                class="c-btn"
+                >view more</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="c-reason c-reason--pink">
+        <h3 class="worries__title section-title-main">
+          SAERAお客さまに<br class="md-show" />選ばれる<br
+            class="md-none"
+          />３つの理由
+        </h3>
+        <ul class="c-reason-items">
+          <li class="c-reason-item">
+            <img
+              src="../images/common/reason-img1.png"
+              alt=""
+              class="md-none"
+            />
+            <img
+              src="../images/common/reason-img1-sp.png"
+              alt=""
+              class="md-show"
+            />
+            <div class="c-reason-text-rap">
+              <h4>
+                業界でも群を抜く圧倒的価格帯。<br />さらに追加料金は一切かかりません！
+              </h4>
+              <p class="text-bk">
+                SAERAは、ひとりひとりのお客様により沿ったサロンです。<br />心理的・経済的に負担をかけず、キレイになって日々を幸せに過ごしてほしいという思いから、社内システムを見直すことで、業界内で群を抜く低価格を実現しました。
+              </p>
+              <p class="text-bk">
+                まずは無料カウンセリングで気になることは何でも相談してください。
+              </p>
+            </div>
+          </li>
+          <li class="c-reason-item">
+            <img
+              src="../images/common/reason-img2.png"
+              alt=""
+              class="md-none"
+            />
+            <img
+              src="../images/common/reason-img2-sp.png"
+              alt=""
+              class="md-show reason-img2"
+            />
+            <div class="c-reason-text-rap">
+              <h4>
+                すべてのサービスが受け放題<br />大切な時間を有効活用できます！
+              </h4>
+              <p class="text-bk">
+                SAERAでは、フェイスアップ（フォト）、脱毛、バストアップのサービスが追加料金なしで受け放題。<br />通常の美容サロンと異なり、余った時間もたっぷり活用していただけます。<br />効率的に美しい肌と理想のボディラインを手に入れましょう！
+              </p>
+            </div>
+          </li>
+          <li class="c-reason-item">
+            <img
+              src="../images/common/reason-img3.png"
+              alt=""
+              class="md-none"
+            />
+            <img
+              src="../images/common/reason-img3-sp.png"
+              alt=""
+              class="md-show"
+            />
+            <div class="c-reason-text-rap">
+              <h4>
+                美のプロフェッショナルが<br />あなたのキレイをトータルサポート
+              </h4>
+              <p class="text-bk">
+                SAERAでは経験豊富なスタッフがあなたの美しさをトータルサポートします。<br />フェイスアップ（フォト）で肌を美しく整え、脱毛でツルツル肌を手に入れ、バストアップで自信に満ちたボディラインを実現。<br />あなたの美しさに磨きをかけるために、SAERAが心を込めてお手伝いいたします。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="p-btn-container inner">
+        <div class="p-btn-body p-top">
+          <div class="p-btn-rv">
+            <p class="btn-rv-text">簡単30秒！</p>
+            <a
+              href="../news_contents/"
+              class="btn-rv-link"
+              >無料カウンセリングを予約する</a
+            >
+          </div>
+          <div class="p-btn-line">
+            <p class="btn-rv-text">セールやクーポン情報をお届け！</p>
+            <a
+              href=""
+              class="btn-rv-link"
+              >SAERAを友だち追加</a
+            >
+          </div>
+        </div>
+      </div>
+      <section class="c-before c-before--pink">
+        <div class="c-before-inner inner">
+          <h3 class="section-title">before<br />after</h3>
+          <ul class="c-before-items">
+            <li class="c-before-item">
+              <img
+                src="../images/common/c-before-img1.png"
+                alt="Image 1"
+              />
+            </li>
+            <li class="c-before-item">
+              <img
+                src="../images/common/c-before-img2.png"
+                alt="Image 1"
+              />
+            </li>
+            <li class="c-before-item">
+              <img
+                src="../images/common/c-before-img3.png"
+                alt="Image 1"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="c-step c-step--beige">
+        <div class="c-step-inner inner">
+          <h3 class="section-title-main">施術までの流れ</h3>
+          <ol class="c-step-items">
+            <li class="c-step-item">
+              <h4>STEP 01<br />カウンセリング</h4>
+              <img
+                src="../images/common/c-step-img1.png"
+                alt=""
+              />
+              <p>
+                初めての方でも安心してご利用いただけるよう、専門のスタッフがカウンセリング、施術のご案内をいたします。<br />
+                また当日は体調をお伺いし、あなたのお肌の状態や毛の状態を確認した上で施術をおこないます。
+              </p>
+            </li>
+            <li class="c-step-item">
+              <h4>STEP 02<br />施術</h4>
+              <img
+                src="../images/common/c-step-img2.png"
+                alt=""
+              />
+              <p class="c-step-text">
+                カウンセリングの内容やお客様のご希望に合わせて、SAERAの経験豊富なスタッフがリラックスした空間で効果的な施術をおこないます。<br />不安や疑問がありましたら、施術の途中でもご遠慮なくお声かけください。
+              </p>
+            </li>
+            <li class="c-step-item">
+              <h4>STEP 03<br />アフターケア</h4>
+              <img
+                src="../images/common/c-step-img3.png"
+                alt=""
+              />
+              <p class="c-step-text">
+                SAERAでは、お客様が美しさを長く保つための施術後のケアや注意点など、丁寧にご説明いたします。<br />何かご不明点やご要望がございましたら、どんな些細ないことでもお気軽ご相談ください。<br />未来の自分のために、一緒にキレイを目指しましょう！
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="c-faq">
+        <div class="c-faq-inner">
+          <h3 class="section-title section-title--pink">FAQ</h3>
+          <ul class="c-faq-items">
+            <li class="c-faq-item">
+              <p class="c-faq-q">
+                <span
+                  >脱毛、フェイスアップ（フォト）、バストアップは<br
+                    class="xl-none"
+                  />別料金ですか？</span
+                >
+              </p>
+              <p class="c-faq-a text-bk">
+                時間売りのため、全て施術がコース料金に含まれています。
+              </p>
+            </li>
+            <li class="c-faq-item">
+              <p class="c-faq-q q-2">
+                <span>施術後のパウダールームはありますか？ </span>
+              </p>
+              <p class="c-faq-a text-bk">
+                さらに、2WAYヘアアイロンもあり、施術後に大事な予定があっても安心です。
+              </p>
+            </li>
+            <li class="c-faq-item">
+              <p class="c-faq-q q-3">
+                <span>肌が弱い人でも大丈夫ですか？</span>
+              </p>
+              <p class="c-faq-a text-bk">
+                当サロンの機械は7歳から使用できるものになっており、お子様やお肌が敏感な方でも安心してご利用いただけます。<br />ご不安な点がございましたらお気軽にスタッフにご相談ください。
+              </p>
+            </li>
+            <li class="c-faq-item">
+              <a
+                href="#"
+                class="c-btn c-btn--pink c-btn-l"
+                >view more</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="p-btn-container inner">
+        <div class="p-btn-body">
+          <div class="p-btn-rv">
+            <p class="btn-rv-text">簡単30秒！</p>
+            <a
+              href="../news_contents/"
+              class="btn-rv-link"
+              >無料カウンセリングを予約する</a
+            >
+          </div>
+          <div class="p-btn-line">
+            <p class="btn-rv-text">セールやクーポン情報をお届け！</p>
+            <a
+              href=""
+              class="btn-rv-link"
+              >SAERAを友だち追加</a
+            >
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="c-footer__inner">
+          <!-- <ul class="c-footer__list">
+            <li class="c-footer__listItem">
+              <a href="/about/">パスルについて</a>
+            </li>
+            <li class="c-footer__listItem">
+              <a href="/message/">代表あいさつ</a>
+            </li>
+            <li class="c-footer__listItem"><a href="/news/">お知らせ</a></li>
+            <li class="c-footer__listItem"><a href="/company/">会社概要</a></li>
+            <li class="c-footer__listItem">
+              <a href="/privacy/">プライバシーポリシー</a>
+            </li>
+          </ul> -->
+        </div>
+      </footer>
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

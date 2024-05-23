@@ -1928,7 +1928,17 @@ footer {
   left: 2%;
 }
 
-.sub-mv__title-wrap.p-facia {
+.sub-mv__title-wrap.p-hair {
   max-width: 36.25rem;
   left: 2%;
+}
+
+.sub-mv__title-wrap.p-bust {
+  max-width: 36.25rem;
+  left: 10%;
+}
+@media screen and (max-width: 767px) {
+  .sub-mv__title-wrap.p-bust {
+    top: 7%;
+  }
 }
