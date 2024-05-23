@@ -1689,7 +1689,8 @@ footer {
     margin-left: auto; /* 左のマージンを自動にして右寄せ */
     display: inline-block;
     margin-top: 1rem;
-    align-self: flex-end; /* 親要素内で右端に配置 */
+    align-self: flex-start; /* 親要素内で右端に配置 */
+    margin-left: 0rem;
   }
 }
 
