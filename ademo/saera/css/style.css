@@ -150,6 +150,18 @@ a:hover {
     display: none;
   }
 }
+.xl-show {
+  display: none;
+}
+
+@media screen and (max-width: 1220px) {
+  .xl-show {
+    display: block;
+  }
+  .xl-none {
+    display: none;
+  }
+}
 .inner {
   max-width: 65.625rem;
   padding-left: 1.5625rem;
@@ -243,10 +255,23 @@ footer {
   line-height: 1;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  border: 3px solid #ffffff;
   border-radius: 3.125rem;
   background-color: #F4BCC5;
   color: #fff;
   position: relative;
+  box-shadow: inset -2px -2px 5px 0px rgba(0, 0, 0, 0.48), -4px -4px 10px rgba(255, 255, 255, 0.65);
+}
+
+.c-btn-l {
+  padding: 1.25rem 7.8125rem 1.25rem 3.4375rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .c-btn-l {
+    padding: 0.875rem 6.25rem 0.875rem 1.875rem;
+    font-size: 0.9375rem;
+  }
 }
 
 .c-btn::before {
@@ -257,6 +282,11 @@ footer {
   height: 1px;
   background-color: #fff;
   content: "";
+}
+
+.c-btn.c-btn--pink::before,
+.c-btn.c-btn--pink::after {
+  background-color: #F59090;
 }
 
 .c-btn::after {
@@ -273,9 +303,9 @@ footer {
   transform-origin: right bottom;
 }
 
-.c-btn.c-btn--black {
-  color: #fff;
-  background-color: #000;
+.c-btn.c-btn--pink {
+  color: #F59090;
+  background-color: #FFDCDC;
 }
 
 .c-concept-rap {
@@ -630,20 +660,20 @@ footer {
 .c-service-img3::before {
   content: ""; /* 擬似要素の内容を空に設定 */
   position: absolute;
-  right: 26%;
-  top: -9%;
-  width: 13.4375rem;
-  height: 8.75rem;
-  background-image: url("../images/common/c-service-text2.png"); /* 画像のURLを設定 */
+  right: 54%;
+  top: -8%;
+  width: 8.5rem;
+  height: 6.9375rem;
+  background-image: url("../images/common/c-service-text3.png"); /* 画像のURLを設定 */
   background-size: cover; /* 画像を要素に合わせてカバー */
   background-position: center; /* 画像を中央に配置 */
 }
 @media screen and (max-width: 767px) {
   .c-service-img3::before {
-    left: 3%;
-    top: -5%;
-    width: 8.75rem;
-    height: 5.6875rem;
+    left: 64%;
+    top: -4%;
+    width: 6rem;
+    height: 4.875rem;
   }
 }
 
@@ -835,6 +865,185 @@ footer {
   font-weight: 700;
   src: url("../fonts/NotoSansCJKjp-Bold.woff2") format("woff2"), url("../fonts/NotoSansCJKjp-Bold.woff") format("woff"), url("../fonts/NotoSansCJKjp-Bold.ttf") format("truetype"), url("../fonts/NotoSansCJKjp-Bold.eot") format("embedded-opentype");
 }
+.c-faq {
+  background-image: url(../images/common/c-faq-bg.png);
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  padding-bottom: 9.375rem;
+}
+@media screen and (max-width: 767px) {
+  .c-faq {
+    padding-bottom: 6.25rem;
+  }
+}
+
+.c-faq-items {
+  margin-top: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .c-faq-items {
+    margin-top: 3.125rem;
+  }
+}
+
+.c-faq-q {
+  background-color: #fff;
+  width: 85%;
+  color: #F59090;
+  padding: 1.25rem 3.125rem 1.25rem 25%;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  border-radius: 0 50px 50px 0;
+  box-shadow: inset 0px -3px 5px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .c-faq-q {
+    width: 99%;
+    padding: 0.9375rem 1rem 0.9375rem 15%;
+    box-shadow: inset -2px -2px 3px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+  }
+}
+
+.q-2,
+.q-3 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .q-2,
+.q-3 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-faq-q.q-3 {
+    padding-top: 1.8125rem;
+    padding-bottom: 1.8125rem;
+  }
+}
+
+.c-faq-q::before {
+  position: absolute;
+  left: 23%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FFDCDC; /* 背景色 */
+  color: #F59090;
+  border-radius: 50%;
+  padding: 2.1875rem; /* パディングで円を作る */
+  font-weight: 200;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .c-faq-q::before {
+    font-size: 0.875rem;
+    left: 5%;
+    padding: 1rem; /* パディングで円を作る */
+  }
+}
+
+.c-faq-q::before {
+  content: "Q1";
+}
+
+.c-faq-q.q-2::before {
+  content: "Q2";
+}
+
+.c-faq-q.q-3::before {
+  content: "Q3";
+}
+
+.c-faq-q {
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 767px) {
+  .c-faq-q {
+    font-size: 1rem;
+  }
+}
+
+.c-faq-a {
+  width: 85%;
+  padding-left: 25%;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+}
+@media screen and (max-width: 767px) {
+  .c-faq-a {
+    width: 99%;
+    margin-top: 1.5625rem;
+    margin-bottom: 1.5625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.c-faq-item:last-child {
+  padding-top: 1.875rem;
+  text-align: center; /* 最後のli要素を中央揃え */
+}
+
+.c-access {
+  background-color: #FEF3F5;
+  padding-bottom: 9.375rem;
+}
+@media screen and (max-width: 767px) {
+  .c-access {
+    padding-bottom: 3.125rem;
+  }
+}
+
+.c-access-rap {
+  display: flex;
+  align-items: center;
+  margin-top: 3.125rem;
+}
+@media screen and (max-width: 767px) {
+  .c-access-rap {
+    flex-direction: column;
+  }
+}
+
+.c-access-rap img {
+  max-width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .c-access-rap img {
+    max-width: 100%;
+  }
+}
+
+.c-access-text-rap {
+  letter-spacing: 0.08em;
+}
+@media screen and (max-width: 767px) {
+  .c-access-text-rap {
+    margin-top: 1.25rem;
+  }
+}
+
+.c-access-text2 {
+  margin-top: 1.875rem;
+}
+
+.c-access-text-rap a {
+  margin-top: 3.125rem;
+  margin-left: 1.25rem;
+}
+@media screen and (max-width: 767px) {
+  .c-access-text-rap a {
+    margin-left: 15%;
+  }
+}
+
 .header {
   height: 4.375rem;
   background-color: #F4BCC5;
@@ -957,10 +1166,8 @@ footer {
   background-color: #EF657B;
   letter-spacing: 0.08em;
   border-radius: 26px;
-  border-bottom: solid 2.5px #d4596e;
-  border-right: solid 1.5px #d4596e;
-  border-left: solid 1px #d4596e;
-  box-shadow: 0px 0px 0px 2px rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  box-shadow: inset -1px -1px 3px 0px rgba(0, 0, 0, 0.48), 0px 0px 0px 0px rgba(255, 255, 255, 0.65);
 }
 @media screen and (max-width: 767px) {
   .header__nav-item.header__nav-item--contact a {
@@ -971,20 +1178,33 @@ footer {
 .header__nav-item.header__nav-item--contact.header__drawer-item--line a {
   padding: 0.3125rem 2.5rem;
   background-color: #65C178;
-  border-bottom: solid 2px #5aab6b;
-  border-right: solid 1.5px #5aab6b;
-  border-left: solid 1px #5aab6b;
 }
 
-.header__nav-item.header__nav-item--contact a::after {
-  margin-left: 0.625rem;
-  width: 0.6875rem;
-  height: 0.75rem;
-  display: inline-block;
-  background-image: url(./../images/common/contact-icon.svg);
-  background-repeat: no-repeat;
+.header__nav-item--contact {
+  position: relative;
+}
+
+.header__nav-item--contact a::after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../images/common/arrow-p.png);
+  background-size: cover;
   background-position: center;
-  background-size: contain;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 767px) {
+  .header__nav-item--contact a::after {
+    display: none;
+  }
+}
+
+.header__nav-item--contact.header__drawer-item--line a::after {
+  background-image: url(../images/common/arrow-g.png);
 }
 
 .header__hamburger {
@@ -1195,6 +1415,7 @@ footer {
   position: absolute;
   bottom: 22%;
   left: 0%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.31), 0px 0px 8px rgba(255, 255, 255, 0.65); /* ハイライトの部分 */
 }
 @media screen and (max-width: 767px) {
   .mv__btn-rap {
@@ -1405,6 +1626,7 @@ footer {
   margin: 5rem 0px;
   text-align: center;
   font-size: 1.25rem;
+  font-weight: 300;
 }
 @media screen and (max-width: 767px) {
   .p-btn-body {
@@ -1436,9 +1658,7 @@ footer {
 
 .p-btn-rv .btn-rv-link {
   background-color: #EF657B;
-  border-bottom: solid 3.5px #d4596e;
-  border-right: solid 2.5px #d4596e;
-  border-left: solid 1px #d4596e;
+  box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, 0.18), -6px -6px 10px rgba(255, 255, 255, 0.16);
   padding-left: 0.625rem;
   padding-right: 3.125rem;
 }
@@ -1451,9 +1671,7 @@ footer {
 
 .p-btn-line .btn-rv-link {
   background-color: #65C178;
-  border-bottom: solid 3.5px #5aab6b;
-  border-right: solid 2.5px #5aab6b;
-  border-left: solid 1px #5aab6b;
+  box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, 0.18), -6px -6px 10px rgba(255, 255, 255, 0.16);
   padding-left: 4.5rem;
   padding-right: 5.125rem;
 }

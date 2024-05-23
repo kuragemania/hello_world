@@ -78,3 +78,15 @@ a:hover {
     display: none;
   }
 }
+
+.xl-show {
+  display: none;
+}
+@media screen and (max-width: 1220px) {
+  .xl-show {
+    display: block;
+  }
+  .xl-none {
+    display: none;
+  }
+}

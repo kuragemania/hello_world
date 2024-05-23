@@ -1,0 +1,116 @@
+@use "../foundation" as *;
+
+.c-faq {
+  background-image: url(../images/common/c-faq-bg.png);
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  padding-bottom: prem(150);
+  @include mq("md"){
+    padding-bottom: prem(100);
+  }
+}
+
+.c-faq-items {
+  margin-top: prem(100);
+  @include mq("md"){
+    margin-top: prem(50);
+  }
+}
+
+.c-faq-q {
+  background-color: #fff;
+  width: 85%;
+  // padding: 30px;
+  color: $pink;
+  padding: prem(20) prem(50) prem(20) 25%;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  border-radius: 0 50px 50px 0;
+  box-shadow: inset 0px -3px 5px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+  position: relative;
+  @include mq("md"){
+  width: 99%;
+  padding: prem(15) prem(16) prem(15) 15%;
+  box-shadow: inset -2px -2px 3px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+  }
+}
+
+.q-2,
+.q-3 {
+  padding-top: prem(40);
+  padding-bottom: prem(40);
+  @include mq("md"){
+    padding-top: prem(20);
+    padding-bottom: prem(20);
+  }
+}
+
+.c-faq-q.q-3 {
+  @include mq("md"){
+    padding-top: prem(29);
+    padding-bottom: prem(29);
+  }
+}
+
+.c-faq-q::before {
+  position: absolute;
+  left: 23%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $pink5; /* 背景色 */
+  color: $pink;
+  border-radius: 50%;
+  padding: prem(35); /* パディングで円を作る */
+  font-weight: 200;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq("md"){
+    font-size: prem(14);
+    left: 5%;
+  padding: prem(16); /* パディングで円を作る */
+  }
+}
+
+.c-faq-q::before {
+  content: "Q1";
+}
+
+.c-faq-q.q-2::before {
+  content: "Q2";
+}
+
+.c-faq-q.q-3::before {
+  content: "Q3";
+}
+
+
+.c-faq-q {
+  font-size: prem(28);
+  // font-weight: 200;
+  @include mq("md"){
+    font-size: prem(16);
+  }
+}
+
+.c-faq-a {
+  width: 85%;
+  padding-left: 25%;
+  margin-top: prem(50);
+  margin-bottom: prem(50);
+  @include mq("md"){
+  width: 99%;
+    margin-top: prem(25);
+    margin-bottom: prem(25);
+    padding-left: prem(20);
+    padding-right: prem(20);
+  }
+}
+
+.c-faq-item:last-child {
+  padding-top: prem(30);
+  text-align: center; /* 最後のli要素を中央揃え */
+}
+

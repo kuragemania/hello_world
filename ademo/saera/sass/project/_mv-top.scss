@@ -42,7 +42,7 @@
 
 .mv__main-title {
   font-size: prem(60);
-  font-family: "GenJyuuGothicP";
+  font-family: "Noto Sans Japanese";
   font-weight: normal;
   @include mq(md) {
     font-size: prem(40);
@@ -77,6 +77,9 @@
   position: absolute;
   bottom: 22%;
   left: 0%;
+  box-shadow:
+  4px 4px 8px rgba(0, 0, 0, 0.31), /* シャドウの部分 */
+  0px 0px 8px rgba(255, 255, 255, 0.65); /* ハイライトの部分 */;
   @include mq("md") {
   padding: prem(10) prem(60) prem(10) 0;
     bottom: 15%;
@@ -89,7 +92,7 @@
   font-size: prem(30);
   letter-spacing: 0.08em;
   color: $pink;
-  font-family: "GenJyuuGothicP";
+  font-family: "Noto Sans Japanese";
   @include mq("md") {
     font-size: prem(20);
   }

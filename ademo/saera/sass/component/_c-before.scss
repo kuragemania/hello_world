@@ -1,0 +1,40 @@
+@use "../foundation" as *;
+
+.c-before {
+  background-color: $beige;
+  padding-bottom: prem(150);
+  @include mq("md"){
+  padding-bottom: prem(100);
+  }
+}
+
+.c-before h3 {
+  padding-top: prem(30);
+  padding-bottom: prem(70);
+  @include mq("md") {
+    padding-top: prem(20);
+    padding-bottom: prem(40);
+  }
+}
+
+.c-before-items {
+  margin-top: prem(50);
+  display: flex;
+  justify-content: space-between;
+  @include mq("md"){
+    flex-direction: column;
+  }
+}
+
+.c-before-item {
+  max-width: calc(33.333% - 1.875rem * 2 / 3);
+  @include mq("md"){
+    max-width: 100%;
+  }
+}
+
+.c-before-item:not(:first-child) {
+  @include mq("md"){
+    margin-top: prem(40);
+  }
+}

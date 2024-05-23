@@ -1,0 +1,99 @@
+@use "../foundation" as *;
+
+.c-step {
+  background-color: $pink4;
+  padding-top: prem(100);
+  padding-bottom: prem(100);
+  @include mq("md"){
+  padding-top: prem(50);
+  }
+}
+
+.c-step-items {
+  margin-top: prem(50);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @include mq("md"){
+    flex-direction: column;
+    padding: 0 prem(10) 0 prem(40);
+  }
+}
+
+.c-step-item {
+  max-width: calc(33.333% - 1.875rem * 2 / 3);
+  position: relative;
+  @include mq("md"){
+    max-width: 100%;
+  }
+}
+
+.c-step-item:not(:first-child) {
+  @include mq("md"){
+    margin-top: prem(40);
+  }
+}
+
+.c-step-text::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 1px; /* 画像の幅 */
+  height: 220px; /* 画像の高さ */
+  background-color: $pink;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  bottom: 0%; /* 位置調整 */
+  left: -5%; /* 位置調整 */
+  @include mq("md"){
+  display: none; /* 画像のように扱うためにblockレベル要素に */
+  }
+}
+
+.c-step-item h4{
+  font-size: prem(14);
+  color: $pink;
+  text-align: center;
+  font-weight: 300;
+  @include mq("md"){
+    text-align: left;
+  }
+}
+
+.c-step-item img {
+  margin-top: prem(50);
+  @include mq("md"){
+  margin-top: prem(10);
+  }
+}
+
+.c-step-item p {
+  margin-top: prem(20);
+  color: $pink;
+  letter-spacing: 0.08em;
+  line-height: 1.731;
+  font-weight: 300;
+  @include mq("md"){
+    margin-top: prem(10);
+  }
+}
+
+.c-step-items::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: prem(698); /* 画像の幅 */
+  height: prem(20.2); /* 画像の高さ */
+  background-image: url('../images/common/stepvar.png'); /* 追加したい画像のパス */
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 8%; /* 位置調整 */
+  left: 15%; /* 位置調整 */
+
+  @include mq("md"){
+  background-image: url('../images/common/stepvar-sp.png'); /* 追加したい画像のパス */
+  width: prem(24); /* 画像の幅 */
+  height: prem(1180); /* 画像の高さ */
+  top: 0.5%; /* 位置調整 */
+  left: 0%; /* 位置調整 */
+  }
+}
+
+

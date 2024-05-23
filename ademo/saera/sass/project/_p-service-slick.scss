@@ -1,0 +1,55 @@
+@use "../foundation" as *;
+
+.p-service {
+  padding-bottom: prem(50);
+  @include mq("md"){
+    padding-bottom: prem(30);
+  }
+}
+
+.service-slick {
+  position: relative;
+  margin-top: prem(50);
+    @include mq("md"){
+    margin-top: prem(30);
+  }
+}
+
+.service-slick.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+// .service-slick__img {
+//     transform: scale(.7);
+//     transition: 1s;
+// }
+
+.service-slick__img.slick-center {
+  transform: scale(1);
+}
+
+.service-slick__img {
+    // overflow: hidden;
+    @include mq("md"){
+      padding-left: prem(20);
+    }
+}
+
+.service-slick__img img {
+  width: 85%;
+  // aspect-ratio: 180/300;
+  object-fit: cover;
+  @include mq("md"){
+    // aspect-ratio: 180/270;
+    width: 90%;
+  }
+}
+
+.service-slick .slick-dots li button:before {
+  opacity: 1;
+  color: #d4e7ed;
+}
+
+.service-slick .slick-dots li.slick-active button:before {
+  color: $pink;
+}

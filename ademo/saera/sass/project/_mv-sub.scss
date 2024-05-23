@@ -32,7 +32,7 @@
   line-height: 1.2;
   padding: 0px 10px;
   position: relative;
-  font-family: "GenJyuuGothicP";
+  font-family: "Noto Sans Japanese";
   font-weight: normal;
   @include mq("md"){
     font-size: prem(28);
@@ -45,7 +45,7 @@
   letter-spacing: 0.08em;
   line-height: 1.2;
   padding-top: 10px;
-  font-family: "GenJyuuGothicP";
+  font-family: "Noto Sans Japanese";
   @include mq("md"){
     font-size: prem(18);
   }

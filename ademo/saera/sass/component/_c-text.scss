@@ -1,12 +1,12 @@
-@use '../foundation' as *;
+@use "../foundation" as *;
 
 .text-bk {
   font-size: prem(16);
-  line-height: 1.429;
-  font-family: "GenJyuuGothicP";
+  line-height: 1.75;
+  font-family: "Noto Sans Japanese";
   font-weight: 300;
-  @include mq("md"){
+  @include mq("md") {
     font-size: prem(14);
-    line-height: 1.25;
+    line-height: 1.429;
   }
 }

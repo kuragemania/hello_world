@@ -1,0 +1,157 @@
+@use "../foundation" as *;
+
+.c-service {
+  background-image: url(../images/common/c-service-bg.png);
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  padding-bottom: prem(150);
+  @include mq("md"){
+    padding-bottom: prem(100);
+  }
+}
+
+.c-service-inner {
+  padding-bottom: prem(100);
+}
+
+.c-service-items {
+  margin-top: prem(100);
+  @include mq("md"){
+    margin-top: prem(50);
+  }
+}
+
+.c-service-item {
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    flex-direction: column;
+    margin-top: prem(50);
+  }
+}
+
+.c-service-item:not(:first-child) {
+  margin-top: prem(80);
+  @include mq("md"){
+    margin-top: prem(60);
+  }
+}
+
+.c-service-item:nth-of-type(even) {
+  flex-direction: row-reverse;
+    @include mq("md"){
+      flex-direction: column;
+  }
+}
+
+.c-service-item img {
+  max-width: 47%;
+  @include mq("md"){
+  max-width: 90%;
+  }
+}
+
+.c-service-text-rap {
+  margin-left: prem(18);
+  @include mq("md"){
+  margin-left: prem(0);
+  margin-top: prem(20);
+  }
+}
+
+.c-service-text-rap.even {
+  margin-left: prem(0);
+  @include mq("md"){
+    margin-left: prem(0);
+    margin-top: prem(20);
+    }
+}
+
+.c-service-text-rap p {
+  margin-top: prem(30);
+  @include mq("md"){
+  }
+}
+
+.c-service-text-rap a {
+  margin-top: 1.875rem;
+  margin-left: 30%;
+  @include mq("md"){
+    margin-left: 15%;
+  }
+}
+
+.c-service-img2 {
+  margin-left: prem(18);
+  @include mq("md"){
+  margin-left: prem(0);
+  }
+}
+
+.c-service-img1,
+.c-service-img2,
+.c-service-img3 {
+  position: relative;
+}
+
+.c-service-img1::before {
+  content: ""; /* 擬似要素の内容を空に設定 */
+  position: absolute;
+  left: 33%;
+  top: -7%;
+  width: prem(124);
+  height: prem(100);
+  background-image: url('../images/common/c-service-text1.png'); /* 画像のURLを設定 */
+  background-size: cover; /* 画像を要素に合わせてカバー */
+  background-position: center; /* 画像を中央に配置 */
+  @include mq("md"){
+    left: 69%;
+    top: -4%;
+    width: prem(74);
+    height: prem(60);
+  }
+}
+
+.c-service-img2::before {
+  content: ""; /* 擬似要素の内容を空に設定 */
+  position: absolute;
+  right: 26%;
+  top: -9%;
+  // width: 215px;
+  // height: 140px;
+  width: prem(215);
+  height: prem(140);
+  background-image: url('../images/common/c-service-text2.png'); /* 画像のURLを設定 */
+  background-size: cover; /* 画像を要素に合わせてカバー */
+  background-position: center; /* 画像を中央に配置 */
+  @include mq("md"){
+    left: 3%;
+    top: -5%;
+    // width: 140px;
+    // height: 91px;
+    width: prem(140);
+    height: prem(91);
+  }
+}
+
+.c-service-img3::before {
+  content: ""; /* 擬似要素の内容を空に設定 */
+  position: absolute;
+  right: 54%;
+  top: -8%;
+  // width: 136px;
+  // height: 111px;
+  width: prem(136);
+  height: prem(111);
+  background-image: url('../images/common/c-service-text3.png'); /* 画像のURLを設定 */
+  background-size: cover; /* 画像を要素に合わせてカバー */
+  background-position: center; /* 画像を中央に配置 */
+  @include mq("md"){
+    left: 64%;
+    top: -4%;
+    // width: 96px;
+    // height: 78px;
+    width: prem(96);
+    height: prem(78);
+  }
+}
+

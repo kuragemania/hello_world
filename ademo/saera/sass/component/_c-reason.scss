@@ -1,0 +1,70 @@
+@use '../foundation' as *;
+
+.c-reason {
+background-color: $beige;
+padding-top: prem(100);
+padding-bottom: prem(100);
+@include mq("md"){
+  padding-top: prem(50);
+}
+}
+
+.c-reason-items {
+  margin-top: prem(50);
+}
+
+.c-reason-item {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  @include mq("md"){
+    display: block;
+  }
+}
+
+.c-reason-item:not(:first-child) {
+  @include mq("md"){
+    margin-top: prem(30);
+  }
+}
+
+.c-reason-item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.c-reason-item img {
+  max-width: 50%;
+  @include mq("md"){
+    max-width: 95%;
+  }
+}
+
+.reason-img2 {
+  @include mq("md"){
+    margin-left: auto;
+  }
+}
+
+.c-reason-text-rap {
+  max-width: 40%;
+  margin-left: prem(20);
+  @include mq("md"){
+    max-width: 100%;
+  margin-left: prem(0);
+  padding: 0 prem(20);
+  }
+}
+
+.c-reason-text-rap h4 {
+  font-size: prem(26);
+  font-weight: 300;
+  color: $pink;
+  @include mq("md"){
+    margin-top: prem(20);
+    font-size: prem(20);
+  }
+}
+
+.c-reason-text-rap p {
+  margin-top: prem(30);
+}

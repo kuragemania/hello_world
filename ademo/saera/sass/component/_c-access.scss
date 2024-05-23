@@ -1,0 +1,45 @@
+@use "../foundation" as *;
+
+.c-access {
+  background-color: $pink4;
+  padding-bottom: prem(150);
+  @include mq("md") {
+    padding-bottom: prem(50);
+  }
+}
+
+.c-access-rap {
+  display: flex;
+  align-items: center;
+  margin-top: prem(50);
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.c-access-rap img {
+  max-width: 50%;
+  @include mq("md") {
+    max-width: 100%;
+  }
+}
+
+.c-access-text-rap {
+  letter-spacing: 0.08em;
+  @include mq("md") {
+    margin-top: prem(20);
+  }
+
+}
+
+.c-access-text2 {
+  margin-top: prem(30);
+}
+
+.c-access-text-rap a{
+  margin-top: prem(50);
+  margin-left: prem(20);
+  @include mq("md") {
+    margin-left: 15%;
+  }
+}

@@ -1,19 +1,59 @@
 @use '../foundation' as *;
 
 .c-btn {
-  padding: prem(14) prem(60);
+  padding: prem(14) prem(100) prem(14) prem(30);
   display: inline-block;
   font-size: prem(15);
   line-height: 1;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 1px solid #000;
+  border: 3px solid #ffffff;
   border-radius: prem(50);
-  background-color: #fff;
+  background-color: $pink2;
+  color: #fff;
+  position: relative;
+  box-shadow: inset -2px -2px 5px 0px rgba(0, 0, 0, 0.48), -4px -4px 10px rgba(255, 255, 255, 0.65);
 }
 
-// Modifier
-.c-btn.c-btn--black {
-  color: #fff;
-  background-color: #000;
+.c-btn-l {
+  padding: prem(20) prem(125) prem(20) prem(55);
+  font-size: prem(16);
+  @include mq("md"){
+    padding: prem(14) prem(100) prem(14) prem(30);
+  font-size: prem(15);
+  }
+}
+
+.c-btn::before {
+  position: absolute;
+  right: 13%;
+  bottom: 48%;
+  width: 20%;
+  height: 1px;
+  background-color: #fff;
+  content: '';
+}
+
+.c-btn.c-btn--pink::before,
+.c-btn.c-btn--pink::after {
+  background-color: $pink;
+}
+
+.c-btn::after {
+  position: absolute;
+  right: 13%;
+  bottom: 50%;
+  width: 1px;
+  height: 12px;
+  background-color: #fff;
+  content: '';
+  -webkit-transform: rotate(-43deg);
+  transform: rotate(-43deg);
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+}
+
+.c-btn.c-btn--pink {
+  color: $pink;
+  background-color: $pink5;
 }

@@ -1,0 +1,44 @@
+@use '../foundation' as *;
+
+.c-concept-rap {
+margin-top: prem(100);
+margin-bottom: prem(50);
+display: flex;
+@include mq("md"){
+  flex-direction: column;
+margin-top: prem(50);
+}
+}
+
+.c-concept-rap img {
+  max-width: 35%;
+  @include mq("md"){
+    max-width: 100%;
+  }
+}
+
+.c-concept-text-rap {
+  margin-left: prem(30);
+  @include mq("md"){
+    margin-left: prem(0);
+  }
+}
+
+.c-concept-text-rap h3 {
+  @include mq("md"){
+    margin-top: prem(30);
+  }
+}
+
+.c-concept-text-rap p {
+  margin-top: prem(30);
+}
+
+.c-concept-text-rap a {
+  margin-top: prem(30); /* ボタンの上にスペースを追加 */
+  margin-left: 30%;
+  align-self: center; /* ボタンを中央揃え */
+  @include mq("md"){
+    margin-left: 15%;
+  }
+}

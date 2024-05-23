@@ -1,0 +1,54 @@
+@use "../foundation" as *;
+
+.p-btn-body.p-top {
+  margin-bottom: prem(110);
+  @include mq("md"){
+    margin-top: prem(10);
+    margin-bottom: prem(50);
+  }
+}
+
+.qa-section {
+  width: 100%;
+  padding: 20px 0;
+  background: #F9F3F0; /* 背景色を設定 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qa-header {
+  width: 100%;
+  background: #fff; /* 白背景色 */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 50px; /* 角を丸くする */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.qa-label {
+  background: #FADCD2; /* Q2の背景色 */
+  color: #E06C6C; /* Q2のテキスト色 */
+  border-radius: 50%; /* 円形にする */
+  padding: 10px 15px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.qa-question {
+  flex-grow: 1; /* 残りのスペースを占める */
+  text-align: center; /* 中央揃え */
+  color: #E06C6C; /* テキスト色 */
+  font-weight: bold;
+  font-size: 1.2em; /* フォントサイズ */
+}
+
+.qa-body {
+  margin-top: 10px;
+  text-align: center; /* テキストを中央揃え */
+  color: #666; /* テキスト色 */
+  font-size: 1em; /* フォントサイズ */
+}

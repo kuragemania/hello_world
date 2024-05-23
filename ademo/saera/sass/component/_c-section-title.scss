@@ -10,14 +10,20 @@
   margin: 0 auto;
   padding: prem(50) prem(90) prem(100) prem(90);
   border-radius: 0 0 200px 200px;
-  font-family: "GenJyuuGothicP";
+  font-family: "Noto Sans Japanese";
   font-weight: 300;
+  letter-spacing: 0.08em;
   @include mq("md"){
   max-width: prem(240);
-  padding: prem(30) prem(40) prem(80) prem(40);
+  padding: prem(30) prem(30) prem(70) prem(40);
     font-size: prem(32);
     line-height: 1.25;
   }
+}
+
+.section-title.section-title--wh {
+  background-color: #fff;
+  color: $pink2;
 }
 
 .section-title-main {
