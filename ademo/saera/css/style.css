@@ -186,7 +186,6 @@ a:hover {
 .text-bk {
   font-size: 1rem;
   line-height: 1.75;
-  font-family: "Noto Sans Japanese";
   font-weight: 300;
 }
 @media screen and (max-width: 767px) {
@@ -949,7 +948,7 @@ footer {
 
 .c-faq-q::before {
   position: absolute;
-  left: 23%;
+  left: 22%;
   top: 50%;
   transform: translateY(-50%);
   background-color: #FFDCDC; /* 背景色 */
@@ -982,6 +981,82 @@ footer {
 
 .c-faq-q.q-3::before {
   content: "Q3";
+}
+
+.c-faq-q.q-4::before {
+  content: "Q4";
+}
+
+.c-faq-q.q-5::before {
+  content: "Q5";
+}
+
+.c-faq-q.q-6::before {
+  content: "Q6";
+}
+
+.c-faq-q.q-7::before {
+  content: "Q7";
+}
+
+.c-faq-q.q-8::before {
+  content: "Q8";
+}
+
+.c-faq-q.q-9::before {
+  content: "Q9";
+}
+
+.c-faq-q.q-10::before {
+  content: "Q10";
+}
+
+.c-faq-q.q-11::before {
+  content: "Q11";
+}
+
+.c-faq-q.q-12::before {
+  content: "Q12";
+}
+
+.c-faq-q.q-13::before {
+  content: "Q13";
+}
+
+.c-faq-q.q-14::before {
+  content: "Q14";
+}
+
+.c-faq-q.q-15::before {
+  content: "Q15";
+}
+
+.c-faq-q.q-16::before {
+  content: "Q16";
+}
+
+.c-faq-q.q-17::before {
+  content: "Q17";
+}
+
+.c-faq-q.q-18::before {
+  content: "Q18";
+}
+
+.c-faq-q.q-19::before {
+  content: "Q19";
+}
+
+.c-faq-q.q-20::before {
+  content: "Q20";
+}
+
+.c-faq-q.q-21::before {
+  content: "Q21";
+}
+
+.c-faq-q.q-22::before {
+  content: "Q22";
 }
 
 .c-faq-q {
@@ -1568,7 +1643,7 @@ footer {
   padding: 0px 10px;
   position: relative;
   font-family: "Noto Sans Japanese";
-  font-weight: normal;
+  font-weight: 300;
 }
 @media screen and (max-width: 767px) {
   .sub-mv__main-title {
@@ -1942,4 +2017,570 @@ footer {
   .sub-mv__title-wrap.p-bust {
     top: 7%;
   }
+}
+
+.concept__inner {
+  background-image: url(../images/common/concept-bg.png);
+  background-size: cover;
+  padding-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .concept__inner {
+    background-image: url(../images/common/concept-bg-sp.png);
+    padding-top: 3.125rem;
+    margin-bottom: 3.125rem;
+  }
+}
+
+.concept__container {
+  display: flex;
+  margin-right: 10%;
+}
+@media screen and (max-width: 767px) {
+  .concept__container {
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.concept__container img {
+  max-width: 35%;
+  object-fit: cover;
+  margin-top: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .concept__container img {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+  }
+}
+
+.concept__text-rap {
+  position: relative;
+}
+
+.concept__text-rap::before {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 100%; /* 画像の幅 */
+  height: 2px; /* 画像の高さ */
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  bottom: 10%; /* 位置調整 */
+  left: 0%; /* 位置調整 */
+  border-bottom: 2px dotted #FF9AA2; /* ピンクの色 */
+}
+@media screen and (max-width: 1299px) {
+  .concept__text-rap::before {
+    bottom: 3%; /* 位置調整 */
+  }
+}
+@media screen and (max-width: 767px) {
+  .concept__text-rap::before {
+    bottom: -3%; /* 位置調整 */
+  }
+}
+
+.concept__title.section-title-main {
+  text-align: left;
+}
+
+.concept__title {
+  margin-bottom: 3.125rem;
+  letter-spacing: 0.08em;
+  position: relative; /* 擬似要素のために必要 */
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .concept__title {
+    font-size: 1.375rem;
+  }
+}
+
+.concept__title::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 2px dotted #FF9AA2; /* ピンクの色 */
+  margin-left: 10px; /* テキストと点線の間のスペース */
+}
+
+.concept__text {
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: "Noto Sans Japanese";
+  font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .concept__text {
+    font-size: 0.875rem;
+    line-height: 1.429;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.sub-mv__title-wrap.p-access {
+  max-width: 36.25rem;
+  left: 7%;
+}
+@media screen and (max-width: 767px) {
+  .sub-mv__title-wrap.p-access {
+    top: 7%;
+  }
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #A5A29D;
+  padding: 0.625rem;
+  text-align: left;
+  font-weight: 300;
+}
+
+.info-table th {
+  width: 9.375rem;
+}
+
+.access-step {
+  background-color: #FEF3F5;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.access-step-title {
+  background-color: #fff;
+  padding: 0.625rem;
+  border-radius: 50px;
+  box-shadow: inset 0px -3px 5px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+}
+
+.access-step-title h1 {
+  margin: 0;
+  color: #F59090;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  font-family: "Noto Sans Japanese";
+}
+
+.access-step-items {
+  margin-top: 3.125rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.access-step-items.access-step-items2 {
+  justify-content: center;
+}
+
+.access-step-items2 .step {
+  margin-left: 3.125rem;
+}
+
+.access-step-item {
+  width: 30%;
+  padding: 0.625rem;
+}
+
+.access-step-item img {
+  width: 100%;
+}
+
+.access-step-item p {
+  margin-top: 1.25rem;
+}
+
+.step {
+  position: relative;
+}
+
+.step::after {
+  content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 1.875rem; /* 画像の幅 */
+  height: 3.4375rem; /* 画像の高さ */
+  background-image: url("../images/common/step-arrow.png"); /* 追加したい画像のパス */
+  background-size: cover; /* 画像を要素に合わせて調整 */
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 27%; /* 位置調整 */
+  left: -15%; /* 位置調整 */
+}
+
+.sub-mv__title-wrap.p-contact {
+  left: 7%;
+}
+
+.contact {
+  background-color: #FEF3F5;
+  padding-bottom: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    padding-bottom: 3.125rem;
+  }
+}
+
+.section-title.contact__title {
+  padding: 3.125rem 4.375rem 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .section-title.contact__title {
+    padding: 1.875rem 1.875rem 3.75rem;
+  }
+}
+
+.contact__form {
+  margin-top: 3.125rem;
+}
+
+.form__label {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  padding-left: 1.875rem;
+  color: #F59090;
+  font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .form__label {
+    font-size: 1.25rem;
+  }
+}
+
+.form__wrap + .form__wrap {
+  margin-top: 1.875rem;
+}
+
+.form-input input {
+  padding: 1rem 2rem;
+  margin-top: 1.25rem;
+  width: 100%;
+  font-size: 0.9375rem;
+  line-height: 1;
+  border-radius: 0;
+  appearance: none;
+  background-image: none;
+  border-radius: 73px;
+  border: none;
+  box-shadow: inset 0px -3px 5px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+}
+@media screen and (max-width: 767px) {
+  .form-input input {
+    margin-top: 0.625rem;
+  }
+}
+
+.form-textarea textarea {
+  padding: 1rem 2rem;
+  margin-top: 1.25rem;
+  width: 100%;
+  height: 12.5rem;
+  font-size: 0.9375rem;
+  border-radius: 0;
+  border: none;
+  appearance: none;
+  background-image: none;
+  border-radius: 45px;
+  box-shadow: inset 0px -3px 5px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+}
+@media screen and (max-width: 767px) {
+  .form-textarea textarea {
+    margin-top: 0.625rem;
+  }
+}
+
+.contact__form-privacy {
+  margin-top: 3.75rem;
+  text-align: center;
+}
+
+.contact__form-privacy input + span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  color: #464646;
+}
+
+.form__submit {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.thanks {
+  background-image: url(../images/common/thanks-bg.png);
+  background-size: cover;
+  margin-top: 4.375rem;
+}
+@media screen and (max-width: 767px) {
+  .thanks {
+    background-image: url(../images/common/thanks-bg-sp.png);
+    margin-top: 5.9375rem;
+  }
+}
+
+.thanks__inner {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .thanks__inner {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+}
+
+.thanks__body {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 6.25rem 9.375rem;
+}
+@media screen and (max-width: 767px) {
+  .thanks__body {
+    padding: 1.875rem 1.25rem;
+  }
+}
+
+.thanks__text-l {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .thanks__text-l {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.thanks__text {
+  font-size: 2rem;
+  margin-top: 3.125rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .thanks__text {
+    margin-top: 0.625rem;
+    font-size: 1rem;
+  }
+}
+
+.sub-mv__title-wrap.p-facia {
+  max-width: 36.25rem;
+  left: 10%;
+  top: 7%;
+}
+@media screen and (max-width: 767px) {
+  .sub-mv__title-wrap.p-facia {
+    left: 5%;
+  }
+}
+
+.p-faq {
+  background-image: url(../images/common/c-faq-bg.png);
+  background-size: contain; /* 画像を要素に合わせて調整 */
+  background-repeat: repeat;
+  padding-bottom: 9.375rem;
+}
+@media screen and (max-width: 767px) {
+  .p-faq {
+    padding-bottom: 6.25rem;
+  }
+}
+
+.p-faq-p {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .p-faq-p {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.p-faq-btn-text {
+  margin-bottom: 1.25rem;
+  padding: 0 1.25rem;
+}
+
+.sub-mv__title-wrap.p-privacy {
+  max-width: 50rem;
+  left: 2%;
+  top: 3%;
+}
+@media screen and (max-width: 767px) {
+  .sub-mv__title-wrap.p-privacy {
+    left: 5%;
+  }
+}
+
+.policy-title {
+  font-size: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .policy-title {
+    font-size: 1.75rem;
+  }
+}
+
+.privacy {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  background-color: #FEF3F5;
+}
+@media screen and (max-width: 767px) {
+  .privacy {
+    padding-top: 3.125rem;
+  }
+}
+
+.policy-lead {
+  font-size: 1rem;
+}
+
+.policy-box {
+  padding: 0.9375rem;
+  padding-left: 1.875rem;
+  margin-top: 2rem;
+  background-color: #fff;
+  font-size: 2rem;
+  border-radius: 50px;
+  box-shadow: inset 0px -3px 5px 0px rgba(0, 0, 0, 0.31), -4px -4px 8px rgba(255, 255, 255, 0.65);
+}
+@media screen and (max-width: 767px) {
+  .policy-box {
+    font-size: 1.375rem;
+  }
+}
+
+.policy-box_title {
+  display: flex;
+  align-items: center;
+}
+
+.policy-box_number {
+  color: #EF657B;
+  white-space: nowrap;
+  padding-right: 0.625rem;
+}
+
+.policy-list-number {
+  counter-reset: number; /* カウンターをリセット */
+  margin-top: 1rem;
+}
+
+.policy-list-number > li {
+  padding-left: 1.5625rem;
+  margin-top: 1rem;
+  line-height: 1.786;
+  letter-spacing: 0.08em;
+  position: relative;
+  counter-increment: number; /* 各liごとにカウンターをインクリメント */
+}
+
+.policy-list-number > li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: counter(number) ". "; /* カウンター値を表示 */
+}
+
+.policy-list-inner {
+  counter-reset: inner-number; /* 内部カウンターをリセット */
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+}
+
+.policy-list-inner > li {
+  margin-top: 0.5rem;
+  line-height: 1.786;
+  letter-spacing: 0.08em;
+  position: relative;
+  counter-increment: inner-number; /* 内部リストのカウンターをインクリメント */
+}
+
+.policy-list-inner > li:before {
+  position: absolute;
+  top: 0;
+  left: -1.5625rem; /* 親リストの番号と揃えるために左にずらす */
+  content: counter(inner-number) ". "; /* 内部カウンター値を表示 */
+}
+
+.p-link {
+  color: blue; /* テキストの色 */
+  text-decoration: none; /* デフォルトの下線を削除 */
+  border-bottom: 1px solid blue; /* 青い下線を追加 */
+  display: inline; /* テキストの幅に合わせる */
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #716B6B;
+  padding: 8px;
+  font-weight: 300;
+}
+
+.custom-table th {
+  text-align: left;
+}
+
+.custom-table td {
+  text-align: left;
+}
+
+.custom-table .title-column {
+  width: 30%;
+}
+
+.custom-table .content-column {
+  width: 70%;
+}
+
+.p-btn-container.p-privacy {
+  background-color: #fff;
+}
+
+.mt-100 {
+  margin-top: 100;
+}
+
+.mt-32 {
+  margin-top: 2rem;
+}
+
+.mt-16 {
+  margin-top: 1rem;
+}
+
+.mt-24 {
+  margin-top: 1.5rem;
+}
+
+.ml-16 {
+  margin-left: 1rem;
+}
+
+.pl-16 {
+  padding-left: 1rem;
 }
