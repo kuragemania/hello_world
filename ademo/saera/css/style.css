@@ -2001,7 +2001,8 @@ footer {
 
 .sub-mv__title-wrap.p-facia {
   max-width: 36.25rem;
-  left: 2%;
+  left: 1%;
+  top: 7%;
 }
 
 .sub-mv__title-wrap.p-hair {
@@ -2379,13 +2380,13 @@ footer {
   }
 }
 
-.sub-mv__title-wrap.p-facia {
+.sub-mv__title-wrap.p-faq-mv {
   max-width: 36.25rem;
   left: 10%;
   top: 7%;
 }
 @media screen and (max-width: 767px) {
-  .sub-mv__title-wrap.p-facia {
+  .sub-mv__title-wrap.p-faq-mv {
     left: 5%;
   }
 }
@@ -2426,6 +2427,7 @@ footer {
 @media screen and (max-width: 767px) {
   .sub-mv__title-wrap.p-privacy {
     left: 5%;
+    top: 4%;
   }
 }
 
