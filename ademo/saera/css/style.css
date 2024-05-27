@@ -362,10 +362,22 @@ footer {
   margin-top: 1.875rem; /* ボタンの上にスペースを追加 */
   margin-left: 30%;
   align-self: center; /* ボタンを中央揃え */
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .c-concept-text-rap a {
     margin-left: 15%;
+  }
+}
+
+.c-concept-text-rap .c-btn-img img {
+  max-width: 70%;
+  padding-left: 25%;
+}
+@media screen and (max-width: 767px) {
+  .c-concept-text-rap .c-btn-img img {
+    max-width: 80%;
+    padding-left: 18%;
   }
 }
 
@@ -388,9 +400,9 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .worries::after {
-    bottom: -0.5%;
-    width: 45px;
-    height: 16px;
+    bottom: -0.8%;
+    width: 70px;
+    height: 25px;
   }
 }
 
@@ -433,6 +445,9 @@ footer {
   }
 }
 
+.worries-list__item-text {
+  text-align: center;
+}
 @media screen and (max-width: 767px) {
   .worries-list__item-text {
     margin-top: 1.25rem;
@@ -494,13 +509,26 @@ footer {
 }
 
 .c-reason-text-rap {
-  max-width: 40%;
-  margin-left: 1.25rem;
+  max-width: 32%;
+  margin-left: 2.5rem;
 }
 @media screen and (max-width: 767px) {
   .c-reason-text-rap {
     max-width: 100%;
     margin-left: 0rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.c-reason-text-rap.c-reason-text-rap2 {
+  margin-right: 2.5rem;
+  margin-left: 0rem;
+}
+@media screen and (max-width: 767px) {
+  .c-reason-text-rap.c-reason-text-rap2 {
+    max-width: 100%;
+    margin-left: 0rem;
+    margin-right: 1.25rem;
     padding: 0 1.25rem;
   }
 }
@@ -535,6 +563,11 @@ footer {
 .c-service-inner {
   padding-bottom: 6.25rem;
 }
+@media screen and (max-width: 767px) {
+  .c-service-inner {
+    padding-bottom: 3.125rem;
+  }
+}
 
 .c-service-items {
   margin-top: 6.25rem;
@@ -561,7 +594,7 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .c-service-item:not(:first-child) {
-    margin-top: 3.75rem;
+    margin-top: 5rem;
   }
 }
 
@@ -580,6 +613,39 @@ footer {
 @media screen and (max-width: 767px) {
   .c-service-item img {
     max-width: 90%;
+  }
+}
+
+.c-service-item .c-btn-img img {
+  max-width: 70%;
+  padding-left: 25%;
+}
+@media screen and (max-width: 767px) {
+  .c-service-item .c-btn-img img {
+    max-width: 80%;
+    padding-left: 18%;
+  }
+}
+
+.c-service-item .c-btn-img.c-btn-hair2 img {
+  max-width: 75%;
+  padding-left: 25%;
+}
+@media screen and (max-width: 767px) {
+  .c-service-item .c-btn-img.c-btn-hair2 img {
+    max-width: 80%;
+    padding-left: 18%;
+  }
+}
+
+.c-service-item .c-btn-img.c-btn-hair3 img {
+  max-width: 72%;
+  padding-left: 25%;
+}
+@media screen and (max-width: 767px) {
+  .c-service-item .c-btn-img.c-btn-hair3 img {
+    max-width: 80%;
+    padding-left: 18%;
   }
 }
 
@@ -837,10 +903,9 @@ footer {
 }
 
 .c-step-items::after {
-  content: ""; /* 擬似要素にはcontentプロパティが必須 */
   display: block; /* 画像のように扱うためにblockレベル要素に */
-  width: 43.625rem; /* 画像の幅 */
-  height: 1.2625rem; /* 画像の高さ */
+  width: 70%;
+  height: 3.11%;
   background-image: url("../images/common/stepvar.png"); /* 追加したい画像のパス */
   background-size: cover; /* 画像を要素に合わせて調整 */
   position: absolute; /* 親要素に対して絶対位置指定 */
@@ -855,6 +920,18 @@ footer {
     top: 0.5%; /* 位置調整 */
     left: 0%; /* 位置調整 */
   }
+}
+
+.c-step-inner {
+  position: relative;
+}
+
+.stepbar-pc {
+  width: 68%;
+  height: auto;
+  position: absolute;
+  top: 20%;
+  left: 16%;
 }
 
 @font-face {
@@ -1089,6 +1166,16 @@ footer {
   text-align: center; /* 最後のli要素を中央揃え */
 }
 
+.c-faq-item-btn {
+  width: 20%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .c-faq-item-btn {
+    width: 60%;
+  }
+}
+
 .c-access {
   background-color: #FEF3F5;
   padding-bottom: 9.375rem;
@@ -1103,6 +1190,7 @@ footer {
   display: flex;
   align-items: center;
   margin-top: 3.125rem;
+  justify-content: space-around;
 }
 @media screen and (max-width: 767px) {
   .c-access-rap {
@@ -1110,21 +1198,23 @@ footer {
   }
 }
 
-.c-access-rap img {
-  max-width: 50%;
+.c-access-rap iframe {
+  width: 40%;
 }
 @media screen and (max-width: 767px) {
-  .c-access-rap img {
-    max-width: 100%;
+  .c-access-rap iframe {
+    width: 100%;
   }
 }
 
 .c-access-text-rap {
+  width: 45%;
   letter-spacing: 0.08em;
 }
 @media screen and (max-width: 767px) {
   .c-access-text-rap {
     margin-top: 1.25rem;
+    width: 100%;
   }
 }
 
@@ -1132,12 +1222,14 @@ footer {
   margin-top: 1.875rem;
 }
 
-.c-access-text-rap a {
+.c-access-text-rap .c-btn-img {
+  display: block;
+  width: 62%;
   margin-top: 3.125rem;
-  margin-left: 1.25rem;
+  margin-left: 1.875rem;
 }
 @media screen and (max-width: 767px) {
-  .c-access-text-rap a {
+  .c-access-text-rap .c-btn-img {
     margin-left: 15%;
   }
 }
@@ -1309,33 +1401,16 @@ footer {
 }
 
 .header__nav-item.header__nav-item--contact a {
-  padding: 0.8125rem 3.4375rem;
   position: relative;
   height: initial;
-  color: #fff;
-  background-color: #EF657B;
-  letter-spacing: 0.08em;
-  border-radius: 26px;
-  border: 2px solid #ffffff;
-  box-shadow: inset -1px -1px 3px 0px rgba(0, 0, 0, 0.48), 0px 0px 0px 0px rgba(255, 255, 255, 0.65);
+  max-width: 10rem;
+  padding: 0;
 }
-@media screen and (max-width: 767px) {
-  .header__nav-item.header__nav-item--contact a {
-    padding: 0.8125rem 3.4375rem;
-  }
-}
-
-.header__nav-item.header__nav-item--contact.header__drawer-item--line a {
-  padding: 0.3125rem 2.5rem;
-  background-color: #65C178;
-}
-
 .header__nav-item--contact {
   position: relative;
 }
 
 .header__nav-item--contact a::after {
-  content: "";
   display: block;
   width: 1.25rem;
   height: 1.25rem;
@@ -1797,11 +1872,11 @@ footer {
 .btn-rv-link {
   color: #fff;
   letter-spacing: 0.08em;
-  padding: 1.875rem 0;
-  display: inline-block;
+  padding: 0rem 0;
+  display: block;
   border-radius: 76px;
   position: relative;
-  margin-top: 1.5rem;
+  margin-top: 0.625rem;
 }
 @media screen and (max-width: 767px) {
   .btn-rv-link {
@@ -1810,27 +1885,24 @@ footer {
 }
 
 .p-btn-rv .btn-rv-link {
-  background-color: #EF657B;
-  box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, 0.18), -6px -6px 10px rgba(255, 255, 255, 0.16);
-  padding-left: 0.625rem;
-  padding-right: 3.125rem;
+  max-width: 100%;
 }
 
+.p-btn-line {
+  margin-left: 3.125rem;
+}
 @media screen and (max-width: 767px) {
   .p-btn-line {
     margin-top: 1.875rem;
+    margin-left: 0rem;
   }
 }
 
 .p-btn-line .btn-rv-link {
-  background-color: #65C178;
-  box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, 0.18), -6px -6px 10px rgba(255, 255, 255, 0.16);
-  padding-left: 4.5rem;
-  padding-right: 5.125rem;
+  max-width: 100%;
 }
 
 .btn-rv-link::after {
-  content: "";
   display: block;
   width: 1.5625rem;
   height: 1.5625rem;
@@ -1842,7 +1914,6 @@ footer {
 }
 
 .p-btn-line .btn-rv-link::after {
-  content: "";
   background-image: url(../images/common/arrow-g.png);
 }
 
