@@ -1570,7 +1570,6 @@ footer {
 }
 
 .header__drawer {
-  padding: 14.25rem 0;
   display: none;
   position: absolute;
   z-index: 900;
@@ -1580,25 +1579,48 @@ footer {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(98, 58, 20, 0.95);
+  background-color: #fff;
   overflow-y: scroll;
   scrollbar-width: none;
+}
+
+.header__drawer-title {
+  background-color: #F4BCC5;
+  padding: 0.75rem 7.5rem;
 }
 
 .header__drawer::-webkit-scrollbar {
   display: none;
 }
 
+.header__drawer-nav {
+  padding-top: 1.875rem;
+}
+
+.header__drawer-item {
+  border-bottom: dotted 2px #F4BCC5;
+  margin: 0 1.25rem;
+}
+
 .header__drawer-item a {
-  padding: 0.9375rem 0;
+  padding: 1.25rem 0.625rem;
   display: block;
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #fff;
-  text-align: center;
+  color: #F4BCC5;
+  text-align: left;
   text-transform: uppercase;
+}
+
+.header__drawer-item-btn {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.header__nav-item.header__nav-item--contact.header__drawer-item-btn a {
+  max-width: 10.625rem;
 }
 
 .header__drawer-item.header__drawer-item--contact a::after {
