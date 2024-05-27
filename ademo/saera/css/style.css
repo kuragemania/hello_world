@@ -963,17 +963,47 @@ footer {
   }
 }
 
-.c-step-items::after {
-  display: block; /* 画像のように扱うためにblockレベル要素に */
-  width: 2px; /* 画像の幅 */
-  height: 100%; /* 画像の高さ */
+.step-1::before {
+  display: block;
+  width: 2px;
+  height: 108%;
   background-color: #F59090;
-  position: absolute; /* 親要素に対して絶対位置指定 */
-  top: 1%;
-  left: 3.5%;
+  position: absolute;
+  top: 3%;
+  left: -10%;
 }
 @media screen and (max-width: 767px) {
-  .c-step-items::after {
+  .step-1::before {
+    content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  }
+}
+
+.step-2::before {
+  display: block;
+  width: 2px;
+  height: 108%;
+  background-color: #F59090;
+  position: absolute;
+  top: 3%;
+  left: -10%;
+}
+@media screen and (max-width: 767px) {
+  .step-2::before {
+    content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  }
+}
+
+.step-3::before {
+  display: block;
+  width: 2px;
+  height: 99%;
+  background-color: #F59090;
+  position: absolute;
+  top: 3%;
+  left: -10%;
+}
+@media screen and (max-width: 767px) {
+  .step-3::before {
     content: ""; /* 擬似要素にはcontentプロパティが必須 */
   }
 }
@@ -1690,7 +1720,7 @@ footer {
 @media screen and (max-width: 767px) {
   .mv__btn-rap {
     padding: 0.625rem 3.75rem 0.625rem 0;
-    bottom: 15%;
+    bottom: 13%;
     width: 80%;
   }
 }
@@ -1988,6 +2018,28 @@ footer {
 .p-btn-line .btn-rv-text::after {
   right: -2.5rem; /* テキストの右側の位置 */
   transform: translateY(-50%) rotate(-55deg); /* 線の角度 */
+}
+
+.mv__title-wrap.p-top {
+  text-align-last: left;
+  line-height: 1.2;
+}
+@media screen and (max-width: 767px) {
+  .mv__title-wrap.p-top {
+    width: 78%;
+    top: 16%;
+    left: 59%;
+    right: 0%;
+  }
+}
+
+.p-top .mv__main-title {
+  font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .p-top .mv__main-title {
+    font-size: 1.75rem;
+  }
 }
 
 .p-btn-body.p-top {
