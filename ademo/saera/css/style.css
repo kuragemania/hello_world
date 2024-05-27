@@ -902,26 +902,6 @@ footer {
   }
 }
 
-.c-step-items::after {
-  display: block; /* 画像のように扱うためにblockレベル要素に */
-  width: 70%;
-  height: 3.11%;
-  background-image: url("../images/common/stepvar.png"); /* 追加したい画像のパス */
-  background-size: cover; /* 画像を要素に合わせて調整 */
-  position: absolute; /* 親要素に対して絶対位置指定 */
-  top: 8%; /* 位置調整 */
-  left: 15%; /* 位置調整 */
-}
-@media screen and (max-width: 767px) {
-  .c-step-items::after {
-    background-image: url("../images/common/stepvar-sp.png"); /* 追加したい画像のパス */
-    width: 1.5rem; /* 画像の幅 */
-    height: 73.75rem; /* 画像の高さ */
-    top: 0.5%; /* 位置調整 */
-    left: 0%; /* 位置調整 */
-  }
-}
-
 .c-step-inner {
   position: relative;
 }
@@ -932,6 +912,70 @@ footer {
   position: absolute;
   top: 20%;
   left: 16%;
+}
+
+.step-1::after {
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  font-size: 2rem;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: -2%;
+  left: -15%;
+}
+@media screen and (max-width: 767px) {
+  .step-1::after {
+    content: "⚫︎"; /* 擬似要素にはcontentプロパティが必須 */
+  }
+}
+
+.step-2::after {
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 20px; /* 画像の幅 */
+  height: 20px; /* 画像の高さ */
+  border-radius: 35px;
+  background-color: #fff;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 0%;
+  left: -13%;
+  border: 2px solid #F59090;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .step-2::after {
+    content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  }
+}
+
+.step-3::after {
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 20px; /* 画像の幅 */
+  height: 20px; /* 画像の高さ */
+  border-radius: 35px;
+  background-color: #fff;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 0%;
+  left: -13%;
+  border: 2px solid #F59090;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .step-3::after {
+    content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  }
+}
+
+.c-step-items::after {
+  display: block; /* 画像のように扱うためにblockレベル要素に */
+  width: 2px; /* 画像の幅 */
+  height: 100%; /* 画像の高さ */
+  background-color: #F59090;
+  position: absolute; /* 親要素に対して絶対位置指定 */
+  top: 1%;
+  left: 3.5%;
+}
+@media screen and (max-width: 767px) {
+  .c-step-items::after {
+    content: ""; /* 擬似要素にはcontentプロパティが必須 */
+  }
 }
 
 @font-face {
