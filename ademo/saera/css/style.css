@@ -318,6 +318,15 @@ footer {
   background-color: #FFDCDC;
 }
 
+.c-concept {
+  margin-bottom: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .c-concept {
+    margin-bottom: 3.125rem;
+  }
+}
+
 .c-concept-rap {
   margin-top: 6.25rem;
   margin-bottom: 3.125rem;
@@ -819,7 +828,7 @@ footer {
   }
 }
 
-.c-step {
+.c-step.c-step--beige {
   background-color: #FFFBF8;
 }
 
@@ -2509,6 +2518,17 @@ footer {
 .form__submit {
   margin-top: 1.25rem;
   text-align: center;
+}
+
+.contact__btn {
+  background-color: transparent;
+  border-color: transparent;
+  width: 35%;
+}
+@media screen and (max-width: 767px) {
+  .contact__btn {
+    width: 90%;
+  }
 }
 
 .thanks {
