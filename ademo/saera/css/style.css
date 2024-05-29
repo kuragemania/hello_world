@@ -1151,13 +1151,21 @@ footer {
 }
 
 .q-2,
-.q-3 {
+.q-3,
+.q-9,
+.q-16,
+.q-19,
+.q-22 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 @media screen and (max-width: 767px) {
   .q-2,
-.q-3 {
+.q-3,
+.q-9,
+.q-16,
+.q-19,
+.q-22 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
