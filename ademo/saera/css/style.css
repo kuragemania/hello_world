@@ -975,7 +975,7 @@ footer {
   width: 67%;
   height: auto;
   position: absolute;
-  top: 9.5%;
+  top: 19.5%;
   left: 16%;
 }
 
@@ -2398,6 +2398,10 @@ footer {
   .c-reason-text-rap.c-reason-text-rap2.bust-reason {
     margin-right: 0;
   }
+}
+
+.stepbar-pc.p-bust {
+  top: 10%;
 }
 
 .stepbar-pc2.p-bust {
