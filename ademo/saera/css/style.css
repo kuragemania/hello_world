@@ -575,6 +575,11 @@ footer {
 .c-reason-text-rap p {
   margin-top: 1.875rem;
 }
+@media screen and (max-width: 767px) {
+  .c-reason-text-rap p {
+    margin-top: 0.3125rem;
+  }
+}
 
 .c-service {
   background-image: url(../images/common/c-service-bg.png);
@@ -914,6 +919,16 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .c-step-text.c-step-text2::before {
+    display: none; /* 画像のように扱うためにblockレベル要素に */
+  }
+}
+
+.c-step-text.c-step-text-top::before {
+  height: 13.75rem; /* 画像の高さ */
+  bottom: 0%; /* 位置調整 */
+}
+@media screen and (max-width: 767px) {
+  .c-step-text.c-step-text-top::before {
     display: none; /* 画像のように扱うためにblockレベル要素に */
   }
 }
@@ -2331,12 +2346,6 @@ footer {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .p-facia h4 {
-    text-align: center;
-  }
-}
-
 .stepbar-pc.p-facia {
   top: 10%;
 }
@@ -2434,13 +2443,14 @@ footer {
 }
 
 .concept__container img {
-  max-width: 35%;
+  max-width: 480px;
+  width: 35%;
   object-fit: cover;
-  margin-top: 6.25rem;
+  margin-top: 3.125rem;
 }
 @media screen and (max-width: 767px) {
   .concept__container img {
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 3.125rem;
   }
