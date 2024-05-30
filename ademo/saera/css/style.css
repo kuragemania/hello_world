@@ -1198,8 +1198,10 @@ footer {
 @media screen and (max-width: 767px) {
   .c-faq-q::before {
     font-size: 0.875rem;
-    left: 5%;
+    left: 4%;
     padding: 1rem; /* パディングで円を作る */
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -1291,6 +1293,14 @@ footer {
   content: "Q22";
 }
 
+.c-faq-q.q-23::before {
+  content: "Q23";
+}
+
+.c-faq-q.q-24::before {
+  content: "Q24";
+}
+
 .c-faq-q {
   font-size: 1.75rem;
 }
@@ -1308,22 +1318,19 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .c-faq-a {
-    width: 99%;
+    width: 95%;
     margin-top: 1.5625rem;
     margin-bottom: 1.5625rem;
-    padding-left: 1.25rem;
+    padding-left: 14%;
     padding-right: 1.25rem;
   }
-}
-
-.c-faq-item:last-child {
-  padding-top: 1.875rem;
-  text-align: center; /* 最後のli要素を中央揃え */
 }
 
 .c-faq-item-btn {
   width: 100%;
   margin: 0 auto;
+  padding-top: 1.875rem;
+  text-align: center; /* 最後のli要素を中央揃え */
 }
 
 .c-faq-item-btn img {
@@ -1333,6 +1340,17 @@ footer {
 @media screen and (max-width: 767px) {
   .c-faq-item-btn img {
     width: 60%;
+  }
+}
+
+.faq-pd {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .faq-pd {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
 
@@ -2373,6 +2391,10 @@ footer {
   }
 }
 
+.stepbar-pc2.p-bust {
+  bottom: 44%;
+}
+
 .c-faq-q.bust-faq {
   padding-top: 2.1875rem;
   padding-bottom: 2.1875rem;
@@ -2841,12 +2863,22 @@ footer {
   background-image: url(../images/common/c-faq-bg.png);
   background-size: contain; /* 画像を要素に合わせて調整 */
   background-repeat: repeat;
-  padding-bottom: 9.375rem;
+  padding-bottom: 6.25rem;
 }
 @media screen and (max-width: 767px) {
   .p-faq {
-    padding-bottom: 6.25rem;
+    padding-bottom: 3.125rem;
   }
+}
+
+.p-faq.p-faq2 {
+  background-image: url(../images/common/c-faq-bg2.png);
+  background-size: contain; /* 画像を要素に合わせて調整 */
+  background-repeat: repeat;
+}
+
+.p-faq-body {
+  background-image: url(../images/common/faq-bg-body.png);
 }
 
 .p-faq-p {
@@ -2863,6 +2895,36 @@ footer {
 .p-faq-btn-text {
   margin-bottom: 1.25rem;
   padding: 0 1.25rem;
+}
+
+.section-title.p-faq-title {
+  font-size: 2rem;
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+}
+@media screen and (max-width: 767px) {
+  .section-title.p-faq-title {
+    font-size: 1.5rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+.section-title.p-faq-title2 {
+  font-size: 1.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.section-title.p-faq-title3 {
+  font-size: 1.5rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+@media screen and (max-width: 767px) {
+  .section-title.p-faq-title3 {
+    font-size: 1.125rem;
+  }
 }
 
 .sub-mv__title-wrap.p-privacy {
