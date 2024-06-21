@@ -234,6 +234,10 @@ a:hover {
   }
 }
 
+.section-title.section-title--pk6 {
+  background-color: #F59090;
+}
+
 .section-title-main {
   font-size: 2rem;
   color: #F59090;
@@ -1477,6 +1481,67 @@ footer {
 
 .service-slick .slick-dots li.slick-active button:before {
   color: #F59090;
+}
+
+.c-price {
+  background: repeating-linear-gradient(-45deg, #FEF3F5, #FEF3F5 2.5px, #ffffff 2.5px, #ffffff 5px);
+}
+
+.c-price-rap {
+  margin-top: 3.125rem;
+}
+
+.price-text {
+  text-align: center;
+  background-color: #fff;
+  color: #F59090;
+  padding: 1rem 0 1rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  font-weight: 200;
+}
+@media screen and (max-width: 767px) {
+  .price-text {
+    font-size: 0.875rem;
+    line-height: 1.429;
+  }
+}
+
+.price-container {
+  margin-top: 3.125rem;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.price-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 27%;
+  padding: 20px;
+  text-align: center;
+}
+
+.price-list li {
+  padding: 16px 0;
+  border-bottom: 2px dotted #F59090;
+}
+
+.price-list2 li {
+  padding: 16px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box1 {
+  height: 350px;
+}
+
+.box2 {
+  width: 33%;
 }
 
 .header {
