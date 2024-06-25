@@ -182,6 +182,7 @@ select::-ms-expand {
   font-size: 15px;
   margin: 0 auto;
   text-align: center;
+  font-weight: normal;
 }
 @media screen and (max-width: 768px) {
   .header__type {
@@ -196,7 +197,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .header__title {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
