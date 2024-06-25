@@ -71,8 +71,7 @@ ol {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 a {
@@ -162,11 +161,47 @@ select::-ms-expand {
   justify-content: space-between;
   height: inherit;
 }
+@media screen and (max-width: 1024px) {
+  .header__inner {
+    padding-left: 5px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .header__logo {
     width: 132px;
   }
+}
+
+.header__type,
+.header__title {
+  display: block;
+}
+
+.header__type {
+  font-size: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .header__type {
+    font-size: 12px;
+  }
+}
+
+.header__title {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 24px;
+  }
+}
+
+.header__name {
+  color: #fff;
 }
 
 .header__nav {
@@ -417,8 +452,7 @@ select::-ms-expand {
 }
 
 .swiper-slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .mv__title-wrap {
@@ -520,8 +554,7 @@ select::-ms-expand {
 }
 
 .concept__img-item {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   margin-top: 39px;
 }
@@ -596,8 +629,7 @@ select::-ms-expand {
   margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  -moz-column-gap: 35px;
-       column-gap: 35px;
+  column-gap: 35px;
   row-gap: 50px;
   justify-items: center;
 }
@@ -702,16 +734,14 @@ select::-ms-expand {
   margin-top: 39px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  -moz-column-gap: 35px;
-       column-gap: 35px;
+  column-gap: 35px;
   row-gap: 50px;
   justify-items: center;
 }
 @media screen and (max-width: 768px) {
   .service__cards {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 50px;
   }
 }
@@ -759,16 +789,16 @@ select::-ms-expand {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
   margin-top: 20px;
-  padding: 4px;
+  padding: 14px;
   font-size: 20px;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
+  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .service__card-text.service__card-text-small {
     font-size: 14px;
     margin-top: 10px;
-    padding: 2px;
+    padding: 8px;
   }
 }
 
@@ -826,14 +856,14 @@ select::-ms-expand {
   font-weight: 500;
   color: #141414;
   letter-spacing: 0.05em;
-  -moz-text-align-last: left;
-       text-align-last: left;
-  padding: 10px;
+  text-align-last: left;
+  text-align: justify;
+  padding: 14px;
 }
 @media screen and (max-width: 768px) {
   .service__item-text {
     font-size: 14px;
-    padding: 2px;
+    padding: 8px;
   }
 }
 
@@ -1074,8 +1104,7 @@ select::-ms-expand {
 }
 
 .contact__title-sub {
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
 }
 
 .contact__text {
@@ -1793,4 +1822,3 @@ dd label {
     display: block;
   }
 }
-/*# sourceMappingURL=style.css.map */
