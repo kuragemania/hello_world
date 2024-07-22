@@ -142,7 +142,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .md-show {
     display: block;
   }
@@ -408,7 +408,7 @@ footer {
 }
 
 .header.is-scroll {
-  height: 4.375rem;
+  height: 70px;
 }
 @media screen and (max-width: 767px) {
   .header.is-scroll {
