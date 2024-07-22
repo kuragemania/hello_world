@@ -55,11 +55,6 @@
       href="/images/common/apple-touch-icon.png"
     />
 
-    <!-- 後で消す -->
-    <meta
-      name="robots"
-      content="noindex"
-    />
     <!-- CSS -->
     <link
       rel="stylesheet"
@@ -111,19 +106,28 @@
   <body>
     <header class="header layout-header js-header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <h1 class="header__logo header__logo--pc">
           <a
             class="header__logo-link"
             href="/"
           >
             <img
+              src="./images/common/logo-pc.png"
+              alt="株式会社パスル"
+              class="md-none"
+            />
+            <img
               src="./images/common/logo.svg"
               alt="株式会社パスル"
+              class="md-show"
             />
           </a>
         </h1>
         <nav class="header__nav">
           <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/">TOP</a>
+            </li>
             <li class="header__nav-item">
               <a href="/about/">パスルについて</a>
             </li>
@@ -136,6 +140,16 @@
             <li class="header__nav-item">
               <a href="/company/">会社概要</a>
             </li>
+            <li
+              class="header__nav-item header__nav-item--contact header__nav-item--contact-c"
+            >
+              <a
+                href="/contact/"
+                target="_blank"
+                rel="noopener"
+                >お問い合わせ ▶︎</a
+              >
+            </li>
             <li class="header__nav-item header__nav-item--contact">
               <a
                 href="https://liff.line.me/2004588804-lRZkv9m9/landing?follow=%40692yhpgw&lp=vyJ021&liff_id=2004588804-lRZkv9m9"
@@ -147,6 +161,12 @@
           </ul>
         </nav>
         <div class="header-btn md-show">
+          <a
+            href="/contact/"
+            target="_blank"
+            rel="noopener"
+            >お問い合わせ ▶︎</a
+          >
           <a
             href="https://liff.line.me/2004588804-lRZkv9m9/landing?follow=%40692yhpgw&lp=vyJ021&liff_id=2004588804-lRZkv9m9"
             target="_blank"
@@ -173,6 +193,16 @@
               </li>
               <li class="header__drawer-item">
                 <a href="/company/">会社概要</a>
+              </li>
+              <li
+                class="header__drawer-item header__drawer-item--contact header__drawer-item--contact-c"
+              >
+                <a
+                  href="/contact/"
+                  target="_blank"
+                  rel="noopener"
+                  >お問い合わせ</a
+                >
               </li>
               <li class="header__drawer-item header__drawer-item--contact">
                 <a
@@ -320,7 +350,7 @@
           <div class="reason__title-wrap section-title__wrap">
             <h2 class="reason__title section-title__main">reason</h2>
             <p class="reason__title-sub section-title__sub">
-              <span>パルスが選ばれる</span><br class="md-show" /><span
+              <span>パスルが選ばれる</span><br class="md-show" /><span
                 ><strong class="u-color-red u-size-superLarge">3</strong
                 >つの理由</span
               >
