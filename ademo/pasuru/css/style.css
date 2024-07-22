@@ -398,7 +398,7 @@ footer {
 }
 
 .header {
-  height: 70px;
+  height: 75px;
   background-color: transparent;
 }
 @media screen and (max-width: 767px) {
@@ -408,7 +408,7 @@ footer {
 }
 
 .header.is-scroll {
-  height: 70px;
+  height: 75px;
 }
 @media screen and (max-width: 767px) {
   .header.is-scroll {
@@ -479,7 +479,7 @@ footer {
   content: ""; /* 擬似要素にはcontentプロパティが必須 */
   display: block; /* 画像のように扱うためにblockレベル要素に */
   width: 100%; /* 画像の幅 */
-  height: 70px; /* 画像の高さ */
+  height: 75px; /* 画像の高さ */
   background-color: #c40002;
   position: absolute; /* 親要素に対して絶対位置指定 */
   top: 0; /* 位置調整 */
