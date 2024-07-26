@@ -342,6 +342,7 @@ footer {
   margin-top: 6.25rem;
   margin-bottom: 3.125rem;
   display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .c-concept-rap {
@@ -579,12 +580,18 @@ footer {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .c-reason-text-rap.p-facia h4 {
+    text-align: center;
+  }
+}
+
 .c-reason-text-rap p {
   margin-top: 1.875rem;
 }
 @media screen and (max-width: 767px) {
   .c-reason-text-rap p {
-    margin-top: 0.3125rem;
+    margin-top: 0.625rem;
   }
 }
 
@@ -825,6 +832,7 @@ footer {
   margin-top: 3.125rem;
   display: flex;
   justify-content: space-between;
+  gap: 2.25rem;
 }
 @media screen and (max-width: 767px) {
   .c-before-items {
@@ -844,6 +852,28 @@ footer {
 @media screen and (max-width: 767px) {
   .c-before-item:not(:first-child) {
     margin-top: 2.5rem;
+  }
+}
+
+.c-concept-text-rap.c-before-text {
+  max-width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .c-concept-text-rap.c-before-text {
+    max-width: 100%;
+  }
+}
+
+.c-concept-rap.c-before-rap {
+  justify-content: space-evenly;
+}
+
+.c-before-text h4 {
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .c-before-text h4 {
+    margin-top: 30px;
   }
 }
 
