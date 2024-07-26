@@ -271,13 +271,41 @@ footer {
   padding: 6.25rem 2.5rem 6.25rem;
   margin: auto;
 }
+@media screen and (max-width: 767px) {
+  .c-footer__inner {
+    padding: 3.125rem 2.5rem 3.125rem;
+  }
+}
 
 .c-footer__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .c-footer__list {
+    flex-wrap: wrap;
+  }
+  .c-footer__listItem {
+    width: 48%; /* 2カラムにするために幅を調整 */
+    text-align: left;
+    margin: 0.5rem 1%; /* 左右の余白を追加 */
+  }
+  .c-footer__listItem a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  .c-footer__listItem a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
 .c-btn {
   padding: 0.875rem 6.25rem 0.875rem 1.875rem;
   display: inline-block;
