@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>コーディング効率化講座</title>
+    <meta name="description" content="トップページの説明" />
+    <meta name="keywords" content="キーワード" />
+    <!-- ogp -->
+    <meta property="og:title" content="サイト名" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="サイトのドメイン" />
+    <meta property="og:image" content="OGP IMAGE" />
+    <meta property="og:site_name" content="サイトのドメイン" />
+    <meta property="og:description" content="トップページの説明" />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <link rel="apple-touch-icon" href="" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header layout-header">
+      <div class="header__inner">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#">CONCEPT</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">NEWS</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">ROOMS</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">STORY</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">FOOD</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="header__logo">
+          <a href="#">
+            <img src="./images/common/logo.svg" alt="LOGO" />
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#">FACILITY</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">TOURIST SPOTS</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">GALLERY</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">ACCESS</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-list">
+              <li class="header__drawer-item">
+                <a href="#">CONCEPT</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">NEWS</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">ROOMS</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">STORY</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">FOOD</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">FACILITY</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">TOURIST SPOTS</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">GALLERY</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">ACCESS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- MV部分のHTML -->
+      <section class="mv">
+        <div class="mv__overlay">
+          <h1 class="mv__title">aha resort<br />Tokashiki</h1>
+        </div>
+      </section>
+
+      <section class="concept">
+        <div class="concept__inner inner mt-80">
+          <div class="concept__content">
+            <h2 class="title-main concept__title">CONCEPT</h2>
+            <p class="title-sub mt-30">
+              テキストテキストテキストテキストテキストテキスト
+            </p>
+            <div class="concept__image-container mt-30">
+              <img
+                src="/images/common/concept-img1.png"
+                alt="Image 1"
+                class="concept__image1"
+              />
+              <img
+                src="/images/common/concept-img2.png"
+                alt="Image 2"
+                class="concept__image2"
+              />
+            </div>
+            <p class="concept__text mt-30">
+              テキストテキストテキストテキストテキストテキスト<br />
+              テキストテキストテキストテキストテキストテキスト<br />
+              テキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="news__inner inner mt-80 pt-30 pb-30">
+          <h2 class="title-main news__title title-main--gold">NEWS</h2>
+          <ul class="news__list news-list">
+            <li class="news-list__item">
+              <a href="#">
+                <div class="news-list__item-meta">
+                  <time class="news-list__item-date" datetime="2023-05-10"
+                    >2023.05.10</time
+                  >
+                </div>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
+              </a>
+            </li>
+            <li class="news-list__item">
+              <a href="#">
+                <div class="news-list__item-meta">
+                  <time class="news-list__item-date" datetime="2023-05-10"
+                    >2023.05.10</time
+                  >
+                </div>
+                <p class="news-list__item-title">
+                  タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="rooms">
+        <div class="rooms__inner inner mt-80">
+          <h2 class="title-main rooms__title">ROOMS</h2>
+        </div>
+
+        <div class="slider-container mt-30">
+          <div class="js-room-slick">
+            <div class="slide">
+              <img src="./images/common/room-img1.png" alt="Room A" />
+              <h3>Room-A</h3>
+              <p>
+                お部屋から海が一望できます。プライベートバルコニーから望む絶景のオーシャンビューを楽しめるスイート。
+              </p>
+            </div>
+            <div class="slide">
+              <img src="./images/common/room-img1.png" alt="Room B" />
+              <h3>Room-B</h3>
+              <p>
+                モダンなインテリアと最新の設備が揃い、特別なひとときをお過ごしください。
+              </p>
+            </div>
+            <div class="slide">
+              <img src="./images/common/room-img1.png" alt="Room C" />
+              <h3>Room-C</h3>
+              <p>
+                広々とした空間でリラックスしながら、最高のひとときをお楽しみください。
+              </p>
+            </div>
+            <div class="slide">
+              <img src="./images/common/room-img1.png" alt="Room D" />
+              <h3>Room-D</h3>
+              <p>快適な空間と素晴らしい眺望を提供するスイートルームです。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="story__inner inner mt-80 pt-30 pb-30">
+          <h2 class="title-main story__title">STORY</h2>
+          <div class="story__container mt-30">
+            <img src="./images/common/story-img.png" alt="Story Image 1" />
+            <p class="story__text mt-30">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="food">
+        <div class="food__inner inner mt-80">
+          <h2 class="title-main food__title">FOOD</h2>
+        </div>
+        <div class="slider-container">
+          <div class="js-food-slick">
+            <div class="slide slide--food">
+              <img src="./images/common/food-img1.png" alt="Room A" />
+              <p class="mt-30">
+                お部屋から海が一望できます。プライベートバルコニーから望む絶景のオーシャンビューを楽しめるスイート。
+              </p>
+            </div>
+            <div class="slide slide--food">
+              <img src="./images/common/food-img2.png" alt="Room B" />
+              <p class="mt-30">
+                モダンなインテリアと最新の設備が揃い、特別なひとときをお過ごしください。
+              </p>
+            </div>
+            <div class="slide slide--food">
+              <img src="./images/common/food-img2.png" alt="Room B" />
+              <p class="mt-30">
+                モダンなインテリアと最新の設備が揃い、特別なひとときをお過ごしください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="facility">
+        <div class="facility__inner inner mt-120">
+          <h2 class="title-main facility__title">FACILITY</h2>
+          <p class="title-sm">施設一覧</p>
+        </div>
+        <div class="slider-container">
+          <div class="js-facility-slick">
+            <div class="slide slide--food">
+              <img src="./images/common/facility-img1.png" alt="Room A" />
+              <div class="slide__content">
+                <h3 class="slide__title">Bar</h3>
+                <p class="slide__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </div>
+            <div class="slide slide--food">
+              <img src="./images/common/facility-img2.png" alt="Room B" />
+              <div class="slide__content">
+                <h3 class="slide__title">Bar</h3>
+                <p class="slide__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </div>
+            <div class="slide slide--food">
+              <img src="./images/common/facility-img3.png" alt="Room B" />
+              <div class="slide__content">
+                <h3 class="slide__title">Bar</h3>
+                <p class="slide__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="spot">
+        <div class="spot__inner inner mt-80 pt-30 pb-50">
+          <h2 class="title-main spot__title title-main--gold">TOURIST SPOTS</h2>
+          <p class="title-sm title-sm--gold">周辺の見どころ</p>
+          <div class="spot__container mt-50">
+            <img src="./images/common/spot-img.png" alt="Spot Image 1" />
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="gallery__inner inner mt-80 pt-30 pb-50">
+          <h2 class="title-main gallery__title title-main--gold">GALLERY</h2>
+          <div class="gallery__container mt-50">
+            <img src="./images/common/gallery-img.png" alt="Gallery Image 1" />
+          </div>
+        </div>
+      </section>
+
+      <section class="access">
+        <div class="access__inner inner mt-80 pt-30 pb-50">
+          <h2 class="title-main access__title title-main--gold">ACCESS</h2>
+          <div class="access__container mt-50">
+            <div class="access__map-wrap">
+              <div class="access__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207763.07103716696!2d139.41831505122724!3d35.5463421778204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1688630714995!5m2!1sja!2sjp"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="access__info">
+              <address class="access__address">
+                〒123-4567<br />
+                東京都渋谷区1-2-3　渋谷ビル10F<br />
+                TEL:03-1234-5678<br />
+                FAX:03-1234-5679
+              </address>
+              <!-- <div class="access__btn-wrap">
+                <a class="access__btn" href="#">contact</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <img src="./images/common/access-bg.png" alt="Access Background" />
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
