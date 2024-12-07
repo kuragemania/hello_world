@@ -605,8 +605,8 @@ a:hover {
 
 .mv__title-wrap.school-mv {
   width: 40%;
-  padding-top: 9.375rem;
-  padding-bottom: 9.375rem;
+  padding-top: 11.25rem;
+  padding-bottom: 11.25rem;
   padding-left: 9.375rem;
 }
 @media screen and (max-width: 767px) {
