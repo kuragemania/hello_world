@@ -45,3 +45,10 @@ jQuery(function ($) {
     nextArrow: $(".js-service-slick-arrow-next"),
   });
 });
+
+jQuery(function ($) {
+  $(".js-faq-question").on("click", function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass("is-open");
+  });
+});
