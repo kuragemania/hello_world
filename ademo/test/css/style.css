@@ -619,6 +619,35 @@ a:hover {
   }
 }
 
+.mv-container.concept-mv {
+  background-image: url("../images/common/concept-mv-pc.png"); /* 背景画像の指定 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  background-size: cover; /* 要素全体にフィット */
+  background-position: center; /* 中央に配置 */
+}
+@media screen and (max-width: 767px) {
+  .mv-container.concept-mv {
+    background-image: url("../images/common/concept-mv-sp.png"); /* 背景画像の指定 */
+    background-color: #cfe0fa;
+  }
+}
+
+.mv__title-wrap.concept-mv {
+  width: 48%;
+  padding-top: 15.625rem;
+  padding-bottom: 15.625rem;
+  padding-left: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .mv__title-wrap.concept-mv {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
 .recommend {
   margin-top: 1.5rem;
 }
@@ -1550,5 +1579,458 @@ a:hover {
 
 .classroom__tel {
   font-size: 1.5rem;
+}
+
+.features {
+  background: repeating-linear-gradient(-45deg, #f2fdff, #f2fdff 5px, #ffffff 5px, #ffffff 10px);
+  padding-bottom: 80px;
+}
+
+.features__title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.features__title-item {
+  max-width: 31.25rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .features__title-item {
+    max-width: 15.625rem;
+  }
+}
+
+.features__item {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .features__item {
+    max-width: 21.875rem;
+  }
+}
+
+.reading {
+  background-color: #def8fe;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.reading__title-wrap {
+  position: relative; /* はみ出し配置を可能にする基準 */
+  background-color: #f9f9f9;
+  background-image: linear-gradient(to right, rgba(121, 121, 121, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(129, 129, 129, 0.1) 1px, transparent 1px);
+  background-size: 15px 15px;
+  box-shadow: 3.35px 3.72px 10px rgba(0, 0, 0, 0.13); /* 影の設定 */
+  z-index: 1; /* レイヤー優先度の指定 */
+}
+
+.reading__title-item {
+  padding-bottom: 80px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .reading__title-item {
+    padding-bottom: 60px;
+  }
+}
+
+.reading__title-item::after {
+  content: "";
+  position: absolute;
+  bottom: -30%; /* 垂直中央揃え */
+  right: 12%; /* テキストとの距離を調整 */
+  width: 8.125rem; /* 画像の幅 */
+  height: 8.125rem; /* 画像の高さ */
+  background-image: url("../images/common/boy.png"); /* 画像のパスを指定 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3; /* 他要素より上に配置 */
+}
+@media screen and (max-width: 767px) {
+  .reading__title-item::after {
+    width: 5rem; /* 画像の幅 */
+    height: 5rem; /* 画像の高さ */
+    bottom: -23%; /* 垂直中央揃え */
+    right: 0%; /* テキストとの距離を調整 */
+  }
+}
+
+.reading__title-text {
+  position: relative; /* 親要素を基準に移動可能にする */
+  font-size: 3.5rem; /* 文字サイズ */
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: #4ec2dd;
+  font-weight: bold;
+  z-index: 2; /* 他要素より上に配置 */
+  top: -40px; /* 上方向にはみ出させる */
+  left: 0%;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .reading__title-text {
+    font-size: 2rem; /* 文字サイズ */
+    top: -20px; /* 上方向にはみ出させる */
+  }
+}
+
+.reading__title-text::after {
+  content: "";
+  position: absolute;
+  top: 70%; /* 垂直中央揃え */
+  transform: translateY(-50%); /* 中央揃えの微調整 */
+  right: 13%; /* テキストとの距離を調整 */
+  width: 31.25rem; /* 画像の幅 */
+  height: 6.25rem; /* 画像の高さ */
+  background-image: url("../images/common/reading-line-a.png"); /* 画像のパスを指定 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3; /* 他要素より上に配置 */
+}
+@media screen and (max-width: 767px) {
+  .reading__title-text::after {
+    width: 12.5rem; /* 画像の幅 */
+    height: 3.125rem; /* 画像の高さ */
+    right: 0%; /* テキストとの距離を調整 */
+  }
+}
+
+.reading__title-text::before {
+  content: "";
+  position: absolute;
+  bottom: -300%; /* 垂直中央揃え */
+  transform: translateY(-50%); /* 中央揃えの微調整 */
+  left: 0%; /* テキストとの距離を調整 */
+  width: 31.25rem; /* 画像の幅 */
+  height: 4.375rem; /* 画像の高さ */
+  background-image: url("../images/common/reading-line-b.png"); /* 画像のパスを指定 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3; /* 他要素より上に配置 */
+}
+@media screen and (max-width: 767px) {
+  .reading__title-text::before {
+    width: 12.5rem; /* 画像の幅 */
+    height: 3.125rem; /* 画像の高さ */
+    bottom: -445%; /* 垂直中央揃え */
+  }
+}
+
+.reading__title-text span {
+  color: #ffd700; /* 黄色 */
+  text-shadow: 2px 2px 0 #00bfff, -2px 2px 0 #00bfff, 2px -2px 0 #00bfff, -2px -2px 0 #00bfff;
+  margin-right: 5px;
+}
+
+.reading__text {
+  padding-left: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .reading__text {
+    padding-left: 0rem;
+  }
+}
+
+.reading__cards {
+  margin-top: 100px;
+}
+
+.reading__card-items {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .reading__card-items {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+.reading-merit {
+  margin-top: 80px;
+}
+@media screen and (max-width: 767px) {
+  .reading-merit {
+    margin-top: 50px;
+    padding: 0 16px;
+  }
+}
+
+.improve {
+  background-image: radial-gradient(circle, #f5f5f5 2px, transparent 2px);
+  background-size: 15px 15px;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.improve::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  height: 2.25rem;
+  background-image: url(../images/common/colorfulframe-top.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .improve::before {
+    background-image: url("../images/common/colorfulframe-top-sp.png"); /* 画像のパスを指定 */
+  }
+}
+
+.improve::after {
+  content: "";
+  position: absolute;
+  bottom: -1%;
+  right: 0%;
+  width: 100%;
+  height: 2.25rem;
+  background-image: url(../images/common/colorfulframe-bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .improve::after {
+    background-image: url("../images/common/colorfulframe-bottom-sp.png"); /* 画像のパスを指定 */
+  }
+}
+
+.improve__title {
+  padding-top: 190px;
+  position: relative;
+  isolation: isolate; /* 子要素のz-indexの競合を防ぐ */
+}
+@media screen and (max-width: 767px) {
+  .improve__title {
+    padding-top: 60px;
+  }
+}
+
+.improve__title::after {
+  content: "";
+  position: absolute;
+  bottom: -8%;
+  right: 6%;
+  width: 8.75rem;
+  height: 8.75rem;
+  background-image: url(../images/common/green-dinosaur.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .improve__title::after {
+    width: 5rem;
+    height: 5rem;
+    bottom: 5%;
+    right: 0%;
+  }
+}
+
+.improve__title p {
+  font-size: 1.5rem;
+  margin-top: 50px;
+  position: relative; /* テキストをマーカーの上に表示 */
+  display: inline-block;
+  color: #000; /* テキストの色 */
+}
+@media screen and (max-width: 767px) {
+  .improve__title p {
+    font-size: 0.875rem;
+  }
+}
+
+.improve__title p::before {
+  content: ""; /* 擬似要素を作成 */
+  position: absolute;
+  bottom: 0; /* テキストの下に配置 */
+  left: 0;
+  width: 100%; /* テキスト全体の幅に合わせる */
+  height: 0.5em; /* マーカーの高さ */
+  background-color: #ffd700; /* マーカーの色（黄色） */
+  z-index: -1; /* テキストの後ろに表示 */
+}
+
+.improve-faq-list__item {
+  background-color: #4ec2dd;
+  box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.05);
+  border-radius: 37px;
+  border: 2.5px solid #4ec2dd;
+  overflow: hidden;
+}
+
+.improve-faq-list__item + .improve-faq-list__item {
+  margin-top: 1.25rem;
+}
+
+.improve-faq-list__item-question {
+  padding: 2.5rem 3.75rem 2.5rem 5rem;
+  position: relative;
+  font-size: 2rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-indent: -1.25rem;
+  cursor: pointer;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .improve-faq-list__item-question {
+    padding: 0.75rem 0.625rem 0.75rem 0.625rem;
+    font-size: 1.25rem;
+    text-indent: -1.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .improve-faq-list__item-question.improve-faq-list__item-question1 {
+    font-size: 1.125rem;
+  }
+}
+
+.improve-faq-list__item-question::before,
+.improve-faq-list__item-question::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 3.125rem;
+  width: 1.25rem;
+  height: 0.1875rem;
+  background: #fff;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .improve-faq-list__item-question::before,
+.improve-faq-list__item-question::after {
+    top: 50%;
+    right: 1.125rem;
+    width: 1.125rem;
+  }
+}
+
+.improve-faq-list__item-question::after {
+  transform: rotate(90deg);
+}
+
+.improve-faq-list__item-question.is-open::after {
+  transform: rotate(0deg);
+}
+
+.improve-faq-list__item-answer {
+  padding: 1.25rem 3.75rem 0.9375rem 3.75rem;
+  display: none;
+  font-size: 1.125rem;
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .improve-faq-list__item-answer {
+    padding: 0.9375rem 1.875rem 0.9375rem 1.875rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* 推奨セクション全体 */
+.answer__title {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #4ec2dd; /* タイトルの色 */
+  margin-bottom: 10px;
+  text-indent: -1.25rem;
+}
+@media screen and (max-width: 767px) {
+  .answer__title {
+    font-size: 1.125rem;
+    text-indent: 0rem;
+  }
+}
+
+.answer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .answer__list {
+    gap: 20px;
+  }
+}
+
+.answer__item {
+  display: flex; /* デフォルトは横並び */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .answer__item {
+    gap: 16px;
+  }
+}
+
+/* ラベル */
+.answer__label {
+  font-size: 1rem;
+  color: #fff;
+  padding: 2.5px 10px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 767px) {
+  .answer__label {
+    display: inline-block;
+    text-align: center; /* 中央揃え */
+  }
+}
+
+.answer__label--blue {
+  background-color: #0183cf;
+}
+
+.answer__label--green {
+  background-color: #62af4e;
+}
+
+.answer__label--green1 {
+  margin-left: 4.375rem;
+}
+@media screen and (max-width: 767px) {
+  .answer__label--green1 {
+    margin-left: 0rem;
+  }
+}
+
+.answer__label--red {
+  background-color: #f54949;
+}
+
+.answer__label--red1 {
+  margin-left: 1.125rem;
+}
+@media screen and (max-width: 767px) {
+  .answer__label--red1 {
+    margin-left: 0rem;
+  }
+}
+
+/* 説明文 */
+.answer__description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .answer__item {
+    flex-direction: column; /* 縦並び */
+    align-items: flex-start; /* 左揃え */
+  }
 }
 /*# sourceMappingURL=style.css.map */
