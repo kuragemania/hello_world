@@ -1,0 +1,60 @@
+:root {
+    --main-color: #f54949;
+    --main-bg-color: #fff7f7;
+    --sub-bg-color: #f57575;
+    --box-shadow-color: rgb(245, 73, 73,0.23);
+}
+
+main.base.syodo-hayagaki .top-concept__title.__change-img::after{
+    background-image: url(../images/common/pink-dinosaur.png);
+}
+
+main.base.syodo-hayagaki .course__title .top-concept__title.__change-img::after{
+    background-image: url(../images/common/red-parts.png);
+}
+
+main.base.syodo-hayagaki .info-block.youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+main.base.syodo-hayagaki .info-block.youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main.base.syodo-hayagaki .text-left{
+    text-align: left;
+}
+
+main.base.syodo-hayagaki .ml1{
+    margin-left: 1em;
+}
+
+main.base.syodo-hayagaki .mb1{
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 767px) {
+    main.base.syodo-hayagaki .info-block.youtube {
+        margin-top: 80%;
+    }
+    main.base.syodo-hayagaki .course__content {
+        margin-top: 0;
+    }
+
+    main.base.syodo-hayagaki .info-block.__left.__kakizome{
+        margin-top: 40%;
+    }
+
+    main.base.syodo-hayagaki .info-block.__left.__kakizome .info-title{
+        text-align: left;
+    }
+
+    main.base.syodo-hayagaki .course{
+        padding-bottom: 10%;
+    }
+}

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>ヒルズキッズ-英会話</title>
+    <meta name="description" content="トップページの説明" />
+    <meta name="keywords" content="キーワード" />
+    <!-- ogp -->
+    <meta property="og:title" content="サイト名" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="サイトのドメイン" />
+    <meta property="og:image" content="OGP IMAGE" />
+    <meta property="og:site_name" content="サイトのドメイン" />
+    <meta property="og:description" content="トップページの説明" />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <link rel="apple-touch-icon" href="" />
+    <!-- Gフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Rounded+1c&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/eikaiwa.css" />
+</head>
+
+<body>
+    <header class="header layout-header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="../">
+                    <img src="../images/common/logo.png" alt="LOGO" />
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                      <a href="#">top</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a href="../concept/">HILLS KIDS<span>ヒルズキッズとは</span></a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a href="../eikaiwa/">英会話</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a href="../syodo-hayagaki/">書道・速書き</a>
+                    </li>
+                    <li class="header__nav-item">
+                      <a href="../soroban-sokusan/">そろばん・速算</a>
+                    </li>
+                    <li class="header__nav-item header__nav-item--contact">
+                      <a href="../contact/" target="_blank" rel="noopener">
+                        <img src="../images/common/lesson-button.png" alt="Contact" />
+                      </a>
+                    </li>
+                    <li class="header__nav-item header__nav-item--contact">
+                      <a href="../recruit/" target="_blank" rel="noopener">
+                        <img src="../images/common/teacher-button.png" alt="Contact" />
+                      </a>
+                    </li>
+                  </ul>
+            </nav>
+            <button class="header__hamburger js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header__drawer js-drawer">
+                <nav class="header__drawer-nav">
+                    <ul class="header__drawer-list">
+                        <li class="header__drawer-item">
+                          <a href="../">top</a>
+                        </li>
+                        <li class="header__drawer-item">
+                          <a href="../concept/"
+                            >HILLS KIDS<span>ヒルズキッズとは</span></a
+                          >
+                        </li>
+                        <li class="header__drawer-item">
+                          <a href="../eikaiwa/">英会話</a>
+                        </li>
+                        <li class="header__drawer-item">
+                          <a href="../syodo-hayagaki/">書道・速書き</a>
+                        </li>
+                        <li class="header__drawer-item">
+                          <a href="../soroban-sokusan/">そろばん・速算</a>
+                        </li>
+                        <li class="header__drawer-item header__drawer-item--contact">
+                          <a href="../contact/" target="_blank" rel="noopener">
+                            <img src="../images/common/lesson-button.png" alt="Contact" />
+                          </a>
+                        </li>
+                        <li class="header__drawer-item header__drawer-item--contact">
+                          <a href="../recruit/" target="_blank" rel="noopener">
+                            <img
+                              src="../images/common/teacher-button.png"
+                              alt="Contact"
+                            />
+                          </a>
+                        </li>
+                      </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header__btn-sp md-show">
+            <div class="button-container">
+                <!-- 体験レッスン申し込みボタン -->
+                <a href="path/to/lesson-application-page">
+                    <img src="../images/common/lesson-button.png" alt="体験レッスン申し込み" class="button-image" />
+                </a>
+                <!-- スクール講師募集ボタン -->
+                <a href="path/to/instructor-recruitment-page">
+                    <img src="../images/common/teacher-button.png" alt="スクール講師募集" class="button-image" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="base eikaiwa">
+        <section class="mv">
+            <div class="mv__inner">
+                <div class="mv-container eikaiwa-mv">
+                    <div class="mv__title-wrap  eikaiwa-mv p-top">
+                        <img src="../images/common/eikaiwa-title-pc.png" alt="" class="md-none" />
+                        <img src="../images/common/eikaiwa-title-sp.png" alt="" class="md-show" />
+                    </div>
+                </div>
+                <div class="striped-pattern"></div>
+            </div>
+        </section>
+        <div class="info-section">
+            <div class="info-block __left inner">
+                <div class="info-image">
+                    <img src="https://placehold.jp/450x300.png" alt="省略">
+                </div>
+                <div class="info-text">
+                    <h3 class="info-title"><span>外国人講師が教える！</span><br>「ヒルズキッズの英会話」とは</h3>
+                    <p class="info-description text">
+                        個別対応なので、学年、年齢にとらわれず一人ひとりにあったペースで学べて、初めてでも安心。<br>グループレッスンもプライベートレッスンも同じ外国人講師が担当するので、通うほどに英語で会話することが楽しくなります！
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="capability-section">
+            <div class="capability__inner inner">
+                <h2 class="capability-title">こんな能力が身に付きます</h2>
+                <div class="capability-list-wrap">
+                    <dl class="capability-list">
+                        <dt class="capability-list-title"></dt>
+                        <dd class="capability-list-text">英語って楽しい！という感覚が身に付く</dd>
+                    </dl>
+                    <dl class="capability-list">
+                        <dt class="capability-list-title"></dt>
+                        <dd class="capability-list-text">楽しく学ぶことで、自主的に学ぶ力を身につける</dd>
+                    </dl>
+                    <dl class="capability-list">
+                        <dt class="capability-list-title"></dt>
+                        <dd class="capability-list-text">大きく数をとらえる「概算・概数」の能力を高め、分析・判断力がつく</dd>
+                    </dl>
+                    <dl class="capability-list">
+                        <dt class="capability-list-title"></dt>
+                        <dd class="capability-list-text">創造性や考える力を伸ばす！</dd>
+                    </dl>
+                    <dl class="capability-list">
+                        <dt class="capability-list-title"></dt>
+                        <dd class="capability-list-text">「聞く・話す・読む・書く」の４技能をバランスよく伸ばせる！</dd>
+                    </dl>
+                    <dl class="capability-list">
+                        <dt class="capability-list-title"></dt>
+                        <dd class="capability-list-text">テスト対策に向けた英文法・必須英単語と実践的な会話力習得 ができる（中・高生クラス）</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <section class="top-concept __lesson">
+            <div class="top-concept__inner inner">
+                <div class="section-title-wrap top-concept__title __change-img">
+                    <h2 class="section-title-text">レッスン内容</h2>
+                </div>
+                <div class="info-block __mt01 inner">
+                    <div class="info-image">
+                        <img src="https://placehold.jp/330x330.png" alt="省略">
+                    </div>
+                    <div class="info-text">
+                        <h3 class="info-title">幼児クラス</h3>
+                        <p class="info-description text">
+                            歌やゲームで、体を動かしながら英語を身につけます。<br>
+                            「英語って楽しい」という感覚を持てるような工夫をたくさんご用意。<br>
+                            楽しく学ぶことで、好奇心を刺激し、創造性や考える力を育みます。<br>
+                            外国人講師から学ぶことで、英語を聞く耳と発音力を養います。
+                        </p>
+                    </div>
+                </div>
+                <div class="info-block __mt01 inner">
+                    <div class="info-image">
+                        <img src="https://placehold.jp/330x330.png" alt="省略">
+                    </div>
+                    <div class="info-text">
+                        <h3 class="info-title">小学生クラス</h3>
+                        <p class="info-description text">
+                            外国人講師と日本人講師がタッグを組みレッスン。<br>
+                            「聞く・話す・読む・書く」をバランスよく伸ばします。<br>
+                            外国人講師のレッスンではリスニング力とスピーキング力を。<br>
+                            フォニックスに力を入れるとともに、カードやゲームを通してコミュニケーションが取れる環境です。<br>
+                            日本人講師のレッスンでは「読み・書き」をしっかりと学びます。<br>
+                            テキストを使って単語や文法などきちんと理解できるように手厚くサポートしています。
+                        </p>
+                    </div>
+                </div>
+                <div class="info-block __mt01 inner">
+                    <div class="info-image">
+                        <img src="https://placehold.jp/330x330.png" alt="省略">
+                    </div>
+                    <div class="info-text">
+                        <h3 class="info-title">中・高生クラス</h3>
+                        <p class="info-description text">
+                            日本人講師の文法解説とテスト対策を40分<br>
+                            外国人講師とのマンツーマン英会話を20分<br>
+                            で構成されたレッスンです。一人ひとりに合わせたレッスンできめ細かくサポートできます。
+                        </p>
+                    </div>
+                </div>
+                <div class="info-block __mt01 inner __adult">
+                    <div class="info-image">
+                        <img src="https://placehold.jp/330x330.png" alt="省略">
+                    </div>
+                    <div class="info-text">
+                        <h3 class="info-title">ハッピータイムレッスン</h3>
+                        <p class="info-description text">
+                            お子さんが学校へ行っている間の時間を使って、英会話スキルを身につけませんか？<br>
+                            11:00〜14:00の間でのレッスンとなります。
+                            <br><br>
+                            希望に合わせた日常会話や時事英語などお好きな内容でレッスンが受けられます。<br>
+                            使いたいテキストがあればお持ち込みも可能です！<br>
+                            ・オンラインレッスン可
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course">
+            <div class="course__inner inner">
+                <h2 class="course__title">
+                    <div class="section-title-wrap top-concept__title __change-img">
+                        <h2 class="section-title-text">5つのこだわり</h2>
+                    </div>
+                </h2>
+                <ul class="top-concept__img-grid">
+                    <li class="__grid-item">
+                        <h3 class="__grid-title">熟練の外国人講師がメインで担当</h3>
+                        <p class="__grid-text">
+                            レッスン経験の豊富な外国人講師がメインで担当いたします。<br>
+                            ネイティブの発音を聞く耳を育て、リスニング・スピーキング両方の能力を伸ばします。
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <h3 class="__grid-title">無料のフォロー<br>アップレッスン</h3>
+                        <p class="__grid-text">
+                            日本人講師がしっかりとサポートしますので、授業の完全理解ができます！<br>
+                            小学生クラスでは、テキストを使用して、単語や文法の習得ができるように手厚くサポート
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <h3 class="__grid-title">無料のフォロー<br>アップレッスン</h3>
+                        <p class="__grid-text">
+                            毎月１回、無料でフォローアップレッスンを行っています。<br>学習漏れをなくして、着実にステップアップしましょう！
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <h3 class="__grid-title">振替レッスン<br>あり！</h3>
+                        <p class="__grid-text">
+                            どうしても用事があって、レッスンに参加できない…そんなこともあるかと思います。<br>
+                            振替レッスンを受けることができるので、無駄になりません。
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <h3 class="__grid-title">少人数制で<br>個別に対応</h3>
+                        <p class="__grid-text">
+                            レッスンは、個別対応なので、学年、年齢にとらわれず一人ひとりに合ったペースで授業をすすめることができます。英会話を習うのははじめてという方も安心です。
+                        </p>
+                    </li>
+                </ul>
+                <div class="course__content __bottom">
+                    <ul class="top-concept__img-grid __bottom">
+                        <li>
+                            <div class="info-image">
+                                <img src="https://placehold.jp/310x310.png" alt="Image 1">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-image">
+                                <img src="https://placehold.jp/310x310.png" alt="Image 1">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-image">
+                                <img src="https://placehold.jp/310x310.png" alt="Image 1">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="top-concept">
+            <div class="top-concept__inner inner">
+                <div class="section-title-wrap top-concept__title __change-img">
+                    <h2 class="section-title-text">お客様の声</h2>
+                </div>
+                <ul class="top-concept__img-grid __customer">
+                    <li class="__grid-item">
+                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
+                        <h3 class="__grid-title">〇〇 〇〇様</h3>
+                        <p class="__grid-text">
+                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
+                        <h3 class="__grid-title">〇〇 〇〇様</h3>
+                        <p class="__grid-text">
+                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
+                        <h3 class="__grid-title">〇〇 〇〇様</h3>
+                        <p class="__grid-text">
+                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
+                        <h3 class="__grid-title">〇〇 〇〇様</h3>
+                        <p class="__grid-text">
+                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                        </p>
+                    </li>
+                    <li class="__grid-item">
+                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
+                        <h3 class="__grid-title">〇〇 〇〇様</h3>
+                        <p class="__grid-text">
+                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="course __detail">
+            <div class="course__inner inner">
+                <h2 class="course__title">
+                    <div class="section-title-wrap top-concept__title __change-img">
+                        <h2 class="section-title-text">レッスン料金</h2>
+                    </div>
+                </h2>
+                <div class="detail-list-wrap">
+                    <div class="class-tables">
+                        <!-- PC用 -->
+                        <table class="pc-table">
+                            <tr>
+                                <th>クラス</th>
+                                <th>コース</th>
+                                <th>年齢</th>
+                                <th>時間</th>
+                                <th>講師</th>
+                                <th>定員</th>
+                                <th>授業料/月</th>
+                            </tr>
+                            <tr>
+                                <td>リトルクラス</td>
+                                <td>幼児英会話</td>
+                                <td>2歳半～6歳</td>
+                                <td>30分~40分</td>
+                                <td>ネイティブ講師のみ</td>
+                                <td>4名</td>
+                                <td>10,100円</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">キッズクラス</td>
+                                <td>英会話 + 英文法<br>
+                                    (初級～中級)
+                                </td>
+                                <td>小学生</td>
+                                <td>60分</td>
+                                <td>ネイティブ講師40分<br>
+                                    日本人講師20分
+                                </td>
+                                <td>4名</td>
+                                <td>11,700円</td>
+                            </tr>
+                            <tr>
+                                <td>英会話 + 英文法<br>
+                                    (上級)
+                                </td>
+                                <td>小学生</td>
+                                <td>60分</td>
+                                <td>ネイティブ講師40分<br>
+                                    日本人講師20分
+                                </td>
+                                <td>4名</td>
+                                <td>14,000円</td>
+                            </tr>
+                            <tr>
+                                <td>ジュニアクラス</td>
+                                <td>英会話 + 英文法<br>
+                                    (中学生レベル)</td>
+                                <td></td>
+                                <td>60分</td>
+                                <td>ネイティブ講師40分<br>
+                                    日本人講師20分</td>
+                                <td>3名</td>
+                                <td>16,300円</td>
+                            </tr>
+                            <tr>
+                                <td>文法クラス</td>
+                                <td>英会話<br>
+                                    (英検対応)</td>
+                                <td></td>
+                                <td>60分</td>
+                                <td>日本人講師</td>
+                                <td></td>
+                                <td>10,400円<br>
+                                    <small>(LGクラスと併用の場合は
+                                        2,500円オフ)</small></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">大人クラス</td>
+                                <td>ハッピータイム<br>
+                                    週1回
+                                </td>
+                                <td></td>
+                                <td>30分</td>
+                                <td>ネイティブ講師</td>
+                                <td></td>
+                                <td>9,000円</td>
+                            </tr>
+                            <tr>
+                                <td>ハッピータイム<br>
+                                    週2回
+                                </td>
+                                <td></td>
+                                <td>30分</td>
+                                <td>ネイティブ講師</td>
+                                <td></td>
+                                <td>13,200円</td>
+                            </tr>
+                        </table>
+                        
+                        <!-- SP用-->
+                        <div class="class-section">
+                            <div class="class-title">リトルクラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>幼児英会話</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td>2歳半～6歳</td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>30分~40分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>ネイティブ講師のみ</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td>4名</td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>10,100円</td>
+                                </tr>
+                            </table>
+                            <div class="class-title">キッズクラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>英会話 + 英文法<br>
+                                        (初級～中級)</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td>小学生</td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>60分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>ネイティブ講師40分<br>
+                                        日本人講師20分</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td>4名</td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>11,700円</td>
+                                </tr>
+                            </table>
+                            <div class="class-title">キッズクラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>英会話 + 英文法<br>
+                                        (上級)</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td>小学生</td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>60分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>ネイティブ講師40分<br>
+                                        日本人講師20分</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td>4名</td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>14,000円</td>
+                                </tr>
+                            </table>
+                            <div class="class-title">ジュニアクラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>英会話 + 英文法<br>
+                                        (中学生レベル)</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>60分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>ネイティブ講師40分<br>
+                                        日本人講師20分</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td>3名</td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>16,300円</td>
+                                </tr>
+                            </table>
+                            <div class="class-title">文法クラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>英会話<br>
+                                        (英検対応)</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>60分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>日本人講師</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>10,400円<br>
+                                        <small>(LGクラスと併用の場合は 2,500円オフ)</small></td>
+                                </tr>
+                            </table>
+                            <div class="class-title">大人クラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>ハッピータイム<br>
+                                        週1回</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>30分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>ネイティブ講師</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>9,000円</td>
+                                </tr>
+                            </table>
+                            <div class="class-title">大人クラス</div>
+                            <table class="class-details">
+                                <tr>
+                                    <th>コース</th>
+                                    <td>ハッピータイム<br>
+                                        週2回</td>
+                                </tr>
+                                <tr>
+                                    <th>年齢</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>時間</th>
+                                    <td>30分</td>
+                                </tr>
+                                <tr>
+                                    <th>講師</th>
+                                    <td>ネイティブ講師</td>
+                                </tr>
+                                <tr>
+                                    <th>定員</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>授業料/月</th>
+                                    <td>13,200円</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p style="text-align: left;">
+                            ※表示金額は全て税込となります。<br>
+                            ※すべてのグループレッスンの新規クラスは１名より開講させていただきます。<br>
+                            ただし、リトルクラスの関しましては、生徒が１名の場合は３０分、２名以上の場合は４０分の授業時間になります。<br>
+                            ※青葉台校：毎週火・水・木・金・土<br>
+                            時間：時間は曜日により異なりますのでご相談ください。
+                        </p>
+                        </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="cta-container">
+            <p class="cta-text">
+                <span class="dotted-line"></span>
+                まずはお気軽に見学・体験！
+                <span class="dotted-line"></span>
+            </p>
+            <a href="#" class="cta-button">
+                <img src="../images/common/cta-btn.png" alt="体験レッスン申し込み" class="md-none" />
+                <img src="../images/common/cta-btn-sp.png" alt="体験レッスン申し込み" class="md-show" />
+            </a>
+        </div>
+        <footer>
+            <div class="footer__inner">
+                <img src="../images/common/footer-img.png" alt="" class="md-none" />
+                <img src="../images/common/footer-img-sp.png" alt="" class="md-show" />
+        </footer>
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+:root {
+    --main-color: #90cb28;
+    --main-bg-color: #f9fff1;
+    --sub-bg-color: #a9d868;
+    --box-shadow-color: rgb(144, 203, 40,0.23);
+}
+
+main.base.soroban-sokusan .top-concept__title.__change-img::after{
+    background-image: url(../images/common/blue-dinosaur.png);
+}
+
+main.base.soroban-sokusan .course__title .top-concept__title.__change-img::after{
+    background-image: url(../images/common/green-parts.png);
+}

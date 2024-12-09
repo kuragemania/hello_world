@@ -1,0 +1,131 @@
+:root {
+    --main-color: #ff7800;
+    --main-bg-color: #fff9ed;
+    --sub-bg-color: #ffd100;
+    --box-shadow-color: rgb(255, 120, 0,0.23);
+}
+
+main.base.eikaiwa .top-concept__title.__change-img::after{
+    background-image: url(../images/common/green-dinosaur.png);
+}
+
+main.base.eikaiwa .course__title .top-concept__title.__change-img::after{
+    background-image: url(../images/common/og-parts.png);
+}
+
+main.base.eikaiwa .capability-section .capability-list-text{
+    margin-left: calc((1.3rem)* 3* -1);
+}
+
+main.base.eikaiwa .info-block.__mt01.inner.__adult{
+    position: relative;
+}
+
+main.base.eikaiwa .info-block.__mt01.inner.__adult::before{
+    position: absolute;
+    content: "大人も学べる！";
+    top: 0;
+    left: 0;
+    font-size: 1.3rem;
+    transform: rotate(-30deg);
+}
+
+/* 以降、レッスン料金用 */
+@media screen and (min-width: 769px) {
+    .class-section {
+        margin-bottom: 0;
+    }
+    
+    .class-title {
+        display: none;
+    }
+
+    .class-details {
+        display: none;
+    }
+
+    .pc-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .pc-table th,
+    .pc-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .pc-table th {
+        background-color: #f8f8f8;
+        white-space: nowrap;
+    }
+
+    .pc-table tr:first-child th {
+        background-color: #FFF3E0;
+    }
+    }
+
+@media screen and (max-width: 767px) {
+    main.base.eikaiwa .capability-section .capability-list-text{
+        margin-left: 0;
+    }
+
+    main.base.eikaiwa .course__content{
+        margin-top: 100%;
+    }
+
+    main.base.eikaiwa  .course.__detail .section-title-text{
+        text-align: center;
+    }
+
+    /*  */
+    .pc-table {
+        display: none;
+    }
+
+    .class-section {
+        margin-bottom: 15px;
+    }
+
+    .class-title {
+        background-color: #FFF3E0;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .class-details {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .class-details tr{
+        display: flex;
+        border-top: 1px solid #ddd;
+    }
+
+    .class-title:nth-child(n+2){
+        margin-top: 10%;
+    }
+
+    .class-details tr:last-child{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .class-details th,
+    .class-details td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .class-details th {
+        padding: 8px;
+        border-right: 1px solid #ddd;
+    }
+
+    .class-details td {
+        padding: 8px;
+    }
+}

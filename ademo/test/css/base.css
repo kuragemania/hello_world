@@ -1,0 +1,497 @@
+main.base .info-section{
+    background-image: radial-gradient(circle, #f5f5f5 2px, transparent 2px);
+    background-color: unset;
+    background-size: 15px 15px;
+    padding: 0 0 350px 0;
+}
+
+main.base .info-block.__left{
+    flex-direction: row-reverse;
+}
+main.base .info-block{
+    margin-top: 80px;
+}
+
+main.base .capability-section .capability__inner{
+    margin-top: -250px;
+    padding-bottom: 80px;
+}
+
+main.base .capability-section .capability-title{
+    color: var(--main-color);
+    font-size: 2rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+main.base .capability-section .capability-title:before,
+main.base .capability-section .capability-title:after {
+    content: '';
+    position: absolute;
+    top: 65px;
+    left: 28%;
+    width: 88px;
+    transform: rotate(-125deg);
+    transform-origin: left top;
+    border: 0;
+    background-image: radial-gradient(circle, var(--main-color) 50%, white 50%);
+    background-size: 8px 8px;
+    background-repeat: repeat-x;
+    height: 8px;
+}
+
+main.base .capability-section .capability-title:after{
+    transform: rotate(-54deg);
+    left: auto;
+    right: 19%;
+    top: 60px;
+}
+
+main.base .capability-section .capability-list-wrap{
+    background-color: var(--main-bg-color);
+    box-shadow: 5.03px 6.22px 0 var(--box-shadow-color);
+    border-radius: 15px;
+    padding: 60px 20px;
+    margin-top: 2rem;
+}
+
+main.base .capability-section .capability-list{
+    display: flex;
+    margin-top: 1.3rem;
+    margin-left: 5rem;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .capability-section .capability-list-title,
+main.base .capability-section .capability-list-text{
+    font-size: 1.3rem;
+}
+
+main.base .capability-section .capability-list-text{
+    padding-left: 1.5rem;
+}
+
+main.base .capability-section .capability-list-title{
+    min-width: calc((1.3rem) * 3);
+    position: relative;
+}
+
+main.base .capability-section .capability-list-title:before{
+    position: absolute;
+    content: '';
+    top: 0.2rem;
+    left: -3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 0.4rem;
+}
+
+main.base .capability-section .capability-list-title:after{
+    position: absolute;
+    content: '';
+    width: 0.9rem;
+    height: 0.5rem;
+    top: 0.6rem;
+    left: -2.7rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    transform: rotate(-45deg);
+}
+
+main.base .info-title{
+    padding: 0;
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+
+main.base .info-title span{
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+main.base .info-image{
+    box-shadow: 5.03px 6.22px 0 var(--box-shadow-color);
+}
+
+main.base .top-concept__title.__change-img::after{
+    top: 28%;
+}
+
+main.base .top-concept{
+    background-color: #f2fdff;
+    background-image: none;
+}
+
+main.base .course::after{
+    bottom: -1%;
+}
+
+main.base .course__title{
+    padding-top: 100px;
+}
+
+main.base .course__title .section-title-text::after{
+    content: none;
+    
+}
+
+main.base .course__title .top-concept__title.__change-img::after{
+    top: 47%;
+    width: 5rem;
+    height: 5rem;
+}
+
+main.base .course__title .section-title-text{
+    background-color: var(--main-color);
+}
+
+main.base .course{
+    background-color: #f9f9f9;
+    background-image: linear-gradient(to right, rgba(121, 121, 121, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(129, 129, 129, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+main.base .top-concept__img-grid{
+    padding: 0 20px;
+}
+
+main.base .top-concept__img-grid.__bottom{
+    padding: 0;
+}
+
+main.base .top-concept__img-grid{
+    row-gap: 26px;
+    margin-top: 40px;
+}
+
+main.base .top-concept__img-grid li{
+    box-shadow: 5.03px 6.22px 0 var(--box-shadow-color);
+}
+
+main.base .top-concept__img-grid li.__grid-item{
+    background-color: var(--main-bg-color);
+}
+
+main.base .top-concept__img-grid{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+main.base .top-concept__img-grid.__bottom{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main.base .__grid-item {
+    border-radius: 15px;
+    padding: 40px 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main.base .__grid-item::before {
+    content: "こだわり";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--sub-bg-color);
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 44px;
+    left: 34px;
+    font-size: 14px;
+    padding-bottom: 20px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-item:nth-child(1)::after {
+    content: "1";
+    position: absolute;
+    top: 77px;
+    left: 64px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-item:nth-child(2)::after {
+    content: "2";
+    position: absolute;
+    top: 77px;
+    left: 64px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-item:nth-child(3)::after {
+    content: "3";
+    position: absolute;
+    top: 77px;
+    left: 64px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-item:nth-child(4)::after {
+    content: "4";
+    position: absolute;
+    top: 77px;
+    left: 64px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-item:nth-child(5)::after {
+    content: "5";
+    position: absolute;
+    top: 77px;
+    left: 64px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0.8rem 0;
+    margin-left: 1rem;
+    line-height: 1.5;
+    min-height: 2em;
+    grid-column: 2 / 4;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main.base .__grid-text {
+    line-height: 1.8;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    min-height: 7em;
+    grid-column: 1 / 4;
+}
+
+main.base .top-concept__img-grid.__customer{
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+}
+
+main.base .top-concept__img-grid.__customer .__grid-item:before,
+main.base .top-concept__img-grid.__customer .__grid-item:after{
+    display: none;
+}
+
+main.base .top-concept__img-grid.__customer .__grid-title{
+    font-size: 1.4rem;
+}
+
+main.base .course.__detail{
+    background-image: radial-gradient(circle, #f5f5f5 2px, transparent 2px);
+    background-color: unset;
+    background-size: 15px 15px;
+}
+
+main.base .course.__detail:before,
+main.base .course.__detail:after{
+    display: none;
+}
+
+main.base .course.__detail .detail-list-wrap{
+    margin-top: 80px;
+    padding: 0 20px;
+}
+
+main.base .course.__detail .detail-list-parent{
+    display: flex;
+    border-top: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+}
+
+main.base .course.__detail .detail-list-parent:last-child{
+    border-bottom: 1px solid #bfbfbf;
+}
+
+main.base .course.__detail .detail-list-parent .detail-list-title,
+main.base .course.__detail .detail-list-parent .detail-list-child{
+    padding: 1rem;
+}
+
+main.base .course.__detail .detail-list-parent .detail-list-title{
+    min-width: 30%;
+    background-color: var(--main-bg-color);
+}
+main.base .course.__detail .detail-list-parent .detail-list-child span{
+    display: inline-block;
+    min-width: 8em;
+}
+
+/* ##########################################
+レスポンシブ用
+########################################## */
+
+@media screen and (max-width: 767px){
+    main.base .info-block.__left {
+        flex-direction: column;
+    }
+
+    main.base .info-title{
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    main.base .info-title span{
+        font-size: 1.2rem;
+    }
+
+    main.base .top-concept.__lesson .info-title{
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    main.base .top-concept__title.__change-img::after{
+        scale: 0.8;
+    }
+
+    main.base .capability-section .capability-list{
+        flex-direction: column;
+    }
+
+    main.base .capability-section .capability-list-title, main.base .capability-section .capability-list-text{
+        font-size: 1.0rem;
+    }
+
+    main.base .capability-section .capability__inner{
+        margin-top: -290px;
+    }
+
+    main.base .capability-section .capability-title{
+        font-size: 1.6rem;
+    }
+
+    main.base .capability-section .capability-title:before, main.base .capability-section .capability-title:after{
+        scale: 0.6;
+        left: 5%;
+        top: 135%;
+    }
+    
+    main.base .capability-section .capability-title:after{
+        left: auto;
+        right: -18%;
+        top: 120%;
+    }
+    
+    main.base .capability-section .capability-list-wrap{
+        padding: 60px 20px;
+    }
+
+    main.base .capability-section .capability-list-text{
+        padding: 0;
+    }
+
+    main.base .top-concept__img-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main.base .top-concept__img-grid li{
+        overflow: visible;
+    }
+
+    main.base .top-concept__img-grid.__bottom li{
+        box-shadow: none;
+    }
+
+    main.base .__grid-title{
+        grid-column: 1 / 4;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    main.base .__grid-item::before{
+        left: 50%;
+        top: -10%;
+        transform: translate(-50%);
+    }
+
+    main.base .__grid-item:nth-child(1)::after,
+    main.base .__grid-item:nth-child(2)::after,
+    main.base .__grid-item:nth-child(3)::after,
+    main.base .__grid-item:nth-child(4)::after,
+    main.base .__grid-item:nth-child(5)::after{
+        left: 50%;
+        top: -2.5%;
+        transform: translate(-50%);
+    }
+
+    main.base .course__title{
+        padding-top: 20%;
+    }
+
+    main.base .top-concept__img-grid{
+        row-gap: 5%;
+        margin-top: 20%;
+    }
+
+    main.base .course__content{
+        margin-top: 60%;
+    }
+
+    main.base .course{
+        padding-bottom: 35%;
+    }
+
+    main.base .course.__detail{
+        padding-bottom: 20%;
+    }
+
+    main.base .top-concept__img-grid.__bottom{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main.base .top-concept__inner{
+        padding-top: 30%;
+    }
+
+    main.base .top-concept__img-grid.__customer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main.base .top-concept__img-grid.__customer{
+        row-gap: 30px;
+    }
+
+    main.base .top-concept__img-grid.__customer .__grid-img{
+        grid-column: 2 / 3;
+    }
+
+    main.base .course.__detail .section-title-text{
+        text-align: left;
+    }
+
+    main.base .course.__detail .detail-list-wrap{
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    main.base .course.__detail .detail-list-wrap ul{
+        text-align: left;
+    }
+
+    main.base .course.__detail .detail-list-parent{
+        flex-direction: column;
+    }
+}
+

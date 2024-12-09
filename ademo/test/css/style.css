@@ -677,6 +677,93 @@ a:hover {
   }
 }
 
+.mv-container.soroban-sokusan-mv {
+  background-image: url("../images/common/soroban-mv-pc.png"); /* 背景画像の指定 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  background-size: cover; /* 要素全体にフィット */
+  background-position: center; /* 中央に配置 */
+}
+@media screen and (max-width: 767px) {
+  .mv-container.soroban-sokusan-mv {
+    background-image: url("../images/common/soroban-mv-sp.png"); /* 背景画像の指定 */
+    background-color: #cfe0fa;
+  }
+}
+
+.mv__title-wrap.soroban-sokusan-mv {
+  width: 50%;
+  padding-top: 14.0625rem;
+  padding-bottom: 14.0625rem;
+  padding-left: 3.125rem;
+}
+@media screen and (max-width: 767px) {
+  .mv__title-wrap.soroban-sokusan-mv {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+.mv-container.syodo-hayagaki-mv {
+  background-image: url("../images/common/syodo-mv-pc.png"); /* 背景画像の指定 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  background-size: cover; /* 要素全体にフィット */
+  background-position: center; /* 中央に配置 */
+}
+@media screen and (max-width: 767px) {
+  .mv-container.syodo-hayagaki-mv {
+    background-image: url("../images/common/syodo-mv-sp.png"); /* 背景画像の指定 */
+    background-color: #cfe0fa;
+  }
+}
+
+.mv__title-wrap.syodo-hayagaki-mv {
+  width: 55%;
+  padding-top: 14.0625rem;
+  padding-bottom: 14.0625rem;
+  padding-left: 3.125rem;
+}
+@media screen and (max-width: 767px) {
+  .mv__title-wrap.syodo-hayagaki-mv {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+.mv-container.eikaiwa-mv {
+  background-image: url("../images/common/eikaiwa-mv-pc.png"); /* 背景画像の指定 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  background-size: cover; /* 要素全体にフィット */
+  background-position: center; /* 中央に配置 */
+}
+@media screen and (max-width: 767px) {
+  .mv-container.eikaiwa-mv {
+    background-image: url("../images/common/eikaiwa-mv-sp.png"); /* 背景画像の指定 */
+    background-color: #cfe0fa;
+  }
+}
+
+.mv__title-wrap.eikaiwa-mv {
+  width: 48%;
+  padding-top: 15.625rem;
+  padding-bottom: 15.625rem;
+  padding-left: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .mv__title-wrap.eikaiwa-mv {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
 .recommend {
   margin-top: 1.5rem;
 }
@@ -2545,7 +2632,7 @@ a:hover {
 
 .business-area {
   padding-top: 200px;
-  padding-bottom: 500px;
+  padding-bottom: 550px;
   background-image: url("../images/common/bg-business-area-pc.png");
   background-size: cover; /* 幅と高さのどちらかが埋まるまで拡大 */
   background-position: center; /* 中央配置 */
