@@ -480,7 +480,7 @@ a:hover {
 }
 
 .header__drawer {
-  padding: 14.25rem 0;
+  padding: 6.25rem 0;
   display: none;
   position: absolute;
   z-index: 900;
@@ -490,7 +490,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(98, 58, 20, 0.95);
+  background-color: rgba(78, 194, 221, 0.95);
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -502,26 +502,14 @@ a:hover {
 .header__drawer-item a {
   padding: 0.9375rem 0;
   display: block;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.05em;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-}
-
-.header__drawer-item.header__drawer-item--contact a::after {
-  content: "";
-  margin-bottom: 0.3125rem;
-  margin-left: 1.25rem;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  display: inline-block;
-  background-image: url(./../images/common/contact-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  margin: 0 auto;
 }
 
 .header__btn-sp {
@@ -761,6 +749,35 @@ a:hover {
     padding-bottom: 25rem;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
+  }
+}
+
+.mv-container.contact-mv {
+  background-image: url("../images/common/contact-mv-pc.png"); /* 背景画像の指定 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  background-size: cover; /* 要素全体にフィット */
+  background-position: center; /* 中央に配置 */
+}
+@media screen and (max-width: 767px) {
+  .mv-container.contact-mv {
+    background-image: url("../images/common/contact-mv-sp.png"); /* 背景画像の指定 */
+    background-color: #cfe0fa;
+  }
+}
+
+.mv__title-wrap.contact-mv {
+  width: 35%;
+  padding-top: 17.1875rem;
+  padding-bottom: 17.1875rem;
+  padding-left: 6.25rem;
+}
+@media screen and (max-width: 767px) {
+  .mv__title-wrap.contact-mv {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 28.125rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
   }
 }
 
@@ -2821,5 +2838,97 @@ a:hover {
 .thought__staff-imgs--bule {
   background-color: #4ec2dd;
   padding: 40px 25px;
+}
+
+.contact__inner {
+  background-image: radial-gradient(circle, #f5f5f5 2px, transparent 2px);
+  background-size: 15px 15px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact__title {
+  font-size: 2rem;
+  color: #4ec2dd;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .contact__title {
+    font-size: 1.5rem;
+  }
+}
+
+.contact__text-top {
+  text-align: right;
+}
+
+/* 基本設定 */
+.form__container {
+  background-color: #eafaff;
+  border: 2px solid #4ec2dd;
+  border-radius: 32px;
+}
+
+.form__group {
+  display: flex;
+}
+
+.form__group label {
+  color: #fff;
+  min-width: 200px;
+  background-color: #4ec2dd;
+  padding: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.form__group select,
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form__date-group {
+  display: flex;
+  gap: 10px;
+}
+
+.form__date-item {
+  flex: 1;
+}
+
+.form__phone-group,
+.form__email-group {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.form__submit {
+  text-align: center;
+}
+
+.form__submit button {
+  background-color: #90cb28;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .form__date-group {
+    flex-direction: column;
+  }
+  .form__phone-group,
+.form__email-group {
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
