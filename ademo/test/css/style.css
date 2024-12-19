@@ -301,7 +301,7 @@ a:hover {
 }
 @media screen and (max-width: 767px) {
   .header {
-    height: 2.5rem;
+    height: 3.125rem;
   }
 }
 
@@ -324,7 +324,7 @@ a:hover {
 }
 @media screen and (max-width: 767px) {
   .header__logo {
-    max-width: 4.625rem;
+    max-width: 5.625rem;
   }
 }
 
@@ -377,10 +377,11 @@ a:hover {
   height: inherit;
   display: flex;
   align-items: center;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1;
   color: #fff;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
@@ -680,8 +681,8 @@ a:hover {
 
 .mv__title-wrap.soroban-sokusan-mv {
   width: 50%;
-  padding-top: 14.0625rem;
-  padding-bottom: 14.0625rem;
+  padding-top: 8.125rem;
+  padding-bottom: 8.125rem;
   padding-left: 3.125rem;
 }
 @media screen and (max-width: 767px) {
@@ -708,9 +709,9 @@ a:hover {
 }
 
 .mv__title-wrap.syodo-hayagaki-mv {
-  width: 55%;
-  padding-top: 14.0625rem;
-  padding-bottom: 14.0625rem;
+  width: 52%;
+  padding-top: 8.125rem;
+  padding-bottom: 8.125rem;
   padding-left: 3.125rem;
 }
 @media screen and (max-width: 767px) {
@@ -1041,8 +1042,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-radius: 40px; /* 角を丸くする */
-  box-shadow: 5.03px 6.22px 0 rgba(78, 194, 221, 0.23); /* ドロップシャドウ */
-  overflow: hidden; /* 画像が枠からはみ出さないようにする */
 }
 @media screen and (max-width: 767px) {
   .top-concept__img-grid li {
@@ -1050,7 +1049,7 @@ a:hover {
   }
 }
 
-.top-concept__img-grid img {
+.top-concept__img-grid .top-concept__img-grid-item {
   width: 100%;
   height: auto;
   display: block;
@@ -1163,9 +1162,7 @@ a:hover {
 
 /* 画像部分 */
 .info-image {
-  box-shadow: 5.03px 6.22px 0 rgba(78, 194, 221, 0.23); /* ドロップシャドウ */
   border-radius: 40px;
-  overflow: hidden; /* 画像が枠からはみ出さないようにする */
 }
 
 .info-image img {
@@ -1442,12 +1439,12 @@ a:hover {
   }
 }
 
-.school__title {
+.section-title-wrap.school__title {
   position: relative;
   margin-bottom: 80px;
 }
 @media screen and (max-width: 767px) {
-  .school__title {
+  .section-title-wrap.school__title {
     margin-bottom: 50px;
   }
 }
@@ -1496,8 +1493,6 @@ a:hover {
   width: 100%; /* グレー画像の幅 */
   height: auto; /* アスペクト比維持 */
   margin-bottom: 20px;
-  border-radius: 40px;
-  box-shadow: 5.03px 6.22px 0 rgba(78, 194, 221, 0.23);
 }
 
 .school-item__name {
@@ -1506,6 +1501,7 @@ a:hover {
   color: #4ec2dd;
   text-decoration: none;
   position: relative;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 .school-item__name::after {
@@ -1548,6 +1544,33 @@ a:hover {
   width: 100%;
 }
 
+.c-footer__inner {
+  max-width: 76.25rem;
+  padding: 0rem 2.5rem 6.25rem;
+  margin: auto;
+}
+
+.c-footer__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  color: #4ec2dd;
+}
+
+@media (max-width: 768px) {
+  .c-footer__list {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  .c-footer__listItem {
+    width: 48%;
+    text-align: left;
+    margin: 0.5rem 1%;
+  }
+}
 .classroom {
   background-image: radial-gradient(circle, #f5f5f5 2px, transparent 2px);
   background-size: 15px 15px;
@@ -1821,13 +1844,17 @@ a:hover {
   z-index: 1; /* レイヤー優先度の指定 */
 }
 
+.reading__inner.inner {
+  max-width: 50rem;
+}
+
 .reading__title-item {
   padding-bottom: 80px;
   position: relative;
 }
 @media screen and (max-width: 767px) {
   .reading__title-item {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 }
 
@@ -1835,7 +1862,7 @@ a:hover {
   content: "";
   position: absolute;
   bottom: -30%; /* 垂直中央揃え */
-  right: 12%; /* テキストとの距離を調整 */
+  right: -7%; /* テキストとの距離を調整 */
   width: 8.125rem; /* 画像の幅 */
   height: 8.125rem; /* 画像の高さ */
   background-image: url("../images/common/boy.png"); /* 画像のパスを指定 */
@@ -1875,7 +1902,7 @@ a:hover {
   position: absolute;
   top: 70%; /* 垂直中央揃え */
   transform: translateY(-50%); /* 中央揃えの微調整 */
-  right: 13%; /* テキストとの距離を調整 */
+  right: -10%; /* テキストとの距離を調整 */
   width: 31.25rem; /* 画像の幅 */
   height: 6.25rem; /* 画像の高さ */
   background-image: url("../images/common/reading-line-a.png"); /* 画像のパスを指定 */
@@ -1896,7 +1923,7 @@ a:hover {
   position: absolute;
   bottom: -300%; /* 垂直中央揃え */
   transform: translateY(-50%); /* 中央揃えの微調整 */
-  left: 0%; /* テキストとの距離を調整 */
+  left: -7%; /* テキストとの距離を調整 */
   width: 31.25rem; /* 画像の幅 */
   height: 4.375rem; /* 画像の高さ */
   background-image: url("../images/common/reading-line-b.png"); /* 画像のパスを指定 */
@@ -1908,7 +1935,7 @@ a:hover {
   .reading__title-text::before {
     width: 12.5rem; /* 画像の幅 */
     height: 3.125rem; /* 画像の高さ */
-    bottom: -445%; /* 垂直中央揃え */
+    bottom: -417%; /* 垂直中央揃え */
   }
 }
 
@@ -1968,8 +1995,8 @@ a:hover {
   width: 100%;
   height: 2.25rem;
   background-image: url(../images/common/colorfulframe-top.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat;
 }
 @media screen and (max-width: 767px) {
   .improve::before {
@@ -1980,13 +2007,13 @@ a:hover {
 .improve::after {
   content: "";
   position: absolute;
-  bottom: -1%;
+  bottom: -0.5%;
   right: 0%;
   width: 100%;
   height: 2.25rem;
   background-image: url(../images/common/colorfulframe-bottom.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat;
 }
 @media screen and (max-width: 767px) {
   .improve::after {
@@ -2009,8 +2036,8 @@ a:hover {
 .improve__title::after {
   content: "";
   position: absolute;
-  bottom: -8%;
-  right: 6%;
+  bottom: 15%;
+  right: 4%;
   width: 8.75rem;
   height: 8.75rem;
   background-image: url(../images/common/green-dinosaur.png);
@@ -2021,8 +2048,8 @@ a:hover {
   .improve__title::after {
     width: 5rem;
     height: 5rem;
-    bottom: 5%;
-    right: 0%;
+    bottom: 33%;
+    right: -5%;
   }
 }
 
@@ -2193,7 +2220,7 @@ a:hover {
 }
 
 .answer__label--green1 {
-  margin-left: 4.375rem;
+  margin-left: 4.0625rem;
 }
 @media screen and (max-width: 767px) {
   .answer__label--green1 {
@@ -2206,7 +2233,7 @@ a:hover {
 }
 
 .answer__label--red1 {
-  margin-left: 1.125rem;
+  margin-left: 1rem;
 }
 @media screen and (max-width: 767px) {
   .answer__label--red1 {
@@ -2231,7 +2258,7 @@ a:hover {
   background-image: radial-gradient(circle, #f5f5f5 2px, transparent 2px);
   background-size: 15px 15px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 @media screen and (max-width: 767px) {
   .thought {
@@ -2244,11 +2271,21 @@ a:hover {
 .thought__staff-imgs {
   padding: 0 25px;
 }
+@media screen and (max-width: 767px) {
+  .thought__staff-imgs {
+    padding: 0 15px;
+  }
+}
 
 .thought__staff-img-wrap {
   display: flex;
   gap: 20px;
   justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .thought__staff-img-wrap {
+    gap: 15px;
+  }
 }
 
 .thought__staff-img-wrap.md-show {
@@ -2264,8 +2301,9 @@ a:hover {
   }
 }
 .thought__text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-top: 80px;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .thought__text {
@@ -2314,8 +2352,8 @@ a:hover {
 
 .business {
   background-color: #fffdec;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .c-title {
@@ -2402,7 +2440,7 @@ a:hover {
 }
 
 .recruit-merit {
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -2504,6 +2542,7 @@ a:hover {
 }
 @media screen and (max-width: 767px) {
   .recruit-merit-list__item-title {
+    text-align: center;
     font-size: 1.25rem;
   }
 }
@@ -2522,7 +2561,7 @@ a:hover {
 
 .persona {
   background-color: #e8fbff;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 100px;
 }
 
@@ -2543,6 +2582,10 @@ a:hover {
     flex-direction: column;
     gap: 50px;
   }
+}
+
+.persona-list__item {
+  width: 100%;
 }
 
 .persona-list__item-img {
@@ -2567,11 +2610,11 @@ a:hover {
   color: #4ec2dd;
   padding: 0 20px;
   margin-top: 20px;
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .persona-list__item-title {
     font-size: 1.25rem;
-    text-align: center;
   }
 }
 
@@ -2661,6 +2704,12 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .work__text1.work__text1a {
+    padding: 40px 10px 20px 10px;
+  }
+}
+
 .work__text2 {
   padding: 20px 20px;
   color: 22ee2e;
@@ -2699,11 +2748,11 @@ a:hover {
 }
 
 .staff-list__item-text {
-  padding: 0px 20px 10px 20px;
+  padding: 0px 18px 20px 18px;
 }
 @media screen and (max-width: 767px) {
   .staff-list__item-text {
-    padding: 0px 30px 10px 30px;
+    padding: 0px 30px 20px 30px;
   }
 }
 
@@ -2763,7 +2812,7 @@ a:hover {
 
 .recruit-guide {
   background-color: #fffdec;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 100px;
 }
 
@@ -2813,6 +2862,11 @@ a:hover {
   list-style: none;
   padding: 30px;
 }
+@media screen and (max-width: 767px) {
+  .recruit-guide__list {
+    padding-bottom: 0;
+  }
+}
 
 .recruit-guide__item {
   display: flex;
@@ -2825,7 +2879,8 @@ a:hover {
 @media screen and (max-width: 767px) {
   .recruit-guide__item {
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    align-items: start;
   }
 }
 
@@ -2853,7 +2908,7 @@ a:hover {
 @media screen and (max-width: 767px) {
   .recruit-guide__value {
     width: 100%;
-    text-align: center;
+    margin-left: 10px;
   }
 }
 
@@ -2895,9 +2950,14 @@ a:hover {
     min-width: auto; /* ラベルの最小幅解除 */
   }
 }
-.thought__staff-imgs--bule {
+.thought__staff-imgs--blue {
   background-color: #4ec2dd;
   padding: 40px 25px;
+}
+@media screen and (max-width: 767px) {
+  .thought__staff-imgs--blue {
+    padding: 40px 15px;
+  }
 }
 
 .contact {
@@ -2999,7 +3059,7 @@ a:hover {
 .form__group select,
 .form__group input,
 .form__group textarea {
-  width: 40%;
+  width: 45%;
   margin: 1.25rem 0.625rem;
   border: 1px solid #656565;
 }
@@ -3353,6 +3413,21 @@ a:hover {
     background-image: url(../images/common/pink-dinosaur.png);
     background-size: contain;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form__group .select-box .classroom-select {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .classroom-select-text {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 0.875rem;
   }
 }
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
@@ -22,364 +21,526 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Rounded+1c&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/soroban-sokusan.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header layout-header">
-        <div class="header__inner">
-            <h1 class="header__logo">
-                <a href="../">
-                    <img src="../images/common/logo.png" alt="LOGO" />
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="../">
+            <img src="../images/common/logo.png" alt="LOGO" />
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="../">top</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../concept/">HILLS KIDS<span>ヒルズキッズとは</span></a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../eikaiwa/">英会話</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../syodo-hayagaki/">書道・速書き</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../soroban-sokusan/">そろばん・速算</a>
+            </li>
+            <li class="header__nav-item header__nav-item--contact">
+              <a href="../contact/" target="_blank" rel="noopener">
+                <img src="../images/common/lesson-button.png" alt="Contact" />
+              </a>
+            </li>
+            <li class="header__nav-item header__nav-item--contact">
+              <a href="../recruit/" target="_blank" rel="noopener">
+                <img src="../images/common/teacher-button.png" alt="Contact" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__drawer js-drawer">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-list">
+              <li class="header__drawer-item">
+                <a href="../">top</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="../concept/"
+                  >HILLS KIDS<span>ヒルズキッズとは</span></a
+                >
+              </li>
+              <li class="header__drawer-item">
+                <a href="../eikaiwa/">英会話</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="../syodo-hayagaki/">書道・速書き</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="../soroban-sokusan/">そろばん・速算</a>
+              </li>
+              <li class="header__drawer-item header__drawer-item--contact">
+                <a href="../contact/" target="_blank" rel="noopener">
+                  <img src="../images/common/lesson-button.png" alt="Contact" />
                 </a>
-            </h1>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item">
-                      <a href="../">top</a>
-                    </li>
-                    <li class="header__nav-item">
-                      <a href="../concept/">HILLS KIDS<span>ヒルズキッズとは</span></a>
-                    </li>
-                    <li class="header__nav-item">
-                      <a href="../eikaiwa/">英会話</a>
-                    </li>
-                    <li class="header__nav-item">
-                      <a href="../syodo-hayagaki/">書道・速書き</a>
-                    </li>
-                    <li class="header__nav-item">
-                      <a href="../soroban-sokusan/">そろばん・速算</a>
-                    </li>
-                    <li class="header__nav-item header__nav-item--contact">
-                      <a href="../contact/" target="_blank" rel="noopener">
-                        <img src="../images/common/lesson-button.png" alt="Contact" />
-                      </a>
-                    </li>
-                    <li class="header__nav-item header__nav-item--contact">
-                      <a href="../recruit/" target="_blank" rel="noopener">
-                        <img src="../images/common/teacher-button.png" alt="Contact" />
-                      </a>
-                    </li>
-                  </ul>
-            </nav>
-            <button class="header__hamburger js-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="header__drawer js-drawer">
-                <nav class="header__drawer-nav">
-                    <ul class="header__drawer-list">
-                        <li class="header__drawer-item">
-                          <a href="../">top</a>
-                        </li>
-                        <li class="header__drawer-item">
-                          <a href="../concept/"
-                            >HILLS KIDS<span>ヒルズキッズとは</span></a
-                          >
-                        </li>
-                        <li class="header__drawer-item">
-                          <a href="../eikaiwa/">英会話</a>
-                        </li>
-                        <li class="header__drawer-item">
-                          <a href="../syodo-hayagaki/">書道・速書き</a>
-                        </li>
-                        <li class="header__drawer-item">
-                          <a href="../soroban-sokusan/">そろばん・速算</a>
-                        </li>
-                        <li class="header__drawer-item header__drawer-item--contact">
-                          <a href="../contact/" target="_blank" rel="noopener">
-                            <img src="../images/common/lesson-button.png" alt="Contact" />
-                          </a>
-                        </li>
-                        <li class="header__drawer-item header__drawer-item--contact">
-                          <a href="../recruit/" target="_blank" rel="noopener">
-                            <img
-                              src="../images/common/teacher-button.png"
-                              alt="Contact"
-                            />
-                          </a>
-                        </li>
-                      </ul>
-                </nav>
-            </div>
+              </li>
+              <li class="header__drawer-item header__drawer-item--contact">
+                <a href="../recruit/" target="_blank" rel="noopener">
+                  <img
+                    src="../images/common/teacher-button.png"
+                    alt="Contact"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="header__btn-sp md-show">
-            <div class="button-container">
-                <!-- 体験レッスン申し込みボタン -->
-                <a href="path/to/lesson-application-page">
-                    <img src="../images/common/lesson-button.png" alt="体験レッスン申し込み" class="button-image" />
-                </a>
-                <!-- スクール講師募集ボタン -->
-                <a href="path/to/instructor-recruitment-page">
-                    <img src="../images/common/teacher-button.png" alt="スクール講師募集" class="button-image" />
-                </a>
-            </div>
+      </div>
+      <div class="header__btn-sp md-show">
+        <div class="button-container">
+          <!-- 体験レッスン申し込みボタン -->
+          <a href="path/to/lesson-application-page">
+            <img
+              src="../images/common/lesson-button.png"
+              alt="体験レッスン申し込み"
+              class="button-image"
+            />
+          </a>
+          <!-- スクール講師募集ボタン -->
+          <a href="path/to/instructor-recruitment-page">
+            <img
+              src="../images/common/teacher-button.png"
+              alt="スクール講師募集"
+              class="button-image"
+            />
+          </a>
         </div>
+      </div>
     </header>
     <main class="base soroban-sokusan">
-        <section class="mv">
-            <div class="mv__inner">
-                <div class="mv-container soroban-sokusan-mv">
-                    <div class="mv__title-wrap soroban-sokusan-mv p-top">
-                        <img src="../images/common/soroban-title-pc.png" alt="" class="md-none" />
-                        <img src="../images/common/soroban-title-sp.png" alt="" class="md-show" />
-                    </div>
-                </div>
-                <div class="striped-pattern"></div>
+      <section class="mv">
+        <div class="mv__inner">
+          <div class="mv-container soroban-sokusan-mv">
+            <div class="mv__title-wrap soroban-sokusan-mv p-top">
+              <img
+                src="../images/common/soroban-title-pc.png"
+                alt=""
+                class="md-none"
+              />
+              <img
+                src="../images/common/soroban-title-sp.png"
+                alt=""
+                class="md-show"
+              />
             </div>
-        </section>
-        <div class="info-section">
-            <div class="info-block __left inner">
-                <div class="info-image">
-                    <img src="https://placehold.jp/450x300.png" alt="省略">
-                </div>
-                <div class="info-text">
-                    <h3 class="info-title"><span>子どもの能力をアップさせる</span><br>「いしど式そろばん」とは</h3>
-                    <p class="info-description text">
-                        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                    </p>
-                </div>
-            </div>
+          </div>
+          <div class="striped-pattern"></div>
         </div>
-        <div class="capability-section">
-            <div class="capability__inner inner">
-                <h2 class="capability-title">こんな能力が身に付きます</h2>
-                <div class="capability-list-wrap">
-                    <dl class="capability-list">
-                        <dt class="capability-list-title">集中力</dt>
-                        <dd class="capability-list-text">限られた時間で計算する訓練方法は集中力を身につける</dd>
-                    </dl>
-                    <dl class="capability-list">
-                        <dt class="capability-list-title">記憶力</dt>
-                        <dd class="capability-list-text">そろばんは計算の過程が目でわかり、残像として記憶される</dd>
-                    </dl>
-                    <dl class="capability-list">
-                        <dt class="capability-list-title">判断力</dt>
-                        <dd class="capability-list-text">大きく数をとらえる「概算・概数」の能力を高め、分析・判断力がつく</dd>
-                    </dl>
-                    <dl class="capability-list">
-                        <dt class="capability-list-title">忍耐力</dt>
-                        <dd class="capability-list-text">目標を達成する喜びを感じ、それに向かってコツコツ努力することができます</dd>
-                    </dl>
-                    <dl class="capability-list">
-                        <dt class="capability-list-title">忍耐力</dt>
-                        <dd class="capability-list-text">目標を達成する喜びを感じ、それに向かってコツコツ努力することができます</dd>
-                    </dl>
-                    <dl class="capability-list">
-                        <dt class="capability-list-title">︎創造力</dt>
-                        <dd class="capability-list-text">右脳の活性化により、イメージ豊かな創造力を引き出す</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
-        <section class="top-concept __lesson">
-            <div class="top-concept__inner inner">
-                <div class="section-title-wrap top-concept__title __change-img">
-                    <h2 class="section-title-text">レッスン内容</h2>
-                </div>
-                <div class="info-block __mt01 inner">
-                    <div class="info-image">
-                        <img src="https://placehold.jp/330x330.png" alt="省略">
-                    </div>
-                    <div class="info-text">
-                        <h3 class="info-title">幼児クラス</h3>
-                        <p class="info-description text">
-                            あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </div>
-                </div>
-                <div class="info-block __left __mt01 inner">
-                    <div class="info-image">
-                        <img src="https://placehold.jp/330x330.png" alt="省略">
-                    </div>
-                    <div class="info-text">
-                        <h3 class="info-title">小学生クラス</h3>
-                        <p class="info-description text">
-                            あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </div>
-                </div>
-                <div class="info-block __mt01 inner">
-                    <div class="info-image">
-                        <img src="https://placehold.jp/330x330.png" alt="省略">
-                    </div>
-                    <div class="info-text">
-                        <h3 class="info-title">中・高生クラス</h3>
-                        <p class="info-description text">
-                            あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="course">
-            <div class="course__inner inner">
-                <h2 class="course__title">
-                    <div class="section-title-wrap top-concept__title __change-img">
-                        <h2 class="section-title-text">4つのこだわり</h2>
-                    </div>
-                </h2>
-                <ul class="top-concept__img-grid">
-                    <li class="__grid-item">
-                        <h3 class="__grid-title">ああああああ<br>あああああ</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <h3 class="__grid-title">ああああああ<br>あああああ</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <h3 class="__grid-title">ああああああ<br>あああああ</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <h3 class="__grid-title">ああああああ<br>あああああ</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                </ul>
-                <div class="course__content __bottom">
-                    <ul class="top-concept__img-grid __bottom">
-                        <li>
-                            <div class="info-image">
-                                <img src="https://placehold.jp/310x310.png" alt="Image 1">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="info-image">
-                                <img src="https://placehold.jp/310x310.png" alt="Image 1">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="info-image">
-                                <img src="https://placehold.jp/310x310.png" alt="Image 1">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="top-concept">
-            <div class="top-concept__inner inner">
-                <div class="section-title-wrap top-concept__title __change-img">
-                    <h2 class="section-title-text">お客様の声</h2>
-                </div>
-                <ul class="top-concept__img-grid __customer">
-                    <li class="__grid-item">
-                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
-                        <h3 class="__grid-title">〇〇 〇〇様</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
-                        <h3 class="__grid-title">〇〇 〇〇様</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
-                        <h3 class="__grid-title">〇〇 〇〇様</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
-                        <h3 class="__grid-title">〇〇 〇〇様</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                    <li class="__grid-item">
-                        <img  class="__grid-img" src="https://placehold.jp/100x100.png" alt="">
-                        <h3 class="__grid-title">〇〇 〇〇様</h3>
-                        <p class="__grid-text">
-                            ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="course __detail">
-            <div class="course__inner inner">
-                <h2 class="course__title">
-                    <div class="section-title-wrap top-concept__title __change-img">
-                        <h2 class="section-title-text">そろばん・速算教室詳細</h2>
-                    </div>
-                </h2>
-                <div class="detail-list-wrap">
-                    <dl class="detail-list-parent">
-                        <dt class="detail-list-title">クラス</dt>
-                        <dd class="detail-list-child">園児（3才）〜</dd>
-                    </dl>
-                    <dl class="detail-list-parent">
-                        <dt class="detail-list-title">開催曜日</dt>
-                        <dd class="detail-list-child">
-                            <ul>
-                                <li><span>青葉台</span>：毎週 月・火・木・金</li>
-                                <li><span>藤が丘</span>：毎週 火･水･金</li>
-                                <li><span>あざみ野</span>：毎週 月・火・水・金</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <dl class="detail-list-parent">
-                        <dt class="detail-list-title">開催時間</dt>
-                        <dd class="detail-list-child">15:30～19:20（60分授業）</dd>
-                    </dl>
-                    <dl class="detail-list-parent">
-                        <dt class="detail-list-title">月謝</dt>
-                        <dd class="detail-list-child">
-                            <ul>
-                                <li><span>フリーコース</span>：14,520円（税込）</li>
-                                <li><span>週2コース</span>：9,900円（税込）</li>
-                                <li><span>週1コース</span>：6,600円（税込）</li>
-                            </ul>
-                        </dd>
-                    </dl>
-                </div>
-
-            </div>
-        </section>
-        <div class="cta-container">
-            <p class="cta-text">
-                <span class="dotted-line"></span>
-                まずはお気軽に見学・体験！
-                <span class="dotted-line"></span>
+      </section>
+      <div class="info-section">
+        <div class="info-block __left inner">
+          <div class="info-image">
+            <img
+              src="../images/common/soroban-img.png"
+              alt="省略"
+              class="md-none"
+            />
+            <img
+              src="../images/common/soroban-img-sp.png"
+              alt="省略"
+              class="md-show"
+            />
+          </div>
+          <div class="info-text">
+            <h3 class="info-title">
+              <span>子どもの能力をアップさせる</span
+              ><br />「いしど式そろばん」とは
+            </h3>
+            <p class="info-description text">
+              日本古来の「そろばん」に速算トレーニング、イメージトレーニングの要素（エアそろばん）を付加した２１世紀型のそろばん授業です。<br />「計算」に自信をつけることが算数好きへの第一歩！<br />速く計算できる力は、受験時にも役立ち、幼稚園児でも二ケタの割り算が暗算でスラスラと解けるように！
             </p>
-            <a href="#" class="cta-button">
-                <img src="../images/common/cta-btn.png" alt="体験レッスン申し込み" class="md-none" />
-                <img src="../images/common/cta-btn-sp.png" alt="体験レッスン申し込み" class="md-show" />
-            </a>
+          </div>
         </div>
-        <footer>
-            <div class="footer__inner">
-                <img src="../images/common/footer-img.png" alt="" class="md-none" />
-                <img src="../images/common/footer-img-sp.png" alt="" class="md-show" />
-        </footer>
+      </div>
+      <div class="capability-section">
+        <div class="capability__inner inner">
+          <h2 class="capability-title">こんな能力が身に付きます</h2>
+          <div class="capability-list-wrap">
+            <dl class="capability-list">
+              <dt class="capability-list-title">集中力</dt>
+              <dd class="capability-list-text">
+                限られた時間で計算する訓練方法は集中力を身につける
+              </dd>
+            </dl>
+            <dl class="capability-list">
+              <dt class="capability-list-title">記憶力</dt>
+              <dd class="capability-list-text">
+                そろばんは計算の過程が目でわかり、残像として記憶される
+              </dd>
+            </dl>
+            <dl class="capability-list">
+              <dt class="capability-list-title">判断力</dt>
+              <dd class="capability-list-text">
+                大きく数をとらえる「概算・概数」の能力を高め、分析・判断力がつく
+              </dd>
+            </dl>
+            <dl class="capability-list">
+              <dt class="capability-list-title">忍耐力</dt>
+              <dd class="capability-list-text">
+                目標を達成する喜びを感じ、それに向かってコツコツ努力することができます
+              </dd>
+            </dl>
+            <dl class="capability-list">
+              <dt class="capability-list-title">︎創造力</dt>
+              <dd class="capability-list-text">
+                右脳の活性化により、イメージ豊かな創造力を引き出す
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <section class="top-concept __lesson">
+        <div class="top-concept__inner inner">
+          <div class="section-title-wrap top-concept__title __change-img">
+            <h2 class="section-title-text">レッスン内容</h2>
+          </div>
+          <div class="info-block __mt01 inner">
+            <div class="info-image">
+              <img
+                src="../images/common/soroban-lesson-img.png"
+                alt="省略"
+                class="md-none"
+              />
+              <img
+                src="../images/common/soroban-lesson-img-sp.png"
+                alt="省略"
+                class="md-show"
+              />
+            </div>
+            <div class="info-text">
+              <h3 class="info-title">個別対応教育</h3>
+              <p class="info-description text">
+                教室の中でグループ分けをして、能力に合わせ教育します。<br />目を見て話し、その子に合った声かけをして、一人の人間として向き合います。<br />いしど式の考える個別指導とは、言葉・行動・心で信頼関係を深め続ける教育のあり方です。
+              </p>
+            </div>
+          </div>
+          <div class="info-block __left __mt01 inner">
+            <div class="info-image">
+              <img
+                src="../images/common/soroban-lesson-img2.png"
+                alt="省略"
+                class="md-none"
+              />
+              <img
+                src="../images/common/soroban-lesson-img2-sp.png"
+                alt="省略"
+                class="md-show"
+              />
+            </div>
+            <div class="info-text">
+              <h3 class="info-title">きめ細やかな段階指導</h3>
+              <p class="info-description text">
+                私たちは一人ひとりに合ったハードルを用意しています。自信が持てない子には、少しずつでも確かな成功体験を。<br />進度の早い子には、向上心の刺激を。「やれば、できる。」という自信をそろばんを学ぶ日々の中で届けます。
+              </p>
+            </div>
+          </div>
+          <div class="info-block __mt01 inner">
+            <div class="info-image">
+              <img
+                src="../images/common/soroban-lesson-img3.png"
+                alt="省略"
+                class="md-none"
+              />
+              <img
+                src="../images/common/soroban-lesson-img3-sp.png"
+                alt="省略"
+                class="md-show"
+              />
+            </div>
+            <div class="info-text">
+              <h3 class="info-title">イメージコントロール法</h3>
+              <p class="info-description text">
+                いしど式は、積極的に前向きな言葉で褒めることを取り入れています。<br />なぜなら、褒められた時子どもたちは喜びを実感し、努力する自信を身につけられるからです。私たちは一人でも多くの子どもへ前向きな未来へのエールを贈ります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="course">
+        <div class="course__inner inner">
+          <h2 class="course__title">
+            <div class="section-title-wrap top-concept__title __change-img">
+              <h2 class="section-title-text">4つのこだわり</h2>
+            </div>
+          </h2>
+          <ul class="top-concept__img-grid">
+            <li class="__grid-item">
+              <h3 class="__grid-title">挨拶にはじまり<br />挨拶におわる</h3>
+              <p class="__grid-text">
+                授業のはじめと終わりに全員で挨拶をしています。<br />あいさつをすることで、学びモードのスイッチを入れられるからです。<br />ヒルズキッズでは、メリハリのある環境づくりを大切にしています。
+              </p>
+            </li>
+            <li class="__grid-item">
+              <h3 class="__grid-title">
+                達成感を<br class="md-none" />ともに味わう
+              </h3>
+              <p class="__grid-text">
+                子どもが苦手なことを乗り越えた時、「達成感」を感じ、さらには自信がつくでしょう。<br />ヒルキッズでは生徒と講師が一緒にその喜びを分かち合い、講師と生徒の信頼関係を築いていきます。
+              </p>
+            </li>
+            <li class="__grid-item">
+              <h3 class="__grid-title soroban-style">
+                コミュニケーション<br class="md-none" />を<br
+                  class="md-show"
+                />大事にします
+              </h3>
+              <p class="__grid-text">
+                ヒルズキッズでは講師・生徒・保護者の方との３つのコミュニケーションを大切にしています。<br />家庭の様子や授業中の様子を保護者の方と共有していくことで、子どもにとって身近な存在であり続けます。
+              </p>
+            </li>
+          </ul>
+          <div class="course__content soroban-style __bottom">
+            <ul class="top-concept__img-grid __bottom eikaiwa-style">
+              <li>
+                <div class="info-image eikaiwa-style">
+                  <img
+                    src="../images/common/soroban-detail-img1.png"
+                    alt="Image 1"
+                    class="md-none"
+                  />
+                  <img
+                    src="../images/common/soroban-detail-img1-sp.png"
+                    alt="Image 1"
+                    class="md-show"
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="info-image">
+                  <img
+                    src="../images/common/soroban-detail-img2.png"
+                    alt="Image 1"
+                    class="md-none"
+                  />
+                  <img
+                    src="../images/common/soroban-detail-img2-sp.png"
+                    alt="Image 1"
+                    class="md-show"
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="info-image">
+                  <img
+                    src="../images/common/soroban-detail-img3.png"
+                    alt="Image 1"
+                    class="md-none"
+                  />
+                  <img
+                    src="../images/common/soroban-detail-img3-sp.png"
+                    alt="Image 1"
+                    class="md-show"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="top-concept">
+        <div class="top-concept__inner inner">
+          <div class="section-title-wrap top-concept__title __change-img">
+            <h2 class="section-title-text">お客様の声</h2>
+          </div>
+          <ul class="top-concept__img-grid __customer">
+            <li class="__grid-item __grid-item-flex">
+              <div class="__grid-item-flex-title">
+                <img
+                  class="__grid-img md-none"
+                  src="../images/common/soroban-voc-img.png"
+                  alt=""
+                />
+                <img
+                  class="__grid-img md-show"
+                  src="../images/common/soroban-voc-img-sp.png"
+                  alt=""
+                />
+                <h3 class="__grid-title voc-title">
+                  加藤茉子さん<span>（生徒）</span>
+                </h3>
+              </div>
+              <p class="__grid-text">
+                そろばんは級があるから、やりがいがあって楽しいです。<br />そろばんを習って計算がすごくできるようになったし、習字を始めてから字もきれいになりました。暗算1級・そろばん1級をめざしてがんばります！
+              </p>
+            </li>
+            <li class="__grid-item __grid-item-flex">
+              <div class="__grid-item-flex-title">
+                <img
+                  class="__grid-img md-none"
+                  src="../images/common/soroban-voc-img2.png"
+                  alt=""
+                />
+                <img
+                  class="__grid-img md-show"
+                  src="../images/common/soroban-voc-img2-sp.png"
+                  alt=""
+                />
+                <h3 class="__grid-title voc-title">
+                  M様<span>（保護者）</span>
+                </h3>
+              </div>
+              <p class="__grid-text">
+                元々、兄が算数が好きだったので、得意なことを伸ばしてほしいと思い入会しました。<br />少しすると妹も兄の取り組んでいる姿を見て、自分からやりたいとお願いされ現在は兄弟で通わせています。<br />今では二人とも計算が得意！とさらに自信が持てるようになり、何より集中力がすごく、そろばん以外の取り組みに活かされているなと感じています。<br />今後はやったらやっただけ伸びるので目標に向かって取り組むことを学んでほしいと思います。
+              </p>
+            </li>
+            <li class="__grid-item __grid-item-flex">
+              <div class="__grid-item-flex-title">
+                <img
+                  class="__grid-img md-none"
+                  src="../images/common/soroban-voc-img3.png"
+                  alt=""
+                />
+                <img
+                  class="__grid-img md-show"
+                  src="../images/common/soroban-voc-img3-sp.png"
+                  alt=""
+                />
+                <h3 class="__grid-title voc-title">
+                  加藤様<span>（保護者）</span>
+                </h3>
+              </div>
+              <p class="__grid-text">
+                3歳上の兄が以前6年間通っていて、勉強面でも精神的にも良いことだらけだったので、必ず妹も入会させようと決めていました。<br />通いはじめてから、集中力が身についたと感じています。<br />また目標を立て達成する楽しさや、検定合格や外部大会での入賞で子どもたちは自信がついたと思います。<br />これからも学びを楽しいと思ってくれるといいなと思っています。
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="course __detail">
+        <div class="course__inner inner">
+          <h2 class="course__title">
+            <div class="section-title-wrap top-concept__title __change-img">
+              <h2 class="section-title-text">そろばん・速算教室詳細</h2>
+            </div>
+          </h2>
+          <div class="detail-list-wrap">
+            <dl class="detail-list-parent">
+              <dt class="detail-list-title">クラス</dt>
+              <dd class="detail-list-child">園児（3才）〜</dd>
+            </dl>
+            <dl class="detail-list-parent">
+              <dt class="detail-list-title">開催曜日</dt>
+              <dd class="detail-list-child">
+                <ul>
+                  <li><span>青葉台</span>：毎週 月・火・木・金</li>
+                  <li><span>藤が丘</span>：毎週 火･水･金</li>
+                  <li><span>あざみ野</span>：毎週 月・火・水・金</li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="detail-list-parent">
+              <dt class="detail-list-title">開催時間</dt>
+              <dd class="detail-list-child">15:30～19:20（50分授業）</dd>
+            </dl>
+            <dl class="detail-list-parent">
+              <dt class="detail-list-title">月謝</dt>
+              <dd class="detail-list-child">
+                <ul>
+                  <li><span>フリーコース</span>：14,520円（税込）</li>
+                  <li><span>週2コース</span>：9,900円（税込）</li>
+                  <li><span>週1コース</span>：6,600円（税込）</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <div class="cta-container">
+        <p class="cta-text">
+          <span class="dotted-line"></span>
+          まずはお気軽に見学・体験！
+          <span class="dotted-line"></span>
+        </p>
+        <a href="#" class="cta-button">
+          <img
+            src="../images/common/cta-btn.png"
+            alt="体験レッスン申し込み"
+            class="md-none"
+          />
+          <img
+            src="../images/common/cta-btn-sp.png"
+            alt="体験レッスン申し込み"
+            class="md-show"
+          />
+        </a>
+      </div>
+      <footer>
+        <div class="footer__inner">
+          <img src="../images/common/footer-img.png" alt="" class="md-none" />
+          <img
+            src="../images/common/footer-img-sp.png"
+            alt=""
+            class="md-show"
+          />
+          <div class="c-footer__inner">
+            <ul class="c-footer__list">
+              <li class="c-footer__listItem">
+                <a href="../">top</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../concept/"
+                  >HILLS KIDS<span>ヒルズキッズとは</span></a
+                >
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../eikaiwa/">英会話</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../syodo-hayagaki/">書道・速書き</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../soroban-sokusan/">そろばん・速算</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../privacy/">プライバシーポリシー</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../trade-law/">特定商取引法に基づく表記</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="../js/script.js"></script>
-</body>
-
+  </body>
 </html>

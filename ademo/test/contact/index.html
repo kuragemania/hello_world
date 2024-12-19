@@ -175,26 +175,33 @@
           <form class="form">
             <div class="form__container">
               <div class="form__group">
-                <label for="classroom"
-                  >ご希望教室 <span class="required">※</span></label
-                >
-                <div class="select-box">
-                  <select id="classroom" name="classroom" required>
-                    <option value="">選択</option>
-                    <!-- 選択肢を追加 -->
-                  </select>
-                </div>
-              </div>
-
-              <div class="form__group">
                 <label for="lesson"
                   >希望レッスン <span class="required">※</span></label
                 >
                 <div class="select-box">
                   <select id="lesson" name="lesson" required>
                     <option value="">選択</option>
-                    <!-- 選択肢を追加 -->
+                    <option value="eikaiwa">英会話</option>
+                    <option value="syodo-hayagaki">書道・速書き</option>
+                    <option value="soroban-sokusan">そろばん・速算</option>
                   </select>
+                </div>
+              </div>
+              <div class="form__group">
+                <label for="classroom"
+                  >ご希望教室 <span class="required">※</span></label
+                >
+                <div class="select-box">
+                  <select
+                    id="classroom"
+                    name="classroom"
+                    required
+                    class="classroom-select"
+                  >
+                    <option value="">選択</option></select
+                  ><span class="classroom-select-text"
+                    >※希望レッスン選択後に入力ください。</span
+                  >
                 </div>
               </div>
 
@@ -205,54 +212,101 @@
                 <div class="form__date-group">
                   <div class="form__date-item">
                     <span>第1希望：</span>
-                    <select name="first-month" aria-label="第1希望 月" required>
+                    <select
+                      id="first-month"
+                      name="first-month"
+                      aria-label="第1希望 月"
+                      required
+                    >
                       <option value="">選択</option>
                       <option value="1">1月</option>
                       <option value="2">2月</option>
-                      <!-- 月の選択肢を追加 -->
+                      <option value="3">3月</option>
+                      <option value="4">4月</option>
+                      <option value="5">5月</option>
+                      <option value="6">6月</option>
+                      <option value="7">7月</option>
+                      <option value="8">8月</option>
+                      <option value="9">9月</option>
+                      <option value="10">10月</option>
+                      <option value="11">11月</option>
+                      <option value="12">12月</option>
                     </select>
                     <span>月</span>
-                    <select name="first-day" aria-label="第1希望 日" required>
+
+                    <select
+                      id="first-day"
+                      name="first-day"
+                      aria-label="第1希望 日"
+                      required
+                    >
                       <option value="">選択</option>
-                      <option value="1">1日</option>
-                      <option value="2">2日</option>
-                      <!-- 日の選択肢を追加 -->
                     </select>
                     <span
                       >日<span class="form__date-item-required">※</span></span
                     >
                   </div>
+
                   <div class="form__date-item">
                     <span>第2希望：</span>
-                    <select name="second-month" aria-label="第2希望 月">
+                    <select
+                      id="second-month"
+                      name="second-month"
+                      aria-label="第2希望 月"
+                    >
                       <option value="">選択</option>
                       <option value="1">1月</option>
                       <option value="2">2月</option>
-                      <!-- 月の選択肢を追加 -->
+                      <option value="3">3月</option>
+                      <option value="4">4月</option>
+                      <option value="5">5月</option>
+                      <option value="6">6月</option>
+                      <option value="7">7月</option>
+                      <option value="8">8月</option>
+                      <option value="9">9月</option>
+                      <option value="10">10月</option>
+                      <option value="11">11月</option>
+                      <option value="12">12月</option>
                     </select>
                     <span>月</span>
-                    <select name="second-day" aria-label="第2希望 日">
+                    <select
+                      id="second-day"
+                      name="second-day"
+                      aria-label="第2希望 日"
+                    >
                       <option value="">選択</option>
-                      <option value="1">1日</option>
-                      <option value="2">2日</option>
-                      <!-- 日の選択肢を追加 -->
                     </select>
                     <span>日</span>
                   </div>
+
                   <div class="form__date-item">
                     <span>第3希望：</span>
-                    <select name="third-month" aria-label="第3希望 月">
+                    <select
+                      id="third-month"
+                      name="third-month"
+                      aria-label="第3希望 月"
+                    >
                       <option value="">選択</option>
                       <option value="1">1月</option>
                       <option value="2">2月</option>
-                      <!-- 月の選択肢を追加 -->
+                      <option value="3">3月</option>
+                      <option value="4">4月</option>
+                      <option value="5">5月</option>
+                      <option value="6">6月</option>
+                      <option value="7">7月</option>
+                      <option value="8">8月</option>
+                      <option value="9">9月</option>
+                      <option value="10">10月</option>
+                      <option value="11">11月</option>
+                      <option value="12">12月</option>
                     </select>
                     <span>月</span>
-                    <select name="third-day" aria-label="第3希望 日">
+                    <select
+                      id="third-day"
+                      name="third-day"
+                      aria-label="第3希望 日"
+                    >
                       <option value="">選択</option>
-                      <option value="1">1日</option>
-                      <option value="2">2日</option>
-                      <!-- 日の選択肢を追加 -->
                     </select>
                     <span>日</span>
                   </div>
@@ -264,6 +318,18 @@
                 <div class="select-box">
                   <select id="grade" name="grade" required>
                     <option value="">選択</option>
+                    <option value="preschool_3">年少</option>
+                    <option value="preschool_4">年中</option>
+                    <option value="preschool_5">年長</option>
+                    <option value="elementary_1">小学1年</option>
+                    <option value="elementary_2">小学2年</option>
+                    <option value="elementary_3">小学3年</option>
+                    <option value="elementary_4">小学4年</option>
+                    <option value="elementary_5">小学5年</option>
+                    <option value="elementary_6">小学6年</option>
+                    <option value="junior_high_1">中学1年</option>
+                    <option value="junior_high_2">中学2年</option>
+                    <option value="junior_high_3">中学3年</option>
                   </select>
                 </div>
               </div>
@@ -304,6 +370,16 @@
                 <div class="select-box">
                   <select id="time" name="time" required>
                     <option value="">選択</option>
+                    <option value="anytime">何時でも可</option>
+                    <option value="11-12">11時～12時</option>
+                    <option value="12-13">12時～13時</option>
+                    <option value="13-14">13時～14時</option>
+                    <option value="14-15">14時～15時</option>
+                    <option value="15-16">15時～16時</option>
+                    <option value="16-17">16時～17時</option>
+                    <option value="17-18">17時～18時</option>
+                    <option value="18-19">18時～19時</option>
+                    <option value="19-20">19時～20時</option>
                   </select>
                 </div>
               </div>
@@ -402,6 +478,33 @@
             alt=""
             class="md-show"
           />
+          <div class="c-footer__inner">
+            <ul class="c-footer__list">
+              <li class="c-footer__listItem">
+                <a href="../">top</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../concept/"
+                  >HILLS KIDS<span>ヒルズキッズとは</span></a
+                >
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../eikaiwa/">英会話</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../syodo-hayagaki/">書道・速書き</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../soroban-sokusan/">そろばん・速算</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../privacy/">プライバシーポリシー</a>
+              </li>
+              <li class="c-footer__listItem">
+                <a href="../trade-law/">特定商取引法に基づく表記</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </main>
